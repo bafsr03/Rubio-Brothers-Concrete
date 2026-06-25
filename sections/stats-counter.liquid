@@ -1,0 +1,208 @@
+{% comment %}
+  Stats counter — a band of animated key figures (years in business, projects
+  completed, etc.). Each stat is a local block.
+{% endcomment %}
+
+<script
+  src="{{ 'stats-counter.js' | asset_url }}"
+  type="module"
+  fetchpriority="low"
+></script>
+
+{%- liquid
+  assign accent = section.settings.accent_color | default: settings.color_palette.foreground
+-%}
+
+<div
+  class="rb-stats section spacing-style"
+  style="
+    --rb-accent: {{ accent }};
+    {% if section.settings.background_color != blank %}--color-background: {{ section.settings.background_color }};{% endif %}
+    {% if section.settings.text_color != blank %}--color-foreground: {{ section.settings.text_color }};{% endif %}
+    {% render 'spacing-style', settings: section.settings %}
+  "
+>
+  <div class="page-width">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="rb-stats__heading">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+    <stats-counter class="rb-stats__grid">
+      {%- for block in section.blocks -%}
+        <div class="rb-stat" {{ block.shopify_attributes }}>
+          <div class="rb-stat__value">
+            {%- if block.settings.prefix != blank -%}<span class="rb-stat__affix">{{ block.settings.prefix }}</span>{%- endif -%}
+            <span data-count-to="{{ block.settings.value }}">0</span>
+            {%- if block.settings.suffix != blank -%}<span class="rb-stat__affix">{{ block.settings.suffix }}</span>{%- endif -%}
+          </div>
+          {%- if block.settings.label != blank -%}
+            <div class="rb-stat__label">{{ block.settings.label }}</div>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </stats-counter>
+  </div>
+</div>
+
+{% stylesheet %}
+  .rb-stats {
+    background: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  .rb-stats__heading {
+    text-align: center;
+    margin: 0 0 var(--gap-xl);
+  }
+
+  .rb-stats__grid {
+    display: grid;
+    gap: var(--gap-lg);
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+  }
+
+  @media screen and (min-width: 750px) {
+    .rb-stats__grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .rb-stat__value {
+    font-size: clamp(2.5rem, 7vw, 4rem);
+    font-weight: 800;
+    line-height: 1;
+    color: var(--rb-accent);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .rb-stat__affix {
+    font-size: 0.7em;
+  }
+
+  .rb-stat__label {
+    margin-top: var(--gap-2xs);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.8125rem;
+    opacity: 0.75;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Stats counter",
+  "tag": "section",
+  "class": "section-wrapper",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:settings.background_color",
+      "placeholder": "t:settings.default"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:settings.text_color",
+      "placeholder": "t:settings.default"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "stat",
+      "name": "Stat",
+      "settings": [
+        {
+          "type": "text",
+          "id": "value",
+          "label": "Value (number)",
+          "default": "500"
+        },
+        {
+          "type": "text",
+          "id": "prefix",
+          "label": "Prefix"
+        },
+        {
+          "type": "text",
+          "id": "suffix",
+          "label": "Suffix",
+          "default": "+"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Projects completed"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Stats counter",
+      "blocks": [
+        { "type": "stat" },
+        { "type": "stat" },
+        { "type": "stat" },
+        { "type": "stat" }
+      ]
+    }
+  ]
+}
+{% endschema %}

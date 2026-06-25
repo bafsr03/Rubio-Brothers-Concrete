@@ -1,0 +1,364 @@
+{% comment %}
+  Site hero — the headline conversion moment. Large headline, supporting copy,
+  dual CTA (estimate + tap-to-call), trust chips, and an optional background
+  image/video with a concrete-texture overlay.
+{% endcomment %}
+
+<script
+  src="{{ 'scroll-reveal.js' | asset_url }}"
+  type="module"
+  fetchpriority="low"
+></script>
+
+{%- liquid
+  assign accent = section.settings.accent_color | default: settings.color_palette.foreground
+  assign overlay = section.settings.overlay_opacity | divided_by: 100.0
+  assign chips = section.settings.trust_chips | newline_to_br | split: '<br />'
+-%}
+
+<div
+  class="rb-hero spacing-style"
+  style="
+    --rb-accent: {{ accent }};
+    --rb-overlay: {{ overlay }};
+    --rb-hero-text: {{ section.settings.text_color | default: '#ffffff' }};
+    --rb-hero-min-h: {{ section.settings.min_height }}svh;
+    {% render 'spacing-style', settings: section.settings %}
+  "
+>
+  <div class="rb-hero__media" aria-hidden="true">
+    {%- if section.settings.image != blank -%}
+      {{
+        section.settings.image
+        | image_url: width: 3000
+        | image_tag:
+          loading: 'eager',
+          fetchpriority: 'high',
+          sizes: '100vw',
+          widths: '800, 1200, 1600, 2000, 3000',
+          alt: '',
+          class: 'rb-hero__img'
+      }}
+    {%- else -%}
+      <div class="rb-hero__img rb-hero__img--placeholder"></div>
+    {%- endif -%}
+    <div class="rb-hero__overlay"></div>
+  </div>
+
+  <scroll-reveal class="page-width rb-hero__inner" data-reveal-stagger="120">
+    {%- if section.settings.eyebrow != blank -%}
+      <p class="rb-hero__eyebrow" data-reveal>{{ section.settings.eyebrow }}</p>
+    {%- endif -%}
+    {%- if section.settings.heading != blank -%}
+      <h1 class="rb-hero__title" data-reveal>{{ section.settings.heading }}</h1>
+    {%- endif -%}
+    {%- if section.settings.subheading != blank -%}
+      <p class="rb-hero__sub" data-reveal>{{ section.settings.subheading }}</p>
+    {%- endif -%}
+
+    <div class="rb-hero__actions" data-reveal>
+      {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}
+        <a class="rb-hero__btn rb-hero__btn--primary" href="{{ section.settings.button_link }}">
+          {{ section.settings.button_label }}
+        </a>
+      {%- endif -%}
+      {%- if section.settings.phone != blank -%}
+        <a
+          class="rb-hero__btn rb-hero__btn--secondary"
+          href="tel:{{ section.settings.phone | remove: ' ' | remove: '(' | remove: ')' | remove: '-' }}"
+        >
+          {{ section.settings.phone_label | default: section.settings.phone }}
+        </a>
+      {%- endif -%}
+    </div>
+
+    {%- if chips.size > 0 -%}
+      <ul class="rb-hero__chips" data-reveal>
+        {%- for chip in chips -%}
+          {%- assign chip_clean = chip | strip -%}
+          {%- if chip_clean != blank -%}
+            <li class="rb-hero__chip">{{ chip_clean }}</li>
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+  </scroll-reveal>
+</div>
+
+{% stylesheet %}
+  .rb-hero {
+    position: relative;
+    display: grid;
+    align-items: end;
+    min-height: var(--rb-hero-min-h, 86svh);
+    overflow: hidden;
+    isolation: isolate;
+    color: var(--rb-hero-text, #fff);
+  }
+
+  .rb-hero__media {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+
+  .rb-hero__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .rb-hero__img--placeholder {
+    background:
+      repeating-linear-gradient(135deg, #2b2b2b 0 2px, transparent 2px 22px),
+      linear-gradient(160deg, #3a3a3a, #1a1a1a);
+  }
+
+  .rb-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgb(0 0 0 / calc(var(--rb-overlay, 0.5) + 0.25)),
+      rgb(0 0 0 / var(--rb-overlay, 0.5)) 60%,
+      rgb(0 0 0 / calc(var(--rb-overlay, 0.5) * 0.6))
+    );
+  }
+
+  .rb-hero__inner {
+    padding-block: clamp(3rem, 8vh, 7rem);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-md);
+    max-width: 60rem;
+  }
+
+  .rb-hero__eyebrow {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: var(--rb-accent);
+  }
+
+  .rb-hero__title {
+    margin: 0;
+    font-size: clamp(2.5rem, 7vw, 5.5rem);
+    line-height: 0.98;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  .rb-hero__sub {
+    margin: 0;
+    font-size: clamp(1.0625rem, 2vw, 1.375rem);
+    max-width: 46ch;
+    opacity: 0.92;
+  }
+
+  .rb-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-sm);
+    margin-top: var(--gap-xs);
+  }
+
+  .rb-hero__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-lg) var(--padding-2xl);
+    border-radius: var(--button-border-radius-primary, 14px);
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+  .rb-hero__btn:hover {
+    transform: translateY(-2px);
+  }
+
+  .rb-hero__btn--primary {
+    background: var(--rb-accent);
+    color: #fff;
+  }
+
+  .rb-hero__btn--secondary {
+    background: rgb(255 255 255 / 0.1);
+    color: var(--rb-hero-text, #fff);
+    border: 2px solid currentcolor;
+    backdrop-filter: blur(4px);
+  }
+
+  .rb-hero__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-xs) var(--gap-md);
+    margin: var(--gap-sm) 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .rb-hero__chip {
+    position: relative;
+    padding-inline-start: 1.25rem;
+    font-size: 0.9375rem;
+    opacity: 0.92;
+  }
+
+  .rb-hero__chip::before {
+    content: "✓";
+    position: absolute;
+    inset-inline-start: 0;
+    color: var(--rb-accent);
+    font-weight: 800;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Site hero",
+  "tag": "section",
+  "class": "section-wrapper",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Pleasant Grove, UT · Licensed & insured"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Concrete that's built to last."
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Driveways, patios, RV pads and stamped concrete — poured by a family crew that treats your property like our own."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Primary button label",
+      "default": "Get a free estimate"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Primary button link"
+    },
+    {
+      "type": "text",
+      "id": "phone_label",
+      "label": "Phone button label",
+      "default": "Call (385) 210-5983"
+    },
+    {
+      "type": "text",
+      "id": "phone",
+      "label": "Phone number",
+      "default": "(385) 210-5983"
+    },
+    {
+      "type": "textarea",
+      "id": "trust_chips",
+      "label": "Trust chips (one per line)",
+      "default": "Free estimates\nLocally owned\n5-star rated"
+    },
+    {
+      "type": "header",
+      "content": "t:content.appearance"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Background image"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:settings.text_color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay opacity",
+      "min": 0,
+      "max": 90,
+      "step": 5,
+      "unit": "%",
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "min_height",
+      "label": "Minimum height",
+      "min": 50,
+      "max": 100,
+      "step": 1,
+      "unit": "svh",
+      "default": 86
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Site hero"
+    }
+  ]
+}
+{% endschema %}

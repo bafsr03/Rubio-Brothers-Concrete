@@ -2116,5 +2116,83 @@
         "default": "equal-width-buttons"
       }
     ]
+  },
+  {
+    "name": "Business info",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Used for the contact bar, click-to-call links and local SEO (LocalBusiness structured data)."
+      },
+      {
+        "type": "text",
+        "id": "business_name",
+        "label": "Business name",
+        "default": "Rubio Brothers Construction"
+      },
+      {
+        "type": "text",
+        "id": "business_phone",
+        "label": "Phone number",
+        "default": "(385) 210-5983"
+      },
+      {
+        "type": "text",
+        "id": "business_email",
+        "label": "Email"
+      },
+      {
+        "type": "text",
+        "id": "business_street",
+        "label": "Street address"
+      },
+      {
+        "type": "text",
+        "id": "business_city",
+        "label": "City",
+        "default": "Pleasant Grove"
+      },
+      {
+        "type": "text",
+        "id": "business_region",
+        "label": "State / region",
+        "default": "UT"
+      },
+      {
+        "type": "text",
+        "id": "business_postal",
+        "label": "Postal code"
+      },
+      {
+        "type": "text",
+        "id": "business_areas_served",
+        "label": "Areas served (comma separated)",
+        "default": "Pleasant Grove, Lindon, Orem, American Fork, Lehi, Provo, Utah County"
+      },
+      {
+        "type": "text",
+        "id": "business_rating",
+        "label": "Average rating (for SEO rich results)",
+        "default": "5.0",
+        "info": "Only use a genuine, on-site-visible rating."
+      },
+      {
+        "type": "text",
+        "id": "business_review_count",
+        "label": "Number of reviews",
+        "default": "44"
+      },
+      {
+        "type": "checkbox",
+        "id": "sticky_call_bar",
+        "label": "Show sticky call bar on mobile",
+        "default": true
+      },
+      {
+        "type": "url",
+        "id": "estimate_url",
+        "label": "Estimate page link"
+      }
+    ]
   }
 ]

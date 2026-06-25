@@ -1,0 +1,220 @@
+{% comment %}
+  Process steps — a numbered, sequential walk-through of how a job runs from
+  first call to final pour. Each step is a local block.
+{% endcomment %}
+
+<script
+  src="{{ 'scroll-reveal.js' | asset_url }}"
+  type="module"
+  fetchpriority="low"
+></script>
+
+{%- liquid
+  assign accent = section.settings.accent_color | default: settings.color_palette.foreground
+-%}
+
+<div
+  class="rb-process section spacing-style"
+  style="
+    --rb-accent: {{ accent }};
+    {% if section.settings.background_color != blank %}--color-background: {{ section.settings.background_color }};{% endif %}
+    {% render 'spacing-style', settings: section.settings %}
+  "
+>
+  <div class="page-width">
+    <div class="rb-section__head">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="rb-eyebrow">{{ section.settings.eyebrow }}</p>
+      {%- endif -%}
+      {%- if section.settings.heading != blank -%}
+        <h2 class="rb-section__title">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+      {%- if section.settings.intro != blank -%}
+        <p class="rb-section__intro">{{ section.settings.intro }}</p>
+      {%- endif -%}
+    </div>
+
+    <scroll-reveal class="rb-process__list" data-reveal-stagger="100">
+      {%- for block in section.blocks -%}
+        <div class="rb-step" data-reveal {{ block.shopify_attributes }}>
+          <div class="rb-step__num" aria-hidden="true">{{ forloop.index }}</div>
+          <div class="rb-step__body">
+            {%- if block.settings.title != blank -%}
+              <h3 class="rb-step__title">{{ block.settings.title }}</h3>
+            {%- endif -%}
+            {%- if block.settings.text != blank -%}
+              <p class="rb-step__text">{{ block.settings.text }}</p>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endfor -%}
+    </scroll-reveal>
+  </div>
+</div>
+
+{% stylesheet %}
+  .rb-process {
+    background: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  .rb-process__list {
+    display: grid;
+    gap: var(--gap-lg);
+    grid-template-columns: 1fr;
+    counter-reset: step;
+  }
+
+  @media screen and (min-width: 750px) {
+    .rb-process__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    .rb-process__list {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .rb-step {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-sm);
+    padding: var(--padding-xl);
+    border-top: 3px solid var(--rb-accent);
+    background: color-mix(in srgb, var(--color-foreground) 3%, var(--color-background));
+  }
+
+  .rb-step__num {
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1;
+    color: var(--rb-accent);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .rb-step__title {
+    margin: 0;
+  }
+
+  .rb-step__text {
+    margin: 0;
+    opacity: 0.8;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Process steps",
+  "tag": "section",
+  "class": "section-wrapper",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "How it works"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "From first call to final pour"
+    },
+    {
+      "type": "textarea",
+      "id": "intro",
+      "label": "Intro",
+      "default": "A clear, no-surprises process so you always know what happens next."
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:settings.background_color",
+      "placeholder": "t:settings.default"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Free estimate"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Description",
+          "default": "Tell us about your project and we'll come measure and quote it at no charge."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Process steps",
+      "blocks": [
+        { "type": "step" },
+        { "type": "step" },
+        { "type": "step" },
+        { "type": "step" }
+      ]
+    }
+  ]
+}
+{% endschema %}

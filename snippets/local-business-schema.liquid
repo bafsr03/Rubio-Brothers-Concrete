@@ -1,0 +1,54 @@
+{% doc %}
+  Renders LocalBusiness (GeneralContractor) JSON-LD for local SEO. Reads values
+  from the theme's "Business info" settings, falling back to shop defaults.
+{% enddoc %}
+
+{%- liquid
+  assign biz_name = settings.business_name | default: shop.name
+  assign biz_phone = settings.business_phone
+  assign biz_email = settings.business_email | default: shop.email
+  assign areas = settings.business_areas_served | split: ','
+-%}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GeneralContractor",
+  "name": {{ biz_name | json }},
+  "url": {{ request.origin | append: page.url | default: request.origin | json }},
+  {% if settings.logo != blank %}"logo": {{ settings.logo | image_url: width: 600 | prepend: 'https:' | json }},{% endif %}
+  {% if biz_phone != blank %}"telephone": {{ biz_phone | json }},{% endif %}
+  {% if biz_email != blank %}"email": {{ biz_email | json }},{% endif %}
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    {% if settings.business_street != blank %}"streetAddress": {{ settings.business_street | json }},{% endif %}
+    "addressLocality": {{ settings.business_city | default: 'Pleasant Grove' | json }},
+    "addressRegion": {{ settings.business_region | default: 'UT' | json }},
+    {% if settings.business_postal != blank %}"postalCode": {{ settings.business_postal | json }},{% endif %}
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    {% for area in areas %}
+      {{ area | strip | json }}{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ],
+  {% if settings.business_rating != blank and settings.business_review_count != blank %}
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": {{ settings.business_rating | json }},
+    "reviewCount": {{ settings.business_review_count | json }},
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  {% endif %}
+  "knowsAbout": [
+    "Concrete driveways",
+    "Concrete patios",
+    "RV pads",
+    "Stamped concrete",
+    "Concrete tear-out and replacement",
+    "Excavation and site prep"
+  ]
+}
+</script>

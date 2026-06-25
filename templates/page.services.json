@@ -1,0 +1,64 @@
+{
+  "sections": {
+    "intro": {
+      "type": "main-page",
+      "settings": {
+        "padding-block-start": 48,
+        "padding-block-end": 0
+      }
+    },
+    "services": {
+      "type": "services-grid",
+      "settings": {
+        "eyebrow": "Our services",
+        "heading": "Every kind of flatwork, done right",
+        "intro": "Residential and commercial concrete across Utah County — from a single slab to a full driveway tear-out and repour.",
+        "accent_color": "#C42A20"
+      },
+      "blocks": {
+        "s1": { "type": "service", "settings": { "title": "Driveways", "text": "Crack-resistant driveways finished to handle freeze-thaw winters.", "link_label": "Get a quote", "link": "/pages/estimate" } },
+        "s2": { "type": "service", "settings": { "title": "Patios & walkways", "text": "Outdoor living spaces, sidewalks and walkways built clean and level.", "link_label": "Get a quote", "link": "/pages/estimate" } },
+        "s3": { "type": "service", "settings": { "title": "RV pads & slabs", "text": "Heavy-duty pads and foundation slabs engineered for serious loads.", "link_label": "Get a quote", "link": "/pages/estimate" } },
+        "s4": { "type": "service", "settings": { "title": "Stamped & decorative", "text": "Stamped, colored and textured finishes that elevate any property.", "link_label": "Get a quote", "link": "/pages/estimate" } },
+        "s5": { "type": "service", "settings": { "title": "Tear-out & replacement", "text": "Old, cracked concrete removed and repoured — no mess left behind.", "link_label": "Get a quote", "link": "/pages/estimate" } },
+        "s6": { "type": "service", "settings": { "title": "Excavation & prep", "text": "Grading, forming and base prep done right so your pour lasts decades.", "link_label": "Get a quote", "link": "/pages/estimate" } }
+      },
+      "block_order": ["s1", "s2", "s3", "s4", "s5", "s6"]
+    },
+    "process": {
+      "type": "process-steps",
+      "settings": { "accent_color": "#C42A20" },
+      "blocks": {
+        "p1": { "type": "step", "settings": { "title": "Free estimate", "text": "Tell us about your project and we'll measure and quote it at no charge." } },
+        "p2": { "type": "step", "settings": { "title": "Prep & excavation", "text": "We grade, form and prep the base so your pour lasts for decades." } },
+        "p3": { "type": "step", "settings": { "title": "Pour & finish", "text": "Concrete placed and finished by hand — clean lines, level surface." } },
+        "p4": { "type": "step", "settings": { "title": "Walkthrough", "text": "We review the finished work with you and clean up the site completely." } }
+      },
+      "block_order": ["p1", "p2", "p3", "p4"]
+    },
+    "faq": {
+      "type": "faq",
+      "settings": { "accent_color": "#C42A20" },
+      "blocks": {
+        "q1": { "type": "qa", "settings": { "question": "How much does a concrete driveway or patio cost?", "answer": "<p>It depends on the square footage, finish and site prep. Use our instant estimator for a rough ballpark, then we confirm an exact price with a free on-site visit.</p>" } },
+        "q2": { "type": "qa", "settings": { "question": "What areas do you serve?", "answer": "<p>We serve Pleasant Grove and the surrounding Utah County communities — Lindon, Orem, American Fork, Lehi, Provo and nearby areas.</p>" } },
+        "q3": { "type": "qa", "settings": { "question": "Are you licensed and insured?", "answer": "<p>Yes. Rubio Brothers Concrete is locally owned, licensed and insured, with over 30 years of concrete experience.</p>" } },
+        "q4": { "type": "qa", "settings": { "question": "Do you remove old concrete?", "answer": "<p>Absolutely. We handle full tear-out, excavation and haul-away, then repour — no mess left behind.</p>" } }
+      },
+      "block_order": ["q1", "q2", "q3", "q4"]
+    },
+    "cta": {
+      "type": "cta-band",
+      "settings": {
+        "button_label": "Get a free estimate",
+        "button_link": "/pages/estimate",
+        "phone_label": "Call (385) 210-5983",
+        "phone": "(385) 210-5983",
+        "accent_color": "#C42A20",
+        "background_color": "#1a1a1a",
+        "text_color": "#ffffff"
+      }
+    }
+  },
+  "order": ["intro", "services", "process", "faq", "cta"]
+}

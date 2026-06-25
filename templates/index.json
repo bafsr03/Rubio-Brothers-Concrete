@@ -1,285 +1,132 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */{
+{
   "sections": {
-    "hero_jVaWmY": {
-      "type": "hero",
-      "blocks": {
-        "text_YLPk4p": {
-          "type": "text",
-          "name": "t:names.heading",
-          "settings": {
-            "text": "<p>Browse our latest products</p>",
-            "text_color": "{{ settings.color_palette.background }}",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "h2",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "button_H9gpTf": {
-          "type": "button",
-          "name": "t:names.button",
-          "settings": {
-            "label": "Shop all",
-            "link": "shopify://collections/all",
-            "open_in_new_tab": false,
-            "style_class": "button-custom",
-            "custom_button_background": "rgba(0,0,0,0)",
-            "custom_button_text": "{{ settings.color_palette.background }}",
-            "custom_button_border": "{{ settings.color_palette.background }}",
-            "width": "fit-content",
-            "custom_width": 100,
-            "width_mobile": "fit-content",
-            "custom_width_mobile": 100
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "text_YLPk4p",
-        "button_H9gpTf"
-      ],
-      "name": "t:names.hero",
+    "hero": {
+      "type": "site-hero",
       "settings": {
-        "media_type_1": "image",
-        "media_type_2": "image",
-        "stack_media_on_mobile": false,
-        "custom_mobile_media": false,
-        "media_type_1_mobile": "image",
-        "media_type_2_mobile": "image",
-        "open_in_new_tab": false,
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "space-between",
-        "vertical_alignment": "flex-end",
-        "align_baseline": true,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "flex-end",
-        "gap": 24,
-        "section_width": "page-width",
-        "section_height": "medium",
-        "section_height_custom": 50,
-        "background_color": "rgba(0,0,0,0)",
-        "toggle_overlay": true,
-        "overlay_color": "#12121266",
-        "overlay_style": "solid",
-        "gradient_direction": "to bottom",
-        "blurred_reflection": false,
-        "reflection_opacity": 75,
-        "padding-block-start": 100,
-        "padding-block-end": 72
+        "eyebrow": "Pleasant Grove, UT · 30+ years of experience",
+        "heading": "Efficient and clean concrete solutions.",
+        "subheading": "From driveways and patios to decorative stamped concrete, we bring over 30 years of experience to every project.",
+        "button_label": "Get a free estimate",
+        "button_link": "/pages/estimate",
+        "phone_label": "Call (385) 210-5983",
+        "phone": "(385) 210-5983",
+        "trust_chips": "Free estimates\n5.0★ from 44+ customers\nLocally owned",
+        "accent_color": "#C42A20",
+        "text_color": "#ffffff",
+        "overlay_opacity": 50,
+        "min_height": 88
       }
     },
-    "product_list_fa6P9H": {
-      "type": "product-list",
+    "services": {
+      "type": "services-grid",
+      "settings": {
+        "eyebrow": "What we offer",
+        "heading": "Concrete done right, the first time",
+        "intro": "From driveways to stamped patios, we handle every step — tear-out, excavation, forming, pouring and finishing.",
+        "accent_color": "#C42A20"
+      },
       "blocks": {
-        "static-header": {
-          "type": "_product-list-content",
-          "name": "t:names.header",
-          "static": true,
+        "s1": { "type": "service", "settings": { "title": "Driveways", "text": "Durable, crack-resistant driveways finished to handle Utah freeze-thaw winters.", "link_label": "Get a quote", "link": "/pages/estimate" } },
+        "s2": { "type": "service", "settings": { "title": "Patios & walkways", "text": "Outdoor living spaces, sidewalks and walkways built clean and level.", "link_label": "Get a quote", "link": "/pages/estimate" } },
+        "s3": { "type": "service", "settings": { "title": "RV pads & slabs", "text": "Heavy-duty pads and foundation slabs engineered for serious loads.", "link_label": "Get a quote", "link": "/pages/estimate" } },
+        "s4": { "type": "service", "settings": { "title": "Stamped & decorative", "text": "Stamped, colored and textured finishes that elevate any property.", "link_label": "Get a quote", "link": "/pages/estimate" } },
+        "s5": { "type": "service", "settings": { "title": "Tear-out & replacement", "text": "Old, cracked concrete removed and repoured — no mess left behind.", "link_label": "Get a quote", "link": "/pages/estimate" } },
+        "s6": { "type": "service", "settings": { "title": "Excavation & prep", "text": "Grading, forming and base prep done right so your pour lasts decades.", "link_label": "Get a quote", "link": "/pages/estimate" } }
+      },
+      "block_order": ["s1", "s2", "s3", "s4", "s5", "s6"]
+    },
+    "stats": {
+      "type": "stats-counter",
+      "settings": {
+        "heading": "Trusted across Utah County",
+        "accent_color": "#C42A20"
+      },
+      "blocks": {
+        "st1": { "type": "stat", "settings": { "value": "30", "suffix": "+", "label": "Years of experience" } },
+        "st2": { "type": "stat", "settings": { "value": "44", "suffix": "+", "label": "Happy customers" } },
+        "st3": { "type": "stat", "settings": { "value": "5", "suffix": ".0★", "label": "Google rating" } },
+        "st4": { "type": "stat", "settings": { "value": "100", "suffix": "%", "label": "Satisfaction focus" } }
+      },
+      "block_order": ["st1", "st2", "st3", "st4"]
+    },
+    "showcase": {
+      "type": "section",
+      "settings": {
+        "section_width": "page-width",
+        "padding-block-start": 32,
+        "padding-block-end": 32
+      },
+      "blocks": {
+        "compare": {
+          "type": "comparison-slider",
           "settings": {
-            "content_direction": "row",
-            "vertical_on_mobile": false,
-            "horizontal_alignment": "space-between",
-            "vertical_alignment": "flex-end",
-            "align_baseline": true,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "product_list_text_YFtzcL": {
-              "type": "_product-list-text",
-              "name": "t:names.collection_title",
-              "settings": {
-                "text": "<h3>{{ closest.collection.title }}</h3>",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "h4",
-                "font": "var(--font-body--family)",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "product_list_button_MWeP9V": {
-              "type": "_product-list-button",
-              "name": "t:names.product_list_button",
-              "settings": {
-                "label": "View all",
-                "open_in_new_tab": false,
-                "style_class": "link",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "product_list_text_YFtzcL",
-            "product_list_button_MWeP9V"
-          ]
-        },
-        "static-product-card": {
-          "type": "_product-card",
-          "name": "t:names.product_card",
-          "static": true,
-          "settings": {
-            "product_card_gap": 4,
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "product_card_gallery_677WP3": {
-              "type": "_product-card-gallery",
-              "name": "t:names.product_card_media",
-              "settings": {
-                "image_ratio": "adapt",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "product_title_YXxMTj": {
-              "type": "product-title",
-              "name": "t:names.product_title",
-              "settings": {
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 4,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "price_JQzVV4": {
-              "type": "price",
-              "name": "t:names.product_price",
-              "settings": {
-                "show_sale_price_first": true,
-                "show_installments": false,
-                "show_tax_info": false,
-                "type_preset": "h6",
-                "width": "100%",
-                "alignment": "left",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "product_card_gallery_677WP3",
-            "product_title_YXxMTj",
-            "price_JQzVV4"
-          ]
+            "show_text": true,
+            "before_text": "Before",
+            "after_text": "After",
+            "image_ratio": "landscape"
+          }
         }
       },
-      "name": "Featured collection",
+      "block_order": ["compare"]
+    },
+    "process": {
+      "type": "process-steps",
       "settings": {
-        "collection": "all",
-        "layout_type": "grid",
-        "carousel_on_mobile": false,
-        "max_products": 8,
-        "columns": 4,
-        "mobile_columns": "2",
-        "mobile_card_size": "60cqw",
-        "columns_gap": 8,
-        "rows_gap": 24,
-        "icons_style": "arrow",
-        "icons_shape": "none",
+        "accent_color": "#C42A20"
+      },
+      "blocks": {
+        "p1": { "type": "step", "settings": { "title": "Free estimate", "text": "Tell us about your project and we'll measure and quote it at no charge." } },
+        "p2": { "type": "step", "settings": { "title": "Prep & excavation", "text": "We grade, form and prep the base so your pour lasts for decades." } },
+        "p3": { "type": "step", "settings": { "title": "Pour & finish", "text": "Concrete placed and finished by hand — clean lines, level surface." } },
+        "p4": { "type": "step", "settings": { "title": "Walkthrough", "text": "We review the finished work with you and clean up the site completely." } }
+      },
+      "block_order": ["p1", "p2", "p3", "p4"]
+    },
+    "estimator": {
+      "type": "section",
+      "settings": {
         "section_width": "page-width",
-        "horizontal_alignment": "flex-start",
-        "gap": 28,
-        "background_color": "{{ settings.color_palette.background }}",
         "padding-block-start": 48,
         "padding-block-end": 48
+      },
+      "blocks": {
+        "calc": {
+          "type": "estimator",
+          "settings": {
+            "accent_color": "#C42A20"
+          }
+        }
+      },
+      "block_order": ["calc"]
+    },
+    "faq": {
+      "type": "faq",
+      "settings": {
+        "eyebrow": "FAQ",
+        "heading": "Questions homeowners ask us",
+        "accent_color": "#C42A20"
+      },
+      "blocks": {
+        "q1": { "type": "qa", "settings": { "question": "How much does a concrete driveway or patio cost?", "answer": "<p>It depends on the square footage, finish and site prep. Use our instant estimator above for a rough ballpark, then we confirm an exact price with a free on-site visit.</p>" } },
+        "q2": { "type": "qa", "settings": { "question": "What areas do you serve?", "answer": "<p>We serve Pleasant Grove and the surrounding Utah County communities — Lindon, Orem, American Fork, Lehi, Provo and nearby areas.</p>" } },
+        "q3": { "type": "qa", "settings": { "question": "Are you licensed and insured?", "answer": "<p>Yes. Rubio Brothers Concrete is locally owned, licensed and insured, with over 30 years of concrete experience.</p>" } },
+        "q4": { "type": "qa", "settings": { "question": "How long does a typical project take?", "answer": "<p>Most residential pours take a few days from prep to finish, depending on size and weather. We'll give you a clear timeline with your quote.</p>" } },
+        "q5": { "type": "qa", "settings": { "question": "Do you remove old concrete?", "answer": "<p>Absolutely. We handle full tear-out, excavation and haul-away, then repour — no mess left behind.</p>" } }
+      },
+      "block_order": ["q1", "q2", "q3", "q4", "q5"]
+    },
+    "cta": {
+      "type": "cta-band",
+      "settings": {
+        "button_label": "Get a free estimate",
+        "button_link": "/pages/estimate",
+        "phone_label": "Call (385) 210-5983",
+        "phone": "(385) 210-5983",
+        "accent_color": "#C42A20",
+        "background_color": "#1a1a1a",
+        "text_color": "#ffffff"
       }
     }
   },
-  "order": [
-    "hero_jVaWmY",
-    "product_list_fa6P9H"
-  ]
+  "order": ["hero", "services", "stats", "showcase", "process", "estimator", "faq", "cta"]
 }

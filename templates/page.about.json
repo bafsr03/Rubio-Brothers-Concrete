@@ -1,0 +1,40 @@
+{
+  "sections": {
+    "intro": {
+      "type": "main-page",
+      "settings": {
+        "padding-block-start": 48,
+        "padding-block-end": 24
+      }
+    },
+    "stats": {
+      "type": "stats-counter",
+      "settings": {
+        "heading": "Family-owned, community-trusted",
+        "accent_color": "#C42A20"
+      },
+      "blocks": {
+        "st1": { "type": "stat", "settings": { "value": "30", "suffix": "+", "label": "Years of experience" } },
+        "st2": { "type": "stat", "settings": { "value": "44", "suffix": "+", "label": "Happy customers" } },
+        "st3": { "type": "stat", "settings": { "value": "5", "suffix": ".0★", "label": "Google rating" } },
+        "st4": { "type": "stat", "settings": { "value": "100", "suffix": "%", "label": "Locally owned" } }
+      },
+      "block_order": ["st1", "st2", "st3", "st4"]
+    },
+    "cta": {
+      "type": "cta-band",
+      "settings": {
+        "eyebrow": "Work with us",
+        "heading": "Concrete you can count on.",
+        "button_label": "Get a free estimate",
+        "button_link": "/pages/estimate",
+        "phone_label": "Call (385) 210-5983",
+        "phone": "(385) 210-5983",
+        "accent_color": "#C42A20",
+        "background_color": "#1a1a1a",
+        "text_color": "#ffffff"
+      }
+    }
+  },
+  "order": ["intro", "stats", "cta"]
+}

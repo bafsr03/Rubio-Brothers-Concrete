@@ -1,0 +1,106 @@
+/* ------------------------------------------------------------------
+ * Rubio Brothers — shared utilities for the custom marketing sections.
+ * Loaded globally via snippets/stylesheets.liquid.
+ * ------------------------------------------------------------------ */
+
+/* Scroll reveal (driven by assets/scroll-reveal.js) */
+scroll-reveal {
+  display: block;
+}
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+[data-reveal].is-revealed {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Section heading helpers reused across custom sections */
+.rb-section__head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xs);
+  max-width: 48rem;
+  margin-inline: auto;
+  margin-bottom: var(--gap-xl);
+  text-align: center;
+}
+
+.rb-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--rb-accent, var(--color-foreground));
+  margin: 0;
+}
+
+.rb-section__title {
+  margin: 0;
+}
+
+.rb-section__intro {
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* Mobile sticky call bar (snippets/sticky-call-bar.liquid) */
+.rb-callbar {
+  position: fixed;
+  inset-inline: 0;
+  bottom: 0;
+  z-index: 50;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  padding: max(0px, env(safe-area-inset-bottom));
+  background: color-mix(in srgb, var(--color-foreground) 12%, transparent);
+  box-shadow: 0 -8px 24px -16px rgb(0 0 0 / 0.5);
+}
+
+@media screen and (min-width: 750px) {
+  .rb-callbar {
+    display: none;
+  }
+}
+
+.rb-callbar__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  min-height: 3.25rem;
+}
+
+.rb-callbar__btn--call {
+  background: var(--color-background);
+  color: var(--color-foreground);
+}
+
+.rb-callbar__btn--quote {
+  background: var(--color-foreground);
+  color: var(--color-background);
+}
+
+/* Keep page content clear of the fixed bar on mobile */
+@media screen and (max-width: 749px) {
+  body {
+    padding-bottom: 3.25rem;
+  }
+}

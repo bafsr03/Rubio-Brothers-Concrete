@@ -1,0 +1,884 @@
+{% doc %}
+  Concrete cost estimator + lead capture.
+
+  Interactive <concrete-estimator> that computes a rough quote from the owner's
+  formula, then reveals a native Shopify contact form so the lead (with the
+  estimate breakdown) is emailed to the store owner. All formula constants and
+  copy are merchant-editable via the schema below.
+{% enddoc %}
+
+<script
+  src="{{ 'estimator.js' | asset_url }}"
+  type="module"
+  fetchpriority="low"
+></script>
+
+{%- liquid
+  assign accent = block.settings.accent_color | default: settings.color_palette.foreground
+  assign form_id = block.id | prepend: 'EstimatorForm-'
+  assign preset_lines = block.settings.presets | newline_to_br | split: '<br />'
+-%}
+
+<concrete-estimator
+  class="estimator spacing-style"
+  style="
+    --estimator-accent: {{ accent }};
+    {% render 'spacing-style', settings: block.settings %}
+  "
+  data-sqft-per-yard="{{ block.settings.sqft_per_yard }}"
+  data-rate-low="{{ block.settings.rate_low }}"
+  data-rate-high="{{ block.settings.rate_high }}"
+  data-rate-mid="{{ block.settings.rate_mid }}"
+  data-small-load-fee="{{ block.settings.small_load_fee }}"
+  data-small-load-threshold="{{ block.settings.small_load_threshold }}"
+  data-add-on="{{ block.settings.add_on }}"
+  data-multiplier="{{ block.settings.multiplier }}"
+  data-range-pct="{{ block.settings.range_pct }}"
+  data-max-sqft="{{ block.settings.max_sqft }}"
+  data-currency="{{ cart.currency.iso_code | default: shop.currency }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="estimator__card">
+    {%- comment -%} ---------- Inputs ---------- {%- endcomment -%}
+    <div class="estimator__panel estimator__panel--inputs">
+      {%- if block.settings.eyebrow != blank -%}
+        <p class="estimator__eyebrow">{{ block.settings.eyebrow }}</p>
+      {%- endif -%}
+      {%- if block.settings.heading != blank -%}
+        <h2 class="estimator__heading">{{ block.settings.heading }}</h2>
+      {%- endif -%}
+      {%- if block.settings.subheading != blank -%}
+        <p class="estimator__subheading">{{ block.settings.subheading }}</p>
+      {%- endif -%}
+
+      {%- if preset_lines.size > 0 -%}
+        <div class="estimator__presets" role="group" aria-label="{{ block.settings.presets_label | escape }}">
+          {%- for line in preset_lines -%}
+            {%- assign parts = line | strip | split: '|' -%}
+            {%- assign p_label = parts[0] | strip -%}
+            {%- assign p_sqft = parts[1] | strip -%}
+            {%- assign p_job = parts[2] | strip -%}
+            {%- if p_label != blank and p_sqft != blank -%}
+              <button
+                type="button"
+                class="estimator__chip"
+                data-sqft="{{ p_sqft }}"
+                {% if p_job != blank %}data-job="{{ p_job | escape }}"{% endif %}
+                aria-pressed="false"
+                on:click="/applyPreset"
+              >
+                {{ p_label }}
+              </button>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+
+      <div class="estimator__field">
+        <label class="estimator__label" for="{{ block.id }}-sqft">{{ block.settings.sqft_label }}</label>
+        <div class="estimator__sqft">
+          <input
+            id="{{ block.id }}-sqft"
+            class="estimator__input estimator__number"
+            type="number"
+            inputmode="numeric"
+            min="0"
+            max="{{ block.settings.max_sqft }}"
+            step="10"
+            placeholder="{{ block.settings.sqft_placeholder }}"
+            ref="sqft"
+            on:input="/onNumberInput"
+          >
+          <span class="estimator__unit">sq ft</span>
+        </div>
+        <input
+          class="estimator__range"
+          type="range"
+          min="0"
+          max="{{ block.settings.slider_max }}"
+          step="10"
+          value="0"
+          ref="sqftRange"
+          aria-label="{{ block.settings.sqft_label | escape }}"
+          on:input="/onSliderInput"
+        >
+        {%- if block.settings.sqft_hint != blank -%}
+          <p class="estimator__hint">{{ block.settings.sqft_hint }}</p>
+        {%- endif -%}
+      </div>
+
+      <div class="estimator__field-row">
+        <div class="estimator__field">
+          <label class="estimator__label" for="{{ block.id }}-job">{{ block.settings.job_label }}</label>
+          <select id="{{ block.id }}-job" class="estimator__input" ref="jobType" on:change="/calculate">
+            {%- assign jobs = block.settings.job_types | newline_to_br | split: '<br />' -%}
+            {%- for job in jobs -%}
+              {%- assign job_clean = job | strip -%}
+              {%- if job_clean != blank -%}
+                <option value="{{ job_clean | escape }}">{{ job_clean }}</option>
+              {%- endif -%}
+            {%- endfor -%}
+          </select>
+        </div>
+
+        <div class="estimator__field">
+          <label class="estimator__label" for="{{ block.id }}-pump">{{ block.settings.pump_label }}</label>
+          <select id="{{ block.id }}-pump" class="estimator__input" ref="pump" on:change="/calculate">
+            <option value="unsure">{{ block.settings.pump_unsure }}</option>
+            <option value="no">{{ block.settings.pump_no }}</option>
+            <option value="yes">{{ block.settings.pump_yes }}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    {%- comment -%} ---------- Output + lead ---------- {%- endcomment -%}
+    <div class="estimator__panel estimator__panel--output">
+      <div class="estimator__readout" aria-live="polite">
+        <div class="estimator__placeholder" ref="placeholder">
+          <span class="estimator__placeholder-icon" aria-hidden="true">📐</span>
+          <p>{{ block.settings.placeholder_text }}</p>
+        </div>
+
+        <div class="estimator__result" ref="result" hidden>
+          <p class="estimator__result-label">{{ block.settings.result_label }}</p>
+          <p class="estimator__range-out">
+            <span ref="lowOut" data-value="0">—</span>
+            <span class="estimator__range-dash">–</span>
+            <span ref="highOut" data-value="0">—</span>
+          </p>
+          <p class="estimator__yards">≈ <span ref="yardsOut">0</span> {{ block.settings.yards_suffix }}</p>
+          <p class="estimator__disclaimer">{{ block.settings.disclaimer }}</p>
+        </div>
+      </div>
+
+      <div class="estimator__lead">
+        <p class="estimator__lead-title">{{ block.settings.form_heading }}</p>
+
+        {%- form 'contact', id: form_id, class: 'estimator__form' -%}
+          <input type="hidden" name="contact[id]" value="{{ form_id }}">
+          <input type="hidden" name="contact[Project type]" ref="fieldJobType" value="">
+          <input type="hidden" name="contact[Project size]" ref="fieldSqft" value="">
+          <input type="hidden" name="contact[Estimated concrete]" ref="fieldYards" value="">
+          <input type="hidden" name="contact[Online rough estimate]" ref="fieldEstimate" value="">
+
+          {%- if form.posted_successfully? -%}
+            <div class="estimator__success" tabindex="-1" autofocus>
+              {{- 'icon-checkmark.svg' | inline_asset_content -}}
+              {{ block.settings.success_text }}
+            </div>
+          {%- else -%}
+            {%- if form.errors -%}
+              <div class="estimator__error" tabindex="-1" autofocus>
+                {{- 'icon-error.svg' | inline_asset_content -}}
+                {{ form.errors.translated_fields.email | capitalize }}
+                {{ form.errors.messages.email }}
+              </div>
+            {%- endif -%}
+
+            <div class="estimator__form-row">
+              <label class="visually-hidden" for="{{ block.id }}-name">{{ 'blocks.contact_form.name' | t }}</label>
+              <input
+                id="{{ block.id }}-name"
+                class="estimator__input"
+                type="text"
+                name="contact[name]"
+                autocomplete="name"
+                placeholder="{{ 'blocks.contact_form.name' | t }}"
+                value="{% if customer %}{{ customer.name }}{% endif %}"
+              >
+              <label class="visually-hidden" for="{{ block.id }}-phone">{{ 'blocks.contact_form.phone' | t }}</label>
+              <input
+                id="{{ block.id }}-phone"
+                class="estimator__input"
+                type="tel"
+                name="contact[phone]"
+                autocomplete="tel"
+                placeholder="{{ 'blocks.contact_form.phone' | t }}"
+                value="{% if customer %}{{ customer.phone }}{% endif %}"
+              >
+            </div>
+
+            <label class="visually-hidden" for="{{ block.id }}-email">{{ 'blocks.contact_form.email' | t }}</label>
+            <input
+              id="{{ block.id }}-email"
+              class="estimator__input"
+              type="email"
+              name="contact[email]"
+              autocomplete="email"
+              spellcheck="false"
+              autocapitalize="off"
+              aria-required="true"
+              placeholder="{{ 'blocks.contact_form.email' | t }}"
+              value="{% if customer %}{{ customer.email }}{% endif %}"
+            >
+
+            <label class="visually-hidden" for="{{ block.id }}-body">{{ 'blocks.contact_form.comment' | t }}</label>
+            <textarea
+              id="{{ block.id }}-body"
+              class="estimator__input estimator__textarea"
+              name="contact[body]"
+              rows="3"
+              placeholder="{{ block.settings.message_placeholder }}"
+              ref="body"
+              on:input="/markBodyTouched"
+            ></textarea>
+
+            <button type="submit" class="estimator__submit">{{ block.settings.submit_label }}</button>
+            {%- if block.settings.form_microcopy != blank -%}
+              <p class="estimator__microcopy">{{ block.settings.form_microcopy }}</p>
+            {%- endif -%}
+          {%- endif -%}
+        {%- endform -%}
+      </div>
+    </div>
+  </div>
+</concrete-estimator>
+
+{% stylesheet %}
+  .estimator {
+    display: block;
+    width: 100%;
+    container-type: inline-size;
+  }
+
+  .estimator__card {
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow: hidden;
+    border: 1px solid color-mix(in srgb, var(--color-foreground) 14%, transparent);
+    border-radius: clamp(12px, 2cqw, 20px);
+    background: var(--color-background);
+    box-shadow: 0 30px 60px -45px color-mix(in srgb, var(--color-foreground) 80%, transparent);
+  }
+
+  @container (min-width: 820px) {
+    .estimator__card {
+      grid-template-columns: 1.05fr 0.95fr;
+    }
+  }
+
+  .estimator__panel {
+    padding: clamp(1.5rem, 4cqw, 2.75rem);
+  }
+
+  .estimator__panel--inputs {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-md);
+  }
+
+  .estimator__panel--output {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-lg);
+    background:
+      radial-gradient(120% 80% at 100% 0%, color-mix(in srgb, var(--estimator-accent) 14%, transparent), transparent 60%),
+      color-mix(in srgb, var(--color-foreground) 96%, var(--estimator-accent));
+    color: #fff;
+  }
+
+  .estimator__eyebrow {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--estimator-accent);
+  }
+
+  .estimator__heading {
+    margin: 0;
+  }
+
+  .estimator__subheading {
+    margin: 0;
+    opacity: 0.8;
+  }
+
+  /* Quick-pick chips */
+  .estimator__presets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-xs);
+  }
+
+  .estimator__chip {
+    appearance: none;
+    cursor: pointer;
+    border: 1px solid color-mix(in srgb, var(--color-foreground) 22%, transparent);
+    background: transparent;
+    color: inherit;
+    border-radius: 999px;
+    padding: 0.5rem 0.9rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+  }
+
+  .estimator__chip:hover {
+    border-color: var(--estimator-accent);
+  }
+
+  .estimator__chip[aria-pressed="true"] {
+    background: var(--estimator-accent);
+    border-color: var(--estimator-accent);
+    color: #fff;
+  }
+
+  .estimator__field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-2xs);
+  }
+
+  .estimator__field-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap-md);
+  }
+
+  @container (min-width: 480px) {
+    .estimator__field-row {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .estimator__label {
+    font-weight: 600;
+    font-size: 0.8125rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  .estimator__input {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    color: var(--color-input-text, var(--color-foreground));
+    background-color: var(--color-input-background, var(--color-background));
+    border: 1px solid var(--color-input-border, color-mix(in srgb, var(--color-foreground) 25%, transparent));
+    border-radius: var(--style-border-radius-inputs, 8px);
+    font-size: 1rem;
+  }
+
+  .estimator__input:focus-visible {
+    outline: 2px solid var(--estimator-accent);
+    outline-offset: 1px;
+    border-color: var(--estimator-accent);
+  }
+
+  .estimator__sqft {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .estimator__number {
+    padding-right: 3.25rem;
+  }
+
+  .estimator__unit {
+    position: absolute;
+    inset-inline-end: 1rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    opacity: 0.55;
+    pointer-events: none;
+  }
+
+  /* Range slider */
+  .estimator__range {
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    margin: 0.4rem 0 0;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--color-foreground) 16%, transparent);
+    cursor: pointer;
+  }
+
+  .estimator__range::-webkit-slider-thumb {
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--estimator-accent);
+    border: 3px solid var(--color-background);
+    box-shadow: 0 2px 6px rgb(0 0 0 / 0.25);
+  }
+
+  .estimator__range::-moz-range-thumb {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--estimator-accent);
+    border: 3px solid var(--color-background);
+  }
+
+  .estimator__range:focus-visible {
+    outline: 2px solid var(--estimator-accent);
+    outline-offset: 4px;
+  }
+
+  .estimator__hint {
+    margin: 0;
+    font-size: 0.8125rem;
+    opacity: 0.6;
+  }
+
+  /* Readout */
+  .estimator__readout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 8rem;
+  }
+
+  .estimator__placeholder {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-xs);
+    opacity: 0.75;
+  }
+
+  .estimator__placeholder[hidden],
+  .estimator__result[hidden] {
+    display: none;
+  }
+
+  .estimator__placeholder-icon {
+    font-size: 1.75rem;
+  }
+
+  .estimator__result-label {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.75rem;
+    opacity: 0.7;
+  }
+
+  .estimator__range-out {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0 0.18em;
+    margin: 0.25rem 0;
+    font-size: clamp(1.9rem, 5.5cqw, 2.7rem);
+    font-weight: 800;
+    line-height: 1.05;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+
+  .estimator__range-dash {
+    opacity: 0.5;
+  }
+
+  .estimator__yards {
+    margin: 0;
+    font-weight: 600;
+    opacity: 0.92;
+  }
+
+  .estimator__disclaimer {
+    margin: 0.4rem 0 0;
+    font-size: 0.8125rem;
+    opacity: 0.65;
+  }
+
+  /* Lead form — progressive reveal */
+  .estimator__lead {
+    border-top: 1px solid rgb(255 255 255 / 0.16);
+    padding-top: var(--gap-lg);
+  }
+
+  .estimator--js .estimator__lead {
+    display: none;
+  }
+
+  .estimator--js.estimator--has-result .estimator__lead,
+  .estimator--js.estimator--show-form .estimator__lead {
+    display: block;
+    animation: estimator-reveal 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  @keyframes estimator-reveal {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: none; }
+  }
+
+  .estimator__lead-title {
+    margin: 0 0 var(--gap-sm);
+    font-weight: 700;
+  }
+
+  .estimator__form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-sm);
+  }
+
+  .estimator__form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap-sm);
+  }
+
+  @container (min-width: 420px) {
+    .estimator__form-row {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .estimator__textarea {
+    resize: vertical;
+    min-height: 3.5rem;
+  }
+
+  .estimator__submit {
+    appearance: none;
+    cursor: pointer;
+    background: var(--estimator-accent);
+    color: #fff;
+    border: 0;
+    border-radius: var(--button-border-radius-primary, 14px);
+    padding: 0.95rem 1.25rem;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: transform 0.2s ease, filter 0.2s ease;
+  }
+
+  .estimator__submit:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.06);
+  }
+
+  .estimator__microcopy {
+    margin: 0;
+    text-align: center;
+    font-size: 0.75rem;
+    opacity: 0.6;
+  }
+
+  .estimator__success,
+  .estimator__error {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-xs);
+    font-weight: 600;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .estimator--js.estimator--has-result .estimator__lead,
+    .estimator--js.estimator--show-form .estimator__lead {
+      animation: none;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Concrete estimator",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Copy"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Instant estimate"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Estimate your concrete project"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Get an instant ballpark price, then send it to us for a free, exact on-site quote."
+    },
+    {
+      "type": "header",
+      "content": "Inputs"
+    },
+    {
+      "type": "text",
+      "id": "presets_label",
+      "label": "Quick-pick group label (accessibility)",
+      "default": "Common project sizes"
+    },
+    {
+      "type": "textarea",
+      "id": "presets",
+      "label": "Quick-pick presets",
+      "info": "One per line: Label | square feet | job type (job type optional).",
+      "default": "1-car driveway | 600 | Driveway\n2-car driveway | 900 | Driveway\nPatio | 300 | Patio\nRV pad | 400 | RV pad\nWalkway | 200 | Sidewalk / walkway"
+    },
+    {
+      "type": "text",
+      "id": "sqft_label",
+      "label": "Square footage label",
+      "default": "Project size"
+    },
+    {
+      "type": "text",
+      "id": "sqft_placeholder",
+      "label": "Square footage placeholder",
+      "default": "e.g. 800"
+    },
+    {
+      "type": "text",
+      "id": "sqft_hint",
+      "label": "Square footage hint",
+      "default": "Drag the slider or type the area in square feet."
+    },
+    {
+      "type": "range",
+      "id": "slider_max",
+      "label": "Slider maximum (sq ft)",
+      "min": 500,
+      "max": 5000,
+      "step": 100,
+      "unit": "ft",
+      "default": 2500
+    },
+    {
+      "type": "number",
+      "id": "max_sqft",
+      "label": "Maximum allowed (sq ft)",
+      "default": 10000
+    },
+    {
+      "type": "text",
+      "id": "job_label",
+      "label": "Job type label",
+      "default": "Project type"
+    },
+    {
+      "type": "textarea",
+      "id": "job_types",
+      "label": "Job types (one per line)",
+      "default": "Driveway\nPatio\nRV pad\nSidewalk / walkway\nStamped concrete\nFoundation / slab\nOther"
+    },
+    {
+      "type": "text",
+      "id": "pump_label",
+      "label": "Pump question label",
+      "default": "Need a concrete pump?"
+    },
+    {
+      "type": "text",
+      "id": "pump_unsure",
+      "label": "Pump: not sure option",
+      "default": "Not sure"
+    },
+    {
+      "type": "text",
+      "id": "pump_no",
+      "label": "Pump: no option",
+      "default": "No"
+    },
+    {
+      "type": "text",
+      "id": "pump_yes",
+      "label": "Pump: yes option",
+      "default": "Yes"
+    },
+    {
+      "type": "header",
+      "content": "Result"
+    },
+    {
+      "type": "text",
+      "id": "placeholder_text",
+      "label": "Result placeholder",
+      "default": "Enter your project size to see a rough estimate."
+    },
+    {
+      "type": "text",
+      "id": "result_label",
+      "label": "Result label",
+      "default": "Your rough estimate"
+    },
+    {
+      "type": "text",
+      "id": "yards_suffix",
+      "label": "Yards suffix",
+      "default": "cubic yards of concrete"
+    },
+    {
+      "type": "textarea",
+      "id": "disclaimer",
+      "label": "Disclaimer",
+      "default": "Rough ballpark only. Your final price is confirmed after a free site visit."
+    },
+    {
+      "type": "header",
+      "content": "Lead form"
+    },
+    {
+      "type": "text",
+      "id": "form_heading",
+      "label": "Form heading",
+      "default": "Send me this quote"
+    },
+    {
+      "type": "text",
+      "id": "message_placeholder",
+      "label": "Message placeholder",
+      "default": "Anything else we should know? (timeline, location, etc.)"
+    },
+    {
+      "type": "text",
+      "id": "submit_label",
+      "label": "Submit button label",
+      "default": "Get my free quote"
+    },
+    {
+      "type": "text",
+      "id": "form_microcopy",
+      "label": "Microcopy under button",
+      "default": "No spam — we usually reply within 24 hours."
+    },
+    {
+      "type": "textarea",
+      "id": "success_text",
+      "label": "Success message",
+      "default": "Thanks! We got your project details and will reach out shortly with your exact quote."
+    },
+    {
+      "type": "header",
+      "content": "Pricing formula"
+    },
+    {
+      "type": "paragraph",
+      "content": "Rough quote = (concrete cost + add-on) × multiplier. Concrete cost = cubic yards × per-yard rate (or the small-load fee for jobs under the threshold)."
+    },
+    {
+      "type": "number",
+      "id": "sqft_per_yard",
+      "label": "Square feet per cubic yard",
+      "default": 80
+    },
+    {
+      "type": "number",
+      "id": "rate_low",
+      "label": "Per-yard rate — no pump ($)",
+      "default": 230
+    },
+    {
+      "type": "number",
+      "id": "rate_high",
+      "label": "Per-yard rate — with pump ($)",
+      "default": 260
+    },
+    {
+      "type": "number",
+      "id": "rate_mid",
+      "label": "Per-yard rate — not sure ($)",
+      "default": 250
+    },
+    {
+      "type": "number",
+      "id": "small_load_threshold",
+      "label": "Small-load threshold (cubic yards)",
+      "default": 5
+    },
+    {
+      "type": "number",
+      "id": "small_load_fee",
+      "label": "Small-load flat concrete fee ($)",
+      "default": 350
+    },
+    {
+      "type": "number",
+      "id": "add_on",
+      "label": "Add-on: excavation / tear-out / pump ($)",
+      "default": 350
+    },
+    {
+      "type": "number",
+      "id": "multiplier",
+      "label": "Multiplier",
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "range_pct",
+      "label": "Estimate range (±%)",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "unit": "%",
+      "default": 10
+    },
+    {
+      "type": "header",
+      "content": "t:content.appearance"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Concrete estimator",
+      "category": "t:categories.forms"
+    }
+  ]
+}
+{% endschema %}

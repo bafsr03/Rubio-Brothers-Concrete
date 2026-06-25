@@ -1,0 +1,38 @@
+{
+  "sections": {
+    "intro": {
+      "type": "main-page",
+      "settings": {
+        "padding-block-start": 48,
+        "padding-block-end": 16
+      }
+    },
+    "estimator": {
+      "type": "section",
+      "settings": {
+        "section_width": "page-width",
+        "padding-block-start": 24,
+        "padding-block-end": 64
+      },
+      "blocks": {
+        "calc": { "type": "estimator", "settings": { "accent_color": "#C42A20" } }
+      },
+      "block_order": ["calc"]
+    },
+    "cta": {
+      "type": "cta-band",
+      "settings": {
+        "eyebrow": "Prefer to talk it through?",
+        "heading": "Call us and we'll quote it on the spot.",
+        "button_label": "See our work",
+        "button_link": "/pages/gallery",
+        "phone_label": "Call (385) 210-5983",
+        "phone": "(385) 210-5983",
+        "accent_color": "#C42A20",
+        "background_color": "#1a1a1a",
+        "text_color": "#ffffff"
+      }
+    }
+  },
+  "order": ["intro", "estimator", "cta"]
+}

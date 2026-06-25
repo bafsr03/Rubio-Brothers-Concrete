@@ -1,0 +1,278 @@
+{% comment %}
+  FAQ — accessible native <details> accordion plus FAQPage JSON-LD for rich
+  results. Each Q&A is a local block.
+{% endcomment %}
+
+<script
+  src="{{ 'scroll-reveal.js' | asset_url }}"
+  type="module"
+  fetchpriority="low"
+></script>
+
+{%- liquid
+  assign accent = section.settings.accent_color | default: settings.color_palette.foreground
+-%}
+
+<div
+  class="rb-faq section spacing-style"
+  style="
+    --rb-accent: {{ accent }};
+    {% if section.settings.background_color != blank %}--color-background: {{ section.settings.background_color }};{% endif %}
+    {% render 'spacing-style', settings: section.settings %}
+  "
+>
+  <div class="page-width rb-faq__wrap">
+    <div class="rb-section__head rb-faq__head">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="rb-eyebrow">{{ section.settings.eyebrow }}</p>
+      {%- endif -%}
+      {%- if section.settings.heading != blank -%}
+        <h2 class="rb-section__title">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+    </div>
+
+    <scroll-reveal class="rb-faq__list" data-reveal-stagger="60">
+      {%- for block in section.blocks -%}
+        <details class="rb-faq__item" data-reveal {{ block.shopify_attributes }}>
+          <summary class="rb-faq__q">
+            <span>{{ block.settings.question }}</span>
+            <span class="rb-faq__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="rb-faq__a">{{ block.settings.answer }}</div>
+        </details>
+      {%- endfor -%}
+    </scroll-reveal>
+  </div>
+</div>
+
+{%- if section.blocks.size > 0 -%}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {%- for block in section.blocks -%}
+        {
+          "@type": "Question",
+          "name": {{ block.settings.question | strip_html | json }},
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": {{ block.settings.answer | strip_html | json }}
+          }
+        }{%- unless forloop.last -%},{%- endunless -%}
+      {%- endfor -%}
+    ]
+  }
+  </script>
+{%- endif -%}
+
+{% stylesheet %}
+  .rb-faq {
+    background: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  .rb-faq__wrap {
+    display: grid;
+    gap: var(--gap-xl);
+    grid-template-columns: 1fr;
+  }
+
+  @media screen and (min-width: 990px) {
+    .rb-faq__wrap {
+      grid-template-columns: 0.8fr 1.2fr;
+      align-items: start;
+    }
+  }
+
+  .rb-faq__head {
+    text-align: left;
+    margin: 0;
+    max-width: none;
+  }
+
+  .rb-faq__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .rb-faq__item {
+    border-bottom: 1px solid color-mix(in srgb, var(--color-foreground) 14%, transparent);
+  }
+
+  .rb-faq__item:first-child {
+    border-top: 1px solid color-mix(in srgb, var(--color-foreground) 14%, transparent);
+  }
+
+  .rb-faq__q {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gap-md);
+    padding: var(--padding-lg) 0;
+    font-weight: 700;
+    font-size: 1.0625rem;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .rb-faq__q::-webkit-details-marker {
+    display: none;
+  }
+
+  .rb-faq__icon {
+    position: relative;
+    flex: 0 0 auto;
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .rb-faq__icon::before,
+  .rb-faq__icon::after {
+    content: "";
+    position: absolute;
+    background: var(--rb-accent);
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+
+  .rb-faq__icon::before {
+    inset: 0 45%;
+    width: 10%;
+  }
+
+  .rb-faq__icon::after {
+    inset: 45% 0;
+    height: 10%;
+  }
+
+  .rb-faq__item[open] .rb-faq__icon::before {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+
+  .rb-faq__a {
+    padding: 0 0 var(--padding-lg);
+    max-width: 60ch;
+    opacity: 0.85;
+  }
+
+  .rb-faq__a > :first-child { margin-top: 0; }
+  .rb-faq__a > :last-child { margin-bottom: 0; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .rb-faq__icon::before,
+    .rb-faq__icon::after {
+      transition: none;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "FAQ",
+  "tag": "section",
+  "class": "section-wrapper",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "FAQ"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Questions homeowners ask us"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:settings.background_color",
+      "placeholder": "t:settings.default"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "qa",
+      "name": "Question",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question",
+          "default": "How much does a concrete project cost?"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer",
+          "default": "<p>It depends on size, finish and site prep. Use our instant estimator for a rough ballpark, then we confirm an exact price with a free on-site visit.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ",
+      "blocks": [
+        { "type": "qa" },
+        { "type": "qa" },
+        { "type": "qa" },
+        { "type": "qa" }
+      ]
+    }
+  ]
+}
+{% endschema %}

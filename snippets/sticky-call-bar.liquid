@@ -1,0 +1,20 @@
+{% doc %}
+  Mobile-only sticky bar with click-to-call + estimate CTA. Driven by the
+  "Business info" theme settings. Hidden on desktop and when disabled.
+{% enddoc %}
+
+{%- if settings.sticky_call_bar and settings.business_phone != blank -%}
+  {%- assign tel = settings.business_phone | remove: ' ' | remove: '(' | remove: ')' | remove: '-' -%}
+  {%- assign estimate_url = settings.estimate_url | default: '/pages/estimate' -%}
+  <div class="rb-callbar" role="region" aria-label="Contact {{ settings.business_name | default: shop.name | escape }}">
+    <a class="rb-callbar__btn rb-callbar__btn--call" href="tel:{{ tel }}">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.25 1l-2.23 2.2Z" fill="currentColor"/>
+      </svg>
+      <span>Call now</span>
+    </a>
+    <a class="rb-callbar__btn rb-callbar__btn--quote" href="{{ estimate_url }}">
+      Free estimate
+    </a>
+  </div>
+{%- endif -%}
