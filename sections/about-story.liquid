@@ -1,0 +1,258 @@
+{% comment %}
+  About story — the company narrative with an optional image and credential
+  chips (licensed/insured, years, etc.). Two-column on desktop.
+{% endcomment %}
+
+<script
+  src="{{ 'scroll-reveal.js' | asset_url }}"
+  type="module"
+  fetchpriority="low"
+></script>
+
+{%- liquid
+  assign accent = section.settings.accent_color | default: settings.color_palette.foreground
+  assign chips = section.settings.chips | newline_to_br | split: '<br />'
+-%}
+
+<div
+  class="rb-about section spacing-style"
+  style="
+    --rb-accent: {{ accent }};
+    {% if section.settings.background_color != blank %}--color-background: {{ section.settings.background_color }};{% endif %}
+    {% render 'spacing-style', settings: section.settings %}
+  "
+>
+  <div class="page-width">
+    <scroll-reveal class="rb-about__grid" data-reveal-stagger="100">
+      <div class="rb-about__media" data-reveal>
+        {%- if section.settings.image != blank -%}
+          {{
+            section.settings.image
+            | image_url: width: 1400
+            | image_tag:
+              loading: 'lazy',
+              sizes: '(min-width: 990px) 45vw, 100vw',
+              widths: '500, 800, 1100, 1400',
+              alt: section.settings.image.alt | default: section.settings.heading,
+              class: 'rb-about__img'
+          }}
+        {%- else -%}
+          <div class="rb-about__img rb-about__img--placeholder"></div>
+        {%- endif -%}
+      </div>
+
+      <div class="rb-about__body" data-reveal>
+        {%- if section.settings.eyebrow != blank -%}
+          <p class="rb-eyebrow">{{ section.settings.eyebrow }}</p>
+        {%- endif -%}
+        {%- if section.settings.heading != blank -%}
+          <h2 class="rb-section__title">{{ section.settings.heading }}</h2>
+        {%- endif -%}
+        {%- if section.settings.body != blank -%}
+          <div class="rb-about__text">{{ section.settings.body }}</div>
+        {%- endif -%}
+
+        {%- if chips.size > 0 -%}
+          <ul class="rb-about__chips">
+            {%- for chip in chips -%}
+              {%- assign chip_clean = chip | strip -%}
+              {%- if chip_clean != blank -%}
+                <li class="rb-about__chip">{{ chip_clean }}</li>
+              {%- endif -%}
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
+
+        {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}
+          <a class="rb-about__cta" href="{{ section.settings.button_link }}">{{ section.settings.button_label }}</a>
+        {%- endif -%}
+      </div>
+    </scroll-reveal>
+  </div>
+</div>
+
+{% stylesheet %}
+  .rb-about {
+    background: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  .rb-about__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap-xl);
+    align-items: center;
+  }
+
+  @media screen and (min-width: 850px) {
+    .rb-about__grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .rb-about__img,
+  .rb-about__img--placeholder {
+    width: 100%;
+    border-radius: 16px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+
+  .rb-about__img--placeholder {
+    background:
+      repeating-linear-gradient(135deg, color-mix(in srgb, var(--color-foreground) 8%, transparent) 0 2px, transparent 2px 22px),
+      color-mix(in srgb, var(--color-foreground) 6%, var(--color-background));
+  }
+
+  .rb-about__text {
+    margin: var(--gap-sm) 0 0;
+    opacity: 0.85;
+    line-height: 1.65;
+  }
+
+  .rb-about__text > :first-child { margin-top: 0; }
+
+  .rb-about__chips {
+    list-style: none;
+    margin: var(--gap-lg) 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-xs);
+  }
+
+  .rb-about__chip {
+    border: 1px solid color-mix(in srgb, var(--rb-accent) 40%, transparent);
+    color: var(--rb-accent);
+    border-radius: 999px;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+  }
+
+  .rb-about__cta {
+    display: inline-flex;
+    margin-top: var(--gap-lg);
+    padding: 0.85rem 1.5rem;
+    background: var(--rb-accent);
+    color: #fff;
+    border-radius: var(--button-border-radius-primary, 14px);
+    font-weight: 700;
+    text-decoration: none;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "About story",
+  "tag": "section",
+  "class": "section-wrapper",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Our story"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "A family crew with 30+ years in concrete"
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Body",
+      "default": "<p>Rubio Brothers Concrete is a locally owned, family-run team serving Pleasant Grove and Utah County. For more than 30 years we've poured driveways, patios, RV pads and stamped concrete that hold up to Utah's freeze-thaw winters.</p><p>We treat every property like our own — clean job sites, honest quotes, and work we stand behind. From tear-out and excavation to the final finish, you deal directly with the people doing the work.</p>"
+    },
+    {
+      "type": "textarea",
+      "id": "chips",
+      "label": "Credential chips (one per line)",
+      "default": "Licensed & insured\n30+ years experience\n5.0★ from 44+ customers\nFree estimates"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Get a free estimate"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "header",
+      "content": "t:content.appearance"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color",
+      "default": "#C42A20"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:settings.background_color",
+      "placeholder": "t:settings.default"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "About story"
+    }
+  ]
+}
+{% endschema %}

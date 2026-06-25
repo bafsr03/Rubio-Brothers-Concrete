@@ -13,7 +13,15 @@
       "type": "main-page",
       "settings": {
         "padding-block-start": 48,
-        "padding-block-end": 24
+        "padding-block-end": 8
+      }
+    },
+    "story": {
+      "type": "about-story",
+      "settings": {
+        "accent_color": "#C42A20",
+        "button_label": "Get a free estimate",
+        "button_link": "/pages/estimate"
       }
     },
     "stats": {
@@ -45,5 +53,5 @@
       }
     }
   },
-  "order": ["intro", "stats", "cta"]
+  "order": ["intro", "story", "stats", "cta"]
 }

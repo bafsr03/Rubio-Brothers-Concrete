@@ -1,0 +1,465 @@
+{% comment %}
+  Contact — business details (NAP + hours), an embedded Google map, and a
+  brand-styled native contact form. Details pull from the "Business info" theme
+  settings; the form uses Shopify's {% form 'contact' %} so submissions email the
+  store owner.
+{% endcomment %}
+
+<script
+  src="{{ 'scroll-reveal.js' | asset_url }}"
+  type="module"
+  fetchpriority="low"
+></script>
+
+{%- liquid
+  assign accent = section.settings.accent_color | default: settings.color_palette.foreground
+  assign biz_name = settings.business_name | default: shop.name
+  assign biz_phone = settings.business_phone
+  assign tel = biz_phone | remove: ' ' | remove: '(' | remove: ')' | remove: '-'
+  assign biz_email = settings.business_email | default: shop.email
+
+  assign addr_parts = ''
+  if settings.business_street != blank
+    assign addr_parts = settings.business_street
+  endif
+  assign city_line = settings.business_city | default: 'Pleasant Grove'
+  if settings.business_region != blank
+    assign city_line = city_line | append: ', ' | append: settings.business_region
+  endif
+  if settings.business_postal != blank
+    assign city_line = city_line | append: ' ' | append: settings.business_postal
+  endif
+
+  if section.settings.map_embed_url != blank
+    assign map_src = section.settings.map_embed_url
+  else
+    assign map_query = section.settings.map_query | default: biz_name
+    assign map_src = 'https://maps.google.com/maps?q=' | append: map_query | url_encode | append: '&output=embed'
+  endif
+
+  assign form_id = section.id | prepend: 'ContactInfoForm-'
+-%}
+
+<div
+  class="rb-contact section spacing-style"
+  style="
+    --rb-accent: {{ accent }};
+    {% if section.settings.background_color != blank %}--color-background: {{ section.settings.background_color }};{% endif %}
+    {% render 'spacing-style', settings: section.settings %}
+  "
+>
+  <div class="page-width">
+    <scroll-reveal class="rb-contact__grid" data-reveal-stagger="90">
+      <div class="rb-contact__info" data-reveal>
+        {%- if section.settings.eyebrow != blank -%}
+          <p class="rb-eyebrow">{{ section.settings.eyebrow }}</p>
+        {%- endif -%}
+        {%- if section.settings.heading != blank -%}
+          <h2 class="rb-section__title">{{ section.settings.heading }}</h2>
+        {%- endif -%}
+        {%- if section.settings.intro != blank -%}
+          <p class="rb-contact__intro">{{ section.settings.intro }}</p>
+        {%- endif -%}
+
+        <ul class="rb-contact__list">
+          {%- if biz_phone != blank -%}
+            <li class="rb-contact__item">
+              <span class="rb-contact__item-label">Call</span>
+              <a class="rb-contact__link" href="tel:{{ tel }}">{{ biz_phone }}</a>
+            </li>
+          {%- endif -%}
+          {%- if biz_email != blank -%}
+            <li class="rb-contact__item">
+              <span class="rb-contact__item-label">Email</span>
+              <a class="rb-contact__link" href="mailto:{{ biz_email }}">{{ biz_email }}</a>
+            </li>
+          {%- endif -%}
+          {%- if addr_parts != blank or city_line != blank -%}
+            <li class="rb-contact__item">
+              <span class="rb-contact__item-label">Visit</span>
+              <span>
+                {%- if addr_parts != blank -%}{{ addr_parts }}<br>{%- endif -%}
+                {{ city_line }}
+              </span>
+            </li>
+          {%- endif -%}
+          {%- if section.settings.hours != blank -%}
+            <li class="rb-contact__item">
+              <span class="rb-contact__item-label">Hours</span>
+              <span class="rb-contact__hours">{{ section.settings.hours | newline_to_br }}</span>
+            </li>
+          {%- endif -%}
+          {%- if settings.business_areas_served != blank -%}
+            <li class="rb-contact__item">
+              <span class="rb-contact__item-label">Serving</span>
+              <span>{{ settings.business_areas_served }}</span>
+            </li>
+          {%- endif -%}
+        </ul>
+
+        {%- if biz_phone != blank -%}
+          <a class="rb-contact__cta" href="tel:{{ tel }}">{{ section.settings.call_label | default: 'Call now' }}</a>
+        {%- endif -%}
+      </div>
+
+      <div class="rb-contact__form-wrap" data-reveal>
+        <p class="rb-contact__form-title">{{ section.settings.form_heading }}</p>
+        {%- form 'contact', id: form_id, class: 'rb-contact__form' -%}
+          <input type="hidden" name="contact[id]" value="{{ form_id }}">
+          {%- if form.posted_successfully? -%}
+            <div class="rb-contact__success" tabindex="-1" autofocus>
+              {{- 'icon-checkmark.svg' | inline_asset_content -}}
+              {{ section.settings.success_text }}
+            </div>
+          {%- else -%}
+            {%- if form.errors -%}
+              <div class="rb-contact__error" tabindex="-1" autofocus>
+                {{- 'icon-error.svg' | inline_asset_content -}}
+                {{ form.errors.translated_fields.email | capitalize }} {{ form.errors.messages.email }}
+              </div>
+            {%- endif -%}
+            <div class="rb-contact__row">
+              <label class="visually-hidden" for="{{ section.id }}-name">{{ 'blocks.contact_form.name' | t }}</label>
+              <input id="{{ section.id }}-name" class="rb-contact__input" type="text" name="contact[name]" autocomplete="name" placeholder="{{ 'blocks.contact_form.name' | t }}" value="{% if customer %}{{ customer.name }}{% endif %}">
+              <label class="visually-hidden" for="{{ section.id }}-phone">{{ 'blocks.contact_form.phone' | t }}</label>
+              <input id="{{ section.id }}-phone" class="rb-contact__input" type="tel" name="contact[phone]" autocomplete="tel" placeholder="{{ 'blocks.contact_form.phone' | t }}" value="{% if customer %}{{ customer.phone }}{% endif %}">
+            </div>
+            <label class="visually-hidden" for="{{ section.id }}-email">{{ 'blocks.contact_form.email' | t }}</label>
+            <input id="{{ section.id }}-email" class="rb-contact__input" type="email" name="contact[email]" autocomplete="email" spellcheck="false" autocapitalize="off" aria-required="true" placeholder="{{ 'blocks.contact_form.email' | t }}" value="{% if customer %}{{ customer.email }}{% endif %}">
+            <label class="visually-hidden" for="{{ section.id }}-body">{{ 'blocks.contact_form.comment' | t }}</label>
+            <textarea id="{{ section.id }}-body" class="rb-contact__input rb-contact__textarea" name="contact[body]" rows="4" placeholder="{{ section.settings.message_placeholder }}"></textarea>
+            <button type="submit" class="rb-contact__submit">{{ section.settings.submit_label }}</button>
+          {%- endif -%}
+        {%- endform -%}
+      </div>
+    </scroll-reveal>
+
+    {%- if section.settings.show_map -%}
+      <div class="rb-contact__map" data-reveal>
+        <iframe
+          title="{{ biz_name | escape }} location map"
+          src="{{ map_src }}"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
+        ></iframe>
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% stylesheet %}
+  .rb-contact {
+    background: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  .rb-contact__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap-xl);
+  }
+
+  @media screen and (min-width: 850px) {
+    .rb-contact__grid {
+      grid-template-columns: 0.9fr 1.1fr;
+      align-items: start;
+    }
+  }
+
+  .rb-contact__intro {
+    margin: var(--gap-xs) 0 var(--gap-lg);
+    opacity: 0.8;
+  }
+
+  .rb-contact__list {
+    list-style: none;
+    margin: 0 0 var(--gap-lg);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-md);
+  }
+
+  .rb-contact__item {
+    display: grid;
+    grid-template-columns: 5rem 1fr;
+    gap: var(--gap-sm);
+    align-items: baseline;
+  }
+
+  .rb-contact__item-label {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    color: var(--rb-accent);
+  }
+
+  .rb-contact__link {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .rb-contact__link:hover {
+    color: var(--rb-accent);
+  }
+
+  .rb-contact__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 1.5rem;
+    background: var(--rb-accent);
+    color: #fff;
+    border-radius: var(--button-border-radius-primary, 14px);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .rb-contact__form-wrap {
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    background: color-mix(in srgb, var(--color-foreground) 4%, var(--color-background));
+    border: 1px solid color-mix(in srgb, var(--color-foreground) 12%, transparent);
+    border-radius: 16px;
+  }
+
+  .rb-contact__form-title {
+    margin: 0 0 var(--gap-md);
+    font-weight: 700;
+    font-size: 1.125rem;
+  }
+
+  .rb-contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-sm);
+  }
+
+  .rb-contact__row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap-sm);
+  }
+
+  @media screen and (min-width: 480px) {
+    .rb-contact__row {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .rb-contact__input {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    color: var(--color-input-text, var(--color-foreground));
+    background: var(--color-input-background, var(--color-background));
+    border: 1px solid var(--color-input-border, color-mix(in srgb, var(--color-foreground) 25%, transparent));
+    border-radius: var(--style-border-radius-inputs, 8px);
+    font-size: 1rem;
+  }
+
+  .rb-contact__input:focus-visible {
+    outline: 2px solid var(--rb-accent);
+    outline-offset: 1px;
+    border-color: var(--rb-accent);
+  }
+
+  .rb-contact__textarea {
+    resize: vertical;
+    min-height: 5rem;
+  }
+
+  .rb-contact__submit {
+    appearance: none;
+    cursor: pointer;
+    background: var(--rb-accent);
+    color: #fff;
+    border: 0;
+    border-radius: var(--button-border-radius-primary, 14px);
+    padding: 0.95rem 1.25rem;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+
+  .rb-contact__submit:hover {
+    filter: brightness(1.06);
+  }
+
+  .rb-contact__success,
+  .rb-contact__error {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-xs);
+    font-weight: 600;
+  }
+
+  .rb-contact__map {
+    margin-top: var(--gap-xl);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid color-mix(in srgb, var(--color-foreground) 12%, transparent);
+  }
+
+  .rb-contact__map iframe {
+    display: block;
+    width: 100%;
+    height: clamp(260px, 40vh, 420px);
+    border: 0;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Contact info",
+  "tag": "section",
+  "class": "section-wrapper",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Get in touch"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Let's talk about your project"
+    },
+    {
+      "type": "textarea",
+      "id": "intro",
+      "label": "Intro",
+      "default": "Call, email, or send us the details and we'll get right back to you with a free estimate."
+    },
+    {
+      "type": "textarea",
+      "id": "hours",
+      "label": "Business hours (one per line)",
+      "default": "Mon–Fri: 8am – 6pm\nSat: 9am – 2pm\nSun: Closed"
+    },
+    {
+      "type": "text",
+      "id": "call_label",
+      "label": "Call button label",
+      "default": "Call now"
+    },
+    {
+      "type": "header",
+      "content": "Form"
+    },
+    {
+      "type": "text",
+      "id": "form_heading",
+      "label": "Form heading",
+      "default": "Send us a message"
+    },
+    {
+      "type": "text",
+      "id": "message_placeholder",
+      "label": "Message placeholder",
+      "default": "Tell us about your project…"
+    },
+    {
+      "type": "text",
+      "id": "submit_label",
+      "label": "Submit label",
+      "default": "Send message"
+    },
+    {
+      "type": "textarea",
+      "id": "success_text",
+      "label": "Success message",
+      "default": "Thanks for reaching out! We'll get back to you shortly."
+    },
+    {
+      "type": "header",
+      "content": "Map"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_map",
+      "label": "Show map",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "map_query",
+      "label": "Map search query",
+      "default": "Rubio Brothers Concrete, Pleasant Grove, UT"
+    },
+    {
+      "type": "textarea",
+      "id": "map_embed_url",
+      "label": "Custom map embed URL (optional)",
+      "info": "Paste a Google Maps 'Embed a map' src URL to override the search query."
+    },
+    {
+      "type": "header",
+      "content": "t:content.appearance"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color",
+      "default": "#C42A20"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:settings.background_color",
+      "placeholder": "t:settings.default"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Contact info"
+    }
+  ]
+}
+{% endschema %}
