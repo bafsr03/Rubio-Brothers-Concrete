@@ -78,6 +78,45 @@
       },
       "block_order": ["compare"]
     },
+    "gallery": {
+      "type": "project-gallery",
+      "settings": {
+        "eyebrow": "Our work",
+        "heading": "Recent pours across Utah County",
+        "intro": "Driveways, patios, RV pads and decorative concrete poured for neighbors in Pleasant Grove, Lehi, American Fork, Orem and Provo.",
+        "button_label": "View full gallery",
+        "button_link": "/pages/gallery",
+        "accent_color": "#C42A20"
+      },
+      "blocks": {
+        "h1": { "type": "photo", "settings": { "category": "Driveway", "caption": "Broom-finish driveway, Lehi", "alt": "New concrete driveway in Lehi, UT" } },
+        "h2": { "type": "photo", "settings": { "category": "Stamped patio", "caption": "Stamped patio, Orem", "alt": "Stamped concrete patio in Orem, UT" } },
+        "h3": { "type": "photo", "settings": { "category": "RV pad", "caption": "RV pad, American Fork", "alt": "Reinforced RV pad in American Fork, UT" } },
+        "h4": { "type": "photo", "settings": { "category": "Retaining wall", "caption": "Retaining wall, Provo", "alt": "Concrete retaining wall in Provo, UT" } },
+        "h5": { "type": "photo", "settings": { "category": "Colored concrete", "caption": "Colored patio, Pleasant Grove", "alt": "Colored concrete patio in Pleasant Grove, UT" } },
+        "h6": { "type": "photo", "settings": { "category": "Sport court", "caption": "Basketball court, Pleasant Grove", "alt": "Backyard concrete basketball court in Pleasant Grove, UT" } },
+        "h7": { "type": "photo", "settings": { "category": "Walkway", "caption": "Walkway & entry, Lehi", "alt": "Concrete walkway in Lehi, UT" } },
+        "h8": { "type": "photo", "settings": { "category": "Dirt work", "caption": "Grading & prep, Orem", "alt": "Dirt work and grading in Orem, UT" } }
+      },
+      "block_order": ["h1","h2","h3","h4","h5","h6","h7","h8"]
+    },
+    "reels": {
+      "type": "reel-showcase",
+      "settings": {
+        "eyebrow": "Watch us work",
+        "heading": "See a pour come together",
+        "intro": "Short clips from real Rubio Brothers job sites across Utah County.",
+        "button_label": "Get a free estimate",
+        "button_link": "/pages/estimate",
+        "accent_color": "#C42A20",
+        "background_color": "#f5f4f2"
+      },
+      "blocks": {
+        "r1": { "type": "reel", "settings": { "caption": "Driveway pour & finish" } },
+        "r2": { "type": "reel", "settings": { "caption": "Stamped patio reveal" } }
+      },
+      "block_order": ["r1", "r2"]
+    },
     "process": {
       "type": "process-steps",
       "settings": {
@@ -137,5 +176,5 @@
       }
     }
   },
-  "order": ["hero", "services", "stats", "showcase", "process", "estimator", "faq", "cta"]
+  "order": ["hero", "services", "stats", "gallery", "showcase", "reels", "process", "estimator", "faq", "cta"]
 }

@@ -1,0 +1,346 @@
+{% comment %}
+  Site footer — brand + NAP (phone/email/address→map) + service & company links
+  + hours + service-area cities + social icons (Facebook, Instagram, Yelp, BBB).
+  All business data pulls from the "Business info" theme settings so it stays in
+  sync with the LocalBusiness schema and contact section.
+{% endcomment %}
+
+{%- liquid
+  assign accent = section.settings.accent_color | default: '#C42A20'
+  assign biz_name = settings.business_name | default: shop.name
+  assign biz_phone = settings.business_phone
+  assign tel = biz_phone | remove: ' ' | remove: '(' | remove: ')' | remove: '-'
+  assign biz_email = settings.business_email | default: shop.email
+
+  assign full_address = ''
+  if settings.business_street != blank
+    assign full_address = settings.business_street | append: ', '
+  endif
+  assign full_address = full_address | append: settings.business_city | default: 'Pleasant Grove'
+  if settings.business_region != blank
+    assign full_address = full_address | append: ', ' | append: settings.business_region
+  endif
+  if settings.business_postal != blank
+    assign full_address = full_address | append: ' ' | append: settings.business_postal
+  endif
+  assign map_url = 'https://maps.google.com/?q=' | append: full_address | url_encode
+
+  assign estimate_url = settings.estimate_url | default: '/pages/estimate'
+
+  comment
+    Apply colors unconditionally with dark defaults so the footer stays legible
+    even if footer-group.json loses its settings on a Shopify sync (mirrors cta-band).
+  endcomment
+  assign footer_bg = section.settings.background_color | default: '#1a1a1a'
+  assign footer_fg = section.settings.text_color | default: '#ffffff'
+-%}
+
+<div
+  class="rb-footer section spacing-style"
+  style="
+    --rb-accent: {{ accent }};
+    --color-background: {{ footer_bg }};
+    --color-foreground: {{ footer_fg }};
+    color: {{ footer_fg }};
+    background-color: {{ footer_bg }};
+    {% render 'spacing-style', settings: section.settings %}
+  "
+>
+  <div class="page-width">
+    <div class="rb-footer__grid">
+      {%- comment -%} Brand column {%- endcomment -%}
+      <div class="rb-footer__col rb-footer__col--brand">
+        {%- if settings.logo != blank -%}
+          <a href="{{ routes.root_url }}" class="rb-footer__logo" aria-label="{{ biz_name }} home">
+            {{ settings.logo | image_url: width: 360 | image_tag: alt: biz_name, loading: 'lazy', widths: '180, 240, 360', class: 'rb-footer__logo-img' }}
+          </a>
+        {%- else -%}
+          <a href="{{ routes.root_url }}" class="rb-footer__wordmark">{{ biz_name }}</a>
+        {%- endif -%}
+        {%- if section.settings.tagline != blank -%}
+          <p class="rb-footer__tagline">{{ section.settings.tagline }}</p>
+        {%- endif -%}
+        {%- if section.settings.credentials != blank -%}
+          <p class="rb-footer__creds">{{ section.settings.credentials }}</p>
+        {%- endif -%}
+
+        <ul class="rb-footer__social" role="list">
+          {%- if settings.business_facebook_url != blank -%}
+            <li><a href="{{ settings.business_facebook_url }}" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.51 1.49-3.9 3.78-3.9 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12Z"/></svg>
+            </a></li>
+          {%- endif -%}
+          {%- if settings.business_instagram_url != blank -%}
+            <li><a href="{{ settings.business_instagram_url }}" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+            </a></li>
+          {%- endif -%}
+          {%- if settings.business_yelp_url != blank -%}
+            <li><a href="{{ settings.business_yelp_url }}" target="_blank" rel="noopener" aria-label="Yelp">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.6 2.1c1.2-.2 3.6.6 4.2 1.3.2.3.3.6.3 1L16.5 12c-.2 1.1-1.6 1.4-2.2.4l-2.5-4.6c-.4-.8-.4-1.4-.3-3.5 0-1.2.2-2 1.1-2.2ZM10 13.4c.8.3.9 1.4.2 1.9l-2.7 2c-.6.4-1.4.2-1.7-.5-.5-1-.7-2.6-.5-3.6.1-.5.5-.9 1-.9.2 0 2.9.8 3.7 1.1Zm.6 2.9c.7-.4 1.6.2 1.5 1l-.3 3.4c-.1.8-.9 1.2-1.6.9-1-.5-2.1-1.6-2.5-2.5-.2-.5 0-1.1.4-1.3.2-.1 2-1.2 2.5-1.5Zm5.5-.8 3.2 1.2c.7.3.9 1.2.3 1.7-.8.7-2.2 1.4-3.2 1.5-.5.1-1-.3-1.1-.8 0-.2-.4-3.2-.5-3.5-.1-.8.7-1.4 1.4-1.1Zm.1-2.2c-.7-.2-.8-1.2-.2-1.7l2.6-2.1c.6-.5 1.5-.2 1.7.5.3 1 .3 2.6 0 3.5-.1.5-.6.8-1.1.7-.2 0-2.5-.7-3-.9Z"/></svg>
+            </a></li>
+          {%- endif -%}
+          {%- if settings.business_bbb_url != blank -%}
+            <li><a class="rb-footer__bbb" href="{{ settings.business_bbb_url }}" target="_blank" rel="noopener" aria-label="Better Business Bureau">BBB</a></li>
+          {%- endif -%}
+        </ul>
+      </div>
+
+      {%- comment -%} Services column {%- endcomment -%}
+      <nav class="rb-footer__col" aria-label="Services">
+        <h2 class="rb-footer__heading">Services</h2>
+        <ul class="rb-footer__links" role="list">
+          <li><a href="/pages/concrete-driveways-rv-pads">Driveways &amp; RV Pads</a></li>
+          <li><a href="/pages/stamped-decorative-concrete-patios">Stamped &amp; Decorative Patios</a></li>
+          <li><a href="/pages/retaining-walls-sports-courts">Retaining Walls &amp; Sport Courts</a></li>
+          <li><a href="/pages/services">All services</a></li>
+          <li><a href="{{ estimate_url }}">Free estimate</a></li>
+        </ul>
+      </nav>
+
+      {%- comment -%} Company column {%- endcomment -%}
+      <nav class="rb-footer__col" aria-label="Company">
+        <h2 class="rb-footer__heading">Company</h2>
+        <ul class="rb-footer__links" role="list">
+          <li><a href="/pages/about">About us</a></li>
+          <li><a href="/pages/gallery">Project gallery</a></li>
+          <li><a href="/pages/contact">Contact</a></li>
+          <li><a href="{{ estimate_url }}">Get a quote</a></li>
+        </ul>
+        {%- if section.settings.hours != blank -%}
+          <h2 class="rb-footer__heading rb-footer__heading--spaced">Hours</h2>
+          <p class="rb-footer__hours">{{ section.settings.hours | newline_to_br }}</p>
+        {%- endif -%}
+      </nav>
+
+      {%- comment -%} Contact column {%- endcomment -%}
+      <div class="rb-footer__col">
+        <h2 class="rb-footer__heading">Contact</h2>
+        <ul class="rb-footer__contact" role="list">
+          {%- if biz_phone != blank -%}
+            <li><span class="rb-footer__label">Call or text</span><a href="tel:{{ tel }}">{{ biz_phone }}</a></li>
+          {%- endif -%}
+          {%- if biz_email != blank -%}
+            <li><span class="rb-footer__label">Email</span><a href="mailto:{{ biz_email }}">{{ biz_email }}</a></li>
+          {%- endif -%}
+          {%- if full_address != blank -%}
+            <li><span class="rb-footer__label">Visit</span><a href="{{ map_url }}" target="_blank" rel="noopener">{{ full_address }}</a></li>
+          {%- endif -%}
+        </ul>
+        {%- if settings.business_areas_served != blank -%}
+          <p class="rb-footer__areas">
+            <span class="rb-footer__label">Proudly serving</span>
+            {{ settings.business_areas_served }}
+          </p>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% stylesheet %}
+  .rb-footer {
+    background: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  .rb-footer__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap-xl);
+  }
+
+  @media screen and (min-width: 600px) {
+    .rb-footer__grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media screen and (min-width: 990px) {
+    .rb-footer__grid { grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: var(--gap-2xl, 3rem); }
+  }
+
+  .rb-footer__col { display: flex; flex-direction: column; gap: var(--gap-xs); }
+
+  .rb-footer__logo-img { max-width: 180px; height: auto; }
+  .rb-footer__wordmark {
+    font-weight: 800;
+    font-size: 1.25rem;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .rb-footer__tagline { margin: 0; opacity: 0.85; max-width: 32ch; }
+  .rb-footer__creds {
+    margin: 0;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--rb-accent);
+  }
+
+  .rb-footer__heading {
+    margin: 0 0 var(--gap-2xs);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+  .rb-footer__heading--spaced { margin-top: var(--gap-md); }
+
+  .rb-footer__links,
+  .rb-footer__contact {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-2xs);
+  }
+
+  .rb-footer a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .rb-footer__links a:hover,
+  .rb-footer__contact a:hover { color: var(--rb-accent); }
+
+  .rb-footer__label {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    opacity: 0.55;
+  }
+
+  .rb-footer__hours,
+  .rb-footer__areas { margin: 0; opacity: 0.85; line-height: 1.6; }
+  .rb-footer__areas { margin-top: var(--gap-sm); }
+
+  .rb-footer__social {
+    list-style: none;
+    margin: var(--gap-xs) 0 0;
+    padding: 0;
+    display: flex;
+    gap: var(--gap-sm);
+    align-items: center;
+  }
+  .rb-footer__social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid color-mix(in srgb, var(--color-foreground) 22%, transparent);
+    color: inherit;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  }
+  .rb-footer__social a:hover {
+    background: var(--rb-accent);
+    border-color: var(--rb-accent);
+    color: #fff;
+  }
+  .rb-footer__bbb { font-size: 0.7rem; font-weight: 800; letter-spacing: 0.02em; }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Site footer",
+  "tag": "section",
+  "class": "section-wrapper",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "tagline",
+      "label": "Tagline",
+      "default": "Family-owned concrete contractor pouring driveways, patios, RV pads and decorative concrete across Utah County for 30+ years."
+    },
+    {
+      "type": "text",
+      "id": "credentials",
+      "label": "Credentials line",
+      "default": "Licensed & insured · 30+ years"
+    },
+    {
+      "type": "textarea",
+      "id": "hours",
+      "label": "Business hours (one per line)",
+      "default": "Mon–Fri: 8am – 6pm\nSat: 9am – 2pm\nSun: Closed"
+    },
+    {
+      "type": "header",
+      "content": "t:content.appearance"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color",
+      "default": "#C42A20"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:settings.background_color",
+      "placeholder": "t:settings.default"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:settings.text_color",
+      "placeholder": "t:settings.default"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Site footer"
+    }
+  ]
+}
+{% endschema %}

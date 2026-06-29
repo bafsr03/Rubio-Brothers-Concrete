@@ -8,6 +8,21 @@
   assign biz_phone = settings.business_phone
   assign biz_email = settings.business_email | default: shop.email
   assign areas = settings.business_areas_served | split: ','
+
+  assign social_urls = ''
+  if settings.business_facebook_url != blank
+    assign social_urls = social_urls | append: settings.business_facebook_url | append: '||'
+  endif
+  if settings.business_instagram_url != blank
+    assign social_urls = social_urls | append: settings.business_instagram_url | append: '||'
+  endif
+  if settings.business_yelp_url != blank
+    assign social_urls = social_urls | append: settings.business_yelp_url | append: '||'
+  endif
+  if settings.business_bbb_url != blank
+    assign social_urls = social_urls | append: settings.business_bbb_url | append: '||'
+  endif
+  assign social_list = social_urls | split: '||'
 -%}
 
 <script type="application/ld+json">
@@ -41,6 +56,13 @@
     "bestRating": "5",
     "worstRating": "1"
   },
+  {% endif %}
+  {% if social_list.size > 0 %}
+  "sameAs": [
+    {% for url in social_list %}
+      {{ url | strip | json }}{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ],
   {% endif %}
   "knowsAbout": [
     "Concrete driveways",

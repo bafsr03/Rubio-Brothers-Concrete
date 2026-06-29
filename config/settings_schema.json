@@ -2192,6 +2192,38 @@
         "type": "url",
         "id": "estimate_url",
         "label": "Estimate page link"
+      },
+      {
+        "type": "header",
+        "content": "Social & review profiles"
+      },
+      {
+        "type": "paragraph",
+        "content": "Used in the footer and in LocalBusiness structured data (sameAs). Use the full profile URLs."
+      },
+      {
+        "type": "text",
+        "id": "business_facebook_url",
+        "label": "Facebook URL",
+        "default": "https://www.facebook.com/RubioBros/"
+      },
+      {
+        "type": "text",
+        "id": "business_instagram_url",
+        "label": "Instagram URL",
+        "default": "https://www.instagram.com/rubiobrothers_concrete/"
+      },
+      {
+        "type": "text",
+        "id": "business_yelp_url",
+        "label": "Yelp URL",
+        "default": "https://www.yelp.com/biz/rubio-brothers-construction-pleasant-grove-2"
+      },
+      {
+        "type": "text",
+        "id": "business_bbb_url",
+        "label": "BBB profile URL",
+        "default": "https://www.bbb.org/us/ut/pleasant-grove/profile/concrete-contractors/rubio-brothers-construction-1166-90028250"
       }
     ]
   }

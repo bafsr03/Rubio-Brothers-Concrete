@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "intro": {
@@ -15,6 +6,34 @@
         "padding-block-start": 48,
         "padding-block-end": 8
       }
+    },
+    "gallery": {
+      "type": "project-gallery",
+      "settings": {
+        "eyebrow": "Our work",
+        "heading": "Recent pours across Utah County",
+        "intro": "Driveways, patios, RV pads and decorative concrete we've poured for neighbors in Pleasant Grove, Lehi, American Fork, Orem and Provo. Pick a photo for each slot in the theme editor.",
+        "accent_color": "#C42A20"
+      },
+      "blocks": {
+        "g1":  { "type": "photo", "settings": { "category": "Driveway", "caption": "Broom-finish driveway, Lehi", "alt": "New broom-finish concrete driveway in Lehi, UT" } },
+        "g2":  { "type": "photo", "settings": { "category": "Driveway", "caption": "Tear-out & replacement, American Fork", "alt": "Concrete driveway replacement in American Fork, UT" } },
+        "g3":  { "type": "photo", "settings": { "category": "RV pad", "caption": "Reinforced RV pad, Orem", "alt": "Reinforced heavy-duty RV pad in Orem, UT" } },
+        "g4":  { "type": "photo", "settings": { "category": "Stamped patio", "caption": "Ashlar stamped patio, Orem", "alt": "Ashlar stamped concrete patio in Orem, UT" } },
+        "g5":  { "type": "photo", "settings": { "category": "Stamped patio", "caption": "Backyard patio, Pleasant Grove", "alt": "Stamped concrete backyard patio in Pleasant Grove, UT" } },
+        "g6":  { "type": "photo", "settings": { "category": "Colored concrete", "caption": "Charcoal colored patio, Provo", "alt": "Charcoal colored concrete patio in Provo, UT" } },
+        "g7":  { "type": "photo", "settings": { "category": "Patio", "caption": "Walkway & entry, Lehi", "alt": "Concrete walkway and entry in Lehi, UT" } },
+        "g8":  { "type": "photo", "settings": { "category": "Decorative", "caption": "Fire pit patio, American Fork", "alt": "Decorative concrete patio around a fire pit in American Fork, UT" } },
+        "g9":  { "type": "photo", "settings": { "category": "Retaining wall", "caption": "Hillside wall, Provo", "alt": "Concrete retaining wall on a sloped lot in Provo, UT" } },
+        "g10": { "type": "photo", "settings": { "category": "Retaining wall", "caption": "Yard wall, Pleasant Grove", "alt": "Concrete retaining wall in Pleasant Grove, UT" } },
+        "g11": { "type": "photo", "settings": { "category": "Sport court", "caption": "Basketball court, Pleasant Grove", "alt": "Backyard concrete basketball court in Pleasant Grove, UT" } },
+        "g12": { "type": "photo", "settings": { "category": "Sport court", "caption": "Pickleball slab, Lehi", "alt": "Concrete pickleball court slab in Lehi, UT" } },
+        "g13": { "type": "photo", "settings": { "category": "Demolition", "caption": "Tear-out & haul-away, Orem", "alt": "Concrete demolition and tear-out in Orem, UT" } },
+        "g14": { "type": "photo", "settings": { "category": "Dirt work", "caption": "Grading & excavation, American Fork", "alt": "Dirt work, grading and excavation in American Fork, UT" } },
+        "g15": { "type": "photo", "settings": { "category": "Driveway", "caption": "Full driveway, Pleasant Grove", "alt": "New concrete driveway in Pleasant Grove, UT" } },
+        "g16": { "type": "photo", "settings": { "category": "Stamped patio", "caption": "Stamped patio, Lindon", "alt": "Stamped concrete patio in Lindon, UT" } }
+      },
+      "block_order": ["g1","g2","g3","g4","g5","g6","g7","g8","g9","g10","g11","g12","g13","g14","g15","g16"]
     },
     "before_after": {
       "type": "section",
@@ -45,5 +64,5 @@
       }
     }
   },
-  "order": ["intro", "before_after", "cta"]
+  "order": ["intro", "gallery", "before_after", "cta"]
 }
