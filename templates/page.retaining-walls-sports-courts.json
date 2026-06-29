@@ -1,0 +1,86 @@
+{
+  "sections": {
+    "hero": {
+      "type": "site-hero",
+      "settings": {
+        "eyebrow": "Pleasant Grove, UT · Serving all of Utah County",
+        "heading": "Retaining Walls & Concrete Sports Courts in Utah County",
+        "subheading": "Engineered retaining walls for sloped lots, plus backyard basketball and tennis courts — including the demolition, dirt work and site prep to get there.",
+        "button_label": "Get a free estimate",
+        "button_link": "/pages/estimate",
+        "phone_label": "Call (385) 210-5983",
+        "phone": "(385) 210-5983",
+        "trust_chips": "Free estimates\nDemolition & dirt work\nLicensed & insured",
+        "accent_color": "#C42A20",
+        "text_color": "#ffffff",
+        "overlay_opacity": 55,
+        "min_height": 78
+      }
+    },
+    "services": {
+      "type": "services-grid",
+      "settings": {
+        "eyebrow": "Walls, courts & site work",
+        "heading": "Engineered Retaining Walls for Sloped Utah Lots",
+        "intro": "Hold back a hillside, level a yard or build a court — we do the heavy site work and the finished concrete in one crew.",
+        "accent_color": "#C42A20"
+      },
+      "blocks": {
+        "s1": { "type": "service", "settings": { "title": "Concrete & block retaining walls", "text": "Structural walls that hold back soil on sloped Utah County lots and create usable, level yard space.", "link_label": "Get a quote", "link": "/pages/estimate" } },
+        "s2": { "type": "service", "settings": { "title": "Basketball & sport courts", "text": "Smooth, level concrete pads sized for backyard basketball, pickleball and multi-sport play.", "link_label": "Get a quote", "link": "/pages/estimate" } },
+        "s3": { "type": "service", "settings": { "title": "Tennis & pickleball courts", "text": "Full-size court slabs poured flat and true, ready for surfacing and striping.", "link_label": "Get a quote", "link": "/pages/estimate" } },
+        "s4": { "type": "service", "settings": { "title": "Demolition & tear-out", "text": "We demo old concrete, structures and walls and haul everything away to clear the site.", "link_label": "Get a quote", "link": "/pages/estimate" } },
+        "s5": { "type": "service", "settings": { "title": "Dirt work & grading", "text": "Excavation, cut-and-fill, grading and compaction to shape the lot before we pour.", "link_label": "Get a quote", "link": "/pages/estimate" } },
+        "s6": { "type": "service", "settings": { "title": "Site cleanup & drainage", "text": "Drainage built in behind walls and a fully cleaned site when the work is done.", "link_label": "Get a quote", "link": "/pages/estimate" } }
+      },
+      "block_order": ["s1", "s2", "s3", "s4", "s5", "s6"]
+    },
+    "process": {
+      "type": "process-steps",
+      "settings": {
+        "eyebrow": "How it works",
+        "heading": "Demolition, Dirt Work & Pour — One Crew, Start to Finish",
+        "intro": "A clear, no-surprises process so you always know what happens next.",
+        "accent_color": "#C42A20"
+      },
+      "blocks": {
+        "p1": { "type": "step", "settings": { "title": "Free site assessment", "text": "We look at your slope, drainage and access, then quote the wall or court at no charge." } },
+        "p2": { "type": "step", "settings": { "title": "Demolition & dirt work", "text": "We demo, excavate, cut-and-fill and grade the lot to the right elevation and compaction." } },
+        "p3": { "type": "step", "settings": { "title": "Build & pour", "text": "Walls formed and reinforced or court slab poured flat and true, with drainage built in." } },
+        "p4": { "type": "step", "settings": { "title": "Cleanup & walkthrough", "text": "We review the finished work with you and haul off every bit of debris." } }
+      },
+      "block_order": ["p1", "p2", "p3", "p4"]
+    },
+    "faq": {
+      "type": "faq",
+      "settings": {
+        "eyebrow": "FAQ",
+        "heading": "Retaining wall & sport court questions",
+        "accent_color": "#C42A20"
+      },
+      "blocks": {
+        "q1": { "type": "qa", "settings": { "question": "Do you handle the demolition and dirt work too?", "answer": "<p>Yes. We're a single crew for demolition, excavation, grading and the finished concrete — so you don't have to coordinate multiple contractors for one project.</p>" } },
+        "q2": { "type": "qa", "settings": { "question": "How big is a backyard basketball or sport court?", "answer": "<p>It depends on your space and game. A half-court is common for backyards, but we'll size the pad to your lot and intended use — basketball, pickleball or multi-sport.</p>" } },
+        "q3": { "type": "qa", "settings": { "question": "Do retaining walls need drainage?", "answer": "<p>Yes — proper drainage behind the wall is critical so water pressure doesn't build up and fail it. We build drainage into every retaining wall we pour.</p>" } },
+        "q4": { "type": "qa", "settings": { "question": "Can you build on a steep or sloped lot?", "answer": "<p>Absolutely. Sloped Utah County lots are exactly what retaining walls and cut-and-fill grading are for. We assess access and slope during the free estimate.</p>" } }
+      },
+      "block_order": ["q1", "q2", "q3", "q4"]
+    },
+    "cta": {
+      "type": "cta-band",
+      "settings": {
+        "eyebrow": "Free, no-pressure quotes",
+        "heading": "Talk to Cesar about your wall or court",
+        "text": "Tell us about your slope, yard or court project and we'll quote an exact price after a free site visit.",
+        "button_label": "Get a free estimate",
+        "button_link": "/pages/estimate",
+        "phone_label": "Call (385) 210-5983",
+        "phone": "(385) 210-5983",
+        "accent_color": "#C42A20",
+        "background_color": "#1a1a1a",
+        "text_color": "#ffffff"
+      }
+    }
+  },
+  "order": ["hero", "services", "process", "faq", "cta"]
+}
