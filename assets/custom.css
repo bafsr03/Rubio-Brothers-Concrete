@@ -145,24 +145,26 @@ scroll-reveal {
     backdrop-filter: saturate(1.1);
   }
 
-  /* --- Nav: animated underline on top-level links --- */
-  .menu-list__link {
+  /* --- Nav: animated underline on the title span only ---
+     (do NOT touch .menu-list__link::after — Horizon uses it as an invisible
+     full-height hover hit-box; styling it paints a solid block on hover) --- */
+  .menu-list__link-title {
     position: relative;
   }
-  .menu-list__link::after {
+  .menu-list__link-title::after {
     content: '';
     position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -2px;
+    left: calc(var(--gap-xl) / 2);
+    right: calc(var(--gap-xl) / 2);
+    bottom: -3px;
     height: 2px;
     background: var(--rb-accent, #C42A20);
     transform: scaleX(0);
     transform-origin: left center;
     transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   }
-  .menu-list__link:hover::after,
-  .menu-list__link--active::after {
+  .menu-list__list-item:where(:hover, :focus-within) .menu-list__link-title::after,
+  .menu-list__link--active .menu-list__link-title::after {
     transform: scaleX(1);
   }
 
