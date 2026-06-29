@@ -20,161 +20,568 @@
         "phone_label": "Call (385) 210-5983",
         "phone": "(385) 210-5983",
         "trust_chips": "Free estimates\n5.0★ from 44+ customers\nLocally owned",
-        "accent_color": "#C42A20",
+        "accent_color": "#c42a20",
         "text_color": "#ffffff",
         "overlay_opacity": 50,
-        "min_height": 88
+        "min_height": 88,
+        "padding-block-start": 0,
+        "padding-block-end": 0,
+        "padding-inline-start": 0,
+        "padding-inline-end": 0
       }
     },
     "services": {
       "type": "services-grid",
+      "blocks": {
+        "s1": {
+          "type": "service",
+          "settings": {
+            "title": "Driveways",
+            "text": "Durable, crack-resistant driveways finished to handle Utah freeze-thaw winters.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s2": {
+          "type": "service",
+          "settings": {
+            "title": "Patios & walkways",
+            "text": "Outdoor living spaces, sidewalks and walkways built clean and level.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s3": {
+          "type": "service",
+          "settings": {
+            "title": "RV pads & slabs",
+            "text": "Heavy-duty pads and foundation slabs engineered for serious loads.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s4": {
+          "type": "service",
+          "settings": {
+            "title": "Stamped & decorative",
+            "text": "Stamped, colored and textured finishes that elevate any property.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s5": {
+          "type": "service",
+          "settings": {
+            "title": "Tear-out & replacement",
+            "text": "Old, cracked concrete removed and repoured — no mess left behind.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s6": {
+          "type": "service",
+          "settings": {
+            "title": "Excavation & prep",
+            "text": "Grading, forming and base prep done right so your pour lasts decades.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ],
       "settings": {
         "eyebrow": "What we offer",
         "heading": "Concrete done right, the first time",
         "intro": "From driveways to stamped patios, we handle every step — tear-out, excavation, forming, pouring and finishing.",
-        "accent_color": "#C42A20"
-      },
-      "blocks": {
-        "s1": { "type": "service", "settings": { "title": "Driveways", "text": "Durable, crack-resistant driveways finished to handle Utah freeze-thaw winters.", "link_label": "Get a quote", "link": "/pages/estimate" } },
-        "s2": { "type": "service", "settings": { "title": "Patios & walkways", "text": "Outdoor living spaces, sidewalks and walkways built clean and level.", "link_label": "Get a quote", "link": "/pages/estimate" } },
-        "s3": { "type": "service", "settings": { "title": "RV pads & slabs", "text": "Heavy-duty pads and foundation slabs engineered for serious loads.", "link_label": "Get a quote", "link": "/pages/estimate" } },
-        "s4": { "type": "service", "settings": { "title": "Stamped & decorative", "text": "Stamped, colored and textured finishes that elevate any property.", "link_label": "Get a quote", "link": "/pages/estimate" } },
-        "s5": { "type": "service", "settings": { "title": "Tear-out & replacement", "text": "Old, cracked concrete removed and repoured — no mess left behind.", "link_label": "Get a quote", "link": "/pages/estimate" } },
-        "s6": { "type": "service", "settings": { "title": "Excavation & prep", "text": "Grading, forming and base prep done right so your pour lasts decades.", "link_label": "Get a quote", "link": "/pages/estimate" } }
-      },
-      "block_order": ["s1", "s2", "s3", "s4", "s5", "s6"]
+        "accent_color": "#c42a20",
+        "background_color": "",
+        "padding-block-start": 64,
+        "padding-block-end": 64,
+        "padding-inline-start": 0,
+        "padding-inline-end": 0
+      }
     },
     "stats": {
       "type": "stats-counter",
-      "settings": {
-        "heading": "Trusted across Utah County",
-        "accent_color": "#C42A20"
-      },
       "blocks": {
-        "st1": { "type": "stat", "settings": { "value": "30", "suffix": "+", "label": "Years of experience" } },
-        "st2": { "type": "stat", "settings": { "value": "44", "suffix": "+", "label": "Happy customers" } },
-        "st3": { "type": "stat", "settings": { "value": "5", "suffix": ".0★", "label": "Google rating" } },
-        "st4": { "type": "stat", "settings": { "value": "100", "suffix": "%", "label": "Satisfaction focus" } }
-      },
-      "block_order": ["st1", "st2", "st3", "st4"]
-    },
-    "showcase": {
-      "type": "section",
-      "settings": {
-        "section_width": "page-width",
-        "padding-block-start": 32,
-        "padding-block-end": 32
-      },
-      "blocks": {
-        "compare": {
-          "type": "comparison-slider",
+        "st1": {
+          "type": "stat",
           "settings": {
-            "show_text": true,
-            "before_text": "Before",
-            "after_text": "After",
-            "image_ratio": "landscape"
+            "value": "30",
+            "prefix": "",
+            "suffix": "+",
+            "label": "Years of experience"
+          }
+        },
+        "st2": {
+          "type": "stat",
+          "settings": {
+            "value": "44",
+            "prefix": "",
+            "suffix": "+",
+            "label": "Happy customers"
+          }
+        },
+        "st3": {
+          "type": "stat",
+          "settings": {
+            "value": "5",
+            "prefix": "",
+            "suffix": ".0★",
+            "label": "Google rating"
+          }
+        },
+        "st4": {
+          "type": "stat",
+          "settings": {
+            "value": "100",
+            "prefix": "",
+            "suffix": "%",
+            "label": "Satisfaction focus"
           }
         }
       },
-      "block_order": ["compare"]
+      "block_order": [
+        "st1",
+        "st2",
+        "st3",
+        "st4"
+      ],
+      "settings": {
+        "heading": "Trusted across Utah County",
+        "accent_color": "#c42a20",
+        "background_color": "",
+        "text_color": "",
+        "padding-block-start": 64,
+        "padding-block-end": 64,
+        "padding-inline-start": 0,
+        "padding-inline-end": 0
+      }
     },
     "gallery": {
       "type": "project-gallery",
+      "blocks": {
+        "h1": {
+          "type": "photo",
+          "settings": {
+            "category": "Driveway",
+            "caption": "Broom-finish driveway, Lehi",
+            "alt": "New concrete driveway in Lehi, UT"
+          }
+        },
+        "h2": {
+          "type": "photo",
+          "settings": {
+            "category": "Stamped patio",
+            "caption": "Stamped patio, Orem",
+            "alt": "Stamped concrete patio in Orem, UT"
+          }
+        },
+        "h3": {
+          "type": "photo",
+          "settings": {
+            "category": "RV pad",
+            "caption": "RV pad, American Fork",
+            "alt": "Reinforced RV pad in American Fork, UT"
+          }
+        },
+        "h4": {
+          "type": "photo",
+          "settings": {
+            "category": "Retaining wall",
+            "caption": "Retaining wall, Provo",
+            "alt": "Concrete retaining wall in Provo, UT"
+          }
+        },
+        "h5": {
+          "type": "photo",
+          "settings": {
+            "category": "Colored concrete",
+            "caption": "Colored patio, Pleasant Grove",
+            "alt": "Colored concrete patio in Pleasant Grove, UT"
+          }
+        },
+        "h6": {
+          "type": "photo",
+          "settings": {
+            "category": "Sport court",
+            "caption": "Basketball court, Pleasant Grove",
+            "alt": "Backyard concrete basketball court in Pleasant Grove, UT"
+          }
+        },
+        "h7": {
+          "type": "photo",
+          "settings": {
+            "category": "Walkway",
+            "caption": "Walkway & entry, Lehi",
+            "alt": "Concrete walkway in Lehi, UT"
+          }
+        },
+        "h8": {
+          "type": "photo",
+          "settings": {
+            "category": "Dirt work",
+            "caption": "Grading & prep, Orem",
+            "alt": "Dirt work and grading in Orem, UT"
+          }
+        }
+      },
+      "block_order": [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6",
+        "h7",
+        "h8"
+      ],
       "settings": {
         "eyebrow": "Our work",
         "heading": "Recent pours across Utah County",
         "intro": "Driveways, patios, RV pads and decorative concrete poured for neighbors in Pleasant Grove, Lehi, American Fork, Orem and Provo.",
         "button_label": "View full gallery",
         "button_link": "/pages/gallery",
-        "accent_color": "#C42A20"
-      },
+        "accent_color": "#c42a20",
+        "background_color": "",
+        "padding-block-start": 48,
+        "padding-block-end": 48,
+        "padding-inline-start": 0,
+        "padding-inline-end": 0
+      }
+    },
+    "showcase": {
+      "type": "section",
       "blocks": {
-        "h1": { "type": "photo", "settings": { "category": "Driveway", "caption": "Broom-finish driveway, Lehi", "alt": "New concrete driveway in Lehi, UT" } },
-        "h2": { "type": "photo", "settings": { "category": "Stamped patio", "caption": "Stamped patio, Orem", "alt": "Stamped concrete patio in Orem, UT" } },
-        "h3": { "type": "photo", "settings": { "category": "RV pad", "caption": "RV pad, American Fork", "alt": "Reinforced RV pad in American Fork, UT" } },
-        "h4": { "type": "photo", "settings": { "category": "Retaining wall", "caption": "Retaining wall, Provo", "alt": "Concrete retaining wall in Provo, UT" } },
-        "h5": { "type": "photo", "settings": { "category": "Colored concrete", "caption": "Colored patio, Pleasant Grove", "alt": "Colored concrete patio in Pleasant Grove, UT" } },
-        "h6": { "type": "photo", "settings": { "category": "Sport court", "caption": "Basketball court, Pleasant Grove", "alt": "Backyard concrete basketball court in Pleasant Grove, UT" } },
-        "h7": { "type": "photo", "settings": { "category": "Walkway", "caption": "Walkway & entry, Lehi", "alt": "Concrete walkway in Lehi, UT" } },
-        "h8": { "type": "photo", "settings": { "category": "Dirt work", "caption": "Grading & prep, Orem", "alt": "Dirt work and grading in Orem, UT" } }
+        "compare": {
+          "type": "comparison-slider",
+          "settings": {
+            "before_image": "shopify://shop_images/before.png",
+            "after_image": "shopify://shop_images/481265356_1112791133981735_8211170253326087886_n.jpg",
+            "slider_style": "horizontal",
+            "show_text": true,
+            "before_text": "Before",
+            "after_text": "After",
+            "text_preset": "",
+            "text_position_horizontal": "start",
+            "text_position_vertical": "start",
+            "text_background": false,
+            "text_background_color": "{{ settings.color_palette.background }}",
+            "text_corner_radius": 0,
+            "text_color": "{{ settings.color_palette.foreground }}",
+            "image_ratio": "landscape",
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "slider_bg_color": "",
+            "slider_handle_color": "",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
       },
-      "block_order": ["h1","h2","h3","h4","h5","h6","h7","h8"]
+      "block_order": [
+        "compare"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 32,
+        "padding-block-end": 32
+      }
     },
     "reels": {
       "type": "reel-showcase",
+      "blocks": {
+        "r1": {
+          "type": "reel",
+          "settings": {
+            "caption": "Driveway pour & finish"
+          }
+        },
+        "r2": {
+          "type": "reel",
+          "settings": {
+            "caption": "Stamped patio reveal"
+          }
+        }
+      },
+      "block_order": [
+        "r1",
+        "r2"
+      ],
       "settings": {
         "eyebrow": "Watch us work",
         "heading": "See a pour come together",
         "intro": "Short clips from real Rubio Brothers job sites across Utah County.",
         "button_label": "Get a free estimate",
         "button_link": "/pages/estimate",
-        "accent_color": "#C42A20",
-        "background_color": "#f5f4f2"
-      },
-      "blocks": {
-        "r1": { "type": "reel", "settings": { "caption": "Driveway pour & finish" } },
-        "r2": { "type": "reel", "settings": { "caption": "Stamped patio reveal" } }
-      },
-      "block_order": ["r1", "r2"]
+        "accent_color": "#c42a20",
+        "background_color": "#f5f4f2",
+        "text_color": "",
+        "padding-block-start": 56,
+        "padding-block-end": 56,
+        "padding-inline-start": 0,
+        "padding-inline-end": 0
+      }
     },
     "process": {
       "type": "process-steps",
-      "settings": {
-        "accent_color": "#C42A20"
-      },
       "blocks": {
-        "p1": { "type": "step", "settings": { "title": "Free estimate", "text": "Tell us about your project and we'll measure and quote it at no charge." } },
-        "p2": { "type": "step", "settings": { "title": "Prep & excavation", "text": "We grade, form and prep the base so your pour lasts for decades." } },
-        "p3": { "type": "step", "settings": { "title": "Pour & finish", "text": "Concrete placed and finished by hand — clean lines, level surface." } },
-        "p4": { "type": "step", "settings": { "title": "Walkthrough", "text": "We review the finished work with you and clean up the site completely." } }
+        "p1": {
+          "type": "step",
+          "settings": {
+            "title": "Free estimate",
+            "text": "Tell us about your project and we'll measure and quote it at no charge."
+          }
+        },
+        "p2": {
+          "type": "step",
+          "settings": {
+            "title": "Prep & excavation",
+            "text": "We grade, form and prep the base so your pour lasts for decades."
+          }
+        },
+        "p3": {
+          "type": "step",
+          "settings": {
+            "title": "Pour & finish",
+            "text": "Concrete placed and finished by hand — clean lines, level surface."
+          }
+        },
+        "p4": {
+          "type": "step",
+          "settings": {
+            "title": "Walkthrough",
+            "text": "We review the finished work with you and clean up the site completely."
+          }
+        }
       },
-      "block_order": ["p1", "p2", "p3", "p4"]
+      "block_order": [
+        "p1",
+        "p2",
+        "p3",
+        "p4"
+      ],
+      "settings": {
+        "eyebrow": "How it works",
+        "heading": "From first call to final pour",
+        "intro": "A clear, no-surprises process so you always know what happens next.",
+        "accent_color": "#c42a20",
+        "background_color": "",
+        "padding-block-start": 64,
+        "padding-block-end": 64,
+        "padding-inline-start": 0,
+        "padding-inline-end": 0
+      }
     },
     "estimator": {
       "type": "section",
-      "settings": {
-        "section_width": "page-width",
-        "padding-block-start": 48,
-        "padding-block-end": 48
-      },
       "blocks": {
         "calc": {
           "type": "estimator",
           "settings": {
-            "accent_color": "#C42A20"
-          }
+            "eyebrow": "Instant estimate",
+            "heading": "Estimate your concrete project",
+            "subheading": "Get an instant ballpark price, then send it to us for a free, exact on-site quote.",
+            "presets_label": "Common project sizes",
+            "presets": "1-car driveway | 600 | Driveway\n2-car driveway | 900 | Driveway\nPatio | 300 | Patio\nRV pad | 400 | RV pad\nWalkway | 200 | Sidewalk / walkway",
+            "sqft_label": "Project size",
+            "sqft_placeholder": "e.g. 800",
+            "sqft_hint": "Drag the slider or type the area in square feet.",
+            "slider_max": 2500,
+            "max_sqft": 10000,
+            "job_label": "Project type",
+            "job_types": "Driveway\nPatio\nRV pad\nSidewalk / walkway\nStamped concrete\nFoundation / slab\nOther",
+            "pump_label": "Need a concrete pump?",
+            "pump_unsure": "Not sure",
+            "pump_no": "No",
+            "pump_yes": "Yes",
+            "placeholder_text": "Enter your project size to see a rough estimate.",
+            "result_label": "Your rough estimate",
+            "yards_suffix": "cubic yards of concrete",
+            "disclaimer": "Rough ballpark only. Your final price is confirmed after a free site visit.",
+            "form_heading": "Send me this quote",
+            "message_placeholder": "Anything else we should know? (timeline, location, etc.)",
+            "submit_label": "Get my free quote",
+            "form_microcopy": "No spam — we usually reply within 24 hours.",
+            "success_text": "Thanks! We got your project details and will reach out shortly with your exact quote.",
+            "sqft_per_yard": 80,
+            "rate_low": 230,
+            "rate_high": 260,
+            "rate_mid": 250,
+            "small_load_threshold": 5,
+            "small_load_fee": 350,
+            "add_on": 350,
+            "multiplier": 3,
+            "range_pct": 10,
+            "accent_color": "#c42a20",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         }
       },
-      "block_order": ["calc"]
+      "block_order": [
+        "calc"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
     },
     "faq": {
       "type": "faq",
+      "blocks": {
+        "q1": {
+          "type": "qa",
+          "settings": {
+            "question": "How much does a concrete driveway or patio cost?",
+            "answer": "<p>It depends on the square footage, finish and site prep. Use our instant estimator above for a rough ballpark, then we confirm an exact price with a free on-site visit.</p>"
+          }
+        },
+        "q2": {
+          "type": "qa",
+          "settings": {
+            "question": "What areas do you serve?",
+            "answer": "<p>We serve Pleasant Grove and the surrounding Utah County communities — Lindon, Orem, American Fork, Lehi, Provo and nearby areas.</p>"
+          }
+        },
+        "q3": {
+          "type": "qa",
+          "settings": {
+            "question": "Are you licensed and insured?",
+            "answer": "<p>Yes. Rubio Brothers Concrete is locally owned, licensed and insured, with over 30 years of concrete experience.</p>"
+          }
+        },
+        "q4": {
+          "type": "qa",
+          "settings": {
+            "question": "How long does a typical project take?",
+            "answer": "<p>Most residential pours take a few days from prep to finish, depending on size and weather. We'll give you a clear timeline with your quote.</p>"
+          }
+        },
+        "q5": {
+          "type": "qa",
+          "settings": {
+            "question": "Do you remove old concrete?",
+            "answer": "<p>Absolutely. We handle full tear-out, excavation and haul-away, then repour — no mess left behind.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5"
+      ],
       "settings": {
         "eyebrow": "FAQ",
         "heading": "Questions homeowners ask us",
-        "accent_color": "#C42A20"
-      },
-      "blocks": {
-        "q1": { "type": "qa", "settings": { "question": "How much does a concrete driveway or patio cost?", "answer": "<p>It depends on the square footage, finish and site prep. Use our instant estimator above for a rough ballpark, then we confirm an exact price with a free on-site visit.</p>" } },
-        "q2": { "type": "qa", "settings": { "question": "What areas do you serve?", "answer": "<p>We serve Pleasant Grove and the surrounding Utah County communities — Lindon, Orem, American Fork, Lehi, Provo and nearby areas.</p>" } },
-        "q3": { "type": "qa", "settings": { "question": "Are you licensed and insured?", "answer": "<p>Yes. Rubio Brothers Concrete is locally owned, licensed and insured, with over 30 years of concrete experience.</p>" } },
-        "q4": { "type": "qa", "settings": { "question": "How long does a typical project take?", "answer": "<p>Most residential pours take a few days from prep to finish, depending on size and weather. We'll give you a clear timeline with your quote.</p>" } },
-        "q5": { "type": "qa", "settings": { "question": "Do you remove old concrete?", "answer": "<p>Absolutely. We handle full tear-out, excavation and haul-away, then repour — no mess left behind.</p>" } }
-      },
-      "block_order": ["q1", "q2", "q3", "q4", "q5"]
+        "accent_color": "#c42a20",
+        "background_color": "",
+        "padding-block-start": 64,
+        "padding-block-end": 64,
+        "padding-inline-start": 0,
+        "padding-inline-end": 0
+      }
     },
     "cta": {
       "type": "cta-band",
       "settings": {
+        "eyebrow": "Free, no-pressure quotes",
+        "heading": "Ready to pour? Let's get your quote.",
+        "text": "Tell us about your project and we'll get you an exact price after a quick site visit — at no cost.",
         "button_label": "Get a free estimate",
         "button_link": "/pages/estimate",
         "phone_label": "Call (385) 210-5983",
         "phone": "(385) 210-5983",
-        "accent_color": "#C42A20",
+        "accent_color": "#c42a20",
         "background_color": "#1a1a1a",
-        "text_color": "#ffffff"
+        "text_color": "#ffffff",
+        "padding-block-start": 96,
+        "padding-block-end": 96,
+        "padding-inline-start": 0,
+        "padding-inline-end": 0
       }
     }
   },
-  "order": ["hero", "services", "stats", "gallery", "showcase", "reels", "process", "estimator", "faq", "cta"]
+  "order": [
+    "hero",
+    "services",
+    "stats",
+    "gallery",
+    "showcase",
+    "reels",
+    "process",
+    "estimator",
+    "faq",
+    "cta"
+  ]
 }
