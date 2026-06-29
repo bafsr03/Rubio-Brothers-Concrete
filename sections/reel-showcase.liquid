@@ -34,9 +34,27 @@
 
     <scroll-reveal class="rb-reels__grid" data-reveal-stagger="100">
       {%- for block in section.blocks -%}
+        {%- liquid
+          assign reel_src = ''
+          if block.settings.video_file != blank
+            assign reel_src = block.settings.video_file | file_url
+          endif
+        -%}
         <figure class="rb-reels__item" data-reveal {{ block.shopify_attributes }}>
           <div class="rb-reels__frame">
-            {%- if block.settings.video != blank -%}
+            {%- if reel_src != blank -%}
+              <video
+                class="rb-reels__video"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                {% if block.settings.poster != blank %}poster="{{ block.settings.poster | image_url: width: 600 }}"{% endif %}
+              >
+                <source src="{{ reel_src }}" type="video/mp4">
+              </video>
+            {%- elsif block.settings.video != blank -%}
               {{
                 block.settings.video
                 | video_tag:
@@ -147,7 +165,8 @@
       "type": "reel",
       "name": "Reel",
       "settings": [
-        { "type": "video", "id": "video", "label": "Video (upload to Files)" },
+        { "type": "text", "id": "video_file", "label": "Video file name", "info": "Exact file name from Content → Files, e.g. rubio-brothers-concrete-reel-01.mp4" },
+        { "type": "video", "id": "video", "label": "Video (Shopify-hosted, optional)" },
         { "type": "image_picker", "id": "poster", "label": "Poster image (fallback)" },
         { "type": "text", "id": "caption", "label": "Caption" }
       ]

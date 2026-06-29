@@ -36,15 +36,24 @@
       {%- for block in section.blocks -%}
         {%- liquid
           assign alt = block.settings.alt | default: block.settings.caption | default: 'Concrete project by Rubio Brothers in Utah County'
+          assign full = ''
+          if block.settings.image != blank
+            assign full = block.settings.image | image_url: width: 2000
+          endif
         -%}
-        <figure class="rb-gallery__tile" data-reveal {{ block.shopify_attributes }}>
+        <figure
+          class="rb-gallery__tile{% if full == blank %} rb-gallery__tile--empty{% endif %}"
+          data-reveal
+          {% if full != blank %}data-full="{{ full }}" data-caption="{{ block.settings.caption | escape }}" role="button" tabindex="0" aria-label="Enlarge: {{ alt | escape }}"{% endif %}
+          {{ block.shopify_attributes }}
+        >
           {%- if block.settings.image != blank -%}
             {{
               block.settings.image
               | image_url: width: 1200
               | image_tag:
                 loading: 'lazy',
-                sizes: '(min-width: 990px) 33vw, (min-width: 600px) 50vw, 100vw',
+                sizes: '(min-width: 990px) 25vw, (min-width: 600px) 33vw, 50vw',
                 widths: '400, 600, 800, 1200',
                 alt: alt,
                 class: 'rb-gallery__img'
@@ -52,6 +61,7 @@
           {%- else -%}
             {{ 'image' | placeholder_svg_tag: 'rb-gallery__placeholder' }}
           {%- endif -%}
+          {%- if full != blank -%}<span class="rb-gallery__zoom" aria-hidden="true">⤢</span>{%- endif -%}
           {%- if block.settings.caption != blank or block.settings.category != blank -%}
             <figcaption class="rb-gallery__caption">
               {%- if block.settings.category != blank -%}<span class="rb-gallery__chip">{{ block.settings.category }}</span>{%- endif -%}
@@ -61,6 +71,38 @@
         </figure>
       {%- endfor -%}
     </scroll-reveal>
+
+    <dialog class="rb-gallery__lightbox" aria-label="Project photo">
+      <button type="button" class="rb-gallery__lightbox-close" aria-label="Close">&times;</button>
+      <img class="rb-gallery__lightbox-img" alt="" width="1600" height="1200" />
+      <p class="rb-gallery__lightbox-cap"></p>
+    </dialog>
+
+    <script>
+      (() => {
+        var root = document.currentScript.closest('.rb-gallery');
+        if (!root) return;
+        var dialog = root.querySelector('.rb-gallery__lightbox');
+        var img = root.querySelector('.rb-gallery__lightbox-img');
+        var cap = root.querySelector('.rb-gallery__lightbox-cap');
+        if (!dialog || typeof dialog.showModal !== 'function') return;
+        function open(tile) {
+          img.src = tile.getAttribute('data-full');
+          img.alt = (tile.getAttribute('aria-label') || '').replace(/^Enlarge:\s*/, '');
+          cap.textContent = tile.getAttribute('data-caption') || '';
+          dialog.showModal();
+        }
+        root.addEventListener('click', function (e) {
+          var tile = e.target.closest('.rb-gallery__tile[data-full]');
+          if (tile) { open(tile); return; }
+          if (e.target.closest('.rb-gallery__lightbox-close') || e.target === dialog) dialog.close();
+        });
+        root.addEventListener('keydown', function (e) {
+          var tile = e.target.closest && e.target.closest('.rb-gallery__tile[data-full]');
+          if (tile && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); open(tile); }
+        });
+      })();
+    </script>
 
     {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}
       <div class="rb-gallery__cta">
@@ -73,35 +115,115 @@
 {% stylesheet %}
   .rb-gallery { background: var(--color-background); color: var(--color-foreground); }
 
+  /* Masonry mosaic — uncropped photos at natural aspect ratios */
   .rb-gallery__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--gap-sm, 0.75rem);
+    columns: 2;
+    column-gap: var(--gap-sm, 0.75rem);
   }
   @media screen and (min-width: 600px) {
-    .rb-gallery__grid { grid-template-columns: repeat(3, 1fr); gap: var(--gap-md, 1rem); }
+    .rb-gallery__grid { columns: 3; column-gap: var(--gap-md, 1rem); }
   }
   @media screen and (min-width: 990px) {
-    .rb-gallery__grid { grid-template-columns: repeat(4, 1fr); }
+    .rb-gallery__grid { columns: 4; }
   }
 
   .rb-gallery__tile {
     position: relative;
-    margin: 0;
+    display: block;
+    break-inside: avoid;
+    margin: 0 0 var(--gap-sm, 0.75rem);
     overflow: hidden;
     border-radius: var(--card-corner-radius, 8px);
-    aspect-ratio: 1 / 1;
     background: color-mix(in srgb, var(--color-foreground) 6%, var(--color-background));
   }
+  .rb-gallery__tile[data-full] { cursor: zoom-in; }
+  .rb-gallery__tile[data-full]:focus-visible {
+    outline: 3px solid var(--rb-accent, #C42A20);
+    outline-offset: 2px;
+  }
+  @media screen and (min-width: 600px) {
+    .rb-gallery__tile { margin-bottom: var(--gap-md, 1rem); }
+  }
+
+  .rb-gallery__tile--empty { aspect-ratio: 4 / 3; }
 
   .rb-gallery__img,
   .rb-gallery__placeholder {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    display: block;
     transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   }
-  .rb-gallery__tile:hover .rb-gallery__img { transform: scale(1.06); }
+  .rb-gallery__tile--empty .rb-gallery__placeholder { height: 100%; }
+  .rb-gallery__tile:hover .rb-gallery__img { transform: scale(1.05); }
+
+  /* Zoom affordance */
+  .rb-gallery__zoom {
+    position: absolute;
+    top: 0.55rem;
+    right: 0.55rem;
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: rgb(0 0 0 / 0.45);
+    color: #fff;
+    font-size: 1rem;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    pointer-events: none;
+  }
+  .rb-gallery__tile:hover .rb-gallery__zoom,
+  .rb-gallery__tile:focus-visible .rb-gallery__zoom { opacity: 1; }
+
+  /* Lightbox */
+  .rb-gallery__lightbox {
+    border: none;
+    padding: 0;
+    background: transparent;
+    max-width: 92vw;
+    max-height: 92vh;
+    overflow: visible;
+  }
+  .rb-gallery__lightbox::backdrop {
+    background: rgb(0 0 0 / 0.82);
+    backdrop-filter: blur(2px);
+  }
+  .rb-gallery__lightbox-img {
+    max-width: 92vw;
+    max-height: 84vh;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 30px 80px -30px rgb(0 0 0 / 0.8);
+  }
+  .rb-gallery__lightbox-cap {
+    color: #fff;
+    text-align: center;
+    margin: 0.7rem 0 0;
+    font-weight: 600;
+  }
+  .rb-gallery__lightbox-close {
+    position: fixed;
+    top: 1rem;
+    right: 1.2rem;
+    width: 2.6rem;
+    height: 2.6rem;
+    display: grid;
+    place-items: center;
+    border: none;
+    border-radius: 50%;
+    background: rgb(255 255 255 / 0.16);
+    color: #fff;
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  .rb-gallery__lightbox-close:hover { background: var(--rb-accent, #C42A20); }
 
   .rb-gallery__caption {
     position: absolute;
