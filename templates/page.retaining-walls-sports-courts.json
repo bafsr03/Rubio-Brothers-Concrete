@@ -3,6 +3,7 @@
     "hero": {
       "type": "site-hero",
       "settings": {
+        "image": "shopify://shop_images/concrete-flatwork-pour-utah-county.jpg",
         "eyebrow": "Pleasant Grove, UT · Serving all of Utah County",
         "heading": "Retaining Walls & Concrete Sports Courts in Utah County",
         "subheading": "Engineered retaining walls for sloped lots, plus backyard basketball and tennis courts — including the demolition, dirt work and site prep to get there.",
@@ -27,11 +28,11 @@
       },
       "blocks": {
         "s1": { "type": "service", "settings": { "title": "Concrete & block retaining walls", "text": "Structural walls that hold back soil on sloped Utah County lots and create usable, level yard space.", "link_label": "Get a quote", "link": "/pages/estimate" } },
-        "s2": { "type": "service", "settings": { "title": "Basketball & sport courts", "text": "Smooth, level concrete pads sized for backyard basketball, pickleball and multi-sport play.", "link_label": "Get a quote", "link": "/pages/estimate" } },
-        "s3": { "type": "service", "settings": { "title": "Tennis & pickleball courts", "text": "Full-size court slabs poured flat and true, ready for surfacing and striping.", "link_label": "Get a quote", "link": "/pages/estimate" } },
-        "s4": { "type": "service", "settings": { "title": "Demolition & tear-out", "text": "We demo old concrete, structures and walls and haul everything away to clear the site.", "link_label": "Get a quote", "link": "/pages/estimate" } },
-        "s5": { "type": "service", "settings": { "title": "Dirt work & grading", "text": "Excavation, cut-and-fill, grading and compaction to shape the lot before we pour.", "link_label": "Get a quote", "link": "/pages/estimate" } },
-        "s6": { "type": "service", "settings": { "title": "Site cleanup & drainage", "text": "Drainage built in behind walls and a fully cleaned site when the work is done.", "link_label": "Get a quote", "link": "/pages/estimate" } }
+        "s2": { "type": "service", "settings": { "image": "shopify://shop_images/concrete-sport-court-pad-pleasant-grove-ut.jpg", "title": "Basketball & sport courts", "text": "Smooth, level concrete pads sized for backyard basketball, pickleball and multi-sport play.", "link_label": "Get a quote", "link": "/pages/estimate" } },
+        "s3": { "type": "service", "settings": { "image": "shopify://shop_images/concrete-backyard-slab-finishing-lehi-ut.jpg", "title": "Tennis & pickleball courts", "text": "Full-size court slabs poured flat and true, ready for surfacing and striping.", "link_label": "Get a quote", "link": "/pages/estimate" } },
+        "s4": { "type": "service", "settings": { "image": "shopify://shop_images/concrete-driveway-extension-lehi-ut.jpg", "title": "Demolition & tear-out", "text": "We demo old concrete, structures and walls and haul everything away to clear the site.", "link_label": "Get a quote", "link": "/pages/estimate" } },
+        "s5": { "type": "service", "settings": { "image": "shopify://shop_images/concrete-slab-base-prep-rebar-utah-county.jpg", "title": "Dirt work & grading", "text": "Excavation, cut-and-fill, grading and compaction to shape the lot before we pour.", "link_label": "Get a quote", "link": "/pages/estimate" } },
+        "s6": { "type": "service", "settings": { "image": "shopify://shop_images/concrete-slab-backyard-american-fork-ut.jpg", "title": "Site cleanup & drainage", "text": "Drainage built in behind walls and a fully cleaned site when the work is done.", "link_label": "Get a quote", "link": "/pages/estimate" } }
       },
       "block_order": ["s1", "s2", "s3", "s4", "s5", "s6"]
     },

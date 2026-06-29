@@ -36,6 +36,7 @@
         "s1": {
           "type": "service",
           "settings": {
+            "image": "shopify://shop_images/concrete-driveway-broom-finish-pleasant-grove-ut.jpg",
             "title": "Driveways",
             "text": "Durable, crack-resistant driveways finished to handle Utah freeze-thaw winters.",
             "link_label": "Get a quote",
@@ -45,6 +46,7 @@
         "s2": {
           "type": "service",
           "settings": {
+            "image": "shopify://shop_images/concrete-patio-backyard-orem-ut.jpg",
             "title": "Patios & walkways",
             "text": "Outdoor living spaces, sidewalks and walkways built clean and level.",
             "link_label": "Get a quote",
@@ -54,6 +56,7 @@
         "s3": {
           "type": "service",
           "settings": {
+            "image": "shopify://shop_images/concrete-flatwork-pour-utah-county.jpg",
             "title": "RV pads & slabs",
             "text": "Heavy-duty pads and foundation slabs engineered for serious loads.",
             "link_label": "Get a quote",
@@ -63,6 +66,7 @@
         "s4": {
           "type": "service",
           "settings": {
+            "image": "shopify://shop_images/stamped-concrete-patio-ashlar-slate-orem-ut.jpg",
             "title": "Stamped & decorative",
             "text": "Stamped, colored and textured finishes that elevate any property.",
             "link_label": "Get a quote",
@@ -72,6 +76,7 @@
         "s5": {
           "type": "service",
           "settings": {
+            "image": "shopify://shop_images/concrete-driveway-extension-lehi-ut.jpg",
             "title": "Tear-out & replacement",
             "text": "Old, cracked concrete removed and repoured — no mess left behind.",
             "link_label": "Get a quote",
@@ -81,6 +86,7 @@
         "s6": {
           "type": "service",
           "settings": {
+            "image": "shopify://shop_images/concrete-slab-base-prep-rebar-utah-county.jpg",
             "title": "Excavation & prep",
             "text": "Grading, forming and base prep done right so your pour lasts decades.",
             "link_label": "Get a quote",
@@ -171,65 +177,73 @@
         "h1": {
           "type": "photo",
           "settings": {
+            "image": "shopify://shop_images/concrete-driveway-stone-home-pleasant-grove-ut.jpg",
             "category": "Driveway",
-            "caption": "Broom-finish driveway, Lehi",
-            "alt": "New concrete driveway in Lehi, UT"
+            "caption": "Driveway, Pleasant Grove",
+            "alt": "Finished concrete driveway at a stone home in Pleasant Grove, UT"
           }
         },
         "h2": {
           "type": "photo",
           "settings": {
+            "image": "shopify://shop_images/stamped-concrete-patio-ashlar-slate-orem-ut.jpg",
             "category": "Stamped patio",
             "caption": "Stamped patio, Orem",
-            "alt": "Stamped concrete patio in Orem, UT"
+            "alt": "Ashlar slate stamped concrete patio in Orem, UT"
           }
         },
         "h3": {
           "type": "photo",
           "settings": {
-            "category": "RV pad",
-            "caption": "RV pad, American Fork",
-            "alt": "Reinforced RV pad in American Fork, UT"
+            "image": "shopify://shop_images/decorative-concrete-firepit-seating-area-pleasant-grove-ut.jpg",
+            "category": "Decorative",
+            "caption": "Fire-pit seating, Pleasant Grove",
+            "alt": "Circular decorative concrete fire-pit seating area in Pleasant Grove, UT"
           }
         },
         "h4": {
           "type": "photo",
           "settings": {
-            "category": "Retaining wall",
-            "caption": "Retaining wall, Provo",
-            "alt": "Concrete retaining wall in Provo, UT"
+            "image": "shopify://shop_images/concrete-driveway-curved-american-fork-ut.jpg",
+            "category": "Driveway",
+            "caption": "Curved driveway, American Fork",
+            "alt": "Curved concrete driveway in American Fork, UT"
           }
         },
         "h5": {
           "type": "photo",
           "settings": {
-            "category": "Colored concrete",
-            "caption": "Colored patio, Pleasant Grove",
-            "alt": "Colored concrete patio in Pleasant Grove, UT"
+            "image": "shopify://shop_images/stamped-concrete-firepit-pad-wood-plank-provo-ut.jpg",
+            "category": "Stamped",
+            "caption": "Stamped fire-pit pad, Provo",
+            "alt": "Round wood-plank stamped concrete fire-pit pad in Provo, UT"
           }
         },
         "h6": {
           "type": "photo",
           "settings": {
+            "image": "shopify://shop_images/concrete-sport-court-pad-pleasant-grove-ut.jpg",
             "category": "Sport court",
-            "caption": "Basketball court, Pleasant Grove",
-            "alt": "Backyard concrete basketball court in Pleasant Grove, UT"
+            "caption": "Sport court pad, Pleasant Grove",
+            "alt": "Concrete sport court pad in Pleasant Grove, UT"
           }
         },
         "h7": {
           "type": "photo",
           "settings": {
-            "category": "Walkway",
-            "caption": "Walkway & entry, Lehi",
-            "alt": "Concrete walkway in Lehi, UT"
+            "image": "shopify://shop_images/concrete-patio-backyard-lehi-ut.jpg",
+            "category": "Patio",
+            "caption": "Backyard patio, Lehi",
+            "alt": "Concrete backyard patio in Lehi, UT"
           }
         },
         "h8": {
           "type": "photo",
           "settings": {
-            "category": "Dirt work",
-            "caption": "Grading & prep, Orem",
-            "alt": "Dirt work and grading in Orem, UT"
+            "image": "shopify://shop_images/colored-concrete-stairs-charcoal-pleasant-grove-ut.jpg",
+            "category": "Colored",
+            "caption": "Charcoal colored stairs, Pleasant Grove",
+            "alt": "Charcoal colored concrete stairs in Pleasant Grove, UT"
           }
         }
       },
@@ -335,12 +349,14 @@
         "r1": {
           "type": "reel",
           "settings": {
+            "poster": "shopify://shop_images/concrete-driveway-pour-sunset-pleasant-grove-ut.jpg",
             "caption": "Driveway pour & finish"
           }
         },
         "r2": {
           "type": "reel",
           "settings": {
+            "poster": "shopify://shop_images/stamped-concrete-patio-ashlar-slate-orem-ut.jpg",
             "caption": "Stamped patio reveal"
           }
         }

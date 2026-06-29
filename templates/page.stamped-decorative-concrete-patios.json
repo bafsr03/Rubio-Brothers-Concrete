@@ -3,6 +3,7 @@
     "hero": {
       "type": "site-hero",
       "settings": {
+        "image": "shopify://shop_images/stamped-concrete-patio-ashlar-slate-orem-ut.jpg",
         "eyebrow": "Pleasant Grove, UT · Serving all of Utah County",
         "heading": "Stamped & Decorative Concrete Patios in Utah County",
         "subheading": "Custom stamped, colored and textured patios that turn a plain backyard into an outdoor living space — designed and poured by a family crew with 30+ years of experience.",
@@ -26,12 +27,12 @@
         "accent_color": "#C42A20"
       },
       "blocks": {
-        "s1": { "type": "service", "settings": { "title": "Stamped concrete patios", "text": "Ashlar slate, cobblestone, wood-plank and more — stamped patterns that mimic premium materials.", "link_label": "Get a quote", "link": "/pages/estimate" } },
-        "s2": { "type": "service", "settings": { "title": "Colored & integral-color concrete", "text": "Integral color, stains and release tones blended to match your home and landscaping.", "link_label": "Get a quote", "link": "/pages/estimate" } },
-        "s3": { "type": "service", "settings": { "title": "Decorative borders & bands", "text": "Contrasting borders, saw-cut patterns and accent bands that frame the space.", "link_label": "Get a quote", "link": "/pages/estimate" } },
-        "s4": { "type": "service", "settings": { "title": "Walkways & entryways", "text": "Matching stamped walkways and front entries that tie the whole property together.", "link_label": "Get a quote", "link": "/pages/estimate" } },
-        "s5": { "type": "service", "settings": { "title": "Fire pits & seating areas", "text": "Decorative slabs poured around fire pits, seat walls and outdoor kitchens.", "link_label": "Get a quote", "link": "/pages/estimate" } },
-        "s6": { "type": "service", "settings": { "title": "Sealing & protection", "text": "Sealed and protected so color stays rich and the surface resists Utah's freeze-thaw and UV.", "link_label": "Get a quote", "link": "/pages/estimate" } }
+        "s1": { "type": "service", "settings": { "image": "shopify://shop_images/stamped-concrete-patio-wood-plank-orem-ut.jpg", "title": "Stamped concrete patios", "text": "Ashlar slate, cobblestone, wood-plank and more — stamped patterns that mimic premium materials.", "link_label": "Get a quote", "link": "/pages/estimate" } },
+        "s2": { "type": "service", "settings": { "image": "shopify://shop_images/colored-concrete-stairs-charcoal-pleasant-grove-ut.jpg", "title": "Colored & integral-color concrete", "text": "Integral color, stains and release tones blended to match your home and landscaping.", "link_label": "Get a quote", "link": "/pages/estimate" } },
+        "s3": { "type": "service", "settings": { "image": "shopify://shop_images/stamped-concrete-firepit-pad-wood-plank-provo-ut.jpg", "title": "Decorative borders & bands", "text": "Contrasting borders, saw-cut patterns and accent bands that frame the space.", "link_label": "Get a quote", "link": "/pages/estimate" } },
+        "s4": { "type": "service", "settings": { "image": "shopify://shop_images/concrete-walkway-stone-home-pleasant-grove-ut.jpg", "title": "Walkways & entryways", "text": "Matching stamped walkways and front entries that tie the whole property together.", "link_label": "Get a quote", "link": "/pages/estimate" } },
+        "s5": { "type": "service", "settings": { "image": "shopify://shop_images/decorative-concrete-firepit-seating-area-pleasant-grove-ut.jpg", "title": "Fire pits & seating areas", "text": "Decorative slabs poured around fire pits, seat walls and outdoor kitchens.", "link_label": "Get a quote", "link": "/pages/estimate" } },
+        "s6": { "type": "service", "settings": { "image": "shopify://shop_images/stamped-concrete-patio-firepit-orem-ut.jpg", "title": "Sealing & protection", "text": "Sealed and protected so color stays rich and the surface resists Utah's freeze-thaw and UV.", "link_label": "Get a quote", "link": "/pages/estimate" } }
       },
       "block_order": ["s1", "s2", "s3", "s4", "s5", "s6"]
     },

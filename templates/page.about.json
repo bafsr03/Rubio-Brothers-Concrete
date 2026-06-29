@@ -19,6 +19,7 @@
     "story": {
       "type": "about-story",
       "settings": {
+        "image": "shopify://shop_images/decorative-concrete-firepit-seating-area-pleasant-grove-ut.jpg",
         "accent_color": "#C42A20",
         "button_label": "Get a free estimate",
         "button_link": "/pages/estimate"

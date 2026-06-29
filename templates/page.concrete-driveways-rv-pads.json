@@ -3,6 +3,7 @@
     "hero": {
       "type": "site-hero",
       "settings": {
+        "image": "shopify://shop_images/concrete-driveway-stone-home-pleasant-grove-ut.jpg",
         "eyebrow": "Pleasant Grove, UT · Serving all of Utah County",
         "heading": "Concrete Driveways & Heavy-Duty RV Pads in Utah County",
         "subheading": "New driveways, full tear-out and replacement, and reinforced RV pads built to handle the weight — poured by a family crew with 30+ years of experience.",
@@ -26,12 +27,12 @@
         "accent_color": "#C42A20"
       },
       "blocks": {
-        "s1": { "type": "service", "settings": { "title": "New concrete driveways", "text": "Crack-resistant, properly based driveways finished to survive freeze-thaw winters.", "link_label": "Get a quote", "link": "/pages/estimate" } },
-        "s2": { "type": "service", "settings": { "title": "Driveway replacement & tear-out", "text": "We remove old, cracked driveways, haul it away and repour clean and level — no mess left behind.", "link_label": "Get a quote", "link": "/pages/estimate" } },
-        "s3": { "type": "service", "settings": { "title": "Heavy-duty RV pads", "text": "Thicker, steel-reinforced pads engineered to hold motorhomes, trailers and equipment without cracking.", "link_label": "Get a quote", "link": "/pages/estimate" } },
-        "s4": { "type": "service", "settings": { "title": "Extra-thick approaches & aprons", "text": "Reinforced driveway approaches and garage aprons that take the daily load where it's heaviest.", "link_label": "Get a quote", "link": "/pages/estimate" } },
-        "s5": { "type": "service", "settings": { "title": "Excavation & base prep", "text": "Grading, forming and compacted base work done right so your pour lasts for decades.", "link_label": "Get a quote", "link": "/pages/estimate" } },
-        "s6": { "type": "service", "settings": { "title": "Drainage & grading", "text": "Proper slope and drainage so water runs off your slab instead of pooling and undermining it.", "link_label": "Get a quote", "link": "/pages/estimate" } }
+        "s1": { "type": "service", "settings": { "image": "shopify://shop_images/concrete-driveway-broom-finish-pleasant-grove-ut.jpg", "title": "New concrete driveways", "text": "Crack-resistant, properly based driveways finished to survive freeze-thaw winters.", "link_label": "Get a quote", "link": "/pages/estimate" } },
+        "s2": { "type": "service", "settings": { "image": "shopify://shop_images/concrete-driveway-extension-lehi-ut.jpg", "title": "Driveway replacement & tear-out", "text": "We remove old, cracked driveways, haul it away and repour clean and level — no mess left behind.", "link_label": "Get a quote", "link": "/pages/estimate" } },
+        "s3": { "type": "service", "settings": { "image": "shopify://shop_images/concrete-flatwork-pour-utah-county.jpg", "title": "Heavy-duty RV pads", "text": "Thicker, steel-reinforced pads engineered to hold motorhomes, trailers and equipment without cracking.", "link_label": "Get a quote", "link": "/pages/estimate" } },
+        "s4": { "type": "service", "settings": { "image": "shopify://shop_images/concrete-driveway-curved-american-fork-ut.jpg", "title": "Extra-thick approaches & aprons", "text": "Reinforced driveway approaches and garage aprons that take the daily load where it's heaviest.", "link_label": "Get a quote", "link": "/pages/estimate" } },
+        "s5": { "type": "service", "settings": { "image": "shopify://shop_images/concrete-slab-base-prep-rebar-utah-county.jpg", "title": "Excavation & base prep", "text": "Grading, forming and compacted base work done right so your pour lasts for decades.", "link_label": "Get a quote", "link": "/pages/estimate" } },
+        "s6": { "type": "service", "settings": { "image": "shopify://shop_images/concrete-driveway-pour-sunset-pleasant-grove-ut.jpg", "title": "Drainage & grading", "text": "Proper slope and drainage so water runs off your slab instead of pooling and undermining it.", "link_label": "Get a quote", "link": "/pages/estimate" } }
       },
       "block_order": ["s1", "s2", "s3", "s4", "s5", "s6"]
     },
