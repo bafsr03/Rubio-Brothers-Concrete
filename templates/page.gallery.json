@@ -1,68 +1,337 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "intro": {
       "type": "main-page",
       "settings": {
+        "content_direction": "column",
+        "gap": 12,
+        "background_color": "",
         "padding-block-start": 48,
         "padding-block-end": 8
       }
     },
     "gallery": {
       "type": "project-gallery",
+      "blocks": {
+        "g1": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-broom-finish-pleasant-grove-ut.jpg",
+            "category": "Driveway",
+            "caption": "Broom-finish driveway, Pleasant Grove",
+            "alt": "New broom-finish concrete driveway in Pleasant Grove, UT"
+          }
+        },
+        "g2": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-stone-home-pleasant-grove-ut.jpg",
+            "category": "Driveway",
+            "caption": "Driveway, Pleasant Grove",
+            "alt": "Finished concrete driveway at a stone home in Pleasant Grove, UT"
+          }
+        },
+        "g3": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-curved-american-fork-ut.jpg",
+            "category": "Driveway",
+            "caption": "Curved driveway, American Fork",
+            "alt": "Curved concrete driveway in American Fork, UT"
+          }
+        },
+        "g4": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-pour-sunset-pleasant-grove-ut.jpg",
+            "category": "Driveway",
+            "caption": "Driveway pour at sunset, Pleasant Grove",
+            "alt": "Freshly poured concrete driveway at sunset in Pleasant Grove, UT"
+          }
+        },
+        "g5": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/stamped-concrete-patio-ashlar-slate-orem-ut.jpg",
+            "category": "Stamped patio",
+            "caption": "Ashlar stamped patio, Orem",
+            "alt": "Ashlar slate stamped concrete patio in Orem, UT"
+          }
+        },
+        "g6": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/stamped-concrete-patio-wood-plank-orem-ut.jpg",
+            "category": "Stamped patio",
+            "caption": "Wood-plank stamped patio, Orem",
+            "alt": "Wood-plank stamped concrete patio in Orem, UT"
+          }
+        },
+        "g7": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/stamped-concrete-firepit-pad-wood-plank-provo-ut.jpg",
+            "category": "Stamped",
+            "caption": "Stamped fire-pit pad, Provo",
+            "alt": "Round wood-plank stamped concrete fire-pit pad in Provo, UT"
+          }
+        },
+        "g8": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/stamped-concrete-patio-firepit-orem-ut.jpg",
+            "category": "Decorative",
+            "caption": "Stamped patio & fire pit, Orem",
+            "alt": "Stamped concrete patio with a stone fire pit in Orem, UT"
+          }
+        },
+        "g9": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/decorative-concrete-firepit-seating-area-pleasant-grove-ut.jpg",
+            "category": "Decorative",
+            "caption": "Fire-pit seating area, Pleasant Grove",
+            "alt": "Circular decorative concrete fire-pit seating area in Pleasant Grove, UT"
+          }
+        },
+        "g10": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/colored-concrete-stairs-charcoal-pleasant-grove-ut.jpg",
+            "category": "Colored",
+            "caption": "Charcoal colored stairs, Pleasant Grove",
+            "alt": "Charcoal colored concrete stairs in Pleasant Grove, UT"
+          }
+        },
+        "g11": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-patio-backyard-orem-ut.jpg",
+            "category": "Patio",
+            "caption": "Backyard patio, Orem",
+            "alt": "Concrete backyard patio in Orem, UT"
+          }
+        },
+        "g12": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-patio-backyard-lehi-ut.jpg",
+            "category": "Patio",
+            "caption": "Backyard patio, Lehi",
+            "alt": "Concrete backyard patio in Lehi, UT"
+          }
+        },
+        "g13": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-covered-patio-pour-lehi-ut.jpg",
+            "category": "Patio",
+            "caption": "Covered patio, Lehi",
+            "alt": "Covered concrete patio pour in Lehi, UT"
+          }
+        },
+        "g14": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-walkway-stone-home-pleasant-grove-ut.jpg",
+            "category": "Walkway",
+            "caption": "Walkway, Pleasant Grove",
+            "alt": "Concrete walkway alongside a stone home in Pleasant Grove, UT"
+          }
+        },
+        "g15": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-sport-court-pad-pleasant-grove-ut.jpg",
+            "category": "Sport court",
+            "caption": "Sport court pad, Pleasant Grove",
+            "alt": "Concrete sport court pad in Pleasant Grove, UT"
+          }
+        },
+        "g16": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-slab-base-prep-rebar-utah-county.jpg",
+            "category": "Site prep",
+            "caption": "Base prep & rebar, Utah County",
+            "alt": "Concrete slab base prep with rebar in Utah County"
+          }
+        }
+      },
+      "block_order": [
+        "g1",
+        "g2",
+        "g3",
+        "g4",
+        "g5",
+        "g6",
+        "g7",
+        "g8",
+        "g9",
+        "g10",
+        "g11",
+        "g12",
+        "g13",
+        "g14",
+        "g15",
+        "g16"
+      ],
       "settings": {
         "eyebrow": "Our work",
         "heading": "Recent pours across Utah County",
         "intro": "Driveways, patios, RV pads and decorative concrete we've poured for neighbors in Pleasant Grove, Lehi, American Fork, Orem and Provo.",
-        "accent_color": "#C42A20"
-      },
-      "blocks": {
-        "g1":  { "type": "photo", "settings": { "image": "shopify://shop_images/concrete-driveway-broom-finish-pleasant-grove-ut.jpg", "category": "Driveway", "caption": "Broom-finish driveway, Pleasant Grove", "alt": "New broom-finish concrete driveway in Pleasant Grove, UT" } },
-        "g2":  { "type": "photo", "settings": { "image": "shopify://shop_images/concrete-driveway-stone-home-pleasant-grove-ut.jpg", "category": "Driveway", "caption": "Driveway, Pleasant Grove", "alt": "Finished concrete driveway at a stone home in Pleasant Grove, UT" } },
-        "g3":  { "type": "photo", "settings": { "image": "shopify://shop_images/concrete-driveway-curved-american-fork-ut.jpg", "category": "Driveway", "caption": "Curved driveway, American Fork", "alt": "Curved concrete driveway in American Fork, UT" } },
-        "g4":  { "type": "photo", "settings": { "image": "shopify://shop_images/concrete-driveway-pour-sunset-pleasant-grove-ut.jpg", "category": "Driveway", "caption": "Driveway pour at sunset, Pleasant Grove", "alt": "Freshly poured concrete driveway at sunset in Pleasant Grove, UT" } },
-        "g5":  { "type": "photo", "settings": { "image": "shopify://shop_images/stamped-concrete-patio-ashlar-slate-orem-ut.jpg", "category": "Stamped patio", "caption": "Ashlar stamped patio, Orem", "alt": "Ashlar slate stamped concrete patio in Orem, UT" } },
-        "g6":  { "type": "photo", "settings": { "image": "shopify://shop_images/stamped-concrete-patio-wood-plank-orem-ut.jpg", "category": "Stamped patio", "caption": "Wood-plank stamped patio, Orem", "alt": "Wood-plank stamped concrete patio in Orem, UT" } },
-        "g7":  { "type": "photo", "settings": { "image": "shopify://shop_images/stamped-concrete-firepit-pad-wood-plank-provo-ut.jpg", "category": "Stamped", "caption": "Stamped fire-pit pad, Provo", "alt": "Round wood-plank stamped concrete fire-pit pad in Provo, UT" } },
-        "g8":  { "type": "photo", "settings": { "image": "shopify://shop_images/stamped-concrete-patio-firepit-orem-ut.jpg", "category": "Decorative", "caption": "Stamped patio & fire pit, Orem", "alt": "Stamped concrete patio with a stone fire pit in Orem, UT" } },
-        "g9":  { "type": "photo", "settings": { "image": "shopify://shop_images/decorative-concrete-firepit-seating-area-pleasant-grove-ut.jpg", "category": "Decorative", "caption": "Fire-pit seating area, Pleasant Grove", "alt": "Circular decorative concrete fire-pit seating area in Pleasant Grove, UT" } },
-        "g10": { "type": "photo", "settings": { "image": "shopify://shop_images/colored-concrete-stairs-charcoal-pleasant-grove-ut.jpg", "category": "Colored", "caption": "Charcoal colored stairs, Pleasant Grove", "alt": "Charcoal colored concrete stairs in Pleasant Grove, UT" } },
-        "g11": { "type": "photo", "settings": { "image": "shopify://shop_images/concrete-patio-backyard-orem-ut.jpg", "category": "Patio", "caption": "Backyard patio, Orem", "alt": "Concrete backyard patio in Orem, UT" } },
-        "g12": { "type": "photo", "settings": { "image": "shopify://shop_images/concrete-patio-backyard-lehi-ut.jpg", "category": "Patio", "caption": "Backyard patio, Lehi", "alt": "Concrete backyard patio in Lehi, UT" } },
-        "g13": { "type": "photo", "settings": { "image": "shopify://shop_images/concrete-covered-patio-pour-lehi-ut.jpg", "category": "Patio", "caption": "Covered patio, Lehi", "alt": "Covered concrete patio pour in Lehi, UT" } },
-        "g14": { "type": "photo", "settings": { "image": "shopify://shop_images/concrete-walkway-stone-home-pleasant-grove-ut.jpg", "category": "Walkway", "caption": "Walkway, Pleasant Grove", "alt": "Concrete walkway alongside a stone home in Pleasant Grove, UT" } },
-        "g15": { "type": "photo", "settings": { "image": "shopify://shop_images/concrete-sport-court-pad-pleasant-grove-ut.jpg", "category": "Sport court", "caption": "Sport court pad, Pleasant Grove", "alt": "Concrete sport court pad in Pleasant Grove, UT" } },
-        "g16": { "type": "photo", "settings": { "image": "shopify://shop_images/concrete-slab-base-prep-rebar-utah-county.jpg", "category": "Site prep", "caption": "Base prep & rebar, Utah County", "alt": "Concrete slab base prep with rebar in Utah County" } }
-      },
-      "block_order": ["g1","g2","g3","g4","g5","g6","g7","g8","g9","g10","g11","g12","g13","g14","g15","g16"]
+        "button_label": "",
+        "button_link": "",
+        "accent_color": "#c42a20",
+        "background_color": "",
+        "padding-block-start": 48,
+        "padding-block-end": 48,
+        "padding-inline-start": 0,
+        "padding-inline-end": 0
+      }
     },
     "before_after": {
       "type": "section",
+      "blocks": {
+        "c1": {
+          "type": "comparison-slider",
+          "settings": {
+            "before_image": "shopify://shop_images/ChatGPT_Image_30_jun_2026_12_32_24_p.m..png",
+            "after_image": "shopify://shop_images/concrete-patio-backyard-lehi-ut.jpg",
+            "slider_style": "horizontal",
+            "show_text": true,
+            "before_text": "Before",
+            "after_text": "After",
+            "text_preset": "",
+            "text_position_horizontal": "start",
+            "text_position_vertical": "start",
+            "text_background": false,
+            "text_background_color": "{{ settings.color_palette.background }}",
+            "text_corner_radius": 0,
+            "text_color": "{{ settings.color_palette.foreground }}",
+            "image_ratio": "landscape",
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "slider_bg_color": "",
+            "slider_handle_color": "",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "c2": {
+          "type": "comparison-slider",
+          "settings": {
+            "before_image": "shopify://shop_images/ChatGPT_Image_30_jun_2026_12_23_49_p.m..png",
+            "after_image": "shopify://shop_images/concrete-patio-pour-provo-ut.jpg",
+            "slider_style": "horizontal",
+            "show_text": true,
+            "before_text": "Before",
+            "after_text": "After",
+            "text_preset": "",
+            "text_position_horizontal": "start",
+            "text_position_vertical": "start",
+            "text_background": false,
+            "text_background_color": "{{ settings.color_palette.background }}",
+            "text_corner_radius": 0,
+            "text_color": "{{ settings.color_palette.foreground }}",
+            "image_ratio": "landscape",
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "slider_bg_color": "",
+            "slider_handle_color": "",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2"
+      ],
       "settings": {
-        "section_width": "page-width",
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
         "gap": 24,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
         "padding-block-start": 24,
         "padding-block-end": 24
-      },
-      "blocks": {
-        "c1": { "type": "comparison-slider", "settings": { "show_text": true, "before_text": "Before", "after_text": "After", "image_ratio": "landscape" } },
-        "c2": { "type": "comparison-slider", "settings": { "show_text": true, "before_text": "Before", "after_text": "After", "image_ratio": "landscape" } }
-      },
-      "block_order": ["c1", "c2"]
+      }
     },
     "cta": {
       "type": "cta-band",
       "settings": {
         "eyebrow": "Like what you see?",
         "heading": "Let's build yours next.",
+        "text": "Tell us about your project and we'll get you an exact price after a quick site visit — at no cost.",
         "button_label": "Get a free estimate",
         "button_link": "/pages/estimate",
         "phone_label": "Call (385) 210-5983",
         "phone": "(385) 210-5983",
-        "accent_color": "#C42A20",
+        "accent_color": "#c42a20",
         "background_color": "#ffffff",
-        "text_color": "#1a1a1a"
+        "text_color": "#1a1a1a",
+        "padding-block-start": 96,
+        "padding-block-end": 96,
+        "padding-inline-start": 0,
+        "padding-inline-end": 0
       }
     }
   },
-  "order": ["intro", "gallery", "before_after", "cta"]
+  "order": [
+    "intro",
+    "gallery",
+    "before_after",
+    "cta"
+  ]
 }
