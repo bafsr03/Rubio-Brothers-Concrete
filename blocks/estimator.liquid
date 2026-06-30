@@ -177,29 +177,29 @@
             {%- endif -%}
 
             <div class="estimator__form-row">
-              <label class="visually-hidden" for="{{ block.id }}-name">{{ 'blocks.contact_form.name' | t }}</label>
+              <label class="visually-hidden" for="{{ block.id }}-name">Name</label>
               <input
                 id="{{ block.id }}-name"
                 class="estimator__input"
                 type="text"
                 name="contact[name]"
                 autocomplete="name"
-                placeholder="{{ 'blocks.contact_form.name' | t }}"
+                placeholder="Name"
                 value="{% if customer %}{{ customer.name }}{% endif %}"
               >
-              <label class="visually-hidden" for="{{ block.id }}-phone">{{ 'blocks.contact_form.phone' | t }}</label>
+              <label class="visually-hidden" for="{{ block.id }}-phone">Phone</label>
               <input
                 id="{{ block.id }}-phone"
                 class="estimator__input"
                 type="tel"
                 name="contact[phone]"
                 autocomplete="tel"
-                placeholder="{{ 'blocks.contact_form.phone' | t }}"
+                placeholder="Phone"
                 value="{% if customer %}{{ customer.phone }}{% endif %}"
               >
             </div>
 
-            <label class="visually-hidden" for="{{ block.id }}-email">{{ 'blocks.contact_form.email' | t }}</label>
+            <label class="visually-hidden" for="{{ block.id }}-email">Email</label>
             <input
               id="{{ block.id }}-email"
               class="estimator__input"
@@ -209,11 +209,11 @@
               spellcheck="false"
               autocapitalize="off"
               aria-required="true"
-              placeholder="{{ 'blocks.contact_form.email' | t }}"
+              placeholder="Email"
               value="{% if customer %}{{ customer.email }}{% endif %}"
             >
 
-            <label class="visually-hidden" for="{{ block.id }}-body">{{ 'blocks.contact_form.comment' | t }}</label>
+            <label class="visually-hidden" for="{{ block.id }}-body">Comment</label>
             <textarea
               id="{{ block.id }}-body"
               class="estimator__input estimator__textarea"

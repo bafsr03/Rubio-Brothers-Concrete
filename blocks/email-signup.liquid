@@ -54,7 +54,7 @@
         for="EmailInput-{{ block.id }}"
         class="visually-hidden"
       >
-        {{ 'blocks.email_signup.label' | t }}
+        Email
       </label>
       <input
         id="EmailInput-{{ block.id }}"
@@ -64,7 +64,7 @@
         autocorrect="off"
         autocapitalize="off"
         autocomplete="email"
-        placeholder="{{ 'blocks.email_signup.placeholder' | t }}"
+        placeholder="Email"
         required
         {% if form.errors and form.id == blank %}
           autofocus
@@ -125,7 +125,7 @@
         <span class="svg-wrapper icon-success">
           {{ 'icon-checkmark.svg' | inline_asset_content }}
         </span>
-        <p class="email-signup__message-text">{{ 'blocks.email_signup.success' | t }}</p>
+        <p class="email-signup__message-text">Thanks for subscribing</p>
       </div>
     {%- endif -%}
   {% endform %}

@@ -53,7 +53,7 @@
         autofocus
       >
         {{- 'icon-checkmark.svg' | inline_asset_content -}}
-        {{- 'blocks.contact_form.post_success' | t -}}
+        Thanks for contacting us. We'll get back to you as soon as possible.
       </div>
     {%- endif -%}
 
@@ -62,7 +62,7 @@
         class="visually-hidden"
         for="ContactForm-name"
       >
-        {{- 'blocks.contact_form.name' | t -}}
+        Name
       </label>
       <input
         type="text"
@@ -71,14 +71,14 @@
         autocomplete="name"
         name="contact[name]"
         value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
-        placeholder="{{ 'blocks.contact_form.name' | t }}"
+        placeholder="Name"
       >
 
       <label
         class="visually-hidden"
         for="ContactForm-email"
       >
-        {{- 'blocks.contact_form.email' | t -}}
+        Email
         <span aria-hidden="true">*</span></label
       >
       <input
@@ -95,7 +95,7 @@
           aria-invalid="true"
           aria-describedby="ContactForm-email-error"
         {% endif %}
-        placeholder="{{ 'blocks.contact_form.email' | t }}"
+        placeholder="Email"
       >
     </div>
 
@@ -103,7 +103,7 @@
       class="visually-hidden"
       for="ContactForm-phone"
     >
-      {{- 'blocks.contact_form.phone' | t -}}
+      Phone
     </label>
     <input
       type="tel"
@@ -113,21 +113,21 @@
       name="contact[phone]"
       pattern="[0-9\-]*"
       value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
-      placeholder="{{ 'blocks.contact_form.phone' | t }}"
+      placeholder="Phone"
     >
 
     <label
       class="visually-hidden"
       for="ContactForm-body"
     >
-      {{- 'blocks.contact_form.comment' | t -}}
+      Comment
     </label>
     <textarea
       rows="10"
       id="ContactForm-body"
       class="contact-form__input contact-form__input--textarea"
       name="contact[body]"
-      placeholder="{{ 'blocks.contact_form.comment' | t }}"
+      placeholder="Comment"
     >
       {{- form.body -}}
     </textarea>

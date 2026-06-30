@@ -119,14 +119,14 @@
               </div>
             {%- endif -%}
             <div class="rb-contact__row">
-              <label class="visually-hidden" for="{{ section.id }}-name">{{ 'blocks.contact_form.name' | t }}</label>
-              <input id="{{ section.id }}-name" class="rb-contact__input" type="text" name="contact[name]" autocomplete="name" placeholder="{{ 'blocks.contact_form.name' | t }}" value="{% if customer %}{{ customer.name }}{% endif %}">
-              <label class="visually-hidden" for="{{ section.id }}-phone">{{ 'blocks.contact_form.phone' | t }}</label>
-              <input id="{{ section.id }}-phone" class="rb-contact__input" type="tel" name="contact[phone]" autocomplete="tel" placeholder="{{ 'blocks.contact_form.phone' | t }}" value="{% if customer %}{{ customer.phone }}{% endif %}">
+              <label class="visually-hidden" for="{{ section.id }}-name">Name</label>
+              <input id="{{ section.id }}-name" class="rb-contact__input" type="text" name="contact[name]" autocomplete="name" placeholder="Name" value="{% if customer %}{{ customer.name }}{% endif %}">
+              <label class="visually-hidden" for="{{ section.id }}-phone">Phone</label>
+              <input id="{{ section.id }}-phone" class="rb-contact__input" type="tel" name="contact[phone]" autocomplete="tel" placeholder="Phone" value="{% if customer %}{{ customer.phone }}{% endif %}">
             </div>
-            <label class="visually-hidden" for="{{ section.id }}-email">{{ 'blocks.contact_form.email' | t }}</label>
-            <input id="{{ section.id }}-email" class="rb-contact__input" type="email" name="contact[email]" autocomplete="email" spellcheck="false" autocapitalize="off" aria-required="true" placeholder="{{ 'blocks.contact_form.email' | t }}" value="{% if customer %}{{ customer.email }}{% endif %}">
-            <label class="visually-hidden" for="{{ section.id }}-body">{{ 'blocks.contact_form.comment' | t }}</label>
+            <label class="visually-hidden" for="{{ section.id }}-email">Email</label>
+            <input id="{{ section.id }}-email" class="rb-contact__input" type="email" name="contact[email]" autocomplete="email" spellcheck="false" autocapitalize="off" aria-required="true" placeholder="Email" value="{% if customer %}{{ customer.email }}{% endif %}">
+            <label class="visually-hidden" for="{{ section.id }}-body">Comment</label>
             <textarea id="{{ section.id }}-body" class="rb-contact__input rb-contact__textarea" name="contact[body]" rows="4" placeholder="{{ section.settings.message_placeholder }}"></textarea>
             <button type="submit" class="rb-contact__submit">{{ section.settings.submit_label }}</button>
           {%- endif -%}
