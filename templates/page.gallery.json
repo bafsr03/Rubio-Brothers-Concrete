@@ -59,8 +59,8 @@
         "phone_label": "Call (385) 210-5983",
         "phone": "(385) 210-5983",
         "accent_color": "#C42A20",
-        "background_color": "#1a1a1a",
-        "text_color": "#ffffff"
+        "background_color": "#ffffff",
+        "text_color": "#1a1a1a"
       }
     }
   },
