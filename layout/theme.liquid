@@ -6,13 +6,16 @@
   lang="{{ request.locale.iso_code }}"
 >
   <head>
-    {%- if settings.favicon != blank -%}
-      <link
-        rel="icon"
-        type="image/png"
-        href="{{ settings.favicon | image_url: width: 32, height: 32 }}"
-      >
-    {%- endif -%}
+    {%- comment -%}
+      Brand favicon — the shield mark shown in browser tabs and Google search results.
+      Served as a theme asset (square, high-res) so it's always present and legible;
+      48x48 is Google's documented minimum. Kept independent of settings.favicon so the
+      brand icon is guaranteed.
+    {%- endcomment -%}
+    {%- assign favicon_url = 'rubio-brothers-favicon.png' | asset_url -%}
+    <link rel="icon" type="image/png" sizes="48x48" href="{{ favicon_url }}">
+    <link rel="icon" type="image/png" sizes="any" href="{{ favicon_url }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ favicon_url }}">
 
     {% comment %} This a way to wait for main content to load when navigating to a new page so that the view transitions can work consistently {% endcomment %}
     {% if settings.transition_to_main_product or settings.page_transition_enabled %}
