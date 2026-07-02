@@ -36,9 +36,9 @@
       "settings": {
         "speed": 5,
         "section_width": "page-width",
-        "background_color": "#1a1a1a",
+        "background_color": "{{ settings.color_palette.color1 }}",
         "divider_width": 1,
-        "divider_color": "{{ settings.color_palette.color2 }}",
+        "divider_color": "{{ settings.color_palette.color1 }}",
         "padding-block-start": 15,
         "padding-block-end": 15
       }
@@ -97,7 +97,7 @@
         "localization_position": "right",
         "localization_row": "top",
         "section_width": "page-width",
-        "section_height": "standard",
+        "section_height": "compact",
         "enable_sticky_header": "always",
         "divider_width": 0,
         "divider_size": "page-width",
