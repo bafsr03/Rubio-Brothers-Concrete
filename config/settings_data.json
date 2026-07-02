@@ -10,8 +10,8 @@
 {
   "current": {
     "logo": "shopify://shop_images/7040B2C3-33B0-46F3-9C35-CDC35D46B527-Photoroom.png",
-    "logo_height": 72,
-    "logo_height_mobile": 48,
+    "logo_height": 110,
+    "logo_height_mobile": 68,
     "favicon": "shopify://shop_images/7040B2C3-33B0-46F3-9C35-CDC35D46B527-Photoroom.png",
     "page_text_color": "{{ settings.color_palette.foreground }}",
     "type_body_font": "inter_n4",
