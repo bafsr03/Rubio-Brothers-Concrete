@@ -31,8 +31,15 @@
   elsif request.page_type == 'password'
     assign og_url = request.origin
   endif
+
+  # Share image fallback chain: page-specific image → merchant default → logo.
+  assign share_image = page_image | default: settings.seo_share_image | default: settings.logo
 %}
 
+<meta
+  property="og:locale"
+  content="en_US"
+>
 <meta
   property="og:site_name"
   content="{{ shop.name }}"
@@ -54,23 +61,25 @@
   content="{{ og_description | escape }}"
 >
 
-{%- if page_image -%}
+{%- if share_image -%}
   <meta
     property="og:image"
-    content="http:{{ page_image | image_url }}"
+    content="https:{{ share_image | image_url: width: 1200 }}"
   >
   <meta
     property="og:image:secure_url"
-    content="https:{{ page_image | image_url }}"
+    content="https:{{ share_image | image_url: width: 1200 }}"
   >
-  <meta
-    property="og:image:width"
-    content="{{ page_image.width }}"
-  >
-  <meta
-    property="og:image:height"
-    content="{{ page_image.height }}"
-  >
+  {%- if share_image.width and share_image.height -%}
+    <meta
+      property="og:image:width"
+      content="{{ share_image.width }}"
+    >
+    <meta
+      property="og:image:height"
+      content="{{ share_image.height }}"
+    >
+  {%- endif -%}
 {%- endif -%}
 
 {%- if request.page_type == 'product' -%}
@@ -94,6 +103,12 @@
   name="twitter:card"
   content="summary_large_image"
 >
+{%- if share_image -%}
+  <meta
+    name="twitter:image"
+    content="https:{{ share_image | image_url: width: 1200 }}"
+  >
+{%- endif -%}
 <meta
   name="twitter:title"
   content="{{ og_title | escape }}"

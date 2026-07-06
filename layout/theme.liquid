@@ -27,8 +27,12 @@
       >
     {% endif %}
 
+    {%- comment -%} Google Search Console domain verification — must remain present. {%- endcomment -%}
+    <meta name="google-site-verification" content="je1kjJcHLxK2bltqqlsZaRAaBjaeah8skfeVTEKxB5Y">
+
     {%- render 'meta-tags' -%}
     {%- render 'local-business-schema' -%}
+    {%- render 'website-schema' -%}
     {%- render 'stylesheets' -%}
     {%- render 'fonts' -%}
     {%- render 'scripts' -%}

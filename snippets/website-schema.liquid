@@ -1,0 +1,32 @@
+{% doc %}
+  Renders WebSite JSON-LD for brand identity and the sitelinks search box.
+  Reinforces the site name/alternate name to Google and declares the on-site
+  search action. Reads the business name from the "Business info" settings,
+  falling back to the shop name.
+{% enddoc %}
+
+{%- liquid
+  assign site_name = settings.business_name | default: shop.name
+-%}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": {{ request.origin | append: '/#website' | json }},
+  "name": {{ site_name | json }},
+  "alternateName": "Rubio Brothers Concrete",
+  "url": {{ request.origin | json }},
+  "publisher": {
+    "@id": {{ request.origin | append: '/#business' | json }}
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "{{ request.origin }}/search?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>

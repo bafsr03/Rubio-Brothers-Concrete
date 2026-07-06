@@ -23,15 +23,19 @@
     assign social_urls = social_urls | append: settings.business_bbb_url | append: '||'
   endif
   assign social_list = social_urls | split: '||'
+
+  assign biz_image = settings.seo_share_image | default: settings.logo
 -%}
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "GeneralContractor",
+  "@id": {{ request.origin | append: '/#business' | json }},
   "name": {{ biz_name | json }},
-  "url": {{ request.origin | append: page.url | default: request.origin | json }},
+  "url": {{ request.origin | json }},
   {% if settings.logo != blank %}"logo": {{ settings.logo | image_url: width: 600 | prepend: 'https:' | json }},{% endif %}
+  {% if biz_image != blank %}"image": {{ biz_image | image_url: width: 1200 | prepend: 'https:' | json }},{% endif %}
   {% if biz_phone != blank %}"telephone": {{ biz_phone | json }},{% endif %}
   {% if biz_email != blank %}"email": {{ biz_email | json }},{% endif %}
   "priceRange": "$$",
