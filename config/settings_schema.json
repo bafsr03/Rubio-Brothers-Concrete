@@ -2183,6 +2183,19 @@
         "default": "44"
       },
       {
+        "type": "header",
+        "content": "Social sharing"
+      },
+      {
+        "type": "paragraph",
+        "content": "Default image shown when the site is shared on social media or messaging apps (Open Graph / Twitter). Recommended size 1200×630."
+      },
+      {
+        "type": "image_picker",
+        "id": "seo_share_image",
+        "label": "Default social share image"
+      },
+      {
         "type": "checkbox",
         "id": "sticky_call_bar",
         "label": "Show sticky call bar on mobile",
