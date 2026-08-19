@@ -1,0 +1,59 @@
+{% doc %}
+  Renders BreadcrumbList JSON-LD for the current page so Google can show the
+  site hierarchy in search results. Derives the trail from the current template
+  (page / article / blog / collection / product) using live Liquid objects —
+  no merchant configuration required. Emits nothing on the homepage, cart,
+  checkout-adjacent, search or password templates where a breadcrumb is noise.
+{% enddoc %}
+
+{%- liquid
+  assign origin = request.origin
+  assign home_name = 'Home'
+
+  # Build a pipe-delimited "name::url" list, then render as ordered ListItems.
+  assign crumbs = ''
+
+  case request.page_type
+    when 'page'
+      assign crumbs = home_name | append: '::' | append: origin
+      assign crumbs = crumbs | append: '||' | append: page.title | append: '::' | append: origin | append: page.url
+    when 'article'
+      assign crumbs = home_name | append: '::' | append: origin
+      assign crumbs = crumbs | append: '||' | append: blog.title | append: '::' | append: origin | append: blog.url
+      assign crumbs = crumbs | append: '||' | append: article.title | append: '::' | append: origin | append: article.url
+    when 'blog'
+      assign crumbs = home_name | append: '::' | append: origin
+      assign crumbs = crumbs | append: '||' | append: blog.title | append: '::' | append: origin | append: blog.url
+    when 'collection'
+      assign crumbs = home_name | append: '::' | append: origin
+      assign crumbs = crumbs | append: '||' | append: collection.title | append: '::' | append: origin | append: collection.url
+    when 'product'
+      assign crumbs = home_name | append: '::' | append: origin
+      if collection and collection.url != blank
+        assign crumbs = crumbs | append: '||' | append: collection.title | append: '::' | append: origin | append: collection.url
+      endif
+      assign crumbs = crumbs | append: '||' | append: product.title | append: '::' | append: origin | append: product.url
+  endcase
+
+  assign crumb_items = crumbs | split: '||'
+-%}
+
+{%- if crumb_items.size > 1 -%}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {%- for crumb in crumb_items -%}
+        {%- assign parts = crumb | split: '::' -%}
+        {
+          "@type": "ListItem",
+          "position": {{ forloop.index }},
+          "name": {{ parts[0] | strip | json }},
+          "item": {{ parts[1] | strip | json }}
+        }{%- unless forloop.last -%},{%- endunless -%}
+      {%- endfor -%}
+    ]
+  }
+  </script>
+{%- endif -%}

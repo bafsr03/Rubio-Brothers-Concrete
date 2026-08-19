@@ -71,7 +71,7 @@
           {%- if biz_email != blank -%}
             <li class="rb-contact__item">
               <span class="rb-contact__item-label">Email</span>
-              <a class="rb-contact__link" href="mailto:{{ biz_email }}">{{ biz_email }}</a>
+              {% render 'protected-email', email: biz_email, link_class: 'rb-contact__link' %}
             </li>
           {%- endif -%}
           {%- if addr_parts != blank or city_line != blank -%}
@@ -105,6 +105,7 @@
       <div class="rb-contact__form-wrap" data-reveal>
         <p class="rb-contact__form-title">{{ section.settings.form_heading }}</p>
         {%- form 'contact', id: form_id, class: 'rb-contact__form' -%}
+          {% render 'spam-guard-fields' %}
           <input type="hidden" name="contact[id]" value="{{ form_id }}">
           {%- if form.posted_successfully? -%}
             <div class="rb-contact__success" tabindex="-1" autofocus>

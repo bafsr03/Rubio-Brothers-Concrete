@@ -1,0 +1,29 @@
+{% doc %}
+  Renders a business email address as a clickable mailto link without ever
+  putting the plain address (or a `mailto:` href) in the served HTML.
+
+  The address ships base64-encoded in a data attribute and is assembled into a
+  real link by `assets/protected-email.js`. Address-harvesting crawlers scrape
+  raw HTML and do not run page scripts, so they see only the encoded blob; the
+  no-JS fallback text reads "name [at] domain.com", which is human-readable but
+  does not match the `\S+@\S+` pattern harvesters key on.
+
+  @param {string} email - The address to render.
+  @param {string} [link_class] - Class applied to the generated <a>.
+
+  @example
+    {% render 'protected-email', email: biz_email, link_class: 'rb-footer__link' %}
+{% enddoc %}
+
+{%- liquid
+  assign encoded = email | base64_encode
+  assign fallback = email | replace: '@', ' [at] '
+-%}
+
+<span
+  class="protected-email"
+  data-protected-email="{{ encoded }}"
+  {% if link_class != blank %}data-link-class="{{ link_class | escape }}"{% endif %}
+>{{ fallback }}</span>
+
+<script src="{{ 'protected-email.js' | asset_url }}" type="module" fetchpriority="low"></script>

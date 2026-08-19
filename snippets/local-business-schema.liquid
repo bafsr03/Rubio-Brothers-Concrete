@@ -6,7 +6,6 @@
 {%- liquid
   assign biz_name = settings.business_name | default: shop.name
   assign biz_phone = settings.business_phone
-  assign biz_email = settings.business_email | default: shop.email
   assign areas = settings.business_areas_served | split: ','
 
   assign social_urls = ''
@@ -37,7 +36,11 @@
   {% if settings.logo != blank %}"logo": {{ settings.logo | image_url: width: 600 | prepend: 'https:' | json }},{% endif %}
   {% if biz_image != blank %}"image": {{ biz_image | image_url: width: 1200 | prepend: 'https:' | json }},{% endif %}
   {% if biz_phone != blank %}"telephone": {{ biz_phone | json }},{% endif %}
-  {% if biz_email != blank %}"email": {{ biz_email | json }},{% endif %}
+  {%- comment -%}
+    "email" is deliberately omitted: it is not used by Google for LocalBusiness
+    rich results, but it is a machine-readable address that harvesters scrape
+    straight out of the JSON-LD. Phone and address carry the local SEO signal.
+  {%- endcomment -%}
   "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",
@@ -47,12 +50,44 @@
     {% if settings.business_postal != blank %}"postalCode": {{ settings.business_postal | json }},{% endif %}
     "addressCountry": "US"
   },
+  {% if settings.business_latitude != blank and settings.business_longitude != blank %}
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": {{ settings.business_latitude | json }},
+    "longitude": {{ settings.business_longitude | json }}
+  },
+  {% endif %}
   "areaServed": [
     {% for area in areas %}
-      {{ area | strip | json }}{% unless forloop.last %},{% endunless %}
+      {
+        "@type": "City",
+        "name": {{ area | strip | json }}
+      }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ],
-  {% if settings.business_rating != blank and settings.business_review_count != blank %}
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Concrete services",
+    "itemListElement": [
+      {% assign svc_list = "Concrete driveways,RV pads,Concrete patios,Stamped decorative concrete,Retaining walls,Sports courts,Concrete tear-out and replacement,Excavation and site prep" | split: ',' %}
+      {% for svc in svc_list %}
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": {{ svc | strip | json }}
+        }
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
+  },
+  {% comment %}
+    Google policy: aggregateRating markup must reflect genuine reviews that are
+    visible to users on the same page. It is therefore gated behind an explicit
+    opt-in (Business info → "Show aggregate rating in SEO markup") and stays off
+    until on-site, verifiable review content backs it up.
+  {% endcomment %}
+  {% if settings.business_show_aggregate_rating and settings.business_rating != blank and settings.business_review_count != blank %}
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": {{ settings.business_rating | json }},

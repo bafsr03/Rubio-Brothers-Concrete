@@ -121,7 +121,7 @@
             <li><span class="rb-footer__label">Call or text</span><a href="tel:{{ tel }}">{{ biz_phone }}</a></li>
           {%- endif -%}
           {%- if biz_email != blank -%}
-            <li><span class="rb-footer__label">Email</span><a href="mailto:{{ biz_email }}">{{ biz_email }}</a></li>
+            <li><span class="rb-footer__label">Email</span>{% render 'protected-email', email: biz_email %}</li>
           {%- endif -%}
           {%- if full_address != blank -%}
             <li><span class="rb-footer__label">Visit</span><a href="{{ map_url }}" target="_blank" rel="noopener">{{ full_address }}</a></li>

@@ -1,0 +1,42 @@
+{% doc %}
+  Bot-deterrent fields for a native Shopify {% form 'contact' %}.
+
+  Render this immediately inside the form tag. It adds a honeypot input and
+  marks the form for `assets/form-spam-guard.js`, which blocks the submit when
+  the honeypot is filled, the form is completed inhumanly fast, or the message
+  is a link dump.
+
+  The honeypot is not prefixed `contact[...]`, so Shopify ignores it and the
+  notification email stays clean. It is positioned off-screen rather than
+  `display: none` — bots commonly skip fields that are explicitly hidden.
+
+  Server-side protection is separate: enable Shopify's reCAPTCHA in the admin
+  (Settings → search "spam protection") so direct POSTs are challenged too.
+
+  @example
+    {%- form 'contact', id: form_id -%}
+      {% render 'spam-guard-fields' %}
+      ...
+    {%- endform -%}
+{% enddoc %}
+
+<div
+  class="spam-guard"
+  aria-hidden="true"
+  style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;"
+>
+  <input
+    type="text"
+    name="website"
+    value=""
+    tabindex="-1"
+    autocomplete="off"
+    data-spam-guard-honeypot
+  >
+</div>
+
+<script>
+  document.currentScript.closest('form')?.setAttribute('data-spam-guard', '');
+</script>
+
+<script src="{{ 'form-spam-guard.js' | asset_url }}" type="module" fetchpriority="low"></script>

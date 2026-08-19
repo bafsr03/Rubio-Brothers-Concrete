@@ -156,6 +156,7 @@
         <p class="estimator__lead-title">{{ block.settings.form_heading }}</p>
 
         {%- form 'contact', id: form_id, class: 'estimator__form' -%}
+          {% render 'spam-guard-fields' %}
           <input type="hidden" name="contact[id]" value="{{ form_id }}">
           <input type="hidden" name="contact[Project type]" ref="fieldJobType" value="">
           <input type="hidden" name="contact[Project size]" ref="fieldSqft" value="">

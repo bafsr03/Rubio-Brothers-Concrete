@@ -2171,6 +2171,25 @@
       },
       {
         "type": "text",
+        "id": "business_latitude",
+        "label": "Latitude",
+        "info": "Optional. Adds precise geo coordinates to LocalBusiness structured data (e.g. 40.3641)."
+      },
+      {
+        "type": "text",
+        "id": "business_longitude",
+        "label": "Longitude",
+        "info": "Optional. Pairs with latitude (e.g. -111.7385)."
+      },
+      {
+        "type": "checkbox",
+        "id": "business_show_aggregate_rating",
+        "label": "Show aggregate rating in SEO markup",
+        "default": false,
+        "info": "Only enable once genuine reviews are displayed on the site. Google can penalize self-serving star ratings that aren't visible to visitors."
+      },
+      {
+        "type": "text",
         "id": "business_rating",
         "label": "Average rating (for SEO rich results)",
         "default": "5.0",
