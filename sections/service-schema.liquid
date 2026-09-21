@@ -1,0 +1,103 @@
+{% comment %}
+  Emits Service JSON-LD for a single service page and renders nothing visible.
+
+  Each service now lives on its own page (Driveways, RV Pads, Patios, Walkways,
+  …) instead of being grouped two-to-a-page, so each one can declare what it is
+  to Google independently. The provider is linked by @id to the GeneralContractor
+  node emitted once in the <head> by `local-business-schema`, so the business is
+  described a single time and every service points back at that same entity.
+
+  areaServed falls back to the theme's "Business info" areas so a new service
+  page is correct without per-page configuration.
+{% endcomment %}
+
+{%- liquid
+  assign svc_name = section.settings.service_name | default: page.title
+  assign svc_desc = section.settings.service_description | default: page.metafields.global.description
+
+  assign areas_raw = section.settings.areas_served | default: settings.business_areas_served
+  assign areas = areas_raw | split: ','
+
+  assign svc_url = request.origin | append: page.url
+-%}
+
+{%- if svc_name != blank -%}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": {{ svc_url | append: '#service' | json }},
+      "name": {{ svc_name | json }},
+      {% if section.settings.service_type != blank %}"serviceType": {{ section.settings.service_type | json }},{% endif %}
+      {% if svc_desc != blank %}"description": {{ svc_desc | strip_html | strip | json }},{% endif %}
+      "url": {{ svc_url | json }},
+      {% if section.settings.image != blank %}
+        "image": {{ section.settings.image | image_url: width: 1200 | prepend: 'https:' | json }},
+      {% endif %}
+      "provider": {
+        "@type": "GeneralContractor",
+        "@id": {{ request.origin | append: '/#business' | json }}
+      },
+      {%- comment -%}
+        Service has no price here on purpose: every job is quoted after a site
+        visit, so publishing a number would be a claim we can't stand behind.
+        The estimator page is offered as the way to get one instead.
+      {%- endcomment -%}
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "url": {{ request.origin | append: '/pages/estimate' | json }}
+      },
+      "areaServed": [
+        {%- for area in areas -%}
+          {
+            "@type": "City",
+            "name": {{ area | strip | json }}
+          }{%- unless forloop.last -%},{%- endunless -%}
+        {%- endfor -%}
+      ]
+    }
+  </script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Service schema",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Invisible. Tells Google this page is one specific service. Add one per service page."
+    },
+    {
+      "type": "text",
+      "id": "service_name",
+      "label": "Service name",
+      "info": "e.g. \"Concrete Driveways\". Defaults to the page title."
+    },
+    {
+      "type": "text",
+      "id": "service_type",
+      "label": "Service type",
+      "info": "Short category, e.g. \"Concrete driveway installation\"."
+    },
+    {
+      "type": "textarea",
+      "id": "service_description",
+      "label": "Service description",
+      "info": "One or two sentences. Defaults to the page's SEO description."
+    },
+    {
+      "type": "textarea",
+      "id": "areas_served",
+      "label": "Areas served",
+      "info": "Comma-separated cities. Defaults to the areas in Theme settings › Business info."
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Representative image"
+    }
+  ],
+  "presets": [{ "name": "Service schema" }]
+}
+{% endschema %}

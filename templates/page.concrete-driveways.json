@@ -1,0 +1,339 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "schema": {
+      "type": "service-schema",
+      "settings": {
+        "service_name": "Concrete Driveways",
+        "service_type": "Concrete driveway installation and replacement",
+        "service_description": "New concrete driveway installation, tear-out and replacement in Pleasant Grove and across Utah County, built and reinforced for freeze-thaw winters.",
+        "image": "shopify://shop_images/concrete-driveway-stone-home-pleasant-grove-ut.jpg"
+      }
+    },
+    "hero": {
+      "type": "site-hero",
+      "settings": {
+        "image": "shopify://shop_images/concrete-driveway-stone-home-pleasant-grove-ut.jpg",
+        "eyebrow": "Pleasant Grove, UT · Serving all of Utah County",
+        "heading": "Concrete Driveways in Pleasant Grove & Utah County",
+        "subheading": "New driveways, full tear-out and replacement, approaches and aprons — poured and reinforced by a family crew with 30+ years of experience.",
+        "button_label": "Get a free driveway estimate",
+        "button_link": "/pages/estimate",
+        "phone_label": "Call (385) 210-5983",
+        "phone": "(385) 210-5983",
+        "trust_chips": "Free estimates\nLicensed & insured\nBuilt for Utah winters",
+        "accent_color": "#C42A20",
+        "text_color": "#ffffff",
+        "overlay_opacity": 55,
+        "min_height": 78
+      }
+    },
+    "services": {
+      "type": "services-grid",
+      "settings": {
+        "eyebrow": "Driveways",
+        "heading": "New Driveway Installation & Replacement in Pleasant Grove, Lehi & American Fork",
+        "intro": "From a fresh pour on a new build to tearing out a cracked, failing slab and repouring it level — we handle every step.",
+        "accent_color": "#C42A20"
+      },
+      "blocks": {
+        "s1": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-broom-finish-pleasant-grove-ut.jpg",
+            "title": "New concrete driveways",
+            "text": "Crack-resistant, properly based driveways finished to survive freeze-thaw winters.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s2": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-extension-lehi-ut.jpg",
+            "title": "Driveway replacement & tear-out",
+            "text": "We remove old, cracked driveways, haul them away and repour clean and level — no mess left behind.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s3": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-extension-apron-garage-lehi-ut.jpg",
+            "title": "Driveway extensions & widening",
+            "text": "Extra parking where you need it, matched to the existing slab and tied in cleanly.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s4": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-curved-american-fork-ut.jpg",
+            "title": "Approaches & garage aprons",
+            "text": "Reinforced approaches and aprons poured thicker where the daily load is heaviest.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s5": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-slab-base-prep-rebar-utah-county.jpg",
+            "title": "Excavation & base prep",
+            "text": "Grading, forming and compacted base work done right so your pour lasts for decades.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s6": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-pour-sunset-pleasant-grove-ut.jpg",
+            "title": "Drainage & grading",
+            "text": "Proper slope so water runs off the slab instead of pooling and undermining it.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
+    },
+    "process": {
+      "type": "process-steps",
+      "settings": {
+        "eyebrow": "How it works",
+        "heading": "Our Driveway Pour Process: Grade, Form, Pour, Cure",
+        "intro": "A clear, no-surprises process so you always know what happens next.",
+        "accent_color": "#C42A20"
+      },
+      "blocks": {
+        "p1": {
+          "type": "step",
+          "settings": {
+            "title": "Free on-site estimate",
+            "text": "We measure your driveway and quote an exact price at no charge."
+          }
+        },
+        "p2": {
+          "type": "step",
+          "settings": {
+            "title": "Tear-out & grade",
+            "text": "We remove old concrete, excavate and compact a solid base for the new pour."
+          }
+        },
+        "p3": {
+          "type": "step",
+          "settings": {
+            "title": "Form, reinforce & pour",
+            "text": "Forms set, rebar or mesh placed, then concrete poured and hand-finished level."
+          }
+        },
+        "p4": {
+          "type": "step",
+          "settings": {
+            "title": "Cure & walkthrough",
+            "text": "We control the cure, review the finished slab with you and clean the site completely."
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3",
+        "p4"
+      ]
+    },
+    "stats": {
+      "type": "stats-counter",
+      "settings": {
+        "heading": "Driveways Utah County homeowners trust",
+        "accent_color": "#C42A20",
+        "background_color": "#f5f4f2"
+      },
+      "blocks": {
+        "st1": {
+          "type": "stat",
+          "settings": {
+            "value": "30",
+            "suffix": "+",
+            "label": "Years pouring concrete"
+          }
+        },
+        "st2": {
+          "type": "stat",
+          "settings": {
+            "value": "500",
+            "suffix": "+",
+            "label": "Projects completed"
+          }
+        },
+        "st3": {
+          "type": "stat",
+          "settings": {
+            "value": "5",
+            "suffix": "★",
+            "label": "Average review rating"
+          }
+        },
+        "st4": {
+          "type": "stat",
+          "settings": {
+            "value": "100",
+            "suffix": "%",
+            "label": "Site cleanup, every time"
+          }
+        }
+      },
+      "block_order": [
+        "st1",
+        "st2",
+        "st3",
+        "st4"
+      ]
+    },
+    "faq": {
+      "type": "faq",
+      "settings": {
+        "eyebrow": "FAQ",
+        "heading": "Concrete driveway questions",
+        "accent_color": "#C42A20"
+      },
+      "blocks": {
+        "q1": {
+          "type": "qa",
+          "settings": {
+            "question": "How much does a new concrete driveway cost in Utah County?",
+            "answer": "<p>Pricing depends on square footage, thickness, finish and how much old concrete has to come out. Use our instant estimator for a ballpark, then we confirm an exact price with a free on-site visit in Pleasant Grove, Lehi, American Fork, Orem or Provo.</p>"
+          }
+        },
+        "q2": {
+          "type": "qa",
+          "settings": {
+            "question": "How thick should a residential driveway be?",
+            "answer": "<p>Four inches over a compacted base handles normal car and truck traffic. We pour thicker and add reinforcement at the approach, the apron and anywhere heavy vehicles turn or park — we'll spec it during the estimate.</p>"
+          }
+        },
+        "q3": {
+          "type": "qa",
+          "settings": {
+            "question": "How long before I can drive on a new driveway?",
+            "answer": "<p>You can usually walk on it the next day. We ask you to keep vehicles off for about a week while the slab gains strength, and we'll give you exact dates for your pour before we leave.</p>"
+          }
+        },
+        "q4": {
+          "type": "qa",
+          "settings": {
+            "question": "Do you remove and haul away the old driveway?",
+            "answer": "<p>Yes. Full tear-out, excavation and haul-away are part of the job — you don't need a separate demo contractor or a dumpster in front of your house.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "related": {
+      "type": "services-grid",
+      "settings": {
+        "eyebrow": "More from Rubio Brothers",
+        "heading": "Other concrete work we pour in Utah County",
+        "intro": "One family crew handles every part of the job — so you're not chasing three contractors for one backyard.",
+        "accent_color": "#C42A20",
+        "background_color": "#f5f4f2"
+      },
+      "blocks": {
+        "r1": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-rv-pad-side-yard-vinyl-fence-utah-county.jpg",
+            "title": "RV pads",
+            "text": "Thick, steel-reinforced pads that carry a motorhome without cracking.",
+            "link_label": "View service",
+            "link": "/pages/rv-pads"
+          }
+        },
+        "r2": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-walkway-side-yard-to-garage-orem-ut.jpg",
+            "title": "Walkways",
+            "text": "Sidewalks, side-yard paths and front entries, poured trip-free.",
+            "link_label": "View service",
+            "link": "/pages/concrete-walkways"
+          }
+        },
+        "r3": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-patio-broom-finish-backyard-utah-county.jpg",
+            "title": "Patios",
+            "text": "Broom-finished backyard patio slabs, poured level and clean.",
+            "link_label": "View service",
+            "link": "/pages/concrete-patios"
+          }
+        },
+        "r4": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-shed-pad-side-yard-pleasant-grove-ut.jpg",
+            "title": "Shed pads",
+            "text": "Level, square pads so a shed sits flat and stays dry.",
+            "link_label": "View service",
+            "link": "/pages/shed-pads"
+          }
+        }
+      },
+      "block_order": [
+        "r1",
+        "r2",
+        "r3",
+        "r4"
+      ]
+    },
+    "cta": {
+      "type": "cta-band",
+      "settings": {
+        "eyebrow": "Free, no-pressure quotes",
+        "heading": "Get a free driveway estimate",
+        "text": "Tell us about your driveway and we'll get you an exact price after a quick site visit — at no cost.",
+        "button_label": "Get a free estimate",
+        "button_link": "/pages/estimate",
+        "phone_label": "Call (385) 210-5983",
+        "phone": "(385) 210-5983",
+        "accent_color": "#C42A20",
+        "background_color": "#ffffff",
+        "text_color": "#1a1a1a"
+      }
+    }
+  },
+  "order": [
+    "schema",
+    "hero",
+    "services",
+    "process",
+    "stats",
+    "faq",
+    "related",
+    "cta"
+  ]
+}

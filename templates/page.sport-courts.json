@@ -1,0 +1,290 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "schema": {
+      "type": "service-schema",
+      "settings": {
+        "service_name": "Concrete Sport Courts",
+        "service_type": "Sport court and basketball court concrete installation",
+        "service_description": "Flat, true concrete pads for backyard basketball, pickleball and multi-sport courts across Utah County, including excavation, grading and site prep.",
+        "image": "shopify://shop_images/concrete-sport-court-pad-pleasant-grove-ut.jpg"
+      }
+    },
+    "hero": {
+      "type": "site-hero",
+      "settings": {
+        "image": "shopify://shop_images/concrete-sport-court-pad-pleasant-grove-ut.jpg",
+        "eyebrow": "Pleasant Grove, UT · Serving all of Utah County",
+        "heading": "Backyard Basketball & Sport Court Pads in Utah County",
+        "subheading": "Flat, true, properly drained concrete pads sized for basketball, pickleball or multi-sport play — ready for surfacing, striping and a hoop.",
+        "button_label": "Get a free court estimate",
+        "button_link": "/pages/estimate",
+        "phone_label": "Call (385) 210-5983",
+        "phone": "(385) 210-5983",
+        "trust_chips": "Free estimates\nPoured flat & true\nDirt work included",
+        "accent_color": "#C42A20",
+        "text_color": "#ffffff",
+        "overlay_opacity": 55,
+        "min_height": 78
+      }
+    },
+    "services": {
+      "type": "services-grid",
+      "settings": {
+        "eyebrow": "Sport courts",
+        "heading": "Basketball & Pickleball Court Slabs in Pleasant Grove & Lehi",
+        "intro": "A court slab is judged on flatness more than anything else — a ball has to bounce true across the whole surface, which is a different standard from a patio.",
+        "accent_color": "#C42A20"
+      },
+      "blocks": {
+        "s1": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-sport-court-pad-pleasant-grove-ut.jpg",
+            "title": "Basketball court pads",
+            "text": "Half-court and full-court slabs sized to your yard and poured dead flat.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s2": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-backyard-slab-finishing-lehi-ut.jpg",
+            "title": "Pickleball courts",
+            "text": "Regulation-size pickleball slabs poured flat and true, ready for surfacing and striping.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s3": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-flatwork-pour-utah-county.jpg",
+            "title": "Multi-sport pads",
+            "text": "One pad that works for hoops, pickleball, hockey and whatever the kids invent next.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s4": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-slab-base-prep-rebar-utah-county.jpg",
+            "title": "Excavation & base prep",
+            "text": "Deep, compacted base under the whole pad so it doesn't settle unevenly and ruin the bounce.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s5": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-extension-lehi-ut.jpg",
+            "title": "Demolition & site clearing",
+            "text": "We demo what's in the way, haul it off and clear the footprint.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s6": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-slab-backyard-american-fork-ut.jpg",
+            "title": "Drainage & perimeter",
+            "text": "Slope and perimeter detailing that sheds water without you feeling the grade underfoot.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
+    },
+    "process": {
+      "type": "process-steps",
+      "settings": {
+        "eyebrow": "How it works",
+        "heading": "How We Pour a Court That Bounces True",
+        "intro": "A clear, no-surprises process so you always know what happens next.",
+        "accent_color": "#C42A20"
+      },
+      "blocks": {
+        "p1": {
+          "type": "step",
+          "settings": {
+            "title": "Free site assessment",
+            "text": "We measure the space, talk through the sport and the size, and quote at no charge."
+          }
+        },
+        "p2": {
+          "type": "step",
+          "settings": {
+            "title": "Clear, excavate & compact",
+            "text": "The footprint is cleared, dug out and compacted — evenly, across the whole pad."
+          }
+        },
+        "p3": {
+          "type": "step",
+          "settings": {
+            "title": "Form, reinforce & pour",
+            "text": "Forms set to a tight tolerance, steel placed, then poured and finished flat."
+          }
+        },
+        "p4": {
+          "type": "step",
+          "settings": {
+            "title": "Cure & walkthrough",
+            "text": "Joints cut, cure controlled, site cleaned, and we tell you when it's ready to surface."
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3",
+        "p4"
+      ]
+    },
+    "faq": {
+      "type": "faq",
+      "settings": {
+        "eyebrow": "FAQ",
+        "heading": "Sport court questions",
+        "accent_color": "#C42A20"
+      },
+      "blocks": {
+        "q1": {
+          "type": "qa",
+          "settings": {
+            "question": "How big is a backyard basketball or pickleball court?",
+            "answer": "<p>A half-court is common for backyards; regulation pickleball needs more length than most people expect. We'll size the pad to your lot and intended use and mark it out on site so you can see it before we dig.</p>"
+          }
+        },
+        "q2": {
+          "type": "qa",
+          "settings": {
+            "question": "Do you surface and stripe the court too?",
+            "answer": "<p>We pour and finish the concrete pad — flat, true and cured correctly, which is what a surfacing system needs underneath it. We'll coordinate timing with your surfacing installer.</p>"
+          }
+        },
+        "q3": {
+          "type": "qa",
+          "settings": {
+            "question": "How flat does a court slab need to be?",
+            "answer": "<p>Flatter than a patio. We set forms to a tighter tolerance and finish accordingly, because a dip you'd never notice on a patio is a dead spot on a court.</p>"
+          }
+        },
+        "q4": {
+          "type": "qa",
+          "settings": {
+            "question": "Do you handle the dirt work and demolition?",
+            "answer": "<p>Yes — clearing, demolition, excavation, grading and the pour are all one crew. See our <a href=\"/pages/retaining-walls\">retaining walls</a> page if your yard needs a grade change first.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "related": {
+      "type": "services-grid",
+      "settings": {
+        "eyebrow": "More from Rubio Brothers",
+        "heading": "Other concrete work we pour in Utah County",
+        "intro": "One family crew handles every part of the job — so you're not chasing three contractors for one backyard.",
+        "accent_color": "#C42A20",
+        "background_color": "#f5f4f2"
+      },
+      "blocks": {
+        "r1": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-slab-backyard-american-fork-ut.jpg",
+            "title": "Retaining walls",
+            "text": "Engineered walls with drainage built in for sloped Utah lots.",
+            "link_label": "View service",
+            "link": "/pages/retaining-walls"
+          }
+        },
+        "r2": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-patio-broom-finish-backyard-utah-county.jpg",
+            "title": "Patios",
+            "text": "Broom-finished backyard patio slabs, poured level and clean.",
+            "link_label": "View service",
+            "link": "/pages/concrete-patios"
+          }
+        },
+        "r3": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-broom-finish-pleasant-grove-ut.jpg",
+            "title": "Driveways",
+            "text": "New driveways, replacements and tear-outs built for Utah freeze-thaw.",
+            "link_label": "View service",
+            "link": "/pages/concrete-driveways"
+          }
+        },
+        "r4": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-walkway-side-yard-to-garage-orem-ut.jpg",
+            "title": "Walkways",
+            "text": "Sidewalks, side-yard paths and front entries, poured trip-free.",
+            "link_label": "View service",
+            "link": "/pages/concrete-walkways"
+          }
+        }
+      },
+      "block_order": [
+        "r1",
+        "r2",
+        "r3",
+        "r4"
+      ]
+    },
+    "cta": {
+      "type": "cta-band",
+      "settings": {
+        "eyebrow": "Free, no-pressure quotes",
+        "heading": "Get a free sport court estimate",
+        "text": "Tell us the sport and the space and we'll size and price the pad after a free site visit.",
+        "button_label": "Get a free estimate",
+        "button_link": "/pages/estimate",
+        "phone_label": "Call (385) 210-5983",
+        "phone": "(385) 210-5983",
+        "accent_color": "#C42A20",
+        "background_color": "#ffffff",
+        "text_color": "#1a1a1a"
+      }
+    }
+  },
+  "order": [
+    "schema",
+    "hero",
+    "services",
+    "process",
+    "faq",
+    "related",
+    "cta"
+  ]
+}

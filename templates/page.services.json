@@ -20,41 +20,216 @@
       "type": "services-grid",
       "settings": {
         "eyebrow": "Our services",
-        "heading": "Every kind of flatwork, done right",
-        "intro": "Residential and commercial concrete across Utah County — from a single slab to a full driveway tear-out and repour.",
+        "heading": "Every kind of concrete flatwork, done right",
+        "intro": "Residential and commercial concrete across Utah County — from a single shed pad to a full driveway tear-out and repour. Every service below has its own page with photos, pricing guidance and answers to the questions we get asked most.",
         "accent_color": "#C42A20"
       },
       "blocks": {
-        "s1": { "type": "service", "settings": { "image": "shopify://shop_images/concrete-driveway-broom-finish-pleasant-grove-ut.jpg", "title": "Driveways", "text": "Crack-resistant driveways finished to handle freeze-thaw winters.", "link_label": "Get a quote", "link": "/pages/estimate" } },
-        "s2": { "type": "service", "settings": { "image": "shopify://shop_images/concrete-patio-backyard-orem-ut.jpg", "title": "Patios & walkways", "text": "Outdoor living spaces, sidewalks and walkways built clean and level.", "link_label": "Get a quote", "link": "/pages/estimate" } },
-        "s3": { "type": "service", "settings": { "image": "shopify://shop_images/concrete-flatwork-pour-utah-county.jpg", "title": "RV pads & slabs", "text": "Heavy-duty pads and foundation slabs engineered for serious loads.", "link_label": "Get a quote", "link": "/pages/estimate" } },
-        "s4": { "type": "service", "settings": { "image": "shopify://shop_images/stamped-concrete-patio-ashlar-slate-orem-ut.jpg", "title": "Stamped & decorative", "text": "Stamped, colored and textured finishes that elevate any property.", "link_label": "Get a quote", "link": "/pages/estimate" } },
-        "s5": { "type": "service", "settings": { "image": "shopify://shop_images/concrete-driveway-extension-lehi-ut.jpg", "title": "Tear-out & replacement", "text": "Old, cracked concrete removed and repoured — no mess left behind.", "link_label": "Get a quote", "link": "/pages/estimate" } },
-        "s6": { "type": "service", "settings": { "image": "shopify://shop_images/concrete-slab-base-prep-rebar-utah-county.jpg", "title": "Excavation & prep", "text": "Grading, forming and base prep done right so your pour lasts decades.", "link_label": "Get a quote", "link": "/pages/estimate" } }
+        "s1": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-broom-finish-pleasant-grove-ut.jpg",
+            "title": "Driveways",
+            "text": "New driveways, replacements and full tear-outs, built to survive Utah freeze-thaw winters.",
+            "link_label": "View service",
+            "link": "/pages/concrete-driveways"
+          }
+        },
+        "s2": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-rv-pad-side-yard-vinyl-fence-utah-county.jpg",
+            "title": "RV pads",
+            "text": "Thicker, steel-reinforced pads engineered to carry a loaded motorhome or trailer.",
+            "link_label": "View service",
+            "link": "/pages/rv-pads"
+          }
+        },
+        "s3": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-patio-broom-finish-backyard-utah-county.jpg",
+            "title": "Patios",
+            "text": "Broom-finished backyard patio slabs, poured level and sloped to drain.",
+            "link_label": "View service",
+            "link": "/pages/concrete-patios"
+          }
+        },
+        "s4": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/stamped-concrete-patio-ashlar-slate-orem-ut.jpg",
+            "title": "Stamped patios",
+            "text": "Ashlar slate, cobblestone, brick and wood-plank patterns stamped by hand.",
+            "link_label": "View service",
+            "link": "/pages/stamped-concrete-patios"
+          }
+        },
+        "s5": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/decorative-concrete-patio-diamond-pattern-stained-utah-county.jpg",
+            "title": "Decorative patios",
+            "text": "Integral color, stains, saw-cut patterns and contrasting borders.",
+            "link_label": "View service",
+            "link": "/pages/decorative-concrete-patios"
+          }
+        },
+        "s6": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-walkway-side-yard-to-garage-orem-ut.jpg",
+            "title": "Walkways",
+            "text": "Front entries, side-yard paths and sidewalks poured level and trip-free.",
+            "link_label": "View service",
+            "link": "/pages/concrete-walkways"
+          }
+        },
+        "s7": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-hot-tub-pad-off-deck-stairs-utah-county.jpg",
+            "title": "Hot tub pads",
+            "text": "Reinforced spa pads rated for the weight of a filled tub, poured dead level.",
+            "link_label": "View service",
+            "link": "/pages/hot-tub-pads"
+          }
+        },
+        "s8": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-shed-pad-side-yard-pleasant-grove-ut.jpg",
+            "title": "Shed pads",
+            "text": "Square, level pads so a shed sits flat, stays dry and keeps its doors true.",
+            "link_label": "View service",
+            "link": "/pages/shed-pads"
+          }
+        },
+        "s9": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-slab-backyard-american-fork-ut.jpg",
+            "title": "Retaining walls",
+            "text": "Engineered walls with drainage built in, plus the demolition and dirt work.",
+            "link_label": "View service",
+            "link": "/pages/retaining-walls"
+          }
+        },
+        "s10": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-sport-court-pad-pleasant-grove-ut.jpg",
+            "title": "Sport courts",
+            "text": "Flat, true pads for backyard basketball, pickleball and multi-sport play.",
+            "link_label": "View service",
+            "link": "/pages/sport-courts"
+          }
+        }
       },
-      "block_order": ["s1", "s2", "s3", "s4", "s5", "s6"]
+      "block_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6",
+        "s7",
+        "s8",
+        "s9",
+        "s10"
+      ]
     },
     "process": {
       "type": "process-steps",
-      "settings": { "accent_color": "#C42A20" },
-      "blocks": {
-        "p1": { "type": "step", "settings": { "title": "Free estimate", "text": "Tell us about your project and we'll measure and quote it at no charge." } },
-        "p2": { "type": "step", "settings": { "title": "Prep & excavation", "text": "We grade, form and prep the base so your pour lasts for decades." } },
-        "p3": { "type": "step", "settings": { "title": "Pour & finish", "text": "Concrete placed and finished by hand — clean lines, level surface." } },
-        "p4": { "type": "step", "settings": { "title": "Walkthrough", "text": "We review the finished work with you and clean up the site completely." } }
+      "settings": {
+        "accent_color": "#C42A20"
       },
-      "block_order": ["p1", "p2", "p3", "p4"]
+      "blocks": {
+        "p1": {
+          "type": "step",
+          "settings": {
+            "title": "Free estimate",
+            "text": "Tell us about your project and we'll measure and quote it at no charge."
+          }
+        },
+        "p2": {
+          "type": "step",
+          "settings": {
+            "title": "Prep & excavation",
+            "text": "We grade, form and prep the base so your pour lasts for decades."
+          }
+        },
+        "p3": {
+          "type": "step",
+          "settings": {
+            "title": "Pour & finish",
+            "text": "Concrete placed and finished by hand — clean lines, level surface."
+          }
+        },
+        "p4": {
+          "type": "step",
+          "settings": {
+            "title": "Walkthrough",
+            "text": "We review the finished work with you and clean up the site completely."
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3",
+        "p4"
+      ]
     },
     "faq": {
       "type": "faq",
-      "settings": { "accent_color": "#C42A20" },
-      "blocks": {
-        "q1": { "type": "qa", "settings": { "question": "How much does a concrete driveway or patio cost?", "answer": "<p>It depends on the square footage, finish and site prep. Use our instant estimator for a rough ballpark, then we confirm an exact price with a free on-site visit.</p>" } },
-        "q2": { "type": "qa", "settings": { "question": "What areas do you serve?", "answer": "<p>We serve Pleasant Grove and the surrounding Utah County communities — Lindon, Orem, American Fork, Lehi, Provo and nearby areas.</p>" } },
-        "q3": { "type": "qa", "settings": { "question": "Are you licensed and insured?", "answer": "<p>Yes. Rubio Brothers Concrete is locally owned, licensed and insured, with over 30 years of concrete experience.</p>" } },
-        "q4": { "type": "qa", "settings": { "question": "Do you remove old concrete?", "answer": "<p>Absolutely. We handle full tear-out, excavation and haul-away, then repour — no mess left behind.</p>" } }
+      "settings": {
+        "accent_color": "#C42A20"
       },
-      "block_order": ["q1", "q2", "q3", "q4"]
+      "blocks": {
+        "q1": {
+          "type": "qa",
+          "settings": {
+            "question": "How much does a concrete driveway or patio cost?",
+            "answer": "<p>It depends on the square footage, finish and site prep. Use our instant estimator for a rough ballpark, then we confirm an exact price with a free on-site visit.</p>"
+          }
+        },
+        "q2": {
+          "type": "qa",
+          "settings": {
+            "question": "What areas do you serve?",
+            "answer": "<p>We serve Pleasant Grove and the surrounding Utah County communities — Lindon, Orem, American Fork, Lehi, Provo and nearby areas.</p>"
+          }
+        },
+        "q3": {
+          "type": "qa",
+          "settings": {
+            "question": "Are you licensed and insured?",
+            "answer": "<p>Yes. Rubio Brothers Concrete is locally owned, licensed and insured, with over 30 years of concrete experience.</p>"
+          }
+        },
+        "q4": {
+          "type": "qa",
+          "settings": {
+            "question": "Do you remove old concrete?",
+            "answer": "<p>Absolutely. We handle full tear-out, excavation and haul-away, then repour — no mess left behind.</p>"
+          }
+        },
+        "q5": {
+          "type": "qa",
+          "settings": {
+            "question": "Do you take on small jobs?",
+            "answer": "<p>Yes. A <a href=\"/pages/shed-pads\">shed pad</a> or a <a href=\"/pages/hot-tub-pads\">hot tub pad</a> is just as welcome as a full driveway — give us a call and we'll tell you honestly whether we're the right crew for it.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5"
+      ]
     },
     "cta": {
       "type": "cta-band",
@@ -69,5 +244,11 @@
       }
     }
   },
-  "order": ["intro", "services", "process", "faq", "cta"]
+  "order": [
+    "intro",
+    "services",
+    "process",
+    "faq",
+    "cta"
+  ]
 }

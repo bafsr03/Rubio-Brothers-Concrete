@@ -1,0 +1,366 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "schema": {
+      "type": "service-schema",
+      "settings": {
+        "service_name": "Concrete Patios",
+        "service_type": "Concrete patio installation",
+        "service_description": "Broom-finished concrete patio slabs poured for backyards across Utah County — level, properly drained and finished clean, with stamped and decorative options available.",
+        "image": "shopify://shop_images/concrete-patio-broom-finish-backyard-utah-county.jpg"
+      }
+    },
+    "hero": {
+      "type": "site-hero",
+      "settings": {
+        "image": "shopify://shop_images/concrete-patio-broom-finish-backyard-utah-county.jpg",
+        "eyebrow": "Pleasant Grove, UT · Serving all of Utah County",
+        "heading": "Concrete Patios in Pleasant Grove & Utah County",
+        "subheading": "Backyard patio slabs poured level, sloped to drain and finished clean — the straightforward, hard-wearing patio most homeowners actually want.",
+        "button_label": "Get a free patio estimate",
+        "button_link": "/pages/estimate",
+        "phone_label": "Call (385) 210-5983",
+        "phone": "(385) 210-5983",
+        "trust_chips": "Free estimates\nPoured level & sloped to drain\nLicensed & insured",
+        "accent_color": "#C42A20",
+        "text_color": "#ffffff",
+        "overlay_opacity": 50,
+        "min_height": 78
+      }
+    },
+    "services": {
+      "type": "services-grid",
+      "settings": {
+        "eyebrow": "Concrete patios",
+        "heading": "Backyard Patio Slabs in Pleasant Grove, Orem & Lehi",
+        "intro": "A plain broom-finished patio is the best value in concrete — one continuous surface, no joints to shift, and decades of life when it's based and drained properly.",
+        "accent_color": "#C42A20"
+      },
+      "blocks": {
+        "s1": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-patio-broom-finish-backyard-utah-county.jpg",
+            "title": "New backyard patios",
+            "text": "Broom-finished slabs sized to your furniture, your grill and the way you actually use the yard.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s2": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/large-concrete-patio-slab-backyard-lehi-ut.jpg",
+            "title": "Large entertaining slabs",
+            "text": "Room for a table, a seating area and a walkway, poured in one continuous slab.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s3": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-patio-under-deck-pleasant-grove-ut.jpg",
+            "title": "Patios under decks & covers",
+            "text": "Clean, dry, usable ground under an existing deck or patio cover.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s4": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-patio-and-walkway-wraparound-utah-county.jpg",
+            "title": "Patio & walkway combinations",
+            "text": "The patio and the path that reaches it, poured together so the finish matches.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s5": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/covered-concrete-patio-under-deck-american-fork-ut.jpg",
+            "title": "Patio extensions",
+            "text": "Add on to a patio that's always been a few feet too small, tied into the existing slab.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s6": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-slab-base-prep-rebar-utah-county.jpg",
+            "title": "Excavation, base & drainage",
+            "text": "Grading, compaction and slope so water runs away from the house, not toward it.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
+    },
+    "process": {
+      "type": "process-steps",
+      "settings": {
+        "eyebrow": "How it works",
+        "heading": "From Bare Yard to Finished Patio",
+        "intro": "A clear, no-surprises process so you always know what happens next.",
+        "accent_color": "#C42A20"
+      },
+      "blocks": {
+        "p1": {
+          "type": "step",
+          "settings": {
+            "title": "Free on-site estimate",
+            "text": "We look at the space, talk through size and layout, and quote an exact price at no charge."
+          }
+        },
+        "p2": {
+          "type": "step",
+          "settings": {
+            "title": "Excavate & form",
+            "text": "We strip the area, set forms to the right slope and compact the base."
+          }
+        },
+        "p3": {
+          "type": "step",
+          "settings": {
+            "title": "Pour & finish",
+            "text": "Concrete placed, screeded and hand-finished with a broom texture that stays grippy when wet."
+          }
+        },
+        "p4": {
+          "type": "step",
+          "settings": {
+            "title": "Cure & walkthrough",
+            "text": "Control joints cut, the site cleaned completely, and we tell you when to put the furniture back."
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3",
+        "p4"
+      ]
+    },
+    "gallery": {
+      "type": "project-gallery",
+      "settings": {
+        "eyebrow": "Recent work",
+        "heading": "Recent patios we've poured",
+        "intro": "Real jobs from around Utah County — no stock photos.",
+        "button_label": "See the full gallery",
+        "button_link": "/pages/gallery",
+        "accent_color": "#C42A20"
+      },
+      "blocks": {
+        "g1": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-patio-broom-finish-backyard-utah-county.jpg",
+            "category": "Patio",
+            "caption": "Backyard patio, broom finish",
+            "alt": "Broom-finished concrete patio poured across the back of a two-storey home in Utah County"
+          }
+        },
+        "g2": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-patio-fresh-pour-backyard-pleasant-grove-ut.jpg",
+            "category": "Patio",
+            "caption": "Fresh pour, Pleasant Grove",
+            "alt": "Freshly poured concrete patio slab being finished behind a home in Pleasant Grove, Utah"
+          }
+        },
+        "g3": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/large-concrete-patio-slab-backyard-lehi-ut.jpg",
+            "category": "Patio",
+            "caption": "Large entertaining slab, Lehi",
+            "alt": "Large concrete patio slab poured across a backyard in Lehi, Utah"
+          }
+        },
+        "g4": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-patio-under-deck-pleasant-grove-ut.jpg",
+            "category": "Patio",
+            "caption": "Patio under an existing deck",
+            "alt": "Concrete patio poured underneath an existing deck and stairs in Pleasant Grove, Utah"
+          }
+        },
+        "g5": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-patio-and-walkway-wraparound-utah-county.jpg",
+            "category": "Patio",
+            "caption": "Patio and wrap-around walkway",
+            "alt": "Concrete patio and wrap-around walkway poured behind a home in Utah County"
+          }
+        },
+        "g6": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/covered-concrete-patio-under-deck-american-fork-ut.jpg",
+            "category": "Patio",
+            "caption": "Covered patio, American Fork",
+            "alt": "Covered concrete patio poured under a deck in American Fork, Utah"
+          }
+        }
+      },
+      "block_order": [
+        "g1",
+        "g2",
+        "g3",
+        "g4",
+        "g5",
+        "g6"
+      ]
+    },
+    "faq": {
+      "type": "faq",
+      "settings": {
+        "eyebrow": "FAQ",
+        "heading": "Concrete patio questions",
+        "accent_color": "#C42A20"
+      },
+      "blocks": {
+        "q1": {
+          "type": "qa",
+          "settings": {
+            "question": "How much does a concrete patio cost in Utah County?",
+            "answer": "<p>A plain broom-finished patio is the most affordable option in concrete; cost moves with square footage, access and how much digging and hauling the site needs. Use our estimator for a ballpark, then we confirm an exact price after a free site visit.</p>"
+          }
+        },
+        "q2": {
+          "type": "qa",
+          "settings": {
+            "question": "Should I get a plain patio or a stamped one?",
+            "answer": "<p>A broom finish costs less, hides wear better and is what most people choose. Stamped and decorative work costs more because of the color, stamping and sealing labour — worth it if the look matters to you. See our <a href=\"/pages/stamped-concrete-patios\">stamped patios</a> and <a href=\"/pages/decorative-concrete-patios\">decorative patios</a> pages.</p>"
+          }
+        },
+        "q3": {
+          "type": "qa",
+          "settings": {
+            "question": "How long does a patio take to pour?",
+            "answer": "<p>Most residential patios are dug, formed and poured within a few days once we start, weather permitting. We give you the actual schedule with your quote.</p>"
+          }
+        },
+        "q4": {
+          "type": "qa",
+          "settings": {
+            "question": "Will my patio crack?",
+            "answer": "<p>Concrete moves, so we control where it cracks instead of pretending it won't — compacted base, reinforcement and control joints cut at the right spacing keep the slab looking like one clean surface.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "related": {
+      "type": "services-grid",
+      "settings": {
+        "eyebrow": "More from Rubio Brothers",
+        "heading": "Other concrete work we pour in Utah County",
+        "intro": "One family crew handles every part of the job — so you're not chasing three contractors for one backyard.",
+        "accent_color": "#C42A20",
+        "background_color": "#f5f4f2"
+      },
+      "blocks": {
+        "r1": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/stamped-concrete-patio-ashlar-slate-orem-ut.jpg",
+            "title": "Stamped patios",
+            "text": "Stone, slate and wood-plank stamped patterns in the color you pick.",
+            "link_label": "View service",
+            "link": "/pages/stamped-concrete-patios"
+          }
+        },
+        "r2": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/decorative-concrete-patio-diamond-pattern-stained-utah-county.jpg",
+            "title": "Decorative patios",
+            "text": "Color, stain, saw-cut patterns and borders on a single slab.",
+            "link_label": "View service",
+            "link": "/pages/decorative-concrete-patios"
+          }
+        },
+        "r3": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-walkway-side-yard-to-garage-orem-ut.jpg",
+            "title": "Walkways",
+            "text": "Sidewalks, side-yard paths and front entries, poured trip-free.",
+            "link_label": "View service",
+            "link": "/pages/concrete-walkways"
+          }
+        },
+        "r4": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-hot-tub-pad-off-deck-stairs-utah-county.jpg",
+            "title": "Hot tub pads",
+            "text": "Reinforced pads rated for the weight of a filled spa.",
+            "link_label": "View service",
+            "link": "/pages/hot-tub-pads"
+          }
+        }
+      },
+      "block_order": [
+        "r1",
+        "r2",
+        "r3",
+        "r4"
+      ]
+    },
+    "cta": {
+      "type": "cta-band",
+      "settings": {
+        "eyebrow": "Free, no-pressure quotes",
+        "heading": "Get a free patio estimate",
+        "text": "Tell us roughly how big you want it and we'll price it exactly after a free visit to your yard.",
+        "button_label": "Get a free estimate",
+        "button_link": "/pages/estimate",
+        "phone_label": "Call (385) 210-5983",
+        "phone": "(385) 210-5983",
+        "accent_color": "#C42A20",
+        "background_color": "#ffffff",
+        "text_color": "#1a1a1a"
+      }
+    }
+  },
+  "order": [
+    "schema",
+    "hero",
+    "services",
+    "process",
+    "gallery",
+    "faq",
+    "related",
+    "cta"
+  ]
+}

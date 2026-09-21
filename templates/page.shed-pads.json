@@ -1,0 +1,336 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "schema": {
+      "type": "service-schema",
+      "settings": {
+        "service_name": "Shed Pads",
+        "service_type": "Concrete shed pad and outbuilding slab installation",
+        "service_description": "Level, square concrete shed pads and outbuilding slabs poured across Utah County so a shed sits flat, stays dry and keeps its doors square.",
+        "image": "shopify://shop_images/concrete-shed-pad-side-yard-pleasant-grove-ut.jpg"
+      }
+    },
+    "hero": {
+      "type": "site-hero",
+      "settings": {
+        "image": "shopify://shop_images/concrete-shed-pad-side-yard-pleasant-grove-ut.jpg",
+        "eyebrow": "Pleasant Grove, UT · Serving all of Utah County",
+        "heading": "Concrete Shed Pads in Pleasant Grove & Utah County",
+        "subheading": "A shed on bare ground settles, racks and stops closing properly. A square, level, well-drained pad keeps the doors true and the floor dry for the life of the building.",
+        "button_label": "Get a free shed pad estimate",
+        "button_link": "/pages/estimate",
+        "phone_label": "Call (385) 210-5983",
+        "phone": "(385) 210-5983",
+        "trust_chips": "Free estimates\nSquare & level\nDrains away from the building",
+        "accent_color": "#C42A20",
+        "text_color": "#ffffff",
+        "overlay_opacity": 55,
+        "min_height": 78
+      }
+    },
+    "services": {
+      "type": "services-grid",
+      "settings": {
+        "eyebrow": "Shed & outbuilding pads",
+        "heading": "Shed Slabs Poured Square, Level and Dry",
+        "intro": "Small pours, done properly. The pad is cheap compared to the shed — and it decides whether the shed is still square in ten years.",
+        "accent_color": "#C42A20"
+      },
+      "blocks": {
+        "s1": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-shed-pad-side-yard-pleasant-grove-ut.jpg",
+            "title": "Shed & storage pads",
+            "text": "Sized to your shed's footprint with the overhang allowance the manufacturer asks for.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s2": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-shed-pad-side-yard-slab-utah-county.jpg",
+            "title": "Side-yard & narrow pads",
+            "text": "Tight side-yard access is our normal — we pour where a truck can't reach.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s3": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-side-yard-pad-between-house-and-fence-lehi-ut.jpg",
+            "title": "Pads between house & fence",
+            "text": "Dead ground down the side of the house turned into clean, usable storage.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s4": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-foundation-slab-pour-basement-utah-county.jpg",
+            "title": "Thickened-edge slabs",
+            "text": "A thickened perimeter where the walls land, so the edges don't chip or settle.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s5": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-slab-base-prep-rebar-utah-county.jpg",
+            "title": "Base prep & compaction",
+            "text": "Compacted base and a moisture break so the slab doesn't wick damp into the floor.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s6": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-walkway-side-yard-to-garage-orem-ut.jpg",
+            "title": "Access paths",
+            "text": "A path from the drive or back door so you're not wheeling the mower over grass.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
+    },
+    "process": {
+      "type": "process-steps",
+      "settings": {
+        "eyebrow": "How it works",
+        "heading": "How We Pour a Shed Pad",
+        "intro": "A clear, no-surprises process so you always know what happens next.",
+        "accent_color": "#C42A20"
+      },
+      "blocks": {
+        "p1": {
+          "type": "step",
+          "settings": {
+            "title": "Free on-site estimate",
+            "text": "We measure the shed footprint, check access and drainage, and quote at no charge."
+          }
+        },
+        "p2": {
+          "type": "step",
+          "settings": {
+            "title": "Excavate & compact",
+            "text": "The area is stripped, dug and compacted so the pad has something solid to sit on."
+          }
+        },
+        "p3": {
+          "type": "step",
+          "settings": {
+            "title": "Form, reinforce & pour",
+            "text": "Formed square and true, reinforced, poured and finished flat."
+          }
+        },
+        "p4": {
+          "type": "step",
+          "settings": {
+            "title": "Cure & walkthrough",
+            "text": "Cure controlled, site cleaned, and we tell you when the shed can go on."
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3",
+        "p4"
+      ]
+    },
+    "gallery": {
+      "type": "project-gallery",
+      "settings": {
+        "eyebrow": "Recent work",
+        "heading": "Recent pads we've poured",
+        "intro": "Side-yard and small-slab work from around Utah County.",
+        "button_label": "See the full gallery",
+        "button_link": "/pages/gallery",
+        "accent_color": "#C42A20"
+      },
+      "blocks": {
+        "g1": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-shed-pad-side-yard-pleasant-grove-ut.jpg",
+            "category": "Shed pad",
+            "caption": "Side-yard shed pad, Pleasant Grove",
+            "alt": "Concrete shed pad poured in the side yard of a home in Pleasant Grove, Utah"
+          }
+        },
+        "g2": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-shed-pad-side-yard-slab-utah-county.jpg",
+            "category": "Shed pad",
+            "caption": "Side-yard slab, Utah County",
+            "alt": "Level concrete shed pad slab poured along the side of a house in Utah County"
+          }
+        },
+        "g3": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-side-yard-pad-between-house-and-fence-lehi-ut.jpg",
+            "category": "Side pad",
+            "caption": "Pad between house and fence, Lehi",
+            "alt": "Concrete pad poured between a house and fence line in Lehi, Utah"
+          }
+        }
+      },
+      "block_order": [
+        "g1",
+        "g2",
+        "g3"
+      ]
+    },
+    "faq": {
+      "type": "faq",
+      "settings": {
+        "eyebrow": "FAQ",
+        "heading": "Shed pad questions",
+        "accent_color": "#C42A20"
+      },
+      "blocks": {
+        "q1": {
+          "type": "qa",
+          "settings": {
+            "question": "How big should a shed pad be?",
+            "answer": "<p>Match the shed's footprint, then check whether the manufacturer wants the pad flush or slightly larger. We pour to whatever the instructions call for — send us the model and we'll work it out.</p>"
+          }
+        },
+        "q2": {
+          "type": "qa",
+          "settings": {
+            "question": "Do I need a pad, or will gravel do?",
+            "answer": "<p>Gravel works for a small, light shed on flat ground. Anything heavy, anything you'll store a mower or tools in, and anything you want square in ten years is better on concrete.</p>"
+          }
+        },
+        "q3": {
+          "type": "qa",
+          "settings": {
+            "question": "Can you pour in a tight side yard?",
+            "answer": "<p>Yes — most shed pads are in tight side yards. We wheelbarrow, pump or chute depending on access, and we'll tell you at the estimate how we'd reach it.</p>"
+          }
+        },
+        "q4": {
+          "type": "qa",
+          "settings": {
+            "question": "Does a shed pad need drainage?",
+            "answer": "<p>It needs slope. We pour a slight fall away from the building so water doesn't sit against the base and find its way into the floor.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "related": {
+      "type": "services-grid",
+      "settings": {
+        "eyebrow": "More from Rubio Brothers",
+        "heading": "Other concrete work we pour in Utah County",
+        "intro": "One family crew handles every part of the job — so you're not chasing three contractors for one backyard.",
+        "accent_color": "#C42A20",
+        "background_color": "#f5f4f2"
+      },
+      "blocks": {
+        "r1": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-rv-pad-side-yard-vinyl-fence-utah-county.jpg",
+            "title": "RV pads",
+            "text": "Thick, steel-reinforced pads that carry a motorhome without cracking.",
+            "link_label": "View service",
+            "link": "/pages/rv-pads"
+          }
+        },
+        "r2": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-hot-tub-pad-off-deck-stairs-utah-county.jpg",
+            "title": "Hot tub pads",
+            "text": "Reinforced pads rated for the weight of a filled spa.",
+            "link_label": "View service",
+            "link": "/pages/hot-tub-pads"
+          }
+        },
+        "r3": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-walkway-side-yard-to-garage-orem-ut.jpg",
+            "title": "Walkways",
+            "text": "Sidewalks, side-yard paths and front entries, poured trip-free.",
+            "link_label": "View service",
+            "link": "/pages/concrete-walkways"
+          }
+        },
+        "r4": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-patio-broom-finish-backyard-utah-county.jpg",
+            "title": "Patios",
+            "text": "Broom-finished backyard patio slabs, poured level and clean.",
+            "link_label": "View service",
+            "link": "/pages/concrete-patios"
+          }
+        }
+      },
+      "block_order": [
+        "r1",
+        "r2",
+        "r3",
+        "r4"
+      ]
+    },
+    "cta": {
+      "type": "cta-band",
+      "settings": {
+        "eyebrow": "Free, no-pressure quotes",
+        "heading": "Get a free shed pad estimate",
+        "text": "Send us the shed size and we'll price the pad — small jobs welcome.",
+        "button_label": "Get a free estimate",
+        "button_link": "/pages/estimate",
+        "phone_label": "Call (385) 210-5983",
+        "phone": "(385) 210-5983",
+        "accent_color": "#C42A20",
+        "background_color": "#ffffff",
+        "text_color": "#1a1a1a"
+      }
+    }
+  },
+  "order": [
+    "schema",
+    "hero",
+    "services",
+    "process",
+    "gallery",
+    "faq",
+    "related",
+    "cta"
+  ]
+}

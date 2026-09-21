@@ -16,6 +16,36 @@
   case request.page_type
     when 'page'
       assign crumbs = home_name | append: '::' | append: origin
+
+      # Each service now has its own page and sits under "Services" in the main
+      # menu, so the trail should read Home › Services › Driveways rather than
+      # Home › Driveways. Rather than hard-coding a list of service handles,
+      # find this page under a top-level menu item and use that item as the
+      # parent crumb — so the trail tracks the nav and needs no maintenance
+      # when a service is added or renamed.
+      assign parent_name = ''
+      assign parent_url = ''
+      for link in linklists.main-menu.links
+        if link.links.size > 0
+          for child in link.links
+            if child.url == page.url
+              assign parent_name = link.title
+              assign parent_url = link.url
+              break
+            endif
+          endfor
+        endif
+        if parent_name != blank
+          break
+        endif
+      endfor
+
+      # Only add the parent when it is a real page of its own (a menu item that
+      # links nowhere, or links back to this page, would make a broken crumb).
+      if parent_name != blank and parent_url != blank and parent_url != '#' and parent_url != page.url
+        assign crumbs = crumbs | append: '||' | append: parent_name | append: '::' | append: origin | append: parent_url
+      endif
+
       assign crumbs = crumbs | append: '||' | append: page.title | append: '::' | append: origin | append: page.url
     when 'article'
       assign crumbs = home_name | append: '::' | append: origin

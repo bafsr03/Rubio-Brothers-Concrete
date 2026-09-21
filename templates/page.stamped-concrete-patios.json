@@ -1,0 +1,290 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "schema": {
+      "type": "service-schema",
+      "settings": {
+        "service_name": "Stamped Concrete Patios",
+        "service_type": "Stamped concrete patio installation",
+        "service_description": "Custom stamped concrete patios in ashlar slate, cobblestone, brick and wood-plank patterns, poured, colored and sealed across Utah County.",
+        "image": "shopify://shop_images/stamped-concrete-patio-ashlar-slate-orem-ut.jpg"
+      }
+    },
+    "hero": {
+      "type": "site-hero",
+      "settings": {
+        "image": "shopify://shop_images/stamped-concrete-patio-ashlar-slate-orem-ut.jpg",
+        "eyebrow": "Pleasant Grove, UT · Serving all of Utah County",
+        "heading": "Stamped Concrete Patios in Utah County",
+        "subheading": "Ashlar slate, cobblestone, brick and wood-plank patterns stamped by hand while the mix is workable — the look of premium stone on one continuous, low-maintenance slab.",
+        "button_label": "Design your stamped patio",
+        "button_link": "/pages/estimate",
+        "phone_label": "Call (385) 210-5983",
+        "phone": "(385) 210-5983",
+        "trust_chips": "Free estimates\nCustom patterns & colors\nSealed & protected",
+        "accent_color": "#C42A20",
+        "text_color": "#ffffff",
+        "overlay_opacity": 50,
+        "min_height": 78
+      }
+    },
+    "services": {
+      "type": "services-grid",
+      "settings": {
+        "eyebrow": "Stamped concrete",
+        "heading": "Custom Stamped Concrete Patios in Orem, Provo & Pleasant Grove",
+        "intro": "Stamping is a finish, not a product — it only looks right when the slab underneath is poured properly and the pattern is worked while the concrete is still live.",
+        "accent_color": "#C42A20"
+      },
+      "blocks": {
+        "s1": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/stamped-concrete-patio-ashlar-slate-orem-ut.jpg",
+            "title": "Ashlar slate patterns",
+            "text": "The most popular pattern we pour — large, irregular stone with tight, realistic joints.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s2": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/stamped-concrete-patio-wood-plank-orem-ut.jpg",
+            "title": "Wood-plank stamping",
+            "text": "Board-by-board texture and grain that reads as timber decking but never needs staining.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s3": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/stamped-concrete-patio-firepit-orem-ut.jpg",
+            "title": "Cobblestone & brick patterns",
+            "text": "Classic European cobble and running-bond brick, in the color blend you choose.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s4": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/stamped-concrete-firepit-pad-wood-plank-provo-ut.jpg",
+            "title": "Stamped fire pit pads",
+            "text": "A stamped pad poured around a fire pit or seating area, matched to the main patio.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s5": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-walkway-stone-home-pleasant-grove-ut.jpg",
+            "title": "Matching stamped walkways",
+            "text": "Stamped entries and paths in the same pattern so the whole property ties together.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s6": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/colored-concrete-stairs-charcoal-pleasant-grove-ut.jpg",
+            "title": "Stamped steps & risers",
+            "text": "Steps stamped and colored to match, with a slip-resistant texture on the tread.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
+    },
+    "process": {
+      "type": "process-steps",
+      "settings": {
+        "eyebrow": "How it works",
+        "heading": "From Pattern & Color Selection to Final Seal",
+        "intro": "A clear, no-surprises process so you always know what happens next.",
+        "accent_color": "#C42A20"
+      },
+      "blocks": {
+        "p1": {
+          "type": "step",
+          "settings": {
+            "title": "Design & color selection",
+            "text": "We bring samples and help you pick the stamp pattern and color blend that suits your home."
+          }
+        },
+        "p2": {
+          "type": "step",
+          "settings": {
+            "title": "Excavation & base prep",
+            "text": "We grade, form and compact a solid base so your decorative slab stays flat and crack-free."
+          }
+        },
+        "p3": {
+          "type": "step",
+          "settings": {
+            "title": "Pour, color & stamp",
+            "text": "Concrete placed, color applied and the pattern stamped by hand while the mix is workable — this is a same-day, one-shot step."
+          }
+        },
+        "p4": {
+          "type": "step",
+          "settings": {
+            "title": "Seal & walkthrough",
+            "text": "We seal the surface, review the finished patio with you and clean up the site completely."
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3",
+        "p4"
+      ]
+    },
+    "faq": {
+      "type": "faq",
+      "settings": {
+        "eyebrow": "FAQ",
+        "heading": "Stamped concrete questions",
+        "accent_color": "#C42A20"
+      },
+      "blocks": {
+        "q1": {
+          "type": "qa",
+          "settings": {
+            "question": "How much does a stamped concrete patio cost?",
+            "answer": "<p>Stamped work costs more than a plain broom finish because of the color, stamping and sealing labour. Size, pattern and site prep all affect the price — use our estimator for a ballpark, then we confirm with a free on-site visit in Orem, Provo, Pleasant Grove and nearby.</p>"
+          }
+        },
+        "q2": {
+          "type": "qa",
+          "settings": {
+            "question": "What stamp patterns and colors can I choose?",
+            "answer": "<p>Ashlar slate, cobblestone, brick, wood-plank and more, in a wide range of integral colors, stains and release tones. We'll walk you through samples during the design step so it matches your home.</p>"
+          }
+        },
+        "q3": {
+          "type": "qa",
+          "settings": {
+            "question": "Does stamped concrete hold up in Utah?",
+            "answer": "<p>Yes — when it's based, reinforced, sloped and sealed correctly. We seal every decorative pour and recommend resealing every few years to keep the color rich and protect against freeze-thaw and UV fade.</p>"
+          }
+        },
+        "q4": {
+          "type": "qa",
+          "settings": {
+            "question": "Is stamped concrete cheaper than pavers or natural stone?",
+            "answer": "<p>Usually, yes. You get the look of premium stone or brick as one continuous, low-maintenance surface with no shifting joints and no weeds — generally at a lower installed cost.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "related": {
+      "type": "services-grid",
+      "settings": {
+        "eyebrow": "More from Rubio Brothers",
+        "heading": "Other concrete work we pour in Utah County",
+        "intro": "One family crew handles every part of the job — so you're not chasing three contractors for one backyard.",
+        "accent_color": "#C42A20",
+        "background_color": "#f5f4f2"
+      },
+      "blocks": {
+        "r1": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/decorative-concrete-patio-diamond-pattern-stained-utah-county.jpg",
+            "title": "Decorative patios",
+            "text": "Color, stain, saw-cut patterns and borders on a single slab.",
+            "link_label": "View service",
+            "link": "/pages/decorative-concrete-patios"
+          }
+        },
+        "r2": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-patio-broom-finish-backyard-utah-county.jpg",
+            "title": "Patios",
+            "text": "Broom-finished backyard patio slabs, poured level and clean.",
+            "link_label": "View service",
+            "link": "/pages/concrete-patios"
+          }
+        },
+        "r3": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-walkway-side-yard-to-garage-orem-ut.jpg",
+            "title": "Walkways",
+            "text": "Sidewalks, side-yard paths and front entries, poured trip-free.",
+            "link_label": "View service",
+            "link": "/pages/concrete-walkways"
+          }
+        },
+        "r4": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-slab-backyard-american-fork-ut.jpg",
+            "title": "Retaining walls",
+            "text": "Engineered walls with drainage built in for sloped Utah lots.",
+            "link_label": "View service",
+            "link": "/pages/retaining-walls"
+          }
+        }
+      },
+      "block_order": [
+        "r1",
+        "r2",
+        "r3",
+        "r4"
+      ]
+    },
+    "cta": {
+      "type": "cta-band",
+      "settings": {
+        "eyebrow": "Free, no-pressure quotes",
+        "heading": "Design your stamped concrete patio",
+        "text": "Tell us about your backyard and we'll help you pick a pattern and color, then quote an exact price after a free site visit.",
+        "button_label": "Get a free estimate",
+        "button_link": "/pages/estimate",
+        "phone_label": "Call (385) 210-5983",
+        "phone": "(385) 210-5983",
+        "accent_color": "#C42A20",
+        "background_color": "#ffffff",
+        "text_color": "#1a1a1a"
+      }
+    }
+  },
+  "order": [
+    "schema",
+    "hero",
+    "services",
+    "process",
+    "faq",
+    "related",
+    "cta"
+  ]
+}
