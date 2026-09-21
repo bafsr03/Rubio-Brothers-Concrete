@@ -94,17 +94,22 @@
             One link per service, ordered most-searched first — the same order as the
             Services dropdown. These are sitewide, so they are the main internal-link
             signal pointing at each service page.
+
+            Each link is rendered only once a page with that handle actually exists.
+            The theme has to be published before the admin will offer these templates
+            when creating the pages, so for a while the templates ship ahead of the
+            pages — guarding on `pages[handle]` means the footer never links into a
+            404 during that window, and each service appears by itself as it is
+            created. Nothing to undo here later.
           {%- endcomment -%}
-          <li><a href="/pages/concrete-driveways">Driveways</a></li>
-          <li><a href="/pages/rv-pads">RV Pads</a></li>
-          <li><a href="/pages/concrete-patios">Patios</a></li>
-          <li><a href="/pages/stamped-concrete-patios">Stamped Patios</a></li>
-          <li><a href="/pages/decorative-concrete-patios">Decorative Patios</a></li>
-          <li><a href="/pages/concrete-walkways">Walkways</a></li>
-          <li><a href="/pages/hot-tub-pads">Hot Tub Pads</a></li>
-          <li><a href="/pages/shed-pads">Shed Pads</a></li>
-          <li><a href="/pages/retaining-walls">Retaining Walls</a></li>
-          <li><a href="/pages/sport-courts">Sport Courts</a></li>
+          {%- assign footer_services = 'concrete-driveways|Driveways,rv-pads|RV Pads,concrete-patios|Patios,stamped-concrete-patios|Stamped Patios,decorative-concrete-patios|Decorative Patios,concrete-walkways|Walkways,hot-tub-pads|Hot Tub Pads,shed-pads|Shed Pads,retaining-walls|Retaining Walls,sport-courts|Sport Courts' | split: ',' -%}
+          {%- for entry in footer_services -%}
+            {%- assign parts = entry | split: '|' -%}
+            {%- assign service_page = pages[parts[0]] -%}
+            {%- if service_page.handle != blank -%}
+              <li><a href="{{ service_page.url }}">{{ parts[1] }}</a></li>
+            {%- endif -%}
+          {%- endfor -%}
           <li><a href="/pages/services">All services</a></li>
           <li><a href="{{ estimate_url }}">Free estimate</a></li>
         </ul>
