@@ -27,7 +27,14 @@
         <p class="rb-eyebrow">{{ section.settings.eyebrow }}</p>
       {%- endif -%}
       {%- if section.settings.heading != blank -%}
-        <h2 class="rb-section__title">{{ section.settings.heading }}</h2>
+        {%- comment -%}
+          h2 everywhere except a page that has no hero of its own — the Services
+          hub leads with this grid, so its heading is the page's only candidate
+          for an h1. Styling comes from the class, so the level changes nothing
+          visually.
+        {%- endcomment -%}
+        {%- assign heading_tag = section.settings.heading_level | default: 'h2' -%}
+        <{{ heading_tag }} class="rb-section__title">{{ section.settings.heading }}</{{ heading_tag }}>
       {%- endif -%}
       {%- if section.settings.intro != blank -%}
         <p class="rb-section__intro">{{ section.settings.intro }}</p>
@@ -187,6 +194,17 @@
       "id": "heading",
       "label": "Heading",
       "default": "Concrete done right, the first time"
+    },
+    {
+      "type": "select",
+      "id": "heading_level",
+      "label": "Heading level",
+      "info": "Use H1 only on a page with no hero above this section. Every page needs exactly one H1.",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" }
+      ],
+      "default": "h2"
     },
     {
       "type": "textarea",

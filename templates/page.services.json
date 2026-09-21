@@ -21,6 +21,7 @@
       "settings": {
         "eyebrow": "Our services",
         "heading": "Every kind of concrete flatwork, done right",
+        "heading_level": "h1",
         "intro": "Residential and commercial concrete across Utah County — from a single shed pad to a full driveway tear-out and repour. Every service below has its own page with photos, pricing guidance and answers to the questions we get asked most.",
         "accent_color": "#C42A20"
       },
