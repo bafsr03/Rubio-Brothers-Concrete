@@ -110,11 +110,14 @@
         "padding-block-start": 16
       },
       "blocks": {
-        "s1": { "type": "service", "settings": { "title": "Driveways & RV pads", "text": "New pours, replacement and heavy-duty RV pads built for Utah winters.", "link_label": "Learn more", "link": "/pages/concrete-driveways-rv-pads" } },
-        "s2": { "type": "service", "settings": { "title": "Stamped & decorative patios", "text": "Custom stamped, colored and textured backyard patios.", "link_label": "Learn more", "link": "/pages/stamped-decorative-concrete-patios" } },
-        "s3": { "type": "service", "settings": { "title": "Retaining walls & sport courts", "text": "Engineered walls, sport courts, demolition and dirt work.", "link_label": "Learn more", "link": "/pages/retaining-walls-sports-courts" } }
+        "s1": { "type": "service", "settings": { "title": "Driveways", "text": "New pours, replacement and extensions built for Utah winters.", "link_label": "Learn more", "link": "/pages/concrete-driveways" } },
+        "s2": { "type": "service", "settings": { "title": "Patios", "text": "Backyard slabs, covered patios and wraparound pours.", "link_label": "Learn more", "link": "/pages/concrete-patios" } },
+        "s3": { "type": "service", "settings": { "title": "RV pads", "text": "Heavy-duty side-yard pads sized and reinforced for an RV.", "link_label": "Learn more", "link": "/pages/rv-pads" } },
+        "s4": { "type": "service", "settings": { "title": "Stamped patios", "text": "Custom stamped, colored and textured backyard patios.", "link_label": "Learn more", "link": "/pages/stamped-concrete-patios" } },
+        "s5": { "type": "service", "settings": { "title": "Walkways", "text": "Front-yard paths, side-yard runs, steps and landings.", "link_label": "Learn more", "link": "/pages/concrete-walkways" } },
+        "s6": { "type": "service", "settings": { "title": "All services", "text": "Retaining walls, sport courts, hot tub pads, shed pads and more.", "link_label": "See everything", "link": "/pages/services" } }
       },
-      "block_order": ["s1", "s2", "s3"]
+      "block_order": ["s1", "s2", "s3", "s4", "s5", "s6"]
     }
   },
   "order": ["main", "services"]

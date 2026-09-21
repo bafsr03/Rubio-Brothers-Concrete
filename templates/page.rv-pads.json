@@ -1,0 +1,339 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "schema": {
+      "type": "service-schema",
+      "settings": {
+        "service_name": "RV Pads",
+        "service_type": "Concrete RV pad and heavy-duty parking pad installation",
+        "service_description": "Thick, steel-reinforced concrete RV pads and heavy equipment parking pads poured across Utah County and engineered to carry a loaded motorhome without cracking.",
+        "image": "shopify://shop_images/concrete-rv-pad-side-yard-vinyl-fence-utah-county.jpg"
+      }
+    },
+    "hero": {
+      "type": "site-hero",
+      "settings": {
+        "image": "shopify://shop_images/concrete-rv-pad-side-yard-vinyl-fence-utah-county.jpg",
+        "eyebrow": "Pleasant Grove, UT · Serving all of Utah County",
+        "heading": "Concrete RV Pads & Heavy-Duty Parking Pads in Utah County",
+        "subheading": "Thicker slabs, steel reinforcement and a compacted base — pads built to park a loaded motorhome, fifth wheel or trailer without cracking or sinking.",
+        "button_label": "Get a free RV pad estimate",
+        "button_link": "/pages/estimate",
+        "phone_label": "Call (385) 210-5983",
+        "phone": "(385) 210-5983",
+        "trust_chips": "Free estimates\nSteel reinforced\nSized to your rig",
+        "accent_color": "#C42A20",
+        "text_color": "#ffffff",
+        "overlay_opacity": 55,
+        "min_height": 78
+      }
+    },
+    "services": {
+      "type": "services-grid",
+      "settings": {
+        "eyebrow": "RV pads & heavy slabs",
+        "heading": "RV Pad Installation in Pleasant Grove, Lehi & American Fork",
+        "intro": "A motorhome puts far more weight on a slab than a car does. We pour RV pads thicker, reinforce them properly and base them so they stay flat.",
+        "accent_color": "#C42A20"
+      },
+      "blocks": {
+        "s1": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-rv-pad-side-yard-vinyl-fence-utah-county.jpg",
+            "title": "RV & motorhome pads",
+            "text": "Reinforced pads sized to your rig's length and axle weight, with room to maneuver.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s2": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-rv-pad-pour-forms-utah-county.jpg",
+            "title": "Trailer & fifth-wheel pads",
+            "text": "Parking pads for boats, trailers and fifth wheels, tied cleanly into the driveway.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s3": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-flatwork-pour-utah-county.jpg",
+            "title": "Equipment & truck pads",
+            "text": "Heavy-duty slabs for work trucks, skid steers and equipment storage.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s4": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-extension-lehi-ut.jpg",
+            "title": "Side-yard parking strips",
+            "text": "Narrow strips down the side of the house that turn dead ground into parking.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s5": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-slab-base-prep-rebar-utah-county.jpg",
+            "title": "Base prep & compaction",
+            "text": "The part nobody sees and everybody feels — excavation and compaction done right.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s6": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-foundation-slab-pour-basement-utah-county.jpg",
+            "title": "Thickened edges & footings",
+            "text": "Thickened perimeters and footings where the jacks and tyres actually land.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
+    },
+    "process": {
+      "type": "process-steps",
+      "settings": {
+        "eyebrow": "How it works",
+        "heading": "How We Build an RV Pad That Won't Crack",
+        "intro": "A clear, no-surprises process so you always know what happens next.",
+        "accent_color": "#C42A20"
+      },
+      "blocks": {
+        "p1": {
+          "type": "step",
+          "settings": {
+            "title": "Free on-site estimate",
+            "text": "We measure the space, ask what you're parking on it and quote an exact price."
+          }
+        },
+        "p2": {
+          "type": "step",
+          "settings": {
+            "title": "Excavate & compact",
+            "text": "We dig out and compact a deep, solid base — the single biggest factor in whether a heavy pad survives."
+          }
+        },
+        "p3": {
+          "type": "step",
+          "settings": {
+            "title": "Form, reinforce & pour",
+            "text": "Thicker slab, rebar grid and control joints placed for the load you told us about."
+          }
+        },
+        "p4": {
+          "type": "step",
+          "settings": {
+            "title": "Cure & walkthrough",
+            "text": "We control the cure, tell you exactly when you can park on it, and clean the site."
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3",
+        "p4"
+      ]
+    },
+    "stats": {
+      "type": "stats-counter",
+      "settings": {
+        "heading": "Built for the weight you actually park",
+        "accent_color": "#C42A20",
+        "background_color": "#f5f4f2"
+      },
+      "blocks": {
+        "st1": {
+          "type": "stat",
+          "settings": {
+            "value": "30",
+            "suffix": "+",
+            "label": "Years pouring concrete"
+          }
+        },
+        "st2": {
+          "type": "stat",
+          "settings": {
+            "value": "500",
+            "suffix": "+",
+            "label": "Projects completed"
+          }
+        },
+        "st3": {
+          "type": "stat",
+          "settings": {
+            "value": "5",
+            "suffix": "★",
+            "label": "Average review rating"
+          }
+        },
+        "st4": {
+          "type": "stat",
+          "settings": {
+            "value": "100",
+            "suffix": "%",
+            "label": "Site cleanup, every time"
+          }
+        }
+      },
+      "block_order": [
+        "st1",
+        "st2",
+        "st3",
+        "st4"
+      ]
+    },
+    "faq": {
+      "type": "faq",
+      "settings": {
+        "eyebrow": "FAQ",
+        "heading": "RV pad questions",
+        "accent_color": "#C42A20"
+      },
+      "blocks": {
+        "q1": {
+          "type": "qa",
+          "settings": {
+            "question": "How thick should an RV pad be?",
+            "answer": "<p>Thicker than a driveway. For motorhomes and loaded trailers we typically pour a reinforced slab over a deep compacted base, and thicken it further where the jacks and tyres sit. We'll spec the right thickness for your rig during the free estimate.</p>"
+          }
+        },
+        "q2": {
+          "type": "qa",
+          "settings": {
+            "question": "How big does my RV pad need to be?",
+            "answer": "<p>Measure your rig and add room to open the door, put the awning out and walk around it. We'll help you size it on site — it's cheaper to pour a few extra feet now than to add on later.</p>"
+          }
+        },
+        "q3": {
+          "type": "qa",
+          "settings": {
+            "question": "Will an RV pad crack under the weight?",
+            "answer": "<p>Not when it's built for it. Cracking on heavy pads almost always comes from a weak base or missing reinforcement, so that's where we spend the effort — compaction, steel and control joints in the right places.</p>"
+          }
+        },
+        "q4": {
+          "type": "qa",
+          "settings": {
+            "question": "Can you tie the pad into my existing driveway?",
+            "answer": "<p>Yes. We match the elevation and finish so it reads as one surface, and we detail the joint properly so the two slabs can move without fighting each other.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "related": {
+      "type": "services-grid",
+      "settings": {
+        "eyebrow": "More from Rubio Brothers",
+        "heading": "Other concrete work we pour in Utah County",
+        "intro": "One family crew handles every part of the job — so you're not chasing three contractors for one backyard.",
+        "accent_color": "#C42A20",
+        "background_color": "#f5f4f2"
+      },
+      "blocks": {
+        "r1": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-broom-finish-pleasant-grove-ut.jpg",
+            "title": "Driveways",
+            "text": "New driveways, replacements and tear-outs built for Utah freeze-thaw.",
+            "link_label": "View service",
+            "link": "/pages/concrete-driveways"
+          }
+        },
+        "r2": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-shed-pad-side-yard-pleasant-grove-ut.jpg",
+            "title": "Shed pads",
+            "text": "Level, square pads so a shed sits flat and stays dry.",
+            "link_label": "View service",
+            "link": "/pages/shed-pads"
+          }
+        },
+        "r3": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-hot-tub-pad-off-deck-stairs-utah-county.jpg",
+            "title": "Hot tub pads",
+            "text": "Reinforced pads rated for the weight of a filled spa.",
+            "link_label": "View service",
+            "link": "/pages/hot-tub-pads"
+          }
+        },
+        "r4": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-patio-broom-finish-backyard-utah-county.jpg",
+            "title": "Patios",
+            "text": "Broom-finished backyard patio slabs, poured level and clean.",
+            "link_label": "View service",
+            "link": "/pages/concrete-patios"
+          }
+        }
+      },
+      "block_order": [
+        "r1",
+        "r2",
+        "r3",
+        "r4"
+      ]
+    },
+    "cta": {
+      "type": "cta-band",
+      "settings": {
+        "eyebrow": "Free, no-pressure quotes",
+        "heading": "Get a free RV pad estimate",
+        "text": "Tell us what you're parking and where, and we'll spec and price the pad after a free site visit.",
+        "button_label": "Get a free estimate",
+        "button_link": "/pages/estimate",
+        "phone_label": "Call (385) 210-5983",
+        "phone": "(385) 210-5983",
+        "accent_color": "#C42A20",
+        "background_color": "#ffffff",
+        "text_color": "#1a1a1a"
+      }
+    }
+  },
+  "order": [
+    "schema",
+    "hero",
+    "services",
+    "process",
+    "stats",
+    "faq",
+    "related",
+    "cta"
+  ]
+}

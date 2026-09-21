@@ -1,0 +1,366 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "schema": {
+      "type": "service-schema",
+      "settings": {
+        "service_name": "Concrete Walkways",
+        "service_type": "Concrete walkway and sidewalk installation",
+        "service_description": "Concrete walkways, sidewalks, side-yard paths and front entries poured across Utah County — level, trip-free and sloped to drain.",
+        "image": "shopify://shop_images/concrete-walkway-side-yard-to-garage-orem-ut.jpg"
+      }
+    },
+    "hero": {
+      "type": "site-hero",
+      "settings": {
+        "image": "shopify://shop_images/concrete-walkway-side-yard-to-garage-orem-ut.jpg",
+        "eyebrow": "Pleasant Grove, UT · Serving all of Utah County",
+        "heading": "Concrete Walkways & Sidewalks in Utah County",
+        "subheading": "Front entries, side-yard paths and sidewalks poured level and trip-free — including the narrow, awkward runs other contractors would rather not quote.",
+        "button_label": "Get a free walkway estimate",
+        "button_link": "/pages/estimate",
+        "phone_label": "Call (385) 210-5983",
+        "phone": "(385) 210-5983",
+        "trust_chips": "Free estimates\nTrip-free & sloped to drain\nTight access welcome",
+        "accent_color": "#C42A20",
+        "text_color": "#ffffff",
+        "overlay_opacity": 55,
+        "min_height": 78
+      }
+    },
+    "services": {
+      "type": "services-grid",
+      "settings": {
+        "eyebrow": "Walkways & sidewalks",
+        "heading": "Front Walks, Side Paths & Sidewalks in Pleasant Grove, Orem & Lehi",
+        "intro": "Walkways are where bad concrete shows first — lipped joints, standing water, cracked corners. Done properly they're the cheapest upgrade to a property's curb appeal.",
+        "accent_color": "#C42A20"
+      },
+      "blocks": {
+        "s1": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-walkway-front-yard-finishing-utah-county.jpg",
+            "title": "Front entry walkways",
+            "text": "The path from the curb to the door — the first thing anyone sees of your house.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s2": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-walkway-side-yard-to-garage-orem-ut.jpg",
+            "title": "Side-yard paths",
+            "text": "Narrow runs down the side of the house to the back yard or garage.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s3": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-walkway-side-yard-landing-pad-utah-county.jpg",
+            "title": "Walkways with landings & steps",
+            "text": "Paths that take a grade change, with landings and steps poured to an even rise.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s4": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-walkway-steps-retaining-wall-pleasant-grove-ut.jpg",
+            "title": "Paths along retaining walls",
+            "text": "Walkways tied into a wall or planter, detailed so the two don't crack each other.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s5": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/curved-concrete-curb-walkway-forming-rebar-utah-county.jpg",
+            "title": "Curbs, edging & borders",
+            "text": "Formed curbs and edging that hold back gravel, bark and landscaping.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s6": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-walkway-stone-home-pleasant-grove-ut.jpg",
+            "title": "Stamped & decorative walkways",
+            "text": "Matching stamped or colored paths that tie into a decorative patio.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
+    },
+    "process": {
+      "type": "process-steps",
+      "settings": {
+        "eyebrow": "How it works",
+        "heading": "How We Pour a Walkway",
+        "intro": "A clear, no-surprises process so you always know what happens next.",
+        "accent_color": "#C42A20"
+      },
+      "blocks": {
+        "p1": {
+          "type": "step",
+          "settings": {
+            "title": "Free on-site estimate",
+            "text": "We walk the route with you, check the fall and quote an exact price at no charge."
+          }
+        },
+        "p2": {
+          "type": "step",
+          "settings": {
+            "title": "Excavate & form",
+            "text": "The run is dug, formed and compacted, with the slope set to shed water off the path."
+          }
+        },
+        "p3": {
+          "type": "step",
+          "settings": {
+            "title": "Pour & finish",
+            "text": "Concrete placed and broom-finished so it stays grippy underfoot when it's wet or icy."
+          }
+        },
+        "p4": {
+          "type": "step",
+          "settings": {
+            "title": "Cure & walkthrough",
+            "text": "Joints cut at the right spacing, site cleaned and the route left ready to use."
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3",
+        "p4"
+      ]
+    },
+    "gallery": {
+      "type": "project-gallery",
+      "settings": {
+        "eyebrow": "Recent work",
+        "heading": "Recent walkways we've poured",
+        "intro": "Real jobs from around Utah County — no stock photos.",
+        "button_label": "See the full gallery",
+        "button_link": "/pages/gallery",
+        "accent_color": "#C42A20"
+      },
+      "blocks": {
+        "g1": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-walkway-side-yard-landing-pad-utah-county.jpg",
+            "category": "Walkway",
+            "caption": "Side-yard walkway and landing",
+            "alt": "Concrete walkway and landing pad poured along a side yard in Utah County"
+          }
+        },
+        "g2": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-walkway-steps-retaining-wall-pleasant-grove-ut.jpg",
+            "category": "Walkway",
+            "caption": "Walkway and steps by a retaining wall",
+            "alt": "Concrete walkway with steps running alongside a retaining wall in Pleasant Grove, Utah"
+          }
+        },
+        "g3": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-walkway-side-yard-to-garage-orem-ut.jpg",
+            "category": "Walkway",
+            "caption": "Side path to the garage, Orem",
+            "alt": "Narrow concrete walkway poured down the side of a house to the garage in Orem, Utah"
+          }
+        },
+        "g4": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-walkway-front-yard-finishing-utah-county.jpg",
+            "category": "Walkway",
+            "caption": "Front walkway being finished",
+            "alt": "Concrete front walkway being floated and finished at a home in Utah County"
+          }
+        },
+        "g5": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/curved-concrete-curb-walkway-forming-rebar-utah-county.jpg",
+            "category": "Curbing",
+            "caption": "Curved curb, formed and reinforced",
+            "alt": "Curved concrete curb formed with rebar before pouring in Utah County"
+          }
+        },
+        "g6": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-patio-and-walkway-wraparound-utah-county.jpg",
+            "category": "Walkway",
+            "caption": "Wrap-around path and patio",
+            "alt": "Concrete walkway wrapping around a home to a rear patio in Utah County"
+          }
+        }
+      },
+      "block_order": [
+        "g1",
+        "g2",
+        "g3",
+        "g4",
+        "g5",
+        "g6"
+      ]
+    },
+    "faq": {
+      "type": "faq",
+      "settings": {
+        "eyebrow": "FAQ",
+        "heading": "Walkway questions",
+        "accent_color": "#C42A20"
+      },
+      "blocks": {
+        "q1": {
+          "type": "qa",
+          "settings": {
+            "question": "How wide should a walkway be?",
+            "answer": "<p>Three feet is the practical minimum for one person; four feet lets two people walk side by side and is the usual choice for a front entry. We'll mark it out on site so you can see it before we form.</p>"
+          }
+        },
+        "q2": {
+          "type": "qa",
+          "settings": {
+            "question": "Can you pour a walkway with a wheelbarrow-only access?",
+            "answer": "<p>Yes. Narrow side-yard runs are a big share of what we do — we wheelbarrow, pump or chute depending on the site and tell you the plan at the estimate.</p>"
+          }
+        },
+        "q3": {
+          "type": "qa",
+          "settings": {
+            "question": "Why do walkways develop lips and trip hazards?",
+            "answer": "<p>Usually a weak or uneven base letting one panel settle. We compact the full run and space control joints properly so the slabs move together instead of against each other.</p>"
+          }
+        },
+        "q4": {
+          "type": "qa",
+          "settings": {
+            "question": "Can my walkway match my patio?",
+            "answer": "<p>Yes — whether that's a matching broom finish or the same stamp pattern and color. See our <a href=\"/pages/stamped-concrete-patios\">stamped patios</a> page for the pattern options.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "related": {
+      "type": "services-grid",
+      "settings": {
+        "eyebrow": "More from Rubio Brothers",
+        "heading": "Other concrete work we pour in Utah County",
+        "intro": "One family crew handles every part of the job — so you're not chasing three contractors for one backyard.",
+        "accent_color": "#C42A20",
+        "background_color": "#f5f4f2"
+      },
+      "blocks": {
+        "r1": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-patio-broom-finish-backyard-utah-county.jpg",
+            "title": "Patios",
+            "text": "Broom-finished backyard patio slabs, poured level and clean.",
+            "link_label": "View service",
+            "link": "/pages/concrete-patios"
+          }
+        },
+        "r2": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-broom-finish-pleasant-grove-ut.jpg",
+            "title": "Driveways",
+            "text": "New driveways, replacements and tear-outs built for Utah freeze-thaw.",
+            "link_label": "View service",
+            "link": "/pages/concrete-driveways"
+          }
+        },
+        "r3": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-shed-pad-side-yard-pleasant-grove-ut.jpg",
+            "title": "Shed pads",
+            "text": "Level, square pads so a shed sits flat and stays dry.",
+            "link_label": "View service",
+            "link": "/pages/shed-pads"
+          }
+        },
+        "r4": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-slab-backyard-american-fork-ut.jpg",
+            "title": "Retaining walls",
+            "text": "Engineered walls with drainage built in for sloped Utah lots.",
+            "link_label": "View service",
+            "link": "/pages/retaining-walls"
+          }
+        }
+      },
+      "block_order": [
+        "r1",
+        "r2",
+        "r3",
+        "r4"
+      ]
+    },
+    "cta": {
+      "type": "cta-band",
+      "settings": {
+        "eyebrow": "Free, no-pressure quotes",
+        "heading": "Get a free walkway estimate",
+        "text": "Tell us where the path needs to run and we'll quote it exactly after a free site visit.",
+        "button_label": "Get a free estimate",
+        "button_link": "/pages/estimate",
+        "phone_label": "Call (385) 210-5983",
+        "phone": "(385) 210-5983",
+        "accent_color": "#C42A20",
+        "background_color": "#ffffff",
+        "text_color": "#1a1a1a"
+      }
+    }
+  },
+  "order": [
+    "schema",
+    "hero",
+    "services",
+    "process",
+    "gallery",
+    "faq",
+    "related",
+    "cta"
+  ]
+}

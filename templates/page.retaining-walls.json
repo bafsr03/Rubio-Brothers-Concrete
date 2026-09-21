@@ -1,0 +1,290 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "schema": {
+      "type": "service-schema",
+      "settings": {
+        "service_name": "Concrete Retaining Walls",
+        "service_type": "Retaining wall construction",
+        "service_description": "Engineered concrete and block retaining walls with drainage built in, plus the demolition, excavation and grading, for sloped lots across Utah County.",
+        "image": "shopify://shop_images/concrete-slab-backyard-american-fork-ut.jpg"
+      }
+    },
+    "hero": {
+      "type": "site-hero",
+      "settings": {
+        "image": "shopify://shop_images/concrete-slab-backyard-american-fork-ut.jpg",
+        "eyebrow": "Pleasant Grove, UT · Serving all of Utah County",
+        "heading": "Concrete Retaining Walls in Utah County",
+        "subheading": "Hold back a hillside and turn a slope into usable, level yard — engineered walls with drainage built in, including all the demolition and dirt work to get there.",
+        "button_label": "Get a free wall estimate",
+        "button_link": "/pages/estimate",
+        "phone_label": "Call (385) 210-5983",
+        "phone": "(385) 210-5983",
+        "trust_chips": "Free estimates\nDrainage built in\nDemolition & dirt work",
+        "accent_color": "#C42A20",
+        "text_color": "#ffffff",
+        "overlay_opacity": 55,
+        "min_height": 78
+      }
+    },
+    "services": {
+      "type": "services-grid",
+      "settings": {
+        "eyebrow": "Retaining walls & site work",
+        "heading": "Engineered Retaining Walls for Sloped Utah Lots",
+        "intro": "A retaining wall is a structural element holding tons of wet soil. The drainage behind it matters as much as the wall itself — that's what separates a wall that lasts from one that leans.",
+        "accent_color": "#C42A20"
+      },
+      "blocks": {
+        "s1": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-slab-backyard-american-fork-ut.jpg",
+            "title": "Poured concrete retaining walls",
+            "text": "Formed and steel-reinforced walls for the heaviest loads and the steepest cuts.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s2": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-walkway-steps-retaining-wall-pleasant-grove-ut.jpg",
+            "title": "Block & segmental walls",
+            "text": "Segmental block walls for terracing, planters and garden-scale grade changes.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s3": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-slab-base-prep-rebar-utah-county.jpg",
+            "title": "Footings & reinforcement",
+            "text": "Properly sized footings and rebar — the part underground that decides whether it holds.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s4": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-flatwork-pour-utah-county.jpg",
+            "title": "Drainage & backfill",
+            "text": "Drain rock, pipe and weeps behind every wall so water pressure never builds up.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s5": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-extension-lehi-ut.jpg",
+            "title": "Demolition & tear-out",
+            "text": "We demo old walls, concrete and structures and haul everything away to clear the site.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        },
+        "s6": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-backyard-slab-finishing-lehi-ut.jpg",
+            "title": "Terracing & grading",
+            "text": "Cut-and-fill, terracing and final grading to shape the lot into level, usable space.",
+            "link_label": "Get a quote",
+            "link": "/pages/estimate"
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
+    },
+    "process": {
+      "type": "process-steps",
+      "settings": {
+        "eyebrow": "How it works",
+        "heading": "Demolition, Dirt Work & Pour — One Crew, Start to Finish",
+        "intro": "A clear, no-surprises process so you always know what happens next.",
+        "accent_color": "#C42A20"
+      },
+      "blocks": {
+        "p1": {
+          "type": "step",
+          "settings": {
+            "title": "Free site assessment",
+            "text": "We look at your slope, drainage and access, then quote the wall at no charge."
+          }
+        },
+        "p2": {
+          "type": "step",
+          "settings": {
+            "title": "Demolition & excavation",
+            "text": "We demo what's there, dig the footing line and cut the bank back to working room."
+          }
+        },
+        "p3": {
+          "type": "step",
+          "settings": {
+            "title": "Footings, steel & wall",
+            "text": "Footings poured, reinforcement set and the wall formed and poured or laid to height."
+          }
+        },
+        "p4": {
+          "type": "step",
+          "settings": {
+            "title": "Drainage, backfill & cleanup",
+            "text": "Drain rock and pipe placed behind the wall, backfilled, graded and the site cleared."
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3",
+        "p4"
+      ]
+    },
+    "faq": {
+      "type": "faq",
+      "settings": {
+        "eyebrow": "FAQ",
+        "heading": "Retaining wall questions",
+        "accent_color": "#C42A20"
+      },
+      "blocks": {
+        "q1": {
+          "type": "qa",
+          "settings": {
+            "question": "Do retaining walls need drainage?",
+            "answer": "<p>Yes, and it's not optional. Water building up behind a wall is what pushes it over — we build drain rock, pipe and weeps into every retaining wall we pour.</p>"
+          }
+        },
+        "q2": {
+          "type": "qa",
+          "settings": {
+            "question": "Do you handle the demolition and dirt work too?",
+            "answer": "<p>Yes. We're a single crew for demolition, excavation, grading and the finished concrete, so you're not coordinating three contractors for one project.</p>"
+          }
+        },
+        "q3": {
+          "type": "qa",
+          "settings": {
+            "question": "How tall can a retaining wall be?",
+            "answer": "<p>It depends on the soil, the slope and what's above it. Past a certain height a wall needs engineering and a permit — we'll tell you honestly during the estimate which side of that line your project falls on.</p>"
+          }
+        },
+        "q4": {
+          "type": "qa",
+          "settings": {
+            "question": "Can you build on a steep or sloped lot?",
+            "answer": "<p>Absolutely. Sloped Utah County lots are exactly what retaining walls and cut-and-fill grading are for. We assess access and slope during the free estimate.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "related": {
+      "type": "services-grid",
+      "settings": {
+        "eyebrow": "More from Rubio Brothers",
+        "heading": "Other concrete work we pour in Utah County",
+        "intro": "One family crew handles every part of the job — so you're not chasing three contractors for one backyard.",
+        "accent_color": "#C42A20",
+        "background_color": "#f5f4f2"
+      },
+      "blocks": {
+        "r1": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-sport-court-pad-pleasant-grove-ut.jpg",
+            "title": "Sport courts",
+            "text": "Flat, true pads for backyard basketball and pickleball.",
+            "link_label": "View service",
+            "link": "/pages/sport-courts"
+          }
+        },
+        "r2": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-walkway-side-yard-to-garage-orem-ut.jpg",
+            "title": "Walkways",
+            "text": "Sidewalks, side-yard paths and front entries, poured trip-free.",
+            "link_label": "View service",
+            "link": "/pages/concrete-walkways"
+          }
+        },
+        "r3": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-patio-broom-finish-backyard-utah-county.jpg",
+            "title": "Patios",
+            "text": "Broom-finished backyard patio slabs, poured level and clean.",
+            "link_label": "View service",
+            "link": "/pages/concrete-patios"
+          }
+        },
+        "r4": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-broom-finish-pleasant-grove-ut.jpg",
+            "title": "Driveways",
+            "text": "New driveways, replacements and tear-outs built for Utah freeze-thaw.",
+            "link_label": "View service",
+            "link": "/pages/concrete-driveways"
+          }
+        }
+      },
+      "block_order": [
+        "r1",
+        "r2",
+        "r3",
+        "r4"
+      ]
+    },
+    "cta": {
+      "type": "cta-band",
+      "settings": {
+        "eyebrow": "Free, no-pressure quotes",
+        "heading": "Talk to Cesar about your retaining wall",
+        "text": "Tell us about your slope and we'll quote the wall, the drainage and the dirt work after a free site visit.",
+        "button_label": "Get a free estimate",
+        "button_link": "/pages/estimate",
+        "phone_label": "Call (385) 210-5983",
+        "phone": "(385) 210-5983",
+        "accent_color": "#C42A20",
+        "background_color": "#ffffff",
+        "text_color": "#1a1a1a"
+      }
+    }
+  },
+  "order": [
+    "schema",
+    "hero",
+    "services",
+    "process",
+    "faq",
+    "related",
+    "cta"
+  ]
+}
