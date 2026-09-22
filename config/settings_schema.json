@@ -2256,6 +2256,12 @@
         "id": "business_bbb_url",
         "label": "BBB profile URL",
         "default": "https://www.bbb.org/us/ut/pleasant-grove/profile/concrete-contractors/rubio-brothers-construction-1166-90028250"
+      },
+      {
+        "type": "textarea",
+        "id": "business_google_verification",
+        "label": "Google Search Console verification code",
+        "info": "Paste just the code from Google's HTML tag method (the content=\"...\" value), not the whole tag. Comma-separate several to verify more than one property. Google's HTML file method does not work on Shopify."
       }
     ]
   }
