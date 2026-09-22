@@ -35,7 +35,7 @@
       in-theme option. Comma-separate the codes in Theme settings › Business
       info to verify more than one Search Console property or account.
     {%- endcomment -%}
-    {%- assign gsc_codes = settings.business_google_verification | default: 'je1kjJcHLxK2bltqqlsZaRAaBjaeah8skfeVTEKxB5Y' | split: ',' -%}
+    {%- assign gsc_codes = settings.business_google_verification | default: 'je1kjJcHLxK2bltqqlsZaRAaBjaeah8skfeVTEKxB5Y,CQkd9m6PmqQKnbNaAkfsm36yrp3JWeUo-nHRcl4PFi0' | split: ',' -%}
     {%- for gsc_code in gsc_codes -%}
       {%- assign gsc_code = gsc_code | strip -%}
       {%- if gsc_code != blank -%}
