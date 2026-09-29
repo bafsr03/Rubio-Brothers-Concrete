@@ -112,6 +112,65 @@
   </div>
 </div>
 
+{%- comment -%}
+  ImageGallery JSON-LD. Alt text alone tells Google what a photo shows; this
+  says, in a machine-readable way, *where* each job was poured. Every photo with
+  a "City" becomes an ImageObject whose contentLocation is that city, which is
+  what ties this gallery to the towns we want to rank in. Photos left without a
+  city are still listed — they just carry no place claim, which is the honest
+  default.
+{%- endcomment -%}
+{%- assign photo_count = 0 -%}
+{%- for block in section.blocks -%}
+  {%- if block.settings.image != blank -%}{%- assign photo_count = photo_count | plus: 1 -%}{%- endif -%}
+{%- endfor -%}
+{%- if photo_count > 0 -%}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageGallery",
+      "name": {{ section.settings.heading | default: 'Project gallery' | json }},
+      {% if section.settings.intro != blank %}"description": {{ section.settings.intro | strip_html | strip | json }},{% endif %}
+      "associatedMedia": [
+        {%- assign emitted = 0 -%}
+        {%- for block in section.blocks -%}
+          {%- if block.settings.image == blank -%}{%- continue -%}{%- endif -%}
+          {%- liquid
+            assign img_alt = block.settings.alt | default: block.settings.caption
+            assign emitted = emitted | plus: 1
+          -%}
+          {%- if emitted > 1 -%},{%- endif -%}
+          {
+            "@type": "ImageObject",
+            "contentUrl": {{ block.settings.image | image_url: width: 2000 | prepend: 'https:' | json }},
+            "thumbnailUrl": {{ block.settings.image | image_url: width: 600 | prepend: 'https:' | json }},
+            {% if img_alt != blank %}
+              "name": {{ img_alt | json }},
+              "caption": {{ img_alt | json }},
+            {% endif %}
+            {% if block.settings.city != blank %}
+              "contentLocation": {
+                "@type": "City",
+                "name": {{ block.settings.city | strip | json }},
+                "containedInPlace": {
+                  "@type": "AdministrativeArea",
+                  "name": {{ settings.business_region | default: 'UT' | json }}
+                }
+              },
+            {% endif %}
+            {% if block.settings.category != blank %}"keywords": {{ block.settings.category | strip | json }},{% endif %}
+            "representativeOfPage": false,
+            "creator": {
+              "@type": "GeneralContractor",
+              "@id": {{ request.origin | append: '/#business' | json }}
+            }
+          }
+        {%- endfor -%}
+      ]
+    }
+  </script>
+{%- endif -%}
+
 {% stylesheet %}
   .rb-gallery { background: var(--color-background); color: var(--color-foreground); }
 
@@ -299,7 +358,8 @@
         { "type": "image_picker", "id": "image", "label": "Photo" },
         { "type": "text", "id": "category", "label": "Category chip", "info": "e.g. Driveway, Stamped patio, RV pad" },
         { "type": "text", "id": "caption", "label": "Caption" },
-        { "type": "text", "id": "alt", "label": "Alt text (SEO)", "info": "Describe the photo + city, e.g. 'Stamped concrete patio in Orem, UT'." }
+        { "type": "text", "id": "alt", "label": "Alt text (SEO)", "info": "Describe the photo + city, e.g. 'Stamped concrete patio in Orem, UT'." },
+        { "type": "text", "id": "city", "label": "City (SEO)", "info": "The town this job was poured in, e.g. 'Alpine'. Adds it to the photo's structured data. Leave blank if unsure — don't guess." }
       ]
     }
   ],

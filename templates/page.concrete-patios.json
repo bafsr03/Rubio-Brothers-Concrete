@@ -177,7 +177,8 @@
             "image": "shopify://shop_images/concrete-patio-broom-finish-backyard-utah-county.jpg",
             "category": "Patio",
             "caption": "Backyard patio, broom finish",
-            "alt": "Broom-finished concrete patio poured across the back of a two-storey home in Utah County"
+            "alt": "Broom-finished concrete patio poured across the back of a two-storey home in Utah County",
+            "city": ""
           }
         },
         "g2": {
@@ -186,7 +187,8 @@
             "image": "shopify://shop_images/concrete-patio-fresh-pour-backyard-pleasant-grove-ut.jpg",
             "category": "Patio",
             "caption": "Fresh pour, Pleasant Grove",
-            "alt": "Freshly poured concrete patio slab being finished behind a home in Pleasant Grove, Utah"
+            "alt": "Freshly poured concrete patio slab being finished behind a home in Pleasant Grove, Utah",
+            "city": "Pleasant Grove"
           }
         },
         "g3": {
@@ -195,7 +197,8 @@
             "image": "shopify://shop_images/large-concrete-patio-slab-backyard-lehi-ut.jpg",
             "category": "Patio",
             "caption": "Large entertaining slab, Lehi",
-            "alt": "Large concrete patio slab poured across a backyard in Lehi, Utah"
+            "alt": "Large concrete patio slab poured across a backyard in Lehi, Utah",
+            "city": "Lehi"
           }
         },
         "g4": {
@@ -204,7 +207,8 @@
             "image": "shopify://shop_images/concrete-patio-under-deck-pleasant-grove-ut.jpg",
             "category": "Patio",
             "caption": "Patio under an existing deck",
-            "alt": "Concrete patio poured underneath an existing deck and stairs in Pleasant Grove, Utah"
+            "alt": "Concrete patio poured underneath an existing deck and stairs in Pleasant Grove, Utah",
+            "city": ""
           }
         },
         "g5": {
@@ -213,7 +217,8 @@
             "image": "shopify://shop_images/concrete-patio-and-walkway-wraparound-utah-county.jpg",
             "category": "Patio",
             "caption": "Patio and wrap-around walkway",
-            "alt": "Concrete patio and wrap-around walkway poured behind a home in Utah County"
+            "alt": "Concrete patio and wrap-around walkway poured behind a home in Utah County",
+            "city": ""
           }
         },
         "g6": {
@@ -222,11 +227,34 @@
             "image": "shopify://shop_images/covered-concrete-patio-under-deck-american-fork-ut.jpg",
             "category": "Patio",
             "caption": "Covered patio, American Fork",
-            "alt": "Covered concrete patio poured under a deck in American Fork, Utah"
+            "alt": "Covered concrete patio poured under a deck in American Fork, Utah",
+            "city": "American Fork"
+          }
+        },
+        "g7": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/stained-concrete-patio-checkerboard-lehi-ut.jpg",
+            "category": "Decorative",
+            "caption": "Checkerboard stained patio, Lehi",
+            "alt": "Two-tone checkerboard stained concrete patio in a Lehi, UT backyard",
+            "city": "Lehi"
+          }
+        },
+        "g8": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/decorative-concrete-patio-checkerboard-stain-lehi-ut.jpg",
+            "category": "Decorative",
+            "caption": "Staining the checkerboard patio, Lehi",
+            "alt": "Applying a grey and white checkerboard stain to a decorative concrete patio in Lehi, UT",
+            "city": "Lehi"
           }
         }
       },
       "block_order": [
+        "g7",
+        "g8",
         "g1",
         "g2",
         "g3",

@@ -1,0 +1,451 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "schema": {
+      "type": "local-area-schema",
+      "blocks": {
+        "sl1": {
+          "type": "service_link",
+          "settings": {
+            "name": "Concrete driveways",
+            "link": "/pages/concrete-driveways"
+          }
+        },
+        "sl2": {
+          "type": "service_link",
+          "settings": {
+            "name": "Concrete patios",
+            "link": "/pages/concrete-patios"
+          }
+        },
+        "sl3": {
+          "type": "service_link",
+          "settings": {
+            "name": "Concrete walkways",
+            "link": "/pages/concrete-walkways"
+          }
+        },
+        "sl4": {
+          "type": "service_link",
+          "settings": {
+            "name": "RV pads",
+            "link": "/pages/rv-pads"
+          }
+        },
+        "sl5": {
+          "type": "service_link",
+          "settings": {
+            "name": "Sport courts",
+            "link": "/pages/sport-courts"
+          }
+        },
+        "sl6": {
+          "type": "service_link",
+          "settings": {
+            "name": "Retaining walls",
+            "link": "/pages/retaining-walls"
+          }
+        },
+        "sl7": {
+          "type": "service_link",
+          "settings": {
+            "name": "Stamped concrete patios",
+            "link": "/pages/stamped-concrete-patios"
+          }
+        }
+      },
+      "block_order": [
+        "sl1",
+        "sl2",
+        "sl3",
+        "sl4",
+        "sl5",
+        "sl6",
+        "sl7"
+      ],
+      "settings": {
+        "city": "Highland",
+        "county": "Utah County",
+        "region": "UT",
+        "service_name": "Concrete Contractor in Highland, UT",
+        "service_type": "Concrete contractor",
+        "service_description": "Concrete driveways, RV pads, patios and replacement flatwork poured for homes in Highland, UT by a local family crew based in Pleasant Grove.",
+        "image": "shopify://shop_images/concrete-driveway-broom-finish-highland-ut.jpg"
+      }
+    },
+    "hero": {
+      "type": "site-hero",
+      "settings": {
+        "image": "shopify://shop_images/concrete-driveway-broom-finish-highland-ut.jpg",
+        "eyebrow": "Serving Highland, UT · Based in Pleasant Grove",
+        "heading": "Concrete Contractor in Highland, UT",
+        "subheading": "Driveways, RV pads, patios and full tear-out replacements for Highland homes — poured by one family crew, haul-off included.",
+        "button_label": "Get a free estimate",
+        "button_link": "/pages/estimate",
+        "phone_label": "Call (385) 210-5983",
+        "phone": "(385) 210-5983",
+        "trust_chips": "Free estimates\nLicensed & insured\nTear-out & haul-off included",
+        "accent_color": "#C42A20",
+        "text_color": "#ffffff",
+        "overlay_opacity": 55,
+        "min_height": 78
+      }
+    },
+    "local": {
+      "type": "local-area",
+      "blocks": {
+        "b1": {
+          "type": "paragraph",
+          "settings": {
+            "subheading": "What Highland calls us for",
+            "text": "<p>Highland sits on the bench between American Fork and Alpine, and the lots are generous. Homes are set back off the road, which means long approach driveways, and there's usually room beside the house for an RV or a toy hauler. That's most of what we pour up there: <a href=\"/pages/concrete-driveways\">driveways</a> and <a href=\"/pages/rv-pads\">RV pads</a>, with patios close behind.</p>"
+          }
+        },
+        "b2": {
+          "type": "paragraph",
+          "settings": {
+            "subheading": "More replacement than new",
+            "text": "<p>A lot of Highland's neighborhoods went in through the 1990s and early 2000s, and the original flatwork is now at the end of its life — spalling at the surface, cracks that have opened past the point of patching, sections lifted by tree roots. Replacing it properly means taking the old slab out, fixing whatever the base was doing wrong underneath it, and pouring back to a spec that lasts. We do all three, and the old concrete leaves on our truck.</p>"
+          }
+        },
+        "b3": {
+          "type": "detail",
+          "settings": {
+            "title": "A driveway that carries the load",
+            "text": "Four inches over compacted base is fine for cars. Where a truck, a trailer or an RV turns and parks, we go thicker and add steel — that's specified at the estimate, not guessed at on the day."
+          }
+        },
+        "b4": {
+          "type": "detail",
+          "settings": {
+            "title": "Tear-out and haul-off included",
+            "text": "No separate demo contractor, no dumpster parked in front of your house for two weeks. The old slab comes out and goes away as part of the same job."
+          }
+        },
+        "b5": {
+          "type": "detail",
+          "settings": {
+            "title": "Joints cut where cracks want to go",
+            "text": "Concrete cracks; the craft is deciding where. Control joints get placed and cut on time so the slab breaks along a straight line you can't see instead of across the middle."
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5"
+      ],
+      "settings": {
+        "eyebrow": "Highland, UT",
+        "heading": "Long driveways and big pads, done in one go",
+        "image": "shopify://shop_images/concrete-driveway-broom-finish-highland-ut.jpg",
+        "image_alt": "Wide broom-finish concrete driveway poured at a brick rambler in Highland, UT",
+        "image_caption": "A broom-finish driveway we poured in Highland — wide enough for three cars abreast.",
+        "neighborhoods_title": "Neighborhoods we pour in",
+        "neighborhoods": "",
+        "accent_color": "#C42A20",
+        "background_color": "",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    },
+    "services": {
+      "type": "services-grid",
+      "blocks": {
+        "s1": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-broom-finish-pleasant-grove-ut.jpg",
+            "title": "Driveways",
+            "text": "New driveways, extensions and full tear-out replacements.",
+            "link_label": "View service",
+            "link": "/pages/concrete-driveways"
+          }
+        },
+        "s2": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-rv-pad-side-yard-vinyl-fence-utah-county.jpg",
+            "title": "RV pads",
+            "text": "Reinforced pads sized to your rig and built to carry the weight.",
+            "link_label": "View service",
+            "link": "/pages/rv-pads"
+          }
+        },
+        "s3": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-patio-broom-finish-backyard-utah-county.jpg",
+            "title": "Patios",
+            "text": "Backyard slabs poured level, sloped to drain and finished clean.",
+            "link_label": "View service",
+            "link": "/pages/concrete-patios"
+          }
+        },
+        "s4": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-walkway-side-yard-to-garage-orem-ut.jpg",
+            "title": "Walkways",
+            "text": "Sidewalks, side-yard paths and front entries, poured trip-free.",
+            "link_label": "View service",
+            "link": "/pages/concrete-walkways"
+          }
+        },
+        "s5": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-sport-court-pad-pickleball-alpine-ut.jpg",
+            "title": "Sport courts",
+            "text": "Basketball and pickleball pads poured flat and true.",
+            "link_label": "View service",
+            "link": "/pages/sport-courts"
+          }
+        },
+        "s6": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-shed-pad-side-yard-pleasant-grove-ut.jpg",
+            "title": "Shed pads",
+            "text": "Square, level pads that keep a shed off the dirt.",
+            "link_label": "View service",
+            "link": "/pages/shed-pads"
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "settings": {
+        "eyebrow": "What we pour in Highland",
+        "heading": "Concrete services for Highland homes",
+        "intro": "Driveways and heavy pads are the bulk of our Highland work, but the same crew pours everything below.",
+        "heading_level": "h2",
+        "accent_color": "#C42A20"
+      }
+    },
+    "gallery": {
+      "type": "project-gallery",
+      "blocks": {
+        "g1": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-broom-finish-highland-ut.jpg",
+            "category": "Driveway",
+            "caption": "Broom-finish driveway, Highland",
+            "alt": "Wide broom-finish concrete driveway poured at a brick rambler in Highland, UT",
+            "city": "Highland"
+          }
+        },
+        "g2": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-sport-court-pad-pickleball-alpine-ut.jpg",
+            "category": "Sport court",
+            "caption": "Sport court pad, Alpine",
+            "alt": "Freshly poured concrete sport court pad beside a backyard pickleball court in Alpine, UT",
+            "city": "Alpine"
+          }
+        },
+        "g3": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-curved-american-fork-ut.jpg",
+            "category": "Driveway",
+            "caption": "Curved driveway, American Fork",
+            "alt": "Curved concrete driveway in American Fork, UT",
+            "city": "American Fork"
+          }
+        },
+        "g4": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-broom-finish-pleasant-grove-ut.jpg",
+            "category": "Driveway",
+            "caption": "Broom-finish driveway, Pleasant Grove",
+            "alt": "New broom-finish concrete driveway in Pleasant Grove, UT",
+            "city": "Pleasant Grove"
+          }
+        },
+        "g5": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-slab-backyard-american-fork-ut.jpg",
+            "category": "Patio",
+            "caption": "Backyard slab, American Fork",
+            "alt": "Concrete backyard slab in American Fork, UT",
+            "city": "American Fork"
+          }
+        },
+        "g6": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-slab-base-prep-rebar-utah-county.jpg",
+            "category": "Site prep",
+            "caption": "Base prep & rebar, Utah County",
+            "alt": "Concrete slab base prep with rebar in Utah County",
+            "city": ""
+          }
+        }
+      },
+      "block_order": [
+        "g1",
+        "g2",
+        "g3",
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "settings": {
+        "eyebrow": "Our work",
+        "heading": "Work in and around Highland",
+        "intro": "Highland and the neighboring towns we pour in — every photo is one of our jobs, captioned with the town it was poured in.",
+        "button_label": "See the full gallery",
+        "button_link": "/pages/gallery",
+        "accent_color": "#C42A20",
+        "background_color": "",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "q1": {
+          "type": "qa",
+          "settings": {
+            "question": "Do you serve Highland?",
+            "answer": "<p>Yes. We're in Pleasant Grove and Highland is a short drive — estimates are free and we don't add travel to the price.</p>"
+          }
+        },
+        "q2": {
+          "type": "qa",
+          "settings": {
+            "question": "What does it cost to replace a driveway in Highland?",
+            "answer": "<p>The two things that move the number most are square footage and how much old concrete has to come out. Highland driveways are often longer than average, so it's worth getting a real figure rather than a rule of thumb — the <a href=\"/pages/estimate\">estimator</a> gives you a ballpark and the site visit gives you the price.</p>"
+          }
+        },
+        "q3": {
+          "type": "qa",
+          "settings": {
+            "question": "Can you pour a pad for an RV or a toy hauler?",
+            "answer": "<p>Yes, and it's built differently from a driveway — deeper base, reinforcement, and extra thickness where the jacks and tires sit. Measure your rig and add room to open the door and put the awning out; we'll help size it on site.</p>"
+          }
+        },
+        "q4": {
+          "type": "qa",
+          "settings": {
+            "question": "How long before I can drive on it?",
+            "answer": "<p>You can usually walk on it the next day. We ask you to keep vehicles off for about a week while it gains strength, and heavy vehicles longer — we'll give you exact dates for your pour before we leave the site.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ],
+      "settings": {
+        "eyebrow": "FAQ",
+        "heading": "Concrete in Highland — common questions",
+        "accent_color": "#C42A20"
+      }
+    },
+    "areas": {
+      "type": "service-areas",
+      "blocks": {
+        "a1": {
+          "type": "area",
+          "settings": {
+            "image": "shopify://shop_images/concrete-sport-court-pad-pickleball-alpine-ut.jpg",
+            "image_alt": "Concrete sport court pad in Alpine, UT",
+            "title": "Alpine, UT",
+            "text": "Sloped bench lots, long driveways and sport court pads.",
+            "link_label": "See our work",
+            "link": "/pages/concrete-alpine-ut"
+          }
+        },
+        "a2": {
+          "type": "area",
+          "settings": {
+            "image": "shopify://shop_images/stained-concrete-patio-checkerboard-lehi-ut.jpg",
+            "image_alt": "Stained checkerboard concrete patio in Lehi, UT",
+            "title": "Lehi, UT",
+            "text": "Backyard patios, walkways and decorative concrete.",
+            "link_label": "See our work",
+            "link": "/pages/concrete-lehi-ut"
+          }
+        },
+        "a3": {
+          "type": "area",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-broom-finish-pleasant-grove-ut.jpg",
+            "image_alt": "Concrete driveway in Pleasant Grove, UT",
+            "title": "Pleasant Grove, UT",
+            "text": "Our home town — driveways, patios and everything between.",
+            "link_label": "See our work",
+            "link": "/pages/gallery"
+          }
+        }
+      },
+      "block_order": [
+        "a1",
+        "a2",
+        "a3"
+      ],
+      "settings": {
+        "eyebrow": "Where we pour",
+        "heading": "Other towns we pour in",
+        "heading_level": "h2",
+        "intro": "Same crew, same standard — a short drive in any direction from Pleasant Grove.",
+        "other_areas_label": "Also serving:",
+        "other_areas": "American Fork, Lindon, Orem, Provo, Cedar Hills, Saratoga Springs",
+        "accent_color": "#C42A20",
+        "background_color": "#f5f4f2",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    },
+    "cta": {
+      "type": "cta-band",
+      "settings": {
+        "eyebrow": "Free, no-pressure quotes",
+        "heading": "Get a free estimate in Highland",
+        "text": "Tell us what needs pouring or replacing and we'll come measure it and price it — free, and with no pressure to book.",
+        "button_label": "Get a free estimate",
+        "button_link": "/pages/estimate",
+        "phone_label": "Call (385) 210-5983",
+        "phone": "(385) 210-5983",
+        "accent_color": "#C42A20",
+        "background_color": "#ffffff",
+        "text_color": "#1a1a1a"
+      }
+    }
+  },
+  "order": [
+    "schema",
+    "hero",
+    "local",
+    "services",
+    "gallery",
+    "faq",
+    "areas",
+    "cta"
+  ]
+}

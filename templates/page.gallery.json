@@ -28,7 +28,8 @@
             "image": "shopify://shop_images/concrete-driveway-broom-finish-pleasant-grove-ut.jpg",
             "category": "Driveway",
             "caption": "Broom-finish driveway, Pleasant Grove",
-            "alt": "New broom-finish concrete driveway in Pleasant Grove, UT"
+            "alt": "New broom-finish concrete driveway in Pleasant Grove, UT",
+            "city": "Pleasant Grove"
           }
         },
         "g2": {
@@ -37,7 +38,8 @@
             "image": "shopify://shop_images/concrete-driveway-stone-home-pleasant-grove-ut.jpg",
             "category": "Driveway",
             "caption": "Driveway, Pleasant Grove",
-            "alt": "Finished concrete driveway at a stone home in Pleasant Grove, UT"
+            "alt": "Finished concrete driveway at a stone home in Pleasant Grove, UT",
+            "city": "Pleasant Grove"
           }
         },
         "g3": {
@@ -46,7 +48,8 @@
             "image": "shopify://shop_images/concrete-driveway-curved-american-fork-ut.jpg",
             "category": "Driveway",
             "caption": "Curved driveway, American Fork",
-            "alt": "Curved concrete driveway in American Fork, UT"
+            "alt": "Curved concrete driveway in American Fork, UT",
+            "city": "American Fork"
           }
         },
         "g4": {
@@ -55,7 +58,8 @@
             "image": "shopify://shop_images/concrete-driveway-pour-sunset-pleasant-grove-ut.jpg",
             "category": "Driveway",
             "caption": "Driveway pour at sunset, Pleasant Grove",
-            "alt": "Freshly poured concrete driveway at sunset in Pleasant Grove, UT"
+            "alt": "Freshly poured concrete driveway at sunset in Pleasant Grove, UT",
+            "city": "Pleasant Grove"
           }
         },
         "g5": {
@@ -64,7 +68,8 @@
             "image": "shopify://shop_images/stamped-concrete-patio-ashlar-slate-orem-ut.jpg",
             "category": "Stamped patio",
             "caption": "Ashlar stamped patio, Orem",
-            "alt": "Ashlar slate stamped concrete patio in Orem, UT"
+            "alt": "Ashlar slate stamped concrete patio in Orem, UT",
+            "city": "Orem"
           }
         },
         "g6": {
@@ -73,7 +78,8 @@
             "image": "shopify://shop_images/stamped-concrete-patio-wood-plank-orem-ut.jpg",
             "category": "Stamped patio",
             "caption": "Wood-plank stamped patio, Orem",
-            "alt": "Wood-plank stamped concrete patio in Orem, UT"
+            "alt": "Wood-plank stamped concrete patio in Orem, UT",
+            "city": "Orem"
           }
         },
         "g7": {
@@ -82,7 +88,8 @@
             "image": "shopify://shop_images/stamped-concrete-firepit-pad-wood-plank-provo-ut.jpg",
             "category": "Stamped",
             "caption": "Stamped fire-pit pad, Provo",
-            "alt": "Round wood-plank stamped concrete fire-pit pad in Provo, UT"
+            "alt": "Round wood-plank stamped concrete fire-pit pad in Provo, UT",
+            "city": "Provo"
           }
         },
         "g8": {
@@ -91,7 +98,8 @@
             "image": "shopify://shop_images/stamped-concrete-patio-firepit-orem-ut.jpg",
             "category": "Decorative",
             "caption": "Stamped patio & fire pit, Orem",
-            "alt": "Stamped concrete patio with a stone fire pit in Orem, UT"
+            "alt": "Stamped concrete patio with a stone fire pit in Orem, UT",
+            "city": "Orem"
           }
         },
         "g9": {
@@ -100,7 +108,8 @@
             "image": "shopify://shop_images/decorative-concrete-firepit-seating-area-pleasant-grove-ut.jpg",
             "category": "Decorative",
             "caption": "Fire-pit seating area, Pleasant Grove",
-            "alt": "Circular decorative concrete fire-pit seating area in Pleasant Grove, UT"
+            "alt": "Circular decorative concrete fire-pit seating area in Pleasant Grove, UT",
+            "city": "Pleasant Grove"
           }
         },
         "g10": {
@@ -109,7 +118,8 @@
             "image": "shopify://shop_images/colored-concrete-stairs-charcoal-pleasant-grove-ut.jpg",
             "category": "Colored",
             "caption": "Charcoal colored stairs, Pleasant Grove",
-            "alt": "Charcoal colored concrete stairs in Pleasant Grove, UT"
+            "alt": "Charcoal colored concrete stairs in Pleasant Grove, UT",
+            "city": "Pleasant Grove"
           }
         },
         "g11": {
@@ -118,7 +128,8 @@
             "image": "shopify://shop_images/concrete-patio-backyard-orem-ut.jpg",
             "category": "Patio",
             "caption": "Backyard patio, Orem",
-            "alt": "Concrete backyard patio in Orem, UT"
+            "alt": "Concrete backyard patio in Orem, UT",
+            "city": "Orem"
           }
         },
         "g12": {
@@ -127,7 +138,8 @@
             "image": "shopify://shop_images/concrete-patio-backyard-lehi-ut.jpg",
             "category": "Patio",
             "caption": "Backyard patio, Lehi",
-            "alt": "Concrete backyard patio in Lehi, UT"
+            "alt": "Concrete backyard patio in Lehi, UT",
+            "city": "Lehi"
           }
         },
         "g13": {
@@ -136,7 +148,8 @@
             "image": "shopify://shop_images/concrete-covered-patio-pour-lehi-ut.jpg",
             "category": "Patio",
             "caption": "Covered patio, Lehi",
-            "alt": "Covered concrete patio pour in Lehi, UT"
+            "alt": "Covered concrete patio pour in Lehi, UT",
+            "city": "Lehi"
           }
         },
         "g14": {
@@ -145,7 +158,8 @@
             "image": "shopify://shop_images/concrete-walkway-stone-home-pleasant-grove-ut.jpg",
             "category": "Walkway",
             "caption": "Walkway, Pleasant Grove",
-            "alt": "Concrete walkway alongside a stone home in Pleasant Grove, UT"
+            "alt": "Concrete walkway alongside a stone home in Pleasant Grove, UT",
+            "city": "Pleasant Grove"
           }
         },
         "g15": {
@@ -154,7 +168,8 @@
             "image": "shopify://shop_images/concrete-sport-court-pad-pleasant-grove-ut.jpg",
             "category": "Sport court",
             "caption": "Sport court pad, Pleasant Grove",
-            "alt": "Concrete sport court pad in Pleasant Grove, UT"
+            "alt": "Concrete sport court pad in Pleasant Grove, UT",
+            "city": "Pleasant Grove"
           }
         },
         "g16": {
@@ -163,11 +178,78 @@
             "image": "shopify://shop_images/concrete-slab-base-prep-rebar-utah-county.jpg",
             "category": "Site prep",
             "caption": "Base prep & rebar, Utah County",
-            "alt": "Concrete slab base prep with rebar in Utah County"
+            "alt": "Concrete slab base prep with rebar in Utah County",
+            "city": ""
+          }
+        },
+        "g17": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-sport-court-pad-pickleball-alpine-ut.jpg",
+            "category": "Sport court",
+            "caption": "Sport court pad, Alpine",
+            "alt": "Freshly poured concrete sport court pad beside a backyard pickleball court in Alpine, UT",
+            "city": "Alpine"
+          }
+        },
+        "g18": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-broom-finish-highland-ut.jpg",
+            "category": "Driveway",
+            "caption": "Broom-finish driveway, Highland",
+            "alt": "Wide broom-finish concrete driveway poured at a brick rambler in Highland, UT",
+            "city": "Highland"
+          }
+        },
+        "g19": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/stained-concrete-patio-checkerboard-lehi-ut.jpg",
+            "category": "Decorative",
+            "caption": "Checkerboard stained patio, Lehi",
+            "alt": "Two-tone checkerboard stained concrete patio in a Lehi, UT backyard",
+            "city": "Lehi"
+          }
+        },
+        "g20": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/decorative-concrete-patio-checkerboard-stain-lehi-ut.jpg",
+            "category": "Decorative",
+            "caption": "Staining the checkerboard patio, Lehi",
+            "alt": "Applying a grey and white checkerboard stain to a decorative concrete patio in Lehi, UT",
+            "city": "Lehi"
+          }
+        },
+        "g21": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-walkway-side-yard-lehi-ut.jpg",
+            "category": "Walkway",
+            "caption": "Side-yard walkway, Lehi",
+            "alt": "Broom-finish concrete side-yard walkway running between two homes in Lehi, UT",
+            "city": "Lehi"
+          }
+        },
+        "g22": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-walkway-steps-retaining-wall-lehi-ut.jpg",
+            "category": "Walkway",
+            "caption": "Walkway, steps & retaining wall, Lehi",
+            "alt": "Concrete walkway and steps beside a block retaining wall in Lehi, UT",
+            "city": "Lehi"
           }
         }
       },
       "block_order": [
+        "g17",
+        "g18",
+        "g19",
+        "g20",
+        "g21",
+        "g22",
         "g1",
         "g2",
         "g3",
@@ -188,7 +270,7 @@
       "settings": {
         "eyebrow": "Our work",
         "heading": "Recent pours across Utah County",
-        "intro": "Driveways, patios, RV pads and decorative concrete we've poured for neighbors in Pleasant Grove, Lehi, American Fork, Orem and Provo.",
+        "intro": "Driveways, patios, RV pads and decorative concrete we've poured for neighbors in Alpine, Highland, Lehi, Pleasant Grove, American Fork, Orem and Provo.",
         "button_label": "",
         "button_link": "",
         "accent_color": "#c42a20",

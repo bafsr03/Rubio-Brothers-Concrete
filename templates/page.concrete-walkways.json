@@ -177,7 +177,8 @@
             "image": "shopify://shop_images/concrete-walkway-side-yard-landing-pad-utah-county.jpg",
             "category": "Walkway",
             "caption": "Side-yard walkway and landing",
-            "alt": "Concrete walkway and landing pad poured along a side yard in Utah County"
+            "alt": "Concrete walkway and landing pad poured along a side yard in Utah County",
+            "city": ""
           }
         },
         "g2": {
@@ -186,7 +187,8 @@
             "image": "shopify://shop_images/concrete-walkway-steps-retaining-wall-pleasant-grove-ut.jpg",
             "category": "Walkway",
             "caption": "Walkway and steps by a retaining wall",
-            "alt": "Concrete walkway with steps running alongside a retaining wall in Pleasant Grove, Utah"
+            "alt": "Concrete walkway with steps running alongside a retaining wall in Pleasant Grove, Utah",
+            "city": ""
           }
         },
         "g3": {
@@ -195,7 +197,8 @@
             "image": "shopify://shop_images/concrete-walkway-side-yard-to-garage-orem-ut.jpg",
             "category": "Walkway",
             "caption": "Side path to the garage, Orem",
-            "alt": "Narrow concrete walkway poured down the side of a house to the garage in Orem, Utah"
+            "alt": "Narrow concrete walkway poured down the side of a house to the garage in Orem, Utah",
+            "city": "Orem"
           }
         },
         "g4": {
@@ -204,7 +207,8 @@
             "image": "shopify://shop_images/concrete-walkway-front-yard-finishing-utah-county.jpg",
             "category": "Walkway",
             "caption": "Front walkway being finished",
-            "alt": "Concrete front walkway being floated and finished at a home in Utah County"
+            "alt": "Concrete front walkway being floated and finished at a home in Utah County",
+            "city": ""
           }
         },
         "g5": {
@@ -213,7 +217,8 @@
             "image": "shopify://shop_images/curved-concrete-curb-walkway-forming-rebar-utah-county.jpg",
             "category": "Curbing",
             "caption": "Curved curb, formed and reinforced",
-            "alt": "Curved concrete curb formed with rebar before pouring in Utah County"
+            "alt": "Curved concrete curb formed with rebar before pouring in Utah County",
+            "city": ""
           }
         },
         "g6": {
@@ -222,11 +227,34 @@
             "image": "shopify://shop_images/concrete-patio-and-walkway-wraparound-utah-county.jpg",
             "category": "Walkway",
             "caption": "Wrap-around path and patio",
-            "alt": "Concrete walkway wrapping around a home to a rear patio in Utah County"
+            "alt": "Concrete walkway wrapping around a home to a rear patio in Utah County",
+            "city": ""
+          }
+        },
+        "g7": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-walkway-side-yard-lehi-ut.jpg",
+            "category": "Walkway",
+            "caption": "Side-yard walkway, Lehi",
+            "alt": "Broom-finish concrete side-yard walkway running between two homes in Lehi, UT",
+            "city": "Lehi"
+          }
+        },
+        "g8": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-walkway-steps-retaining-wall-lehi-ut.jpg",
+            "category": "Walkway",
+            "caption": "Walkway, steps & retaining wall, Lehi",
+            "alt": "Concrete walkway and steps beside a block retaining wall in Lehi, UT",
+            "city": "Lehi"
           }
         }
       },
       "block_order": [
+        "g7",
+        "g8",
         "g1",
         "g2",
         "g3",

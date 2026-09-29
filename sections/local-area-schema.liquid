@@ -1,0 +1,120 @@
+{% comment %}
+  Emits Service JSON-LD for a city landing page and renders nothing visible.
+
+  A city page is not a new business, so it does not emit a second LocalBusiness
+  node — doing that would claim a branch that doesn't exist. It emits one
+  Service whose areaServed is this one city, provided by the single
+  GeneralContractor node that `local-business-schema` puts in the <head>. The
+  services listed in hasOfferCatalog link back to the real service pages, which
+  is what ties "concrete in Alpine" to "concrete driveways" for Google.
+
+  Sibling of `service-schema`, which does the same job for a service page.
+{% endcomment %}
+
+{%- liquid
+  assign city = section.settings.city | strip
+  assign region = section.settings.region | default: settings.business_region | default: 'UT'
+  assign svc_name = section.settings.service_name
+  if svc_name == blank and city != blank
+    assign svc_name = 'Concrete Contractor in ' | append: city | append: ', ' | append: region
+  endif
+  assign svc_desc = section.settings.service_description | default: page.metafields.global.description
+  assign svc_url = request.origin | append: page.url
+-%}
+
+{%- if city != blank -%}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": {{ svc_url | append: '#service' | json }},
+      "name": {{ svc_name | json }},
+      "serviceType": {{ section.settings.service_type | default: 'Concrete contractor' | json }},
+      {% if svc_desc != blank %}"description": {{ svc_desc | strip_html | strip | json }},{% endif %}
+      "url": {{ svc_url | json }},
+      {% if section.settings.image != blank %}
+        "image": {{ section.settings.image | image_url: width: 1200 | prepend: 'https:' | json }},
+      {% endif %}
+      "provider": {
+        "@type": "GeneralContractor",
+        "@id": {{ request.origin | append: '/#business' | json }}
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": {{ city | json }},
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": {{ section.settings.county | default: 'Utah County' | json }},
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": {{ region | json }}
+          }
+        }
+      },
+      {%- comment -%}
+        Same rule as the service pages: no price. Every job is quoted after a
+        site visit, so the estimator is what we point at instead.
+      {%- endcomment -%}
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "url": {{ request.origin | append: '/pages/estimate' | json }}
+      }
+      {%- if section.blocks.size > 0 -%}
+        ,
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": {{ 'Concrete services in ' | append: city | json }},
+          "itemListElement": [
+            {%- assign emitted = 0 -%}
+            {%- for block in section.blocks -%}
+              {%- if block.settings.name == blank -%}{%- continue -%}{%- endif -%}
+              {%- assign emitted = emitted | plus: 1 -%}
+              {%- if emitted > 1 -%},{%- endif -%}
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": {{ block.settings.name | strip | append: ' in ' | append: city | append: ', ' | append: region | json }}
+                  {%- if block.settings.link != blank -%}
+                    , "url": {{ request.origin | append: block.settings.link | json }}
+                  {%- endif -%}
+                }
+              }
+            {%- endfor -%}
+          ]
+        }
+      {%- endif -%}
+    }
+  </script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "City schema",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Invisible. Tells Google this page covers one town. Add one per city page."
+    },
+    { "type": "text", "id": "city", "label": "City", "info": "Just the town, e.g. \"Alpine\". Required — nothing is emitted without it." },
+    { "type": "text", "id": "county", "label": "County", "default": "Utah County" },
+    { "type": "text", "id": "region", "label": "State", "info": "Two-letter code. Defaults to Theme settings › Business info." },
+    { "type": "text", "id": "service_name", "label": "Service name", "info": "Defaults to \"Concrete Contractor in <City>, <State>\"." },
+    { "type": "text", "id": "service_type", "label": "Service type", "default": "Concrete contractor" },
+    { "type": "textarea", "id": "service_description", "label": "Description", "info": "One or two sentences. Defaults to the page's SEO description." },
+    { "type": "image_picker", "id": "image", "label": "Representative image", "info": "A real job from this town." }
+  ],
+  "blocks": [
+    {
+      "type": "service_link",
+      "name": "Service offered here",
+      "settings": [
+        { "type": "text", "id": "name", "label": "Service name", "info": "e.g. \"Concrete driveways\". The town is appended automatically." },
+        { "type": "url", "id": "link", "label": "Link to the service page" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "City schema" }]
+}
+{% endschema %}

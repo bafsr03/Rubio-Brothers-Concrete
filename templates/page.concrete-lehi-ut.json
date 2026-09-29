@@ -1,0 +1,462 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "schema": {
+      "type": "local-area-schema",
+      "blocks": {
+        "sl1": {
+          "type": "service_link",
+          "settings": {
+            "name": "Concrete driveways",
+            "link": "/pages/concrete-driveways"
+          }
+        },
+        "sl2": {
+          "type": "service_link",
+          "settings": {
+            "name": "Concrete patios",
+            "link": "/pages/concrete-patios"
+          }
+        },
+        "sl3": {
+          "type": "service_link",
+          "settings": {
+            "name": "Concrete walkways",
+            "link": "/pages/concrete-walkways"
+          }
+        },
+        "sl4": {
+          "type": "service_link",
+          "settings": {
+            "name": "RV pads",
+            "link": "/pages/rv-pads"
+          }
+        },
+        "sl5": {
+          "type": "service_link",
+          "settings": {
+            "name": "Sport courts",
+            "link": "/pages/sport-courts"
+          }
+        },
+        "sl6": {
+          "type": "service_link",
+          "settings": {
+            "name": "Retaining walls",
+            "link": "/pages/retaining-walls"
+          }
+        },
+        "sl7": {
+          "type": "service_link",
+          "settings": {
+            "name": "Stamped concrete patios",
+            "link": "/pages/stamped-concrete-patios"
+          }
+        }
+      },
+      "block_order": [
+        "sl1",
+        "sl2",
+        "sl3",
+        "sl4",
+        "sl5",
+        "sl6",
+        "sl7"
+      ],
+      "settings": {
+        "city": "Lehi",
+        "county": "Utah County",
+        "region": "UT",
+        "service_name": "Concrete Contractor in Lehi, UT",
+        "service_type": "Concrete contractor",
+        "service_description": "Concrete patios, walkways, driveways and decorative stained concrete poured for homes in Lehi, UT by a local family crew based in Pleasant Grove.",
+        "image": "shopify://shop_images/stained-concrete-patio-checkerboard-lehi-ut.jpg"
+      }
+    },
+    "hero": {
+      "type": "site-hero",
+      "settings": {
+        "image": "shopify://shop_images/stained-concrete-patio-checkerboard-lehi-ut.jpg",
+        "eyebrow": "Serving Lehi, UT · Based in Pleasant Grove",
+        "heading": "Concrete Contractor in Lehi, UT",
+        "subheading": "Patios, walkways, driveways and decorative concrete for Lehi backyards — from Traverse Mountain down to the west side.",
+        "button_label": "Get a free estimate",
+        "button_link": "/pages/estimate",
+        "phone_label": "Call (385) 210-5983",
+        "phone": "(385) 210-5983",
+        "trust_chips": "Free estimates\nLicensed & insured\nCustom colors & patterns",
+        "accent_color": "#C42A20",
+        "text_color": "#ffffff",
+        "overlay_opacity": 55,
+        "min_height": 78
+      }
+    },
+    "local": {
+      "type": "local-area",
+      "blocks": {
+        "b1": {
+          "type": "paragraph",
+          "settings": {
+            "subheading": "Most Lehi calls start the same way",
+            "text": "<p>Lehi has grown faster than anywhere else in the county, and a lot of those homes were handed over with a small builder-grade slab off the back door and bare dirt everywhere else. The call we get is nearly always the same: finish the backyard. A proper <a href=\"/pages/concrete-patios\">patio</a>, <a href=\"/pages/concrete-walkways\">walkways</a> down both side yards, steps to get from the deck to the grass, and often a <a href=\"/pages/retaining-walls\">retaining wall</a> to hold the grade the builder left behind.</p>"
+          }
+        },
+        "b2": {
+          "type": "paragraph",
+          "settings": {
+            "subheading": "Decorative work, not just grey",
+            "text": "<p>The patio at the top of this page is a Lehi backyard — a two-tone checkerboard stained into the slab, laid out on the diagonal and cut to the shape of the yard. Stain, integral color and stamped patterns are all poured by the same crew that does the flatwork, so the decorative work isn't subcontracted out to someone who turns up after we've gone. See <a href=\"/pages/decorative-concrete-patios\">decorative concrete</a> for the finishes we do.</p>"
+          }
+        },
+        "b3": {
+          "type": "detail",
+          "settings": {
+            "title": "Tight side yards are normal here",
+            "text": "Lehi's newer lots sit close together. Where a truck can't reach, we pump or wheel it — a narrow side yard is a logistics problem, not a reason to say no."
+          }
+        },
+        "b4": {
+          "type": "detail",
+          "settings": {
+            "title": "We work around new landscaping",
+            "text": "Sod, sprinklers and young trees usually go in before the concrete does. We protect what's there, plan the access route with you first, and leave the site clean."
+          }
+        },
+        "b5": {
+          "type": "detail",
+          "settings": {
+            "title": "Grade and drainage on a graded lot",
+            "text": "Builder grading is set up to move water off the lot, not around a new patio. We slope the slab to keep that working rather than ponding water against your foundation."
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5"
+      ],
+      "settings": {
+        "eyebrow": "Lehi, UT",
+        "heading": "Finishing what the builder left as dirt",
+        "image": "shopify://shop_images/stained-concrete-patio-checkerboard-lehi-ut.jpg",
+        "image_alt": "Two-tone checkerboard stained concrete patio in a Lehi, UT backyard",
+        "image_caption": "A checkerboard-stained patio we poured and finished in Lehi.",
+        "neighborhoods_title": "Neighborhoods we pour in",
+        "neighborhoods": "",
+        "accent_color": "#C42A20",
+        "background_color": "",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    },
+    "services": {
+      "type": "services-grid",
+      "blocks": {
+        "s1": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-patio-broom-finish-backyard-utah-county.jpg",
+            "title": "Patios",
+            "text": "Backyard slabs poured level, sloped to drain and finished clean.",
+            "link_label": "View service",
+            "link": "/pages/concrete-patios"
+          }
+        },
+        "s2": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/decorative-concrete-patio-checkerboard-stain-lehi-ut.jpg",
+            "title": "Decorative concrete",
+            "text": "Stains, colors and patterns poured into the slab itself.",
+            "link_label": "View service",
+            "link": "/pages/decorative-concrete-patios"
+          }
+        },
+        "s3": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-walkway-side-yard-to-garage-orem-ut.jpg",
+            "title": "Walkways",
+            "text": "Sidewalks, side-yard paths and front entries, poured trip-free.",
+            "link_label": "View service",
+            "link": "/pages/concrete-walkways"
+          }
+        },
+        "s4": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-broom-finish-pleasant-grove-ut.jpg",
+            "title": "Driveways",
+            "text": "New driveways, extensions and full tear-out replacements.",
+            "link_label": "View service",
+            "link": "/pages/concrete-driveways"
+          }
+        },
+        "s5": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-walkway-steps-retaining-wall-pleasant-grove-ut.jpg",
+            "title": "Retaining walls",
+            "text": "Walls with drainage built in, for lots that change grade.",
+            "link_label": "View service",
+            "link": "/pages/retaining-walls"
+          }
+        },
+        "s6": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/stamped-concrete-patio-ashlar-slate-orem-ut.jpg",
+            "title": "Stamped concrete",
+            "text": "Stamped and colored patios that read like stone or plank.",
+            "link_label": "View service",
+            "link": "/pages/stamped-concrete-patios"
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "settings": {
+        "eyebrow": "What we pour in Lehi",
+        "heading": "Concrete services for Lehi homes",
+        "intro": "Backyard finishing work is most of what we do in Lehi — patios, paths, steps and the decorative finishes that go with them.",
+        "heading_level": "h2",
+        "accent_color": "#C42A20"
+      }
+    },
+    "gallery": {
+      "type": "project-gallery",
+      "blocks": {
+        "g1": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/stained-concrete-patio-checkerboard-lehi-ut.jpg",
+            "category": "Decorative",
+            "caption": "Checkerboard stained patio, Lehi",
+            "alt": "Two-tone checkerboard stained concrete patio in a Lehi, UT backyard",
+            "city": "Lehi"
+          }
+        },
+        "g2": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/decorative-concrete-patio-checkerboard-stain-lehi-ut.jpg",
+            "category": "Decorative",
+            "caption": "Staining the checkerboard patio, Lehi",
+            "alt": "Applying a grey and white checkerboard stain to a decorative concrete patio in Lehi, UT",
+            "city": "Lehi"
+          }
+        },
+        "g3": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-walkway-side-yard-lehi-ut.jpg",
+            "category": "Walkway",
+            "caption": "Side-yard walkway, Lehi",
+            "alt": "Broom-finish concrete side-yard walkway running between two homes in Lehi, UT",
+            "city": "Lehi"
+          }
+        },
+        "g4": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-walkway-steps-retaining-wall-lehi-ut.jpg",
+            "category": "Walkway",
+            "caption": "Walkway, steps & retaining wall, Lehi",
+            "alt": "Concrete walkway and steps beside a block retaining wall in Lehi, UT",
+            "city": "Lehi"
+          }
+        },
+        "g5": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-patio-backyard-lehi-ut.jpg",
+            "category": "Patio",
+            "caption": "Backyard patio, Lehi",
+            "alt": "Concrete backyard patio in Lehi, UT",
+            "city": "Lehi"
+          }
+        },
+        "g6": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-covered-patio-pour-lehi-ut.jpg",
+            "category": "Patio",
+            "caption": "Covered patio, Lehi",
+            "alt": "Covered concrete patio pour in Lehi, UT",
+            "city": "Lehi"
+          }
+        },
+        "g7": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/large-concrete-patio-slab-backyard-lehi-ut.jpg",
+            "category": "Patio",
+            "caption": "Large entertaining slab, Lehi",
+            "alt": "Large concrete patio slab in a Lehi, UT backyard",
+            "city": "Lehi"
+          }
+        }
+      },
+      "block_order": [
+        "g1",
+        "g2",
+        "g3",
+        "g4",
+        "g5",
+        "g6",
+        "g7"
+      ],
+      "settings": {
+        "eyebrow": "Our work",
+        "heading": "Recent work in Lehi",
+        "intro": "Every photo below is a job we poured in Lehi — no stock photos.",
+        "button_label": "See the full gallery",
+        "button_link": "/pages/gallery",
+        "accent_color": "#C42A20",
+        "background_color": "",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "q1": {
+          "type": "qa",
+          "settings": {
+            "question": "Do you pour concrete in Lehi?",
+            "answer": "<p>Yes — Lehi is one of our busiest areas. We're based in Pleasant Grove, estimates are free, and there's no travel charge.</p>"
+          }
+        },
+        "q2": {
+          "type": "qa",
+          "settings": {
+            "question": "Can you do a stained or stamped patio, not just plain grey?",
+            "answer": "<p>Yes. Stains, integral color and stamped patterns are all done in-house by the same crew that pours the slab. The checkerboard patio on this page is a Lehi job — we laid it out, poured it and stained it ourselves.</p>"
+          }
+        },
+        "q3": {
+          "type": "qa",
+          "settings": {
+            "question": "My side yard is really narrow. Can you still get concrete back there?",
+            "answer": "<p>Almost always. If a truck can't reach the pour we pump it over the house or wheel it through — it costs a bit more in labour and it's worth knowing at the estimate, but a tight Lehi side yard isn't a dealbreaker.</p>"
+          }
+        },
+        "q4": {
+          "type": "qa",
+          "settings": {
+            "question": "How soon can you start?",
+            "answer": "<p>It depends on the season — spring and fall book out fastest. Get on the schedule with a free estimate and we'll give you a realistic window rather than a date we can't hold.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ],
+      "settings": {
+        "eyebrow": "FAQ",
+        "heading": "Concrete in Lehi — common questions",
+        "accent_color": "#C42A20"
+      }
+    },
+    "areas": {
+      "type": "service-areas",
+      "blocks": {
+        "a1": {
+          "type": "area",
+          "settings": {
+            "image": "shopify://shop_images/concrete-sport-court-pad-pickleball-alpine-ut.jpg",
+            "image_alt": "Concrete sport court pad in Alpine, UT",
+            "title": "Alpine, UT",
+            "text": "Sloped bench lots, long driveways and sport court pads.",
+            "link_label": "See our work",
+            "link": "/pages/concrete-alpine-ut"
+          }
+        },
+        "a2": {
+          "type": "area",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-broom-finish-highland-ut.jpg",
+            "image_alt": "Concrete driveway in Highland, UT",
+            "title": "Highland, UT",
+            "text": "Long driveways, RV pads and tear-out replacements.",
+            "link_label": "See our work",
+            "link": "/pages/concrete-highland-ut"
+          }
+        },
+        "a3": {
+          "type": "area",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-broom-finish-pleasant-grove-ut.jpg",
+            "image_alt": "Concrete driveway in Pleasant Grove, UT",
+            "title": "Pleasant Grove, UT",
+            "text": "Our home town — driveways, patios and everything between.",
+            "link_label": "See our work",
+            "link": "/pages/gallery"
+          }
+        }
+      },
+      "block_order": [
+        "a1",
+        "a2",
+        "a3"
+      ],
+      "settings": {
+        "eyebrow": "Where we pour",
+        "heading": "Other towns we pour in",
+        "heading_level": "h2",
+        "intro": "Same crew, same standard — a short drive in any direction from Pleasant Grove.",
+        "other_areas_label": "Also serving:",
+        "other_areas": "American Fork, Lindon, Orem, Provo, Cedar Hills, Saratoga Springs",
+        "accent_color": "#C42A20",
+        "background_color": "#f5f4f2",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    },
+    "cta": {
+      "type": "cta-band",
+      "settings": {
+        "eyebrow": "Free, no-pressure quotes",
+        "heading": "Get a free estimate in Lehi",
+        "text": "Tell us what you want the backyard to look like and we'll come measure it and price it — free, and with no pressure.",
+        "button_label": "Get a free estimate",
+        "button_link": "/pages/estimate",
+        "phone_label": "Call (385) 210-5983",
+        "phone": "(385) 210-5983",
+        "accent_color": "#C42A20",
+        "background_color": "#ffffff",
+        "text_color": "#1a1a1a"
+      }
+    }
+  },
+  "order": [
+    "schema",
+    "hero",
+    "local",
+    "services",
+    "gallery",
+    "faq",
+    "areas",
+    "cta"
+  ]
+}

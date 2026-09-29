@@ -1,0 +1,451 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "schema": {
+      "type": "local-area-schema",
+      "blocks": {
+        "sl1": {
+          "type": "service_link",
+          "settings": {
+            "name": "Concrete driveways",
+            "link": "/pages/concrete-driveways"
+          }
+        },
+        "sl2": {
+          "type": "service_link",
+          "settings": {
+            "name": "Concrete patios",
+            "link": "/pages/concrete-patios"
+          }
+        },
+        "sl3": {
+          "type": "service_link",
+          "settings": {
+            "name": "Concrete walkways",
+            "link": "/pages/concrete-walkways"
+          }
+        },
+        "sl4": {
+          "type": "service_link",
+          "settings": {
+            "name": "RV pads",
+            "link": "/pages/rv-pads"
+          }
+        },
+        "sl5": {
+          "type": "service_link",
+          "settings": {
+            "name": "Sport courts",
+            "link": "/pages/sport-courts"
+          }
+        },
+        "sl6": {
+          "type": "service_link",
+          "settings": {
+            "name": "Retaining walls",
+            "link": "/pages/retaining-walls"
+          }
+        },
+        "sl7": {
+          "type": "service_link",
+          "settings": {
+            "name": "Stamped concrete patios",
+            "link": "/pages/stamped-concrete-patios"
+          }
+        }
+      },
+      "block_order": [
+        "sl1",
+        "sl2",
+        "sl3",
+        "sl4",
+        "sl5",
+        "sl6",
+        "sl7"
+      ],
+      "settings": {
+        "city": "Alpine",
+        "county": "Utah County",
+        "region": "UT",
+        "service_name": "Concrete Contractor in Alpine, UT",
+        "service_type": "Concrete contractor",
+        "service_description": "Concrete driveways, sport court pads, patios and RV pads poured for homes in Alpine, UT by a family crew based ten minutes away in Pleasant Grove.",
+        "image": "shopify://shop_images/concrete-sport-court-pad-pickleball-alpine-ut.jpg"
+      }
+    },
+    "hero": {
+      "type": "site-hero",
+      "settings": {
+        "image": "shopify://shop_images/concrete-sport-court-pad-pickleball-alpine-ut.jpg",
+        "eyebrow": "Serving Alpine, UT · Based in Pleasant Grove",
+        "heading": "Concrete Contractor in Alpine, UT",
+        "subheading": "Driveways, sport court pads, patios and RV pads poured for Alpine homes — dirt work, forming, pouring and finishing all by one family crew.",
+        "button_label": "Get a free estimate",
+        "button_link": "/pages/estimate",
+        "phone_label": "Call (385) 210-5983",
+        "phone": "(385) 210-5983",
+        "trust_chips": "Free estimates\nLicensed & insured\n30+ years in Utah County",
+        "accent_color": "#C42A20",
+        "text_color": "#ffffff",
+        "overlay_opacity": 55,
+        "min_height": 78
+      }
+    },
+    "local": {
+      "type": "local-area",
+      "blocks": {
+        "b1": {
+          "type": "paragraph",
+          "settings": {
+            "subheading": "Why Alpine jobs run differently",
+            "text": "<p>Alpine sits up against the mountains at the mouth of American Fork Canyon, and the lots reflect it — larger than most of the valley, and very often on a grade. That changes the job. A driveway is longer, a patio needs a retaining edge, and a flat sport court has to be cut into a yard that isn't flat to begin with.</p><p>On an Alpine job the excavation is usually the bigger half of the work. We'd rather spend the extra day on base and grade than come back to a slab that has settled.</p>"
+          }
+        },
+        "b2": {
+          "type": "paragraph",
+          "settings": {
+            "subheading": "One crew, dirt work included",
+            "text": "<p>Clearing, demolition, excavation, forming, steel, pour and finish are all handled by the same crew — you're not scheduling an excavator, a concrete contractor and a haul-off service around each other. If your lot needs a grade change first, our <a href=\"/pages/retaining-walls\">retaining walls</a> go in as part of the same job.</p>"
+          }
+        },
+        "b3": {
+          "type": "detail",
+          "settings": {
+            "title": "Grade first, concrete second",
+            "text": "On a sloped lot it's almost never the concrete that fails — it's the base under it. We dig, compact and check grade across the whole footprint before a form goes down."
+          }
+        },
+        "b4": {
+          "type": "detail",
+          "settings": {
+            "title": "Built for canyon-mouth winters",
+            "text": "Alpine gets more snow and harder freeze-thaw than the valley floor. Joints get cut where the slab wants to crack anyway, and everything drains away from the house."
+          }
+        },
+        "b5": {
+          "type": "detail",
+          "settings": {
+            "title": "Room to work — or not",
+            "text": "Big Alpine lots usually mean a truck can back right up to the pour. Where a side yard or a gate is tight, we pump or wheel it in rather than telling you it can't be done."
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5"
+      ],
+      "settings": {
+        "eyebrow": "Alpine, UT",
+        "heading": "Concrete built for Alpine's slopes and big lots",
+        "image": "shopify://shop_images/concrete-sport-court-pad-pickleball-alpine-ut.jpg",
+        "image_alt": "Freshly poured concrete sport court pad beside a backyard pickleball court in Alpine, UT",
+        "image_caption": "A sport court pad we poured in Alpine, next to the homeowner's existing pickleball court.",
+        "neighborhoods_title": "Neighborhoods we pour in",
+        "neighborhoods": "",
+        "accent_color": "#C42A20",
+        "background_color": "",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    },
+    "services": {
+      "type": "services-grid",
+      "blocks": {
+        "s1": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-broom-finish-pleasant-grove-ut.jpg",
+            "title": "Driveways",
+            "text": "New driveways, extensions and full tear-out replacements.",
+            "link_label": "View service",
+            "link": "/pages/concrete-driveways"
+          }
+        },
+        "s2": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-sport-court-pad-pickleball-alpine-ut.jpg",
+            "title": "Sport courts",
+            "text": "Basketball and pickleball pads poured flat and true.",
+            "link_label": "View service",
+            "link": "/pages/sport-courts"
+          }
+        },
+        "s3": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-rv-pad-side-yard-vinyl-fence-utah-county.jpg",
+            "title": "RV pads",
+            "text": "Reinforced pads sized to your rig and built to carry the weight.",
+            "link_label": "View service",
+            "link": "/pages/rv-pads"
+          }
+        },
+        "s4": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-patio-broom-finish-backyard-utah-county.jpg",
+            "title": "Patios",
+            "text": "Backyard slabs poured level, sloped to drain and finished clean.",
+            "link_label": "View service",
+            "link": "/pages/concrete-patios"
+          }
+        },
+        "s5": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-walkway-steps-retaining-wall-pleasant-grove-ut.jpg",
+            "title": "Retaining walls",
+            "text": "Walls with drainage built in, for lots that change grade.",
+            "link_label": "View service",
+            "link": "/pages/retaining-walls"
+          }
+        },
+        "s6": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-walkway-side-yard-to-garage-orem-ut.jpg",
+            "title": "Walkways",
+            "text": "Sidewalks, side-yard paths and front entries, poured trip-free.",
+            "link_label": "View service",
+            "link": "/pages/concrete-walkways"
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "settings": {
+        "eyebrow": "What we pour in Alpine",
+        "heading": "Concrete services for Alpine homes",
+        "intro": "Every service below is poured by the same crew, on Alpine lots, with the dirt work included.",
+        "heading_level": "h2",
+        "accent_color": "#C42A20"
+      }
+    },
+    "gallery": {
+      "type": "project-gallery",
+      "blocks": {
+        "g1": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-sport-court-pad-pickleball-alpine-ut.jpg",
+            "category": "Sport court",
+            "caption": "Sport court pad, Alpine",
+            "alt": "Freshly poured concrete sport court pad beside a backyard pickleball court in Alpine, UT",
+            "city": "Alpine"
+          }
+        },
+        "g2": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-broom-finish-highland-ut.jpg",
+            "category": "Driveway",
+            "caption": "Broom-finish driveway, Highland",
+            "alt": "Wide broom-finish concrete driveway poured at a brick rambler in Highland, UT",
+            "city": "Highland"
+          }
+        },
+        "g3": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-curved-american-fork-ut.jpg",
+            "category": "Driveway",
+            "caption": "Curved driveway, American Fork",
+            "alt": "Curved concrete driveway in American Fork, UT",
+            "city": "American Fork"
+          }
+        },
+        "g4": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-sport-court-pad-pleasant-grove-ut.jpg",
+            "category": "Sport court",
+            "caption": "Sport court pad, Pleasant Grove",
+            "alt": "Concrete sport court pad in Pleasant Grove, UT",
+            "city": "Pleasant Grove"
+          }
+        },
+        "g5": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-slab-backyard-american-fork-ut.jpg",
+            "category": "Patio",
+            "caption": "Backyard slab, American Fork",
+            "alt": "Concrete backyard slab in American Fork, UT",
+            "city": "American Fork"
+          }
+        },
+        "g6": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-slab-base-prep-rebar-utah-county.jpg",
+            "category": "Site prep",
+            "caption": "Base prep & rebar, Utah County",
+            "alt": "Concrete slab base prep with rebar in Utah County",
+            "city": ""
+          }
+        }
+      },
+      "block_order": [
+        "g1",
+        "g2",
+        "g3",
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "settings": {
+        "eyebrow": "Our work",
+        "heading": "Work in and around Alpine",
+        "intro": "Alpine and the neighboring towns we pour in — every photo is a job of ours, captioned with the town it was poured in.",
+        "button_label": "See the full gallery",
+        "button_link": "/pages/gallery",
+        "accent_color": "#C42A20",
+        "background_color": "",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "q1": {
+          "type": "qa",
+          "settings": {
+            "question": "Do you pour concrete in Alpine?",
+            "answer": "<p>Yes. We're based in Pleasant Grove, about ten minutes down the road, and Alpine is a regular part of our run. Estimates there are free and there's no travel charge.</p>"
+          }
+        },
+        "q2": {
+          "type": "qa",
+          "settings": {
+            "question": "What does a concrete driveway cost in Alpine?",
+            "answer": "<p>It depends on length, thickness, how much grade we have to work with and whether an old driveway has to come out first — and Alpine driveways tend to be longer than average. Use our <a href=\"/pages/estimate\">instant estimator</a> for a ballpark, then we confirm an exact price on site for free.</p>"
+          }
+        },
+        "q3": {
+          "type": "qa",
+          "settings": {
+            "question": "Can you pour a sport court on a sloped Alpine lot?",
+            "answer": "<p>Yes — that's most of them. We cut and fill to get a level pad, compact the fill properly so it doesn't settle under the low side, and retain the edge where it needs it. See <a href=\"/pages/sport-courts\">sport courts</a> for how the pad is built.</p>"
+          }
+        },
+        "q4": {
+          "type": "qa",
+          "settings": {
+            "question": "Do I need a permit for concrete work in Alpine?",
+            "answer": "<p>It depends on the job. Flatwork inside your own yard usually doesn't; work in the city right-of-way, or anything that changes drainage or grade, often does. We'll tell you what your specific job needs before we start, not after.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ],
+      "settings": {
+        "eyebrow": "FAQ",
+        "heading": "Concrete in Alpine — common questions",
+        "accent_color": "#C42A20"
+      }
+    },
+    "areas": {
+      "type": "service-areas",
+      "blocks": {
+        "a1": {
+          "type": "area",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-broom-finish-highland-ut.jpg",
+            "image_alt": "Concrete driveway in Highland, UT",
+            "title": "Highland, UT",
+            "text": "Long driveways, RV pads and tear-out replacements.",
+            "link_label": "See our work",
+            "link": "/pages/concrete-highland-ut"
+          }
+        },
+        "a2": {
+          "type": "area",
+          "settings": {
+            "image": "shopify://shop_images/stained-concrete-patio-checkerboard-lehi-ut.jpg",
+            "image_alt": "Stained checkerboard concrete patio in Lehi, UT",
+            "title": "Lehi, UT",
+            "text": "Backyard patios, walkways and decorative concrete.",
+            "link_label": "See our work",
+            "link": "/pages/concrete-lehi-ut"
+          }
+        },
+        "a3": {
+          "type": "area",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-broom-finish-pleasant-grove-ut.jpg",
+            "image_alt": "Concrete driveway in Pleasant Grove, UT",
+            "title": "Pleasant Grove, UT",
+            "text": "Our home town — driveways, patios and everything between.",
+            "link_label": "See our work",
+            "link": "/pages/gallery"
+          }
+        }
+      },
+      "block_order": [
+        "a1",
+        "a2",
+        "a3"
+      ],
+      "settings": {
+        "eyebrow": "Where we pour",
+        "heading": "Other towns we pour in",
+        "heading_level": "h2",
+        "intro": "Same crew, same standard — a short drive in any direction from Pleasant Grove.",
+        "other_areas_label": "Also serving:",
+        "other_areas": "American Fork, Lindon, Orem, Provo, Cedar Hills, Saratoga Springs",
+        "accent_color": "#C42A20",
+        "background_color": "#f5f4f2",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    },
+    "cta": {
+      "type": "cta-band",
+      "settings": {
+        "eyebrow": "Free, no-pressure quotes",
+        "heading": "Get a free estimate in Alpine",
+        "text": "Tell us about the job and we'll come out, measure it and give you an exact price — at no cost and with no pressure.",
+        "button_label": "Get a free estimate",
+        "button_link": "/pages/estimate",
+        "phone_label": "Call (385) 210-5983",
+        "phone": "(385) 210-5983",
+        "accent_color": "#C42A20",
+        "background_color": "#ffffff",
+        "text_color": "#1a1a1a"
+      }
+    }
+  },
+  "order": [
+    "schema",
+    "hero",
+    "local",
+    "services",
+    "gallery",
+    "faq",
+    "areas",
+    "cta"
+  ]
+}

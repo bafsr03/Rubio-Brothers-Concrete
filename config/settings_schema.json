@@ -2167,7 +2167,7 @@
         "type": "text",
         "id": "business_areas_served",
         "label": "Areas served (comma separated)",
-        "default": "Pleasant Grove, Lindon, Orem, American Fork, Lehi, Provo, Utah County"
+        "default": "Pleasant Grove, Alpine, Highland, Lehi, American Fork, Lindon, Orem, Provo, Utah County"
       },
       {
         "type": "text",
