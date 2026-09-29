@@ -243,12 +243,80 @@
         "background_color": "#ffffff",
         "text_color": "#1a1a1a"
       }
+    },
+    "areas": {
+      "type": "service-areas",
+      "blocks": {
+        "a1": {
+          "type": "area",
+          "settings": {
+            "image": "shopify://shop_images/concrete-sport-court-pad-pickleball-alpine-ut.jpg",
+            "image_alt": "Concrete sport court pad in Alpine, UT",
+            "title": "Alpine, UT",
+            "text": "Sloped bench lots, long driveways and sport court pads.",
+            "link_label": "See our work",
+            "link": "/pages/concrete-alpine-ut"
+          }
+        },
+        "a2": {
+          "type": "area",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-broom-finish-highland-ut.jpg",
+            "image_alt": "Concrete driveway in Highland, UT",
+            "title": "Highland, UT",
+            "text": "Long driveways, RV pads and tear-out replacements.",
+            "link_label": "See our work",
+            "link": "/pages/concrete-highland-ut"
+          }
+        },
+        "a3": {
+          "type": "area",
+          "settings": {
+            "image": "shopify://shop_images/stained-concrete-patio-checkerboard-lehi-ut.jpg",
+            "image_alt": "Stained checkerboard concrete patio in Lehi, UT",
+            "title": "Lehi, UT",
+            "text": "Backyard patios, walkways and decorative concrete.",
+            "link_label": "See our work",
+            "link": "/pages/concrete-lehi-ut"
+          }
+        },
+        "a4": {
+          "type": "area",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-broom-finish-pleasant-grove-ut.jpg",
+            "image_alt": "Concrete driveway in Pleasant Grove, UT",
+            "title": "Pleasant Grove, UT",
+            "text": "Our home town — driveways, patios and everything between.",
+            "link_label": "See our work",
+            "link": "/pages/gallery"
+          }
+        }
+      },
+      "block_order": [
+        "a1",
+        "a2",
+        "a3",
+        "a4"
+      ],
+      "settings": {
+        "eyebrow": "Where we pour",
+        "heading": "The towns we pour in",
+        "heading_level": "h2",
+        "intro": "Every service on this page is available across northern Utah County. Pick your town to see local jobs and what they usually involve.",
+        "other_areas_label": "Also serving:",
+        "other_areas": "American Fork, Lindon, Orem, Provo, Cedar Hills, Saratoga Springs",
+        "accent_color": "#C42A20",
+        "background_color": "#f5f4f2",
+        "padding-block-start": 64,
+        "padding-block-end": 64
+      }
     }
   },
   "order": [
     "intro",
     "services",
     "process",
+    "areas",
     "faq",
     "cta"
   ]
