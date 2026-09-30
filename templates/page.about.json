@@ -33,8 +33,8 @@
       },
       "blocks": {
         "st1": { "type": "stat", "settings": { "value": "30", "suffix": "+", "label": "Years of experience" } },
-        "st2": { "type": "stat", "settings": { "value": "44", "suffix": "+", "label": "Happy customers" } },
-        "st3": { "type": "stat", "settings": { "value": "5", "suffix": ".0★", "label": "Google rating" } },
+        "st2": { "type": "stat", "settings": { "value": "40", "suffix": "+", "label": "Happy customers" } },
+        "st3": { "type": "stat", "settings": { "value": "4.8", "suffix": "★", "label": "Google rating" } },
         "st4": { "type": "stat", "settings": { "value": "100", "suffix": "%", "label": "Locally owned" } }
       },
       "block_order": ["st1", "st2", "st3", "st4"]

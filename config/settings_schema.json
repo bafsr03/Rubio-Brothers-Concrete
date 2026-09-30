@@ -2192,7 +2192,7 @@
         "type": "text",
         "id": "business_rating",
         "label": "Average rating (for SEO rich results)",
-        "default": "5.0",
+        "default": "4.8",
         "info": "Only use a genuine, on-site-visible rating."
       },
       {

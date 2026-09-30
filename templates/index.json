@@ -19,7 +19,7 @@
         "button_link": "/pages/estimate",
         "phone_label": "Call (385) 210-5983",
         "phone": "(385) 210-5983",
-        "trust_chips": "Free estimates\n5.0★ from 44+ customers\nLocally owned",
+        "trust_chips": "Free estimates\n4.8★ from 40+ customers\nLocally owned",
         "accent_color": "#c42a20",
         "text_color": "#ffffff",
         "overlay_opacity": 50,
@@ -129,7 +129,7 @@
         "st2": {
           "type": "stat",
           "settings": {
-            "value": "44",
+            "value": "40",
             "prefix": "",
             "suffix": "+",
             "label": "Happy customers"
@@ -138,9 +138,9 @@
         "st3": {
           "type": "stat",
           "settings": {
-            "value": "5",
+            "value": "4.8",
             "prefix": "",
-            "suffix": ".0★",
+            "suffix": "★",
             "label": "Google rating"
           }
         },
