@@ -2262,6 +2262,12 @@
         "id": "business_google_verification",
         "label": "Google Search Console verification code",
         "info": "Paste just the code from Google's HTML tag method (the content=\"...\" value), not the whole tag. Comma-separate several to verify more than one property. Google's HTML file method does not work on Shopify."
+      },
+      {
+        "type": "text",
+        "id": "business_google_analytics_id",
+        "label": "Google Analytics measurement ID",
+        "info": "The G-XXXXXXXXXX ID from Google Analytics › Admin › Data streams. Leave blank to use the built-in ID. Don't also connect Google Analytics through the Google & YouTube app, or every visit will be counted twice."
       }
     ]
   }

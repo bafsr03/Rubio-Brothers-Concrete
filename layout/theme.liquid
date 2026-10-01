@@ -7,6 +7,26 @@
 >
   <head>
     {%- comment -%}
+      Google Analytics (GA4) tag — Google asks for it immediately after <head>.
+      The ID lives in the code default (like the Search Console codes) so a
+      theme-editor save or a Shopify sync can't drop it; Theme settings ›
+      Business info can override it. Skipped in the theme editor so editing
+      sessions don't count as visits.
+    {%- endcomment -%}
+    {%- assign ga_id = settings.business_google_analytics_id | strip | default: 'G-WEHTF98L5L' -%}
+    {%- unless request.design_mode -%}
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id={{ ga_id | url_encode }}"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', {{ ga_id | json }});
+      </script>
+    {%- endunless -%}
+
+    {%- comment -%}
       Brand favicon — the shield mark shown in browser tabs and Google search results.
       Served as a theme asset (square, high-res) so it's always present and legible;
       48x48 is Google's documented minimum. Kept independent of settings.favicon so the
