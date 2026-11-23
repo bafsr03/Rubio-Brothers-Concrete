@@ -12,6 +12,7 @@
 {%- liquid
   assign accent = section.settings.accent_color | default: settings.color_palette.foreground
   assign chips = section.settings.chips | newline_to_br | split: '<br />'
+  assign image_alt = section.settings.image.alt | default: section.settings.heading
 -%}
 
 <div
@@ -33,7 +34,7 @@
               loading: 'lazy',
               sizes: '(min-width: 990px) 45vw, 100vw',
               widths: '500, 800, 1100, 1400',
-              alt: section.settings.image.alt | default: section.settings.heading,
+              alt: image_alt,
               class: 'rb-about__img'
           }}
         {%- else -%}

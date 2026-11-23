@@ -47,6 +47,7 @@
             if block.settings.link != blank
               assign tag = 'a'
             endif
+            assign image_alt = block.settings.image_alt | default: block.settings.title
           -%}
           <{{ tag }}
             class="rb-area-card"
@@ -63,7 +64,7 @@
                     loading: 'lazy',
                     sizes: '(min-width: 990px) 25vw, (min-width: 600px) 33vw, 50vw',
                     widths: '300, 500, 800',
-                    alt: block.settings.image_alt | default: block.settings.title,
+                    alt: image_alt,
                     class: 'rb-area-card__img'
                 }}
               </div>

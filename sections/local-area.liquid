@@ -18,6 +18,7 @@
 {%- liquid
   assign accent = section.settings.accent_color | default: '#C42A20'
   assign neighborhoods = section.settings.neighborhoods | split: ','
+  assign image_alt = section.settings.image_alt | default: section.settings.heading
 -%}
 
 <div
@@ -75,7 +76,7 @@
                   loading: 'lazy',
                   sizes: '(min-width: 990px) 33vw, 100vw',
                   widths: '400, 600, 800, 1000',
-                  alt: section.settings.image_alt | default: section.settings.heading,
+                  alt: image_alt,
                   class: 'rb-local__img'
               }}
               {%- if section.settings.image_caption != blank -%}

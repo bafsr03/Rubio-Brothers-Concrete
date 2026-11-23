@@ -48,6 +48,9 @@
           if block.settings.link != blank
             assign tag = 'a'
           endif
+          # `| default:` inside image_tag's arguments ends the argument list, dropping
+          # alt and class — so resolve the fallback first.
+          assign image_alt = block.settings.image.alt | default: block.settings.title
         -%}
         <{{ tag }}
           class="rb-service-card"
@@ -64,7 +67,7 @@
                   loading: 'lazy',
                   sizes: '(min-width: 990px) 33vw, 100vw',
                   widths: '400, 600, 800, 1200',
-                  alt: block.settings.image.alt | default: block.settings.title,
+                  alt: image_alt,
                   class: 'rb-service-card__img'
               }}
             </div>
