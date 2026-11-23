@@ -32,6 +32,7 @@
   "@type": "GeneralContractor",
   "@id": {{ request.origin | append: '/#business' | json }},
   "name": {{ biz_name | json }},
+  "alternateName": "Rubio Brothers Construction",
   "url": {{ request.origin | json }},
   {% if settings.logo != blank %}"logo": {{ settings.logo | image_url: width: 600 | prepend: 'https:' | json }},{% endif %}
   {% if biz_image != blank %}"image": {{ biz_image | image_url: width: 1200 | prepend: 'https:' | json }},{% endif %}
@@ -69,13 +70,16 @@
     "@type": "OfferCatalog",
     "name": "Concrete services",
     "itemListElement": [
-      {% assign svc_list = "Concrete driveways,RV pads,Concrete patios,Stamped decorative concrete,Retaining walls,Sports courts,Concrete tear-out and replacement,Excavation and site prep" | split: ',' %}
-      {% for svc in svc_list %}
+      {% assign svc_list = "Concrete driveways|concrete-driveways,RV pads|rv-pads,Concrete patios|concrete-patios,Stamped concrete patios|stamped-concrete-patios,Decorative concrete patios|decorative-concrete-patios,Concrete walkways|concrete-walkways,Hot tub pads|hot-tub-pads,Shed pads|shed-pads,Retaining walls|retaining-walls,Sport courts|sport-courts,Concrete tear-out and replacement|,Excavation and site prep|" | split: ',' %}
+      {% for entry in svc_list %}
+      {% assign svc_parts = entry | split: '|' %}
+      {% assign svc_handle = svc_parts[1] | default: '' %}
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": {{ svc | strip | json }}
+          {% if svc_handle != blank and pages[svc_handle].handle != blank %}"url": {{ request.origin | append: pages[svc_handle].url | json }},{% endif %}
+          "name": {{ svc_parts[0] | strip | json }}
         }
       }{% unless forloop.last %},{% endunless %}
       {% endfor %}
