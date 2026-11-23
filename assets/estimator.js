@@ -25,6 +25,7 @@ import { Component } from '@theme/component';
  * @property {HTMLElement} lowOut
  * @property {HTMLElement} highOut
  * @property {HTMLElement} yardsOut
+ * @property {HTMLElement} [finishNote]
  * @property {HTMLInputElement} [fieldJobType]
  * @property {HTMLInputElement} [fieldSqft]
  * @property {HTMLInputElement} [fieldYards]
@@ -175,6 +176,11 @@ export class ConcreteEstimator extends Component {
 
     this.render();
     this.syncFormFields();
+
+    // Picked up by lead-tracking.js; carries no personal data.
+    this.dispatchEvent(
+      new CustomEvent('rb:estimate', { bubbles: true, detail: { jobType: this.refs.jobType?.value ?? '' } })
+    );
   }
 
   showPlaceholder() {
@@ -193,6 +199,10 @@ export class ConcreteEstimator extends Component {
     this.classList.add('estimator--has-result');
 
     this.refs.yardsOut.textContent = String(yards);
+    if (this.refs.finishNote) {
+      // The formula prices plain concrete, so say so when a decorative finish is picked.
+      this.refs.finishNote.hidden = !/stamp|decorative|color|stain/i.test(this.refs.jobType?.value ?? '');
+    }
     this.animateMoney(this.refs.lowOut, low);
     this.animateMoney(this.refs.highOut, high);
   }
