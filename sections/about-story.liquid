@@ -47,7 +47,7 @@
           <p class="rb-eyebrow">{{ section.settings.eyebrow }}</p>
         {%- endif -%}
         {%- if section.settings.heading != blank -%}
-          <h2 class="rb-section__title">{{ section.settings.heading }}</h2>
+          {%- assign heading_tag = section.settings.heading_level | default: 'h2' -%}<{{ heading_tag }} class="rb-section__title">{{ section.settings.heading }}</{{ heading_tag }}>
         {%- endif -%}
         {%- if section.settings.body != blank -%}
           <div class="rb-about__text">{{ section.settings.body }}</div>
@@ -165,6 +165,17 @@
       "id": "heading",
       "label": "Heading",
       "default": "A family crew with 30+ years in concrete"
+    },
+    {
+      "type": "select",
+      "id": "heading_level",
+      "label": "Heading level",
+      "info": "Use H1 only on a page with no hero above this section. Every page needs exactly one H1.",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" }
+      ],
+      "default": "h2"
     },
     {
       "type": "richtext",

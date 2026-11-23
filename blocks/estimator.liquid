@@ -45,7 +45,8 @@
         <p class="estimator__eyebrow">{{ block.settings.eyebrow }}</p>
       {%- endif -%}
       {%- if block.settings.heading != blank -%}
-        <h2 class="estimator__heading">{{ block.settings.heading }}</h2>
+        {%- assign heading_tag = block.settings.heading_level | default: 'h2' -%}
+        <{{ heading_tag }} class="estimator__heading">{{ block.settings.heading }}</{{ heading_tag }}>
       {%- endif -%}
       {%- if block.settings.subheading != blank -%}
         <p class="estimator__subheading">{{ block.settings.subheading }}</p>
@@ -598,6 +599,17 @@
       "id": "heading",
       "label": "Heading",
       "default": "Estimate your concrete project"
+    },
+    {
+      "type": "select",
+      "id": "heading_level",
+      "label": "Heading level",
+      "info": "Use H1 only on a page with no hero above this section. Every page needs exactly one H1.",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" }
+      ],
+      "default": "h2"
     },
     {
       "type": "textarea",

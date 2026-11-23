@@ -24,7 +24,7 @@
         "padding-block-end": 64
       },
       "blocks": {
-        "calc": { "type": "estimator", "settings": { "accent_color": "#C42A20" } }
+        "calc": { "type": "estimator", "settings": { "heading_level": "h1", "heading": "Concrete cost calculator for Utah County", "accent_color": "#C42A20" } }
       },
       "block_order": ["calc"]
     },

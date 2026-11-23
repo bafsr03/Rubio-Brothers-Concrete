@@ -10,6 +10,7 @@
     "contact": {
       "type": "contact-info",
       "settings": {
+        "heading_level": "h1",
         "accent_color": "#C42A20"
       }
     },

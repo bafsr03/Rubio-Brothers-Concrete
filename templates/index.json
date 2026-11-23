@@ -12,9 +12,9 @@
     "hero": {
       "type": "site-hero",
       "settings": {
-        "eyebrow": "Pleasant Grove, UT · 30+ years of experience",
-        "heading": "Efficient and clean concrete solutions.",
-        "subheading": "From driveways and patios to decorative stamped concrete, we bring over 30 years of experience to every project.",
+        "eyebrow": "Family-run · 30+ years of experience",
+        "heading": "Concrete contractor in Pleasant Grove & Utah County",
+        "subheading": "Efficient and clean concrete solutions. From driveways and patios to decorative stamped concrete, we bring over 30 years of experience to every project.",
         "button_label": "Get a free estimate",
         "button_link": "/pages/estimate",
         "phone_label": "Call (385) 210-5983",
@@ -39,8 +39,8 @@
             "image": "shopify://shop_images/concrete-driveway-broom-finish-pleasant-grove-ut.jpg",
             "title": "Driveways",
             "text": "Durable, crack-resistant driveways finished to handle Utah freeze-thaw winters.",
-            "link_label": "Get a quote",
-            "link": "/pages/estimate"
+            "link_label": "See driveways",
+            "link": "/pages/concrete-driveways"
           }
         },
         "s2": {
@@ -49,8 +49,8 @@
             "image": "shopify://shop_images/concrete-patio-backyard-orem-ut.jpg",
             "title": "Patios & walkways",
             "text": "Outdoor living spaces, sidewalks and walkways built clean and level.",
-            "link_label": "Get a quote",
-            "link": "/pages/estimate"
+            "link_label": "See patios",
+            "link": "/pages/concrete-patios"
           }
         },
         "s3": {
@@ -59,8 +59,8 @@
             "image": "shopify://shop_images/concrete-flatwork-pour-utah-county.jpg",
             "title": "RV pads & slabs",
             "text": "Heavy-duty pads and foundation slabs engineered for serious loads.",
-            "link_label": "Get a quote",
-            "link": "/pages/estimate"
+            "link_label": "See RV pads",
+            "link": "/pages/rv-pads"
           }
         },
         "s4": {
@@ -69,8 +69,8 @@
             "image": "shopify://shop_images/stamped-concrete-patio-ashlar-slate-orem-ut.jpg",
             "title": "Stamped & decorative",
             "text": "Stamped, colored and textured finishes that elevate any property.",
-            "link_label": "Get a quote",
-            "link": "/pages/estimate"
+            "link_label": "See stamped concrete",
+            "link": "/pages/stamped-concrete-patios"
           }
         },
         "s5": {
@@ -79,8 +79,8 @@
             "image": "shopify://shop_images/concrete-driveway-extension-lehi-ut.jpg",
             "title": "Tear-out & replacement",
             "text": "Old, cracked concrete removed and repoured — no mess left behind.",
-            "link_label": "Get a quote",
-            "link": "/pages/estimate"
+            "link_label": "See driveway replacement",
+            "link": "/pages/concrete-driveways"
           }
         },
         "s6": {
@@ -89,8 +89,8 @@
             "image": "shopify://shop_images/concrete-slab-base-prep-rebar-utah-county.jpg",
             "title": "Excavation & prep",
             "text": "Grading, forming and base prep done right so your pour lasts decades.",
-            "link_label": "Get a quote",
-            "link": "/pages/estimate"
+            "link_label": "See all services",
+            "link": "/pages/services"
           }
         }
       },

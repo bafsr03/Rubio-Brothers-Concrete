@@ -269,7 +269,8 @@
       ],
       "settings": {
         "eyebrow": "Our work",
-        "heading": "Recent pours across Utah County",
+        "heading": "Concrete projects across Utah County",
+        "heading_level": "h1",
         "intro": "Driveways, patios, RV pads and decorative concrete we've poured for neighbors in Alpine, Highland, Lehi, Pleasant Grove, American Fork, Orem and Provo.",
         "button_label": "",
         "button_link": "",
