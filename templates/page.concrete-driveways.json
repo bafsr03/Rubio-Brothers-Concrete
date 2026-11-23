@@ -220,7 +220,7 @@
           "type": "qa",
           "settings": {
             "question": "How much does a new concrete driveway cost in Utah County?",
-            "answer": "<p>Pricing depends on square footage, thickness, finish and how much old concrete has to come out. Use our instant estimator for a ballpark, then we confirm an exact price with a free on-site visit in Pleasant Grove, Lehi, American Fork, Orem or Provo.</p>"
+            "answer": "<p>Pricing depends on square footage, thickness, finish and how much old concrete has to come out. Use our <a href=\"/pages/estimate\">instant estimator</a> for a ballpark, then we confirm an exact price with a free on-site visit in Pleasant Grove, Lehi, American Fork, Orem or Provo.</p>"
           }
         },
         "q2": {

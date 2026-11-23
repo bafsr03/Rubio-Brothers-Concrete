@@ -172,7 +172,7 @@
           "type": "qa",
           "settings": {
             "question": "How much does a stamped concrete patio cost?",
-            "answer": "<p>Stamped work costs more than a plain broom finish because of the color, stamping and sealing labour. Size, pattern and site prep all affect the price — use our estimator for a ballpark, then we confirm with a free on-site visit in Orem, Provo, Pleasant Grove and nearby.</p>"
+            "answer": "<p>Stamped work costs more than a plain broom finish because of the color, stamping and sealing labour. Size, pattern and site prep all affect the price — use our <a href=\"/pages/estimate\">estimator</a> for a ballpark, then we confirm with a free on-site visit in Orem, Provo, Pleasant Grove and nearby.</p>"
           }
         },
         "q2": {

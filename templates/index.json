@@ -561,7 +561,7 @@
           "type": "qa",
           "settings": {
             "question": "How much does a concrete driveway or patio cost?",
-            "answer": "<p>It depends on the square footage, finish and site prep. Use our instant estimator above for a rough ballpark, then we confirm an exact price with a free on-site visit.</p>"
+            "answer": "<p>It depends on the square footage, finish and site prep. Use our <a href=\"/pages/estimate\">instant estimator</a> above for a rough ballpark, then we confirm an exact price with a free on-site visit.</p>"
           }
         },
         "q2": {

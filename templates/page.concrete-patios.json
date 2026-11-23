@@ -275,7 +275,7 @@
           "type": "qa",
           "settings": {
             "question": "How much does a concrete patio cost in Utah County?",
-            "answer": "<p>A plain broom-finished patio is the most affordable option in concrete; cost moves with square footage, access and how much digging and hauling the site needs. Use our estimator for a ballpark, then we confirm an exact price after a free site visit.</p>"
+            "answer": "<p>A plain broom-finished patio is the most affordable option in concrete; cost moves with square footage, access and how much digging and hauling the site needs. Use our <a href=\"/pages/estimate\">estimator</a> for a ballpark, then we confirm an exact price after a free site visit.</p>"
           }
         },
         "q2": {
