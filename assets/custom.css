@@ -229,3 +229,43 @@ summary:focus-visible {
     margin-top: -12px;
   }
 }
+
+/* Lead-form trust row (snippets/lead-trust.liquid, snippets/google-rating.liquid) */
+.rb-trust {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.rb-rating {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  gap: 0.35rem;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.rb-rating__star {
+  color: #f5a623;
+}
+
+.rb-trust__text {
+  display: inline-block;
+  padding-block: 0.35rem;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+/* Hero copy paints immediately: it holds the H1 (usually the LCP element), so it
+   must not wait at opacity 0 for scroll-reveal.js. It still slides into place. */
+.rb-hero [data-reveal] {
+  opacity: 1;
+}

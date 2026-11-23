@@ -1,0 +1,423 @@
+{
+  "sections": {
+    "schema": {
+      "type": "local-area-schema",
+      "blocks": {
+        "sl1": {
+          "type": "service_link",
+          "settings": {
+            "name": "Concrete driveways",
+            "link": "/pages/concrete-driveways"
+          }
+        },
+        "sl2": {
+          "type": "service_link",
+          "settings": {
+            "name": "Concrete patios",
+            "link": "/pages/concrete-patios"
+          }
+        },
+        "sl3": {
+          "type": "service_link",
+          "settings": {
+            "name": "Concrete walkways",
+            "link": "/pages/concrete-walkways"
+          }
+        },
+        "sl4": {
+          "type": "service_link",
+          "settings": {
+            "name": "RV pads",
+            "link": "/pages/rv-pads"
+          }
+        },
+        "sl5": {
+          "type": "service_link",
+          "settings": {
+            "name": "Sport courts",
+            "link": "/pages/sport-courts"
+          }
+        },
+        "sl6": {
+          "type": "service_link",
+          "settings": {
+            "name": "Retaining walls",
+            "link": "/pages/retaining-walls"
+          }
+        },
+        "sl7": {
+          "type": "service_link",
+          "settings": {
+            "name": "Stamped concrete patios",
+            "link": "/pages/stamped-concrete-patios"
+          }
+        }
+      },
+      "block_order": [
+        "sl1",
+        "sl2",
+        "sl3",
+        "sl4",
+        "sl5",
+        "sl6",
+        "sl7"
+      ],
+      "settings": {
+        "city": "Orem",
+        "county": "Utah County",
+        "region": "UT",
+        "service_name": "Concrete Contractor in Orem, UT",
+        "service_type": "Concrete contractor",
+        "service_description": "Stamped patios, walkways, driveways and RV pads for Orem homes, from a local family crew.",
+        "image": "shopify://shop_images/stamped-concrete-patio-ashlar-slate-orem-ut.jpg"
+      }
+    },
+    "hero": {
+      "type": "site-hero",
+      "settings": {
+        "image": "shopify://shop_images/stamped-concrete-patio-ashlar-slate-orem-ut.jpg",
+        "eyebrow": "Serving Orem, UT · Based in Pleasant Grove",
+        "heading": "Concrete Contractor in Orem, UT",
+        "subheading": "Stamped patios, walkways, driveways and RV pads for Orem homes, from a local family crew.",
+        "button_label": "Get a free estimate",
+        "button_link": "/pages/estimate",
+        "phone_label": "Call (385) 210-5983",
+        "phone": "(385) 210-5983",
+        "trust_chips": "Free estimates\nLicensed & insured\nStamped & colored finishes",
+        "accent_color": "#C42A20",
+        "text_color": "#ffffff",
+        "overlay_opacity": 55,
+        "min_height": 78
+      }
+    },
+    "local": {
+      "type": "local-area",
+      "blocks": {
+        "b1": {
+          "type": "paragraph",
+          "settings": {
+            "subheading": "Stamped patios, three ways",
+            "text": "<p>The Orem jobs below include an ashlar slate patio, a wood-plank patio and a stamped patio built around a stone fire pit. If you are choosing between a plain and a patterned finish, start with <a href=\"/pages/stamped-concrete-patios\">stamped patios</a> and <a href=\"/pages/concrete-patios\">plain patios</a> side by side.</p>"
+          }
+        },
+        "b2": {
+          "type": "paragraph",
+          "settings": {
+            "subheading": "Side yards, walkways and pads",
+            "text": "<p>Not every job is a showpiece. We also pour <a href=\"/pages/concrete-walkways\">walkways</a> from the gate to the garage, <a href=\"/pages/rv-pads\">RV pads</a>, <a href=\"/pages/hot-tub-pads\">hot tub pads</a> and <a href=\"/pages/shed-pads\">shed pads</a>.</p>"
+          }
+        },
+        "b3": {
+          "type": "detail",
+          "settings": {
+            "title": "Established yards",
+            "text": "Mature trees, fences and sprinklers limit access. We plan the route with you first and pump or wheel concrete in when a truck cannot reach."
+          }
+        },
+        "b4": {
+          "type": "detail",
+          "settings": {
+            "title": "Replacing a small original patio",
+            "text": "We can tear out the old slab, haul it away and pour a larger one to suit how you use the yard."
+          }
+        },
+        "b5": {
+          "type": "detail",
+          "settings": {
+            "title": "Pattern and color you can see first",
+            "text": "We bring samples during the design step so you choose with the house in front of you."
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5"
+      ],
+      "settings": {
+        "eyebrow": "Orem, UT",
+        "heading": "Backyards worth sitting in",
+        "image": "shopify://shop_images/stamped-concrete-patio-wood-plank-orem-ut.jpg",
+        "image_alt": "Wood-plank stamped concrete patio in Orem, UT",
+        "image_caption": "Wood-plank stamped patio, Orem.",
+        "neighborhoods_title": "Neighborhoods we pour in",
+        "neighborhoods": "",
+        "accent_color": "#C42A20",
+        "background_color": "",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    },
+    "services": {
+      "type": "services-grid",
+      "blocks": {
+        "s1": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/stamped-concrete-patio-ashlar-slate-orem-ut.jpg",
+            "title": "Stamped concrete",
+            "text": "Stamped and colored patios that read like stone or plank.",
+            "link_label": "View service",
+            "link": "/pages/stamped-concrete-patios"
+          }
+        },
+        "s2": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-patio-broom-finish-backyard-utah-county.jpg",
+            "title": "Patios",
+            "text": "Backyard slabs poured level, sloped to drain and finished clean.",
+            "link_label": "View service",
+            "link": "/pages/concrete-patios"
+          }
+        },
+        "s3": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-walkway-side-yard-to-garage-orem-ut.jpg",
+            "title": "Walkways",
+            "text": "Sidewalks, side-yard paths and front entries, poured trip-free.",
+            "link_label": "View service",
+            "link": "/pages/concrete-walkways"
+          }
+        },
+        "s4": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-broom-finish-pleasant-grove-ut.jpg",
+            "title": "Driveways",
+            "text": "New driveways, extensions and full tear-out replacements.",
+            "link_label": "View service",
+            "link": "/pages/concrete-driveways"
+          }
+        },
+        "s5": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-rv-pad-side-yard-vinyl-fence-utah-county.jpg",
+            "title": "RV pads",
+            "text": "Reinforced pads sized and thickened for your rig.",
+            "link_label": "View service",
+            "link": "/pages/rv-pads"
+          }
+        },
+        "s6": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/decorative-concrete-patio-checkerboard-stain-lehi-ut.jpg",
+            "title": "Decorative concrete",
+            "text": "Stains, colors and patterns poured into the slab itself.",
+            "link_label": "View service",
+            "link": "/pages/decorative-concrete-patios"
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "settings": {
+        "eyebrow": "What we pour in Orem",
+        "heading": "Concrete services for Orem homes",
+        "intro": "Outdoor living space is the heart of it, with the practical flatwork that goes around it.",
+        "heading_level": "h2",
+        "accent_color": "#C42A20"
+      }
+    },
+    "gallery": {
+      "type": "project-gallery",
+      "blocks": {
+        "g1": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/stamped-concrete-patio-ashlar-slate-orem-ut.jpg",
+            "category": "Stamped patio",
+            "caption": "Ashlar stamped patio, Orem",
+            "alt": "Ashlar slate stamped concrete patio in Orem, UT",
+            "city": "Orem"
+          }
+        },
+        "g2": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/stamped-concrete-patio-wood-plank-orem-ut.jpg",
+            "category": "Stamped patio",
+            "caption": "Wood-plank stamped patio, Orem",
+            "alt": "Wood-plank stamped concrete patio in Orem, UT",
+            "city": "Orem"
+          }
+        },
+        "g3": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/stamped-concrete-patio-firepit-orem-ut.jpg",
+            "category": "Decorative",
+            "caption": "Stamped patio & fire pit, Orem",
+            "alt": "Stamped concrete patio with a stone fire pit in Orem, UT",
+            "city": "Orem"
+          }
+        },
+        "g4": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-patio-backyard-orem-ut.jpg",
+            "category": "Patio",
+            "caption": "Backyard patio, Orem",
+            "alt": "Concrete backyard patio in Orem, UT",
+            "city": "Orem"
+          }
+        },
+        "g5": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-walkway-side-yard-to-garage-orem-ut.jpg",
+            "category": "Walkway",
+            "caption": "Side-yard walkway, Orem",
+            "alt": "Concrete side-yard walkway to a garage in Orem, UT",
+            "city": "Orem"
+          }
+        }
+      },
+      "block_order": [
+        "g1",
+        "g2",
+        "g3",
+        "g4",
+        "g5"
+      ],
+      "settings": {
+        "eyebrow": "Our work",
+        "heading": "Recent work in Orem",
+        "intro": "Every photo below is a job we poured in Orem, with no stock photos.",
+        "button_label": "See the full gallery",
+        "button_link": "/pages/gallery",
+        "accent_color": "#C42A20",
+        "background_color": "",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "q1": {
+          "type": "qa",
+          "settings": {
+            "question": "Do you pour concrete in Orem?",
+            "answer": "<p>Yes. We are based in nearby Pleasant Grove, and on-site estimates in Orem are free.</p>"
+          }
+        },
+        "q2": {
+          "type": "qa",
+          "settings": {
+            "question": "How much does a stamped patio cost in Orem?",
+            "answer": "<p>Stamped work costs more than a plain broom finish because of the color, stamping and sealing. Use our <a href=\"/pages/estimate\">instant estimator</a> for a plain-concrete ballpark, then we price the finish after a free site visit.</p>"
+          }
+        },
+        "q3": {
+          "type": "qa",
+          "settings": {
+            "question": "Can you pour an RV pad beside my house?",
+            "answer": "<p>Often, yes. We check width, access and drainage on site, then spec the thickness for your rig. See <a href=\"/pages/rv-pads\">RV pads</a>.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3"
+      ],
+      "settings": {
+        "eyebrow": "FAQ",
+        "heading": "Concrete in Orem: common questions",
+        "accent_color": "#C42A20"
+      }
+    },
+    "areas": {
+      "type": "service-areas",
+      "blocks": {
+        "a1": {
+          "type": "area",
+          "settings": {
+            "image": "shopify://shop_images/concrete-sport-court-pad-pickleball-alpine-ut.jpg",
+            "image_alt": "Concrete sport court pad in Alpine, UT",
+            "title": "Alpine, UT",
+            "text": "Sloped bench lots, long driveways and sport court pads.",
+            "link_label": "See our work",
+            "link": "/pages/concrete-alpine-ut"
+          }
+        },
+        "a2": {
+          "type": "area",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-broom-finish-highland-ut.jpg",
+            "image_alt": "Concrete driveway in Highland, UT",
+            "title": "Highland, UT",
+            "text": "Long driveways, RV pads and tear-out replacements.",
+            "link_label": "See our work",
+            "link": "/pages/concrete-highland-ut"
+          }
+        },
+        "a3": {
+          "type": "area",
+          "settings": {
+            "image": "shopify://shop_images/stained-concrete-patio-checkerboard-lehi-ut.jpg",
+            "image_alt": "Stained checkerboard concrete patio in Lehi, UT",
+            "title": "Lehi, UT",
+            "text": "Backyard patios, walkways and decorative concrete.",
+            "link_label": "See our work",
+            "link": "/pages/concrete-lehi-ut"
+          }
+        }
+      },
+      "block_order": [
+        "a1",
+        "a2",
+        "a3"
+      ],
+      "settings": {
+        "eyebrow": "Where we pour",
+        "heading": "Other towns we pour in",
+        "heading_level": "h2",
+        "intro": "Same crew, same standard, across northern Utah County.",
+        "other_areas_label": "Also serving:",
+        "other_areas": "Pleasant Grove, American Fork, Lindon, Provo, Cedar Hills, Saratoga Springs",
+        "accent_color": "#C42A20",
+        "background_color": "#f5f4f2",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    },
+    "cta": {
+      "type": "cta-band",
+      "settings": {
+        "eyebrow": "Free, no-pressure quotes",
+        "heading": "Get a free estimate in Orem",
+        "text": "Tell us what you want the yard to look like and we will measure it and price it for free.",
+        "button_label": "Get a free estimate",
+        "button_link": "/pages/estimate",
+        "phone_label": "Call (385) 210-5983",
+        "phone": "(385) 210-5983",
+        "accent_color": "#C42A20",
+        "background_color": "#ffffff",
+        "text_color": "#1a1a1a"
+      }
+    }
+  },
+  "order": [
+    "schema",
+    "hero",
+    "local",
+    "services",
+    "gallery",
+    "faq",
+    "areas",
+    "cta"
+  ]
+}

@@ -282,6 +282,14 @@
   defer="defer"
 ></script>
 
+{%- unless request.design_mode -%}
+  <script
+    src="{{ 'lead-tracking.js' | asset_url }}"
+    type="module"
+    fetchpriority="low"
+  ></script>
+{%- endunless -%}
+
 <script>
   const Theme = {
     translations: {

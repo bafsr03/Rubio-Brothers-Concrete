@@ -1,0 +1,445 @@
+{
+  "sections": {
+    "schema": {
+      "type": "local-area-schema",
+      "blocks": {
+        "sl1": {
+          "type": "service_link",
+          "settings": {
+            "name": "Concrete driveways",
+            "link": "/pages/concrete-driveways"
+          }
+        },
+        "sl2": {
+          "type": "service_link",
+          "settings": {
+            "name": "Concrete patios",
+            "link": "/pages/concrete-patios"
+          }
+        },
+        "sl3": {
+          "type": "service_link",
+          "settings": {
+            "name": "Concrete walkways",
+            "link": "/pages/concrete-walkways"
+          }
+        },
+        "sl4": {
+          "type": "service_link",
+          "settings": {
+            "name": "RV pads",
+            "link": "/pages/rv-pads"
+          }
+        },
+        "sl5": {
+          "type": "service_link",
+          "settings": {
+            "name": "Sport courts",
+            "link": "/pages/sport-courts"
+          }
+        },
+        "sl6": {
+          "type": "service_link",
+          "settings": {
+            "name": "Retaining walls",
+            "link": "/pages/retaining-walls"
+          }
+        },
+        "sl7": {
+          "type": "service_link",
+          "settings": {
+            "name": "Stamped concrete patios",
+            "link": "/pages/stamped-concrete-patios"
+          }
+        }
+      },
+      "block_order": [
+        "sl1",
+        "sl2",
+        "sl3",
+        "sl4",
+        "sl5",
+        "sl6",
+        "sl7"
+      ],
+      "settings": {
+        "city": "Pleasant Grove",
+        "county": "Utah County",
+        "region": "UT",
+        "service_name": "Concrete Contractor in Pleasant Grove, UT",
+        "service_type": "Concrete contractor",
+        "service_description": "Driveways, patios, walkways and decorative concrete, poured by a local family crew that is based right here.",
+        "image": "shopify://shop_images/concrete-driveway-stone-home-pleasant-grove-ut.jpg"
+      }
+    },
+    "hero": {
+      "type": "site-hero",
+      "settings": {
+        "image": "shopify://shop_images/concrete-driveway-stone-home-pleasant-grove-ut.jpg",
+        "eyebrow": "Based in Pleasant Grove, UT",
+        "heading": "Concrete Contractor in Pleasant Grove, UT",
+        "subheading": "Driveways, patios, walkways and decorative concrete, poured by a local family crew that is based right here.",
+        "button_label": "Get a free estimate",
+        "button_link": "/pages/estimate",
+        "phone_label": "Call (385) 210-5983",
+        "phone": "(385) 210-5983",
+        "trust_chips": "Free estimates\nLicensed & insured\nLocally owned",
+        "accent_color": "#C42A20",
+        "text_color": "#ffffff",
+        "overlay_opacity": 55,
+        "min_height": 78
+      }
+    },
+    "local": {
+      "type": "local-area",
+      "blocks": {
+        "b1": {
+          "type": "paragraph",
+          "settings": {
+            "subheading": "Work you can go and look at",
+            "text": "<p>Pleasant Grove is home base, and you can see the range of what we pour here: <a href=\"/pages/concrete-driveways\">driveways</a>, <a href=\"/pages/concrete-walkways\">walkways</a>, a <a href=\"/pages/sport-courts\">sport court pad</a>, charcoal colored stairs and a round fire-pit seating area. The photos below are all Pleasant Grove jobs.</p>"
+          }
+        },
+        "b2": {
+          "type": "paragraph",
+          "settings": {
+            "subheading": "One crew from dirt to finish",
+            "text": "<p>Tear-out, excavation, forming, pouring and finishing are handled by the same people. If the yard changes grade, <a href=\"/pages/retaining-walls\">retaining walls</a> can go in as part of the same job.</p>"
+          }
+        },
+        "b3": {
+          "type": "detail",
+          "settings": {
+            "title": "Lots that rise toward the bench",
+            "text": "Much of Pleasant Grove climbs toward the mountains. On a sloping lot we sort out grade, base and drainage before a form goes down."
+          }
+        },
+        "b4": {
+          "type": "detail",
+          "settings": {
+            "title": "Built for freeze-thaw",
+            "text": "Control joints, a compacted base and a slope away from the house matter more here than the finish you can see."
+          }
+        },
+        "b5": {
+          "type": "detail",
+          "settings": {
+            "title": "Replacing an older slab",
+            "text": "Full tear-out and haul-away are part of the job, so you deal with one contractor instead of two."
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5"
+      ],
+      "settings": {
+        "eyebrow": "Pleasant Grove, UT",
+        "heading": "Your hometown concrete crew",
+        "image": "shopify://shop_images/concrete-driveway-broom-finish-pleasant-grove-ut.jpg",
+        "image_alt": "New broom-finish concrete driveway in Pleasant Grove, UT",
+        "image_caption": "Broom-finish driveway, Pleasant Grove.",
+        "neighborhoods_title": "Neighborhoods we pour in",
+        "neighborhoods": "",
+        "accent_color": "#C42A20",
+        "background_color": "",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    },
+    "services": {
+      "type": "services-grid",
+      "blocks": {
+        "s1": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-broom-finish-pleasant-grove-ut.jpg",
+            "title": "Driveways",
+            "text": "New driveways, extensions and full tear-out replacements.",
+            "link_label": "View service",
+            "link": "/pages/concrete-driveways"
+          }
+        },
+        "s2": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-patio-broom-finish-backyard-utah-county.jpg",
+            "title": "Patios",
+            "text": "Backyard slabs poured level, sloped to drain and finished clean.",
+            "link_label": "View service",
+            "link": "/pages/concrete-patios"
+          }
+        },
+        "s3": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-walkway-side-yard-to-garage-orem-ut.jpg",
+            "title": "Walkways",
+            "text": "Sidewalks, side-yard paths and front entries, poured trip-free.",
+            "link_label": "View service",
+            "link": "/pages/concrete-walkways"
+          }
+        },
+        "s4": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/decorative-concrete-patio-checkerboard-stain-lehi-ut.jpg",
+            "title": "Decorative concrete",
+            "text": "Stains, colors and patterns poured into the slab itself.",
+            "link_label": "View service",
+            "link": "/pages/decorative-concrete-patios"
+          }
+        },
+        "s5": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-sport-court-pad-pleasant-grove-ut.jpg",
+            "title": "Sport courts",
+            "text": "Flat, true pads for backyard basketball, pickleball and multi-sport play.",
+            "link_label": "View service",
+            "link": "/pages/sport-courts"
+          }
+        },
+        "s6": {
+          "type": "service",
+          "settings": {
+            "image": "shopify://shop_images/concrete-shed-pad-side-yard-pleasant-grove-ut.jpg",
+            "title": "Shed pads",
+            "text": "Level, reinforced pads that keep a shed sitting true.",
+            "link_label": "View service",
+            "link": "/pages/shed-pads"
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "settings": {
+        "eyebrow": "What we pour in Pleasant Grove",
+        "heading": "Concrete services for Pleasant Grove homes",
+        "intro": "From a front walk to a full backyard, poured by the crew down the road.",
+        "heading_level": "h2",
+        "accent_color": "#C42A20"
+      }
+    },
+    "gallery": {
+      "type": "project-gallery",
+      "blocks": {
+        "g1": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-stone-home-pleasant-grove-ut.jpg",
+            "category": "Driveway",
+            "caption": "Driveway, Pleasant Grove",
+            "alt": "Finished concrete driveway at a stone home in Pleasant Grove, UT",
+            "city": "Pleasant Grove"
+          }
+        },
+        "g2": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-broom-finish-pleasant-grove-ut.jpg",
+            "category": "Driveway",
+            "caption": "Broom-finish driveway, Pleasant Grove",
+            "alt": "New broom-finish concrete driveway in Pleasant Grove, UT",
+            "city": "Pleasant Grove"
+          }
+        },
+        "g3": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-pour-sunset-pleasant-grove-ut.jpg",
+            "category": "Driveway",
+            "caption": "Driveway pour at sunset, Pleasant Grove",
+            "alt": "Freshly poured concrete driveway at sunset in Pleasant Grove, UT",
+            "city": "Pleasant Grove"
+          }
+        },
+        "g4": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/decorative-concrete-firepit-seating-area-pleasant-grove-ut.jpg",
+            "category": "Decorative",
+            "caption": "Fire-pit seating area, Pleasant Grove",
+            "alt": "Circular decorative concrete fire-pit seating area in Pleasant Grove, UT",
+            "city": "Pleasant Grove"
+          }
+        },
+        "g5": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/colored-concrete-stairs-charcoal-pleasant-grove-ut.jpg",
+            "category": "Colored",
+            "caption": "Charcoal colored stairs, Pleasant Grove",
+            "alt": "Charcoal colored concrete stairs in Pleasant Grove, UT",
+            "city": "Pleasant Grove"
+          }
+        },
+        "g6": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-walkway-stone-home-pleasant-grove-ut.jpg",
+            "category": "Walkway",
+            "caption": "Walkway, Pleasant Grove",
+            "alt": "Concrete walkway alongside a stone home in Pleasant Grove, UT",
+            "city": "Pleasant Grove"
+          }
+        },
+        "g7": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/concrete-sport-court-pad-pleasant-grove-ut.jpg",
+            "category": "Sport court",
+            "caption": "Sport court pad, Pleasant Grove",
+            "alt": "Concrete sport court pad in Pleasant Grove, UT",
+            "city": "Pleasant Grove"
+          }
+        }
+      },
+      "block_order": [
+        "g1",
+        "g2",
+        "g3",
+        "g4",
+        "g5",
+        "g6",
+        "g7"
+      ],
+      "settings": {
+        "eyebrow": "Our work",
+        "heading": "Recent work in Pleasant Grove",
+        "intro": "Every photo below is a job we poured in Pleasant Grove, with no stock photos.",
+        "button_label": "See the full gallery",
+        "button_link": "/pages/gallery",
+        "accent_color": "#C42A20",
+        "background_color": "",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "q1": {
+          "type": "qa",
+          "settings": {
+            "question": "Are you based in Pleasant Grove?",
+            "answer": "<p>Yes. Rubio Brothers Concrete is a family crew based in Pleasant Grove, and on-site estimates are free.</p>"
+          }
+        },
+        "q2": {
+          "type": "qa",
+          "settings": {
+            "question": "What does concrete cost in Pleasant Grove?",
+            "answer": "<p>It depends on size, finish, access and how much has to come out first. Use our <a href=\"/pages/estimate\">instant estimator</a> for a ballpark, then we confirm an exact price after a free site visit.</p>"
+          }
+        },
+        "q3": {
+          "type": "qa",
+          "settings": {
+            "question": "Can you match or extend an existing driveway?",
+            "answer": "<p>Yes. We match the elevation and finish as closely as the old slab allows and detail the joint so both slabs can move. See <a href=\"/pages/concrete-driveways\">driveways</a>.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3"
+      ],
+      "settings": {
+        "eyebrow": "FAQ",
+        "heading": "Concrete in Pleasant Grove: common questions",
+        "accent_color": "#C42A20"
+      }
+    },
+    "areas": {
+      "type": "service-areas",
+      "blocks": {
+        "a1": {
+          "type": "area",
+          "settings": {
+            "image": "shopify://shop_images/concrete-sport-court-pad-pickleball-alpine-ut.jpg",
+            "image_alt": "Concrete sport court pad in Alpine, UT",
+            "title": "Alpine, UT",
+            "text": "Sloped bench lots, long driveways and sport court pads.",
+            "link_label": "See our work",
+            "link": "/pages/concrete-alpine-ut"
+          }
+        },
+        "a2": {
+          "type": "area",
+          "settings": {
+            "image": "shopify://shop_images/concrete-driveway-broom-finish-highland-ut.jpg",
+            "image_alt": "Concrete driveway in Highland, UT",
+            "title": "Highland, UT",
+            "text": "Long driveways, RV pads and tear-out replacements.",
+            "link_label": "See our work",
+            "link": "/pages/concrete-highland-ut"
+          }
+        },
+        "a3": {
+          "type": "area",
+          "settings": {
+            "image": "shopify://shop_images/stained-concrete-patio-checkerboard-lehi-ut.jpg",
+            "image_alt": "Stained checkerboard concrete patio in Lehi, UT",
+            "title": "Lehi, UT",
+            "text": "Backyard patios, walkways and decorative concrete.",
+            "link_label": "See our work",
+            "link": "/pages/concrete-lehi-ut"
+          }
+        }
+      },
+      "block_order": [
+        "a1",
+        "a2",
+        "a3"
+      ],
+      "settings": {
+        "eyebrow": "Where we pour",
+        "heading": "Other towns we pour in",
+        "heading_level": "h2",
+        "intro": "Same crew, same standard, across northern Utah County.",
+        "other_areas_label": "Also serving:",
+        "other_areas": "American Fork, Lindon, Orem, Provo, Cedar Hills, Saratoga Springs",
+        "accent_color": "#C42A20",
+        "background_color": "#f5f4f2",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    },
+    "cta": {
+      "type": "cta-band",
+      "settings": {
+        "eyebrow": "Free, no-pressure quotes",
+        "heading": "Get a free estimate in Pleasant Grove",
+        "text": "Tell us about the job and we will come out, measure it and give you an exact price at no cost.",
+        "button_label": "Get a free estimate",
+        "button_link": "/pages/estimate",
+        "phone_label": "Call (385) 210-5983",
+        "phone": "(385) 210-5983",
+        "accent_color": "#C42A20",
+        "background_color": "#ffffff",
+        "text_color": "#1a1a1a"
+      }
+    }
+  },
+  "order": [
+    "schema",
+    "hero",
+    "local",
+    "services",
+    "gallery",
+    "faq",
+    "areas",
+    "cta"
+  ]
+}

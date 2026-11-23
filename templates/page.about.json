@@ -20,6 +20,8 @@
       "type": "about-story",
       "settings": {
         "image": "shopify://shop_images/decorative-concrete-firepit-seating-area-pleasant-grove-ut.jpg",
+        "heading_level": "h1",
+        "heading": "A family concrete crew with 30+ years in Utah County",
         "accent_color": "#C42A20",
         "button_label": "Get a free estimate",
         "button_link": "/pages/estimate"

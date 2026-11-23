@@ -1,0 +1,19 @@
+{% doc %}
+  Trust + fallback row shown under a lead form's submit button: Google rating,
+  contractor license (when set) and a tap-to-text link for sending job photos.
+
+  @example
+  {% render 'lead-trust' %}
+{% enddoc %}
+
+{%- assign sms = settings.business_phone | remove: ' ' | remove: '(' | remove: ')' | remove: '-' -%}
+
+<div class="rb-trust">
+  {% render 'google-rating' %}
+  {%- if settings.business_license_number != blank -%}
+    <span class="rb-trust__license">Licensed contractor #{{ settings.business_license_number }}</span>
+  {%- endif -%}
+  {%- if sms != blank -%}
+    <a class="rb-trust__text" href="sms:{{ sms }}">Rather text? Send photos to {{ settings.business_phone }}</a>
+  {%- endif -%}
+</div>

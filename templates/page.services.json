@@ -20,7 +20,7 @@
       "type": "services-grid",
       "settings": {
         "eyebrow": "Our services",
-        "heading": "Every kind of concrete flatwork, done right",
+        "heading": "Concrete services in Utah County",
         "heading_level": "h1",
         "intro": "Residential and commercial concrete across Utah County — from a single shed pad to a full driveway tear-out and repour. Every service below has its own page with photos, pricing guidance and answers to the questions we get asked most.",
         "accent_color": "#C42A20"
@@ -192,7 +192,7 @@
           "type": "qa",
           "settings": {
             "question": "How much does a concrete driveway or patio cost?",
-            "answer": "<p>It depends on the square footage, finish and site prep. Use our instant estimator for a rough ballpark, then we confirm an exact price with a free on-site visit.</p>"
+            "answer": "<p>It depends on the square footage, finish and site prep. Use our <a href=\"/pages/estimate\">instant estimator</a> for a rough ballpark, then we confirm an exact price with a free on-site visit.</p>"
           }
         },
         "q2": {

@@ -55,7 +55,7 @@
           <p class="rb-eyebrow">{{ section.settings.eyebrow }}</p>
         {%- endif -%}
         {%- if section.settings.heading != blank -%}
-          <h2 class="rb-section__title">{{ section.settings.heading }}</h2>
+          {%- assign heading_tag = section.settings.heading_level | default: 'h2' -%}<{{ heading_tag }} class="rb-section__title">{{ section.settings.heading }}</{{ heading_tag }}>
         {%- endif -%}
         {%- if section.settings.intro != blank -%}
           <p class="rb-contact__intro">{{ section.settings.intro }}</p>
@@ -108,7 +108,7 @@
           {% render 'spam-guard-fields' %}
           <input type="hidden" name="contact[id]" value="{{ form_id }}">
           {%- if form.posted_successfully? -%}
-            <div class="rb-contact__success" tabindex="-1" autofocus>
+            <div class="rb-contact__success" data-lead-success="contact" tabindex="-1" autofocus>
               {{- 'icon-checkmark.svg' | inline_asset_content -}}
               {{ section.settings.success_text }}
             </div>
@@ -121,15 +121,16 @@
             {%- endif -%}
             <div class="rb-contact__row">
               <label class="visually-hidden" for="{{ section.id }}-name">Name</label>
-              <input id="{{ section.id }}-name" class="rb-contact__input" type="text" name="contact[name]" autocomplete="name" placeholder="Name" value="{% if customer %}{{ customer.name }}{% endif %}">
+              <input id="{{ section.id }}-name" class="rb-contact__input" type="text" name="contact[name]" autocomplete="name" placeholder="Name" required value="{% if customer %}{{ customer.name }}{% endif %}">
               <label class="visually-hidden" for="{{ section.id }}-phone">Phone</label>
-              <input id="{{ section.id }}-phone" class="rb-contact__input" type="tel" name="contact[phone]" autocomplete="tel" placeholder="Phone" value="{% if customer %}{{ customer.phone }}{% endif %}">
+              <input id="{{ section.id }}-phone" class="rb-contact__input" type="tel" name="contact[phone]" autocomplete="tel" inputmode="tel" placeholder="Phone" required value="{% if customer %}{{ customer.phone }}{% endif %}">
             </div>
             <label class="visually-hidden" for="{{ section.id }}-email">Email</label>
-            <input id="{{ section.id }}-email" class="rb-contact__input" type="email" name="contact[email]" autocomplete="email" spellcheck="false" autocapitalize="off" aria-required="true" placeholder="Email" value="{% if customer %}{{ customer.email }}{% endif %}">
+            <input id="{{ section.id }}-email" class="rb-contact__input" type="email" name="contact[email]" autocomplete="email" spellcheck="false" autocapitalize="off" required placeholder="Email" value="{% if customer %}{{ customer.email }}{% endif %}">
             <label class="visually-hidden" for="{{ section.id }}-body">Comment</label>
             <textarea id="{{ section.id }}-body" class="rb-contact__input rb-contact__textarea" name="contact[body]" rows="4" placeholder="{{ section.settings.message_placeholder }}"></textarea>
             <button type="submit" class="rb-contact__submit">{{ section.settings.submit_label }}</button>
+            {% render 'lead-trust' %}
           {%- endif -%}
         {%- endform -%}
       </div>
@@ -327,6 +328,17 @@
       "id": "heading",
       "label": "Heading",
       "default": "Let's talk about your project"
+    },
+    {
+      "type": "select",
+      "id": "heading_level",
+      "label": "Heading level",
+      "info": "Use H1 only on a page with no hero above this section. Every page needs exactly one H1.",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" }
+      ],
+      "default": "h2"
     },
     {
       "type": "textarea",

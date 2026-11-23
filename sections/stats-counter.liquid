@@ -31,7 +31,8 @@
         <div class="rb-stat" {{ block.shopify_attributes }}>
           <div class="rb-stat__value">
             {%- if block.settings.prefix != blank -%}<span class="rb-stat__affix">{{ block.settings.prefix }}</span>{%- endif -%}
-            <span data-count-to="{{ block.settings.value }}">0</span>
+            {%- comment -%} Real value in the HTML so crawlers and no-JS visitors never read "0 ★"; the script counts up from 0. {%- endcomment -%}
+            <span data-count-to="{{ block.settings.value }}">{{ block.settings.value }}</span>
             {%- if block.settings.suffix != blank -%}<span class="rb-stat__affix">{{ block.settings.suffix }}</span>{%- endif -%}
           </div>
           {%- if block.settings.label != blank -%}

@@ -311,17 +311,11 @@
   {% endif %}
 {% endcapture %}
 
-<script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "Organization",
-    "name": {{ shop.name | json }},
-    {% if settings.logo %}
-      "logo": {{ settings.logo | image_url: width: 500 | prepend: "https:" | json }},
-    {% endif %}
-    "url": {{ request.origin | append: page.url | json }}
-  }
-</script>
+{%- comment -%}
+  Horizon's generic Organization JSON-LD is omitted here: local-business-schema
+  already describes the business as a GeneralContractor (a kind of Organization),
+  and two unlinked entities for one business muddy the local SEO signal.
+{%- endcomment -%}
 
 <header-component
   id="header-component"
@@ -366,9 +360,10 @@
   <div
     class="header__underlay header__underlay-open"
   ></div>
-  {%- if request.page_type == 'index' -%}
-    <h1 class="visually-hidden">{{ shop.name }}</h1>
-  {%- endif -%}
+  {%- comment -%}
+    Horizon prints a hidden shop-name H1 here on the homepage. Removed: the
+    site-hero section already renders the homepage's H1, and a page gets one.
+  {%- endcomment -%}
   {% for row in rows %}
     {% liquid
       assign background = 'background_color_' | append: row

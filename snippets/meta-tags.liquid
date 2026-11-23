@@ -19,10 +19,28 @@
 >
 
 {%- liquid
-  assign og_title = page_title | default: shop.name
+  # Fallbacks for pages whose "Search engine listing" was left empty in the admin.
+  assign seo_title = page_title
+  assign seo_description = page_description
+-%}
+{%- capture default_title -%}{%- render 'seo-defaults', field: 'title' -%}{%- endcapture -%}
+{%- capture default_description -%}{%- render 'seo-defaults', field: 'description' -%}{%- endcapture -%}
+{%- liquid
+  assign default_title = default_title | strip
+  assign default_description = default_description | strip
+  if default_title != blank
+    if page_title == blank or page_title == shop.name or page_title == page.title
+      assign seo_title = default_title
+    endif
+  endif
+  if seo_description == blank and default_description != blank
+    assign seo_description = default_description
+  endif
+
+  assign og_title = seo_title | default: shop.name
   assign og_url = canonical_url | default: request.origin
   assign og_type = 'website'
-  assign og_description = page_description | default: shop.description | default: shop.name
+  assign og_description = seo_description | default: shop.description | default: shop.name
 
   if request.page_type == 'product'
     assign og_type = 'product'
@@ -119,20 +137,30 @@
 >
 
 <title>
-  {{ page_title }}
+  {{ seo_title }}
   {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
   {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
-  {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+  {%- unless seo_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
 </title>
+
+{%- comment -%}
+  A service business with no catalog: keep collection listings and empty blogs
+  out of search. The blog rule lifts itself once a post is published.
+{%- endcomment -%}
+{%- if request.page_type == 'collection' or request.page_type == 'list-collections' -%}
+  <meta name="robots" content="noindex, follow">
+{%- elsif request.page_type == 'blog' and blog.articles_count == 0 -%}
+  <meta name="robots" content="noindex, follow">
+{%- endif %}
 
 <link
   rel="canonical"
   href="{{ canonical_url }}"
 >
 
-{% if page_description %}
+{% if seo_description != blank %}
   <meta
     name="description"
-    content="{{ page_description | escape }}"
+    content="{{ seo_description | escape }}"
   >
 {% endif %}

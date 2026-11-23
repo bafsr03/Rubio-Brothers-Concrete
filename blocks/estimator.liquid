@@ -45,7 +45,8 @@
         <p class="estimator__eyebrow">{{ block.settings.eyebrow }}</p>
       {%- endif -%}
       {%- if block.settings.heading != blank -%}
-        <h2 class="estimator__heading">{{ block.settings.heading }}</h2>
+        {%- assign heading_tag = block.settings.heading_level | default: 'h2' -%}
+        <{{ heading_tag }} class="estimator__heading">{{ block.settings.heading }}</{{ heading_tag }}>
       {%- endif -%}
       {%- if block.settings.subheading != blank -%}
         <p class="estimator__subheading">{{ block.settings.subheading }}</p>
@@ -148,6 +149,9 @@
             <span ref="highOut" data-value="0">—</span>
           </p>
           <p class="estimator__yards">≈ <span ref="yardsOut">0</span> {{ block.settings.yards_suffix }}</p>
+          {%- if block.settings.finish_note != blank -%}
+            <p class="estimator__finish-note" ref="finishNote" hidden>{{ block.settings.finish_note }}</p>
+          {%- endif -%}
           <p class="estimator__disclaimer">{{ block.settings.disclaimer }}</p>
         </div>
       </div>
@@ -164,7 +168,7 @@
           <input type="hidden" name="contact[Online rough estimate]" ref="fieldEstimate" value="">
 
           {%- if form.posted_successfully? -%}
-            <div class="estimator__success" tabindex="-1" autofocus>
+            <div class="estimator__success" data-lead-success="estimator" tabindex="-1" autofocus>
               {{- 'icon-checkmark.svg' | inline_asset_content -}}
               {{ block.settings.success_text }}
             </div>
@@ -186,6 +190,7 @@
                 name="contact[name]"
                 autocomplete="name"
                 placeholder="Name"
+                required
                 value="{% if customer %}{{ customer.name }}{% endif %}"
               >
               <label class="visually-hidden" for="{{ block.id }}-phone">Phone</label>
@@ -195,7 +200,9 @@
                 type="tel"
                 name="contact[phone]"
                 autocomplete="tel"
+                inputmode="tel"
                 placeholder="Phone"
+                required
                 value="{% if customer %}{{ customer.phone }}{% endif %}"
               >
             </div>
@@ -209,7 +216,7 @@
               autocomplete="email"
               spellcheck="false"
               autocapitalize="off"
-              aria-required="true"
+              required
               placeholder="Email"
               value="{% if customer %}{{ customer.email }}{% endif %}"
             >
@@ -229,6 +236,7 @@
             {%- if block.settings.form_microcopy != blank -%}
               <p class="estimator__microcopy">{{ block.settings.form_microcopy }}</p>
             {%- endif -%}
+            {% render 'lead-trust' %}
           {%- endif -%}
         {%- endform -%}
       </div>
@@ -482,6 +490,16 @@
     opacity: 0.92;
   }
 
+  .estimator__finish-note {
+    margin: 0.6rem 0 0;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  .estimator__finish-note[hidden] {
+    display: none;
+  }
+
   .estimator__disclaimer {
     margin: 0.4rem 0 0;
     font-size: 0.8125rem;
@@ -598,6 +616,17 @@
       "id": "heading",
       "label": "Heading",
       "default": "Estimate your concrete project"
+    },
+    {
+      "type": "select",
+      "id": "heading_level",
+      "label": "Heading level",
+      "info": "Use H1 only on a page with no hero above this section. Every page needs exactly one H1.",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" }
+      ],
+      "default": "h2"
     },
     {
       "type": "textarea",
@@ -719,6 +748,13 @@
       "id": "disclaimer",
       "label": "Disclaimer",
       "default": "Rough ballpark only. Your final price is confirmed after a free site visit."
+    },
+    {
+      "type": "textarea",
+      "id": "finish_note",
+      "label": "Decorative finish note",
+      "info": "Shown when the chosen project type is stamped, decorative, colored or stained.",
+      "default": "This ballpark is for plain concrete. Stamping, color and sealing cost more, and we'll price them at your free site visit."
     },
     {
       "type": "header",

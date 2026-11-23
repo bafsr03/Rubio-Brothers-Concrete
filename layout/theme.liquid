@@ -77,6 +77,12 @@
       {%- render 'theme-editor' -%}
     {% endif %}
 
+    <noscript>
+      <style>
+        [data-reveal] { opacity: 1; transform: none; }
+      </style>
+    </noscript>
+
     {{ content_for_header }}
   </head>
 

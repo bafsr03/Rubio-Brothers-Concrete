@@ -46,7 +46,13 @@
         assign crumbs = crumbs | append: '||' | append: parent_name | append: '::' | append: origin | append: parent_url
       endif
 
-      assign crumbs = crumbs | append: '||' | append: page.title | append: '::' | append: origin | append: page.url
+      # Some admin page titles are all lower case ("contact"); present them properly.
+      assign crumb_title = page.title
+      assign crumb_title_lower = page.title | downcase
+      if crumb_title == crumb_title_lower
+        assign crumb_title = crumb_title | capitalize
+      endif
+      assign crumbs = crumbs | append: '||' | append: crumb_title | append: '::' | append: origin | append: page.url
     when 'article'
       assign crumbs = home_name | append: '::' | append: origin
       assign crumbs = crumbs | append: '||' | append: blog.title | append: '::' | append: origin | append: blog.url
