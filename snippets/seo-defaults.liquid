@@ -1,0 +1,60 @@
+{% doc %}
+  Prints the fallback SEO title or meta description for the current page, used by
+  meta-tags only when the merchant left that field empty in the admin. Anything
+  typed into a page's "Search engine listing" always wins.
+
+  Every title contains the exact shop name, because meta-tags appends the shop
+  name to titles that don't.
+
+  @param {string} field - "title" or "description"
+
+  @example
+  {% render 'seo-defaults', field: 'title' %}
+{% enddoc %}
+
+{%- liquid
+  assign title = ''
+  assign description = ''
+  assign handle = ''
+  if request.page_type == 'page'
+    assign handle = page.handle
+  endif
+
+  if request.page_type == 'index'
+    assign title = 'Concrete Contractor Utah County | Rubio Brothers Concrete'
+    assign description = 'Family-run concrete contractor in Pleasant Grove, UT. Driveways, patios, RV pads and stamped concrete across Utah County. 30+ years. Free estimates.'
+  endif
+
+  case handle
+    when 'about'
+      assign title = 'About Our Concrete Crew | Rubio Brothers Concrete'
+      assign description = 'Meet the family crew behind Rubio Brothers Concrete: 30+ years pouring driveways, patios and stamped concrete in Pleasant Grove and Utah County.'
+    when 'contact'
+      assign title = 'Contact & Free Quotes | Rubio Brothers Concrete'
+      assign description = 'Call or text (385) 210-5983 or send a message for a free concrete estimate in Pleasant Grove, Lehi, Orem, American Fork and across Utah County.'
+    when 'estimate'
+      assign title = 'Concrete Cost Calculator Utah | Rubio Brothers Concrete'
+      assign description = 'Get a rough concrete price in seconds. Enter your driveway, patio or RV pad size for an instant Utah County estimate, then book a free site visit.'
+    when 'gallery'
+      assign title = 'Concrete Project Photos | Rubio Brothers Concrete'
+      assign description = 'See real driveways, patios, RV pads, sport courts and stamped concrete poured in Pleasant Grove, Alpine, Highland, Lehi, Orem and Provo, UT.'
+    when 'concrete-alpine-ut'
+      assign description = 'Concrete driveways, patios and sport court pads for sloped Alpine, UT lots, poured by a local family crew from Pleasant Grove. Free estimates.'
+    when 'concrete-highland-ut'
+      assign description = 'Concrete driveways, RV pads and tear-out replacements in Highland, UT by a local family crew with 30+ years of experience. Free estimates.'
+    when 'concrete-lehi-ut'
+      assign description = 'Concrete patios, walkways, driveways and decorative concrete for Lehi, UT homes. Local family crew, 30+ years of experience. Free estimates.'
+    when 'concrete-pleasant-grove-ut'
+      assign description = 'Pleasant Grove concrete contractor for driveways, patios, walkways and decorative concrete. Local family crew, 30+ years. Free estimates.'
+    when 'concrete-orem-ut'
+      assign description = 'Stamped patios, walkways, driveways and RV pads in Orem, UT, poured by a local family crew with 30+ years of experience. Free estimates.'
+    when 'concrete-american-fork-ut'
+      assign description = 'Concrete driveways, covered patios and backyard slabs in American Fork, UT by a local family crew with 30+ years of experience. Free estimates.'
+  endcase
+
+  if field == 'title'
+    echo title
+  elsif field == 'description'
+    echo description
+  endif
+-%}
