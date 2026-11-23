@@ -1,0 +1,23 @@
+{% doc %}
+  Compact link to the business's Google reviews: "★ 4.8 · 40+ Google reviews".
+  Rating and count come from the "Business info" theme settings; the count is
+  rounded down to the nearest ten so it never overstates. Prints nothing when
+  the rating or the reviews link is blank.
+
+  @example
+  {% render 'google-rating' %}
+{% enddoc %}
+
+{%- liquid
+  assign reviews_url = settings.business_google_reviews_url | default: 'https://www.google.com/maps/search/?api=1&query=Rubio+Brothers+Concrete+Pleasant+Grove+UT'
+  assign review_count = settings.business_review_count | plus: 0
+  assign review_tens = review_count | divided_by: 10 | times: 10
+-%}
+
+{%- if settings.business_rating != blank and review_tens > 0 -%}
+  <a class="rb-rating" href="{{ reviews_url | escape }}" target="_blank" rel="noopener" data-reviews-link>
+    <span class="rb-rating__star" aria-hidden="true">★</span>
+    <strong>{{ settings.business_rating }}</strong>
+    <span>from {{ review_tens }}+ Google reviews. Read them</span>
+  </a>
+{%- endif -%}

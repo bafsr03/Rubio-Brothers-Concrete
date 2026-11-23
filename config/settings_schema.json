@@ -2202,6 +2202,18 @@
         "default": "44"
       },
       {
+        "type": "text",
+        "id": "business_google_reviews_url",
+        "label": "Google reviews link",
+        "info": "The share link of the Google Business Profile. Leave blank to use a Google Maps search for the business."
+      },
+      {
+        "type": "text",
+        "id": "business_license_number",
+        "label": "Contractor license number",
+        "info": "Shown under the estimate and contact forms. Leave blank to hide."
+      },
+      {
         "type": "header",
         "content": "Social sharing"
       },
