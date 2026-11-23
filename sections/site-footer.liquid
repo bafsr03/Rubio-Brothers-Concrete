@@ -159,7 +159,7 @@
               {%- if area_page.handle != blank -%}
                 <a href="{{ area_page.url }}">{{ area_name }}</a>
               {%- else -%}
-                {{ area_name }}
+                {{- area_name -}}
               {%- endif -%}
               {%- unless forloop.last %}, {% endunless -%}
             {%- endfor %}
